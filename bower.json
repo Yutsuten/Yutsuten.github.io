@@ -1,0 +1,17 @@
+{
+  "name": "mateus-etto-home-page",
+  "authors": [
+    "Mateus Etto <mateus.etto@gmail.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
