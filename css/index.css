@@ -7,15 +7,28 @@ header {
 	background: #DDDDDD;
 }
 
-#photo-container * {
+#photo-container img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	background: #448866;
 }
 
+#choose-language-container {
+	font-size: 22px;
+	text-align: right;
+}
+
 /* debug code */
 /*#photo-container {
 	background: green;
 	height: 220px;
+}
+
+#name-container {
+	background: #005577;
+}
+
+#choose-language-container {
+	background: #007777;
 }*/

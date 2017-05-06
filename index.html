@@ -19,11 +19,16 @@
           <div class="col-md-2" id="photo-container">
             <img src="img/Photo.jpg" height="220px" alt="Profile Photo" />
           </div>
-          <div class="col-md-7" style="background: #005577">
-            Name
+          <div class="col-md-6" id="name-container">
+            <h1>Mateus Etto</h1>
           </div>
-          <div class="col-md-3" style="background: #007777">
-            Language
+          <div class="col-md-4" id="choose-language-container">
+            Idioma:
+            <select onchange="document.documentElement.lang=this.value">
+              <option value="pt-BR">Português</option>
+              <option value="en">English</option>
+              <option value="jp">日本語</option>
+            </select>
           </div>
           <div class="col-md-9" style="background: #009977">
             <p class="lead">
