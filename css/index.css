@@ -19,6 +19,10 @@ header {
 	text-align: right;
 }
 
+#navigation-menu-container div {
+	width: 165px;
+}
+
 /* debug code */
 /*#photo-container {
 	background: green;
@@ -39,5 +43,13 @@ header {
 
 #cv-download-container {
 	background: #00CC77;
+}
+
+#page-content-container {
+	background: #DDDDDD;
+}
+
+#navigation-menu-container {
+	background: #AA44FF; height: 200px;
 }
 */
