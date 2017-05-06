@@ -6,8 +6,11 @@
 
     <!-- Libraries -->
     <link href="libraries/bootstrap.min.css" rel="stylesheet">
+    <script src="libraries/jquery.min.js"></script>
+    <script src="libraries/bootstrap.min.js"></script>
 
     <script src="index.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="index.css" media="screen">
   </head>
   <body>
     <header class="jumbotron" style="background: #DDDDDD; height: 160px">
@@ -23,7 +26,9 @@
             Language
           </div>
           <div class="col-md-9" style="background: #009977">
-            Profile
+            <p class="lead">
+              Profile
+            </p>
           </div>
           <div class="col-md-9" style="background: #00CC77">
             Curriculo Download
@@ -33,14 +38,19 @@
     </header>
     <div class="container" style="background: #DDDDDD">
       <div class="row">
-        <nav class="col-md-2 hidden-sm hidden-xs" style="background: yellow; height: 200px">
-          Navigation menu
-        </nav>
-        <div class="col-md-10" style="background: #FF0000; height: 500px">
+        <div class="col-md-3 hidden-sm hidden-xs" style="background: #AA44FF; height: 200px">
+          <nav class="" style="background: #8822FF;" data-spy="affix" data-offset-top="200">
+            <ul class="nav">
+              <li>Profile</li>
+              <li>Interests</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-9" style="background: #FF0000; height: 1000px">
           Information about me
         </div>
       </div>
     </div>
-    <footer class="container" style="background: pink;">My footer</footer>
+    <footer class="container" style="background: pink;; height: 100px">My footer</footer>
   </body>
 </html>
