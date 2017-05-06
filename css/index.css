@@ -1,3 +1,21 @@
 .affix {
 	top: 20px;
 }
+
+header {
+	height: 340px;
+	background: #DDDDDD;
+}
+
+#photo-container * {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background: #448866;
+}
+
+/* debug code */
+/*#photo-container {
+	background: green;
+	height: 220px;
+}*/
