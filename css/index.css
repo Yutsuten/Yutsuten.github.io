@@ -2,16 +2,15 @@
 	top: 20px;
 }
 
-header {
+.jumbotron {
 	height: 340px;
-	background: #DDDDDD;
+	background: #DFEAEF;
 }
 
 #photo-container img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	background: #448866;
 }
 
 #choose-language-container {
