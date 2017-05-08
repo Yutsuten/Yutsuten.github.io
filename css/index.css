@@ -7,24 +7,24 @@
 	background: #DFEAEF;
 }
 
-.university-container,
-.university-container .image-logo {
+.company-container,
+.company-container .image-logo {
 	height: 200px;
 }
 
-.university-container {
+.company-container {
 	margin-bottom: 8px;
 	background: #F5F5F5;
 	border: 1px solid #CCCCCC;
 }
 
-.university-container a,
-.university-container a:hover {
+.company-container a,
+.company-container a:hover {
 	text-decoration : none;
 	color: #333333;
 }
 
-.university-container:hover {
+.company-container:hover {
 	background: #EEEEEE;
 }
 
