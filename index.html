@@ -12,8 +12,8 @@
     <script src="js/index.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/index.css" media="screen">
   </head>
-  <body>
-    <header class="jumbotron">
+  <body data-spy="scroll" data-target="#navigation-menu-container">
+    <header class="jumbotron" id="profile">
       <div class="container">
         <div class="row">
           <div class="col-md-2" id="photo-container">
@@ -43,18 +43,18 @@
     </header>
     <div class="container" id="page-content-container">
       <div class="row">
-        <div class="col-md-2 hidden-sm hidden-xs" id="navigation-menu-container">
-          <div class="list-group" data-spy="affix" data-offset-top="350">
-            <a href="#top" class="list-group-item list-group-item-action active">Topo</a>
-            <a href="#interests" class="list-group-item list-group-item-action">Interesses</a>
-            <a href="#education" class="list-group-item list-group-item-action">Educação</a>
-            <a href="#experience" class="list-group-item list-group-item-action">Experiência</a>
-            <a href="#skills" class="list-group-item list-group-item-action">Habilidades</a>
-            <a href="#projects" class="list-group-item list-group-item-action">Projetos</a>
-            <a href="#languages" class="list-group-item list-group-item-action">Idiomas</a>
-            <a href="#contact" class="list-group-item list-group-item-action">Contato</a>
-          </div>
-        </div>
+        <nav class="col-md-2 hidden-sm hidden-xs" id="navigation-menu-container">
+          <ul class="list-group nav" role="tablist" data-spy="affix" data-offset-top="350">
+            <li><a href="#profile" class="list-group-item list-group-item-action">Topo</a></li>
+            <li><a href="#interests" class="list-group-item list-group-item-action">Interesses</a></li>
+            <li><a href="#education" class="list-group-item list-group-item-action">Educação</a></li>
+            <li><a href="#experience" class="list-group-item list-group-item-action">Experiência</a></li>
+            <li><a href="#skills" class="list-group-item list-group-item-action">Habilidades</a></li>
+            <li><a href="#projects" class="list-group-item list-group-item-action">Projetos</a></li>
+            <li><a href="#languages" class="list-group-item list-group-item-action">Idiomas</a></li>
+            <li><a href="#contact" class="list-group-item list-group-item-action">Contato</a></li>
+          </ul>
+        </nav>
         <div class="col-md-10" id="details-about-me-container">
           <div id="interest-container">
             <h2 id="interests">Interesses</h2>

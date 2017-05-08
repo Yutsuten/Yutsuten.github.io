@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 .affix {
 	top: 20px;
 }
@@ -49,8 +53,16 @@
 	text-align: right;
 }
 
-#navigation-menu-container div {
+#navigation-menu-container ul {
 	width: 165px;
+}
+
+#navigation-menu-container .nav > .active > a,
+#navigation-menu-container .nav > .active:hover > a,
+#navigation-menu-container .nav > .active:focus > a {
+	color: #FFFFFF;
+	background-color: #337AB7;
+	border-color: #337AB7;
 }
 
 #footer-container {
