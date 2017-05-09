@@ -1,3 +1,13 @@
+// Skill: 0 to 7
+// 0: Never used
+// 1: Learned syntax
+// 2: Have done something with that language (1+ small project done, 1+ month of experience)
+// 3: Have some confidence (2+ small projects done, 6+ months of experience)
+// 4: Have confidence (1+ big projects done, 1+ years of experience)
+// 5: Very experienced (2+ big projects done, 2+ years of experience)
+// 6: Master (5+ big projects done, 5+ years of experience)
+// 7: Legendary (10+ big projects done, 10+ years of experience)
+
 var experience = {
   programming: {
     language: {
@@ -45,9 +55,9 @@ var experience = {
     },
   },
   language: {
-    portuguese: { skill: 0 },
-    english: { skill: 0 },
-    japanese: { skill: 0 },
+    portuguese: { skill: 7 }, // Native
+    english: { skill: 4 }, // Upper-Intermediate
+    japanese: { skill: 4 }, // Upper-Intermediate
   },
 }
 
