@@ -17,6 +17,8 @@ body {
 }
 
 .company-container {
+  margin-left: 6px;
+  margin-right: 6px;
 	margin-bottom: 8px;
 	background: #F5F5F5;
 	border: 1px solid #CCCCCC;
