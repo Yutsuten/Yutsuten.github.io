@@ -98,6 +98,8 @@ body {
 	left: 0;
   width: 100%;
   margin-top: -6em;
+  padding-left: 25px;
+  padding-right: 25px;
   font-size: 22px;
 	font-weight: 700;
 	text-align: center;
@@ -108,7 +110,7 @@ body {
 
 .projects-done .single-project ul {
 	position: absolute;
-	bottom: 0%;
+	bottom: 3%;
 	left: 0;
 	width: 100%;
   text-align: left;
