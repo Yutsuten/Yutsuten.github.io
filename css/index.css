@@ -2,6 +2,12 @@ body {
   position: relative;
 }
 
+html:not(:lang(pt-BR)) :lang(pt-BR),
+html:not(:lang(en)) :lang(en),
+html:not(:lang(jp)) :lang(jp) {
+  display: none;
+}
+
 .affix {
 	top: 20px;
 }
