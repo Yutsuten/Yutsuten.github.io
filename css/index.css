@@ -21,6 +21,14 @@ body {
 
 #interest-container ul {
   font-size: 20px;
+  color: #333;
+}
+
+#contact-container ul {
+  padding-left: 8px;
+  list-style-type: none;
+  font-size: 20px;
+  color: #333;
 }
 
 .company-container,
