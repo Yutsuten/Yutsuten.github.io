@@ -71,6 +71,42 @@ body {
 	height: 80px;
 }
 
+#skills-container .experience-time {
+  margin-bottom: 0px;
+}
+
+#skills-container .progress .bg-success {
+  background-color: #5CB85C !important;
+}
+
+#skills-container .progress .bg-info {
+  background-color: #5BC0DE !important;
+}
+
+#skills-container .progress .bg-warning {
+  background-color: #F0AD4E !important;
+}
+
+#skills-container .progress .bg-danger {
+  background-color: #D9534F !important;
+}
+
+#skills-container h3 {
+  margin-top: 6px;
+}
+
+#skills-container .single-skill-container {
+  padding: 6px 10px 6px 10px;
+}
+
+#skills-container .skill-level {
+  margin-bottom: 0px;
+}
+
+#skills-container .progress-bar {
+  font-size: 14px;
+}
+
 .projects-done .row {
   padding-bottom: 30px;
 }
