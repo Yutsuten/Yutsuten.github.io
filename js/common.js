@@ -51,12 +51,15 @@ function generateArrayFromObject(object) {
   return arrayResult;
 }
 
+var biggestTime = 1;
+
 function appendArrayToHTML(array, divId, headersArray) {
   // Sort (descending) the array
   array.sort(function(a, b) {return b.time - a.time;});
 
   // Get language with biggest experience
-  var biggestTime = array[0].time;
+  if (array[0].time > biggestTime)
+    biggestTime = array[0].time;
 
   // Add the programming experiences to the html
   var numSkillsToShow = (array.length <= MAX_SKILLS_TO_SHOW) ? array.length : MAX_SKILLS_TO_SHOW;
@@ -87,3 +90,29 @@ var languageName = {
   lisp: "LISP",
   prolog: "Prolog",
 };
+
+var frameworkName = {
+  angularjs: "AngularJS",
+  bootstrap: "Bootstrap",
+  jQuery: "jQuery",
+  ionic: "Ionic",
+  mocha: "Mocha",
+  pixijs: "PixiJS",
+  stylus: "Stylus",
+  pug: "Pug (jade)",
+  dotnet: ".NET",
+}
+
+var databaseName = {
+  oracle: "Oracle",
+  mysql: "MySQL",
+  mongodb: "MongoDB",
+}
+
+var toolName = {
+  unity: "Unity",
+  atom: "Atom",
+  visualStudio: "Visual Studio",
+  codeblocks: "Code Blocks",
+  git: "Git",
+}
