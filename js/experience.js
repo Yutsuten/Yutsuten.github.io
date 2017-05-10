@@ -1,26 +1,26 @@
-// Skill: 0 to 7
+// SKILLS: 0 to 7
 // 0: Never used
-// 1: Learned syntax
-// 2: Have done something with that language (1+ small project done, 1+ month of experience)
-// 3: Have some confidence (2+ small projects done, 6+ months of experience)
-// 4: Have confidence (1+ big projects done, 1+ years of experience)
-// 5: Very experienced (2+ big projects done, 2+ years of experience)
-// 6: Master (5+ big projects done, 5+ years of experience)
-// 7: Legendary (10+ big projects done, 10+ years of experience)
+// 1: Only Syntax
+// 2: Little Experience (1+ small project done, 1+ month of experience)
+// 3: Used to it (2+ small projects done, 6+ months of experience)
+// 4: Experient (1+ big projects done, 1+ years of experience)
+// 5: Confident (2+ big projects done, 2+ years of experience)
+// 6: Very Confident (5+ big projects done, 5+ years of experience)
+// 7: Mastered (10+ big projects done, 10+ years of experience)
 
 var experience = {
   programming: {
     language: {
-      assembly: { time: 0, skill: 0 },
-      javascript: { time: 0, skill: 0 },
-      csharp: { time: 0, skill: 0 },
-      html5: { time: 0, skill: 0 },
-      css: { time: 0, skill: 0 },
-      c: { time: 0, skill: 0 },
-      java: { time: 0, skill: 0 },
-      php: { time: 0, skill: 0 },
-      lisp: { time: 0, skill: 0 },
-      prolog: { time: 0, skill: 0 },
+      assembly: { time: 0, skill: 2 },
+      javascript: { time: 0, skill: 4 },
+      csharp: { time: 0, skill: 5 },
+      html5: { time: 0, skill: 4 },
+      css: { time: 0, skill: 3 },
+      c: { time: 0, skill: 4 },
+      java: { time: 0, skill: 2 },
+      php: { time: 0, skill: 1 },
+      lisp: { time: 0, skill: 1 },
+      prolog: { time: 0, skill: 1 },
     },
     database: {
       oracle: { time: 0, skill: 0 },
