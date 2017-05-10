@@ -1,5 +1,5 @@
 // Programming languages
-appendArrayToHTML(generateArrayFromObject(experience.programming.language), '#skills-container #languages', languageName);
+appendArrayToHTML(generateArrayFromObject(experience.programming.language), '#skills-container #programmingLanguages', languageName);
 
 // Frameworks
 appendArrayToHTML(generateArrayFromObject(experience.programming.framework), '#skills-container #frameworks', frameworkName);
