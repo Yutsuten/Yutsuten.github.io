@@ -15,6 +15,10 @@ body {
   margin-bottom: 20px;
 }
 
+#interest-container h2 {
+  margin-top: 0px;
+}
+
 .company-container,
 .company-container .image-logo {
 	height: 200px;
@@ -211,45 +215,3 @@ body {
 .doc-item:hover .project-links {
 	opacity: 1;
 }
-
-/* debug code */
-/*#photo-container {
-	background: green;
-	height: 220px;
-}
-
-#name-container {
-	background: #005577;
-}
-
-#choose-language-container {
-	background: #007777;
-}
-
-#profile-container {
-	background: #009977;
-}
-
-#cv-download-container {
-	background: #00CC77;
-}
-
-#page-content-container {
-	background: #DDDDDD;
-}
-
-#navigation-menu-container {
-	background: #AA44FF;
-	height: 200px;
-}
-
-#details-about-me-container {
-	background: #FF0000;
-	height: 1000px;
-}
-
-#footer-container {
-	background: pink;
-	height: 100px;
-}
-*/
