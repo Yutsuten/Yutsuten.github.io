@@ -39,6 +39,39 @@ function generateFormattedTime(totalTime) {
   return yearsText + ' ' + monthsText;
 }
 
+function generateArrayFromObject(object) {
+  var arrayResult = [];
+  for (key in object) {
+    if(object.hasOwnProperty(key)) {
+      var item = object[key];
+      item['name'] = key;
+      arrayResult.push(item);
+    }
+  }
+  return arrayResult;
+}
+
+function appendArrayToHTML(array, divId, headersArray) {
+  // Sort (descending) the array
+  array.sort(function(a, b) {return b.time - a.time;});
+
+  // Get language with biggest experience
+  var biggestTime = array[0].time;
+
+  // Add the programming experiences to the html
+  var numSkillsToShow = (array.length <= MAX_SKILLS_TO_SHOW) ? array.length : MAX_SKILLS_TO_SHOW;
+  for (var i = 0; i < numSkillsToShow; i++) {
+    if (array[i].time > 0) {
+      $(divId).append(generateSkillBars(headersArray[array[i].name],
+        100 * array[i].time / biggestTime, generateFormattedTime(array[i].time),
+        100 * array[i].skill / 7, skillLvlText[array[i].skill]));
+    }
+    else {
+      break;
+    }
+  }
+}
+
 var skillLvlText = ["", "Only Syntax", "Little Experience", "Used to it",
   "Experient", "Confident", "Very Confident", "Mastered"];
 
