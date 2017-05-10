@@ -36,6 +36,7 @@ var experience = {
     framework: {
       angularjs: { time: 0, skill: 0 },
       bootstrap: { time: 0, skill: 0 },
+      jQuery: { time: 0, skill: 0 },
       ionic: { time: 0, skill: 0 },
       pixijs: { time: 0, skill: 0 },
       stylus: { time: 0, skill: 0 },
