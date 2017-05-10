@@ -1,15 +1,36 @@
 var MAX_SKILLS_TO_SHOW = 6;
 
+function generateExpTimeBar(expTimeBarPercentage, expTimeBarText) {
+  var htmlCode = '';
+  htmlCode +=   '<div class="progress experience-time">';
+  htmlCode +=     '<div class="progress-bar bg-success" role="progressbar" style="width: ' + expTimeBarPercentage + '%">' + expTimeBarText + '</div>';
+  htmlCode +=   '</div>';
+  return htmlCode;
+}
+
+function generateSkillLvlBar(skillLvlBarPercentage, skillLvlBarText) {
+  var htmlCode = '';
+  htmlCode +=   '<div class="progress skill-level">';
+  htmlCode +=     '<div class="progress-bar bg-info" role="progressbar" style="width: ' + skillLvlBarPercentage + '%">' + skillLvlBarText + '</div>';
+  htmlCode +=   '</div>';
+  return htmlCode;
+}
+
 function generateSkillBars(languageName, expTimeBarPercentage, expTimeBarText, skillLvlBarPercentage, skillLvlBarText) {
   var htmlCode = '';
   htmlCode += '<div class="single-skill-container">';
   htmlCode +=   '<h4>' + languageName + '</h4>';
-  htmlCode +=   '<div class="progress experience-time">';
-  htmlCode +=     '<div class="progress-bar bg-success" role="progressbar" style="width: ' + expTimeBarPercentage + '%">' + expTimeBarText + '</div>';
-  htmlCode +=   '</div>';
-  htmlCode +=   '<div class="progress skill-level">';
-  htmlCode +=     '<div class="progress-bar bg-info" role="progressbar" style="width: ' + skillLvlBarPercentage + '%">' + skillLvlBarText + '</div>';
-  htmlCode +=   '</div>';
+  htmlCode +=   generateExpTimeBar(expTimeBarPercentage, expTimeBarText);
+  htmlCode +=   generateSkillLvlBar(skillLvlBarPercentage, skillLvlBarText);
+  htmlCode += '</div>';
+  return htmlCode;
+}
+
+function generateLanguageSkillBar(languageName, skillLvlBarPercentage, skillLvlBarText) {
+  var htmlCode = '';
+  htmlCode += '<div class="single-skill-container">';
+  htmlCode +=   '<h4>' + languageName + '</h4>';
+  htmlCode +=   generateSkillLvlBar(skillLvlBarPercentage, skillLvlBarText);
   htmlCode += '</div>';
   return htmlCode;
 }
@@ -58,7 +79,7 @@ function generateArrayFromObject(object) {
 
 var biggestTime = 1;
 
-function appendArrayToHTML(array, divId, headersArray) {
+function appendProgExpArrayToHTML(array, divId, headersArray) {
   // Sort (descending) the array
   array.sort(function(a, b) {return b.time - a.time;});
 
@@ -66,14 +87,27 @@ function appendArrayToHTML(array, divId, headersArray) {
   if (array[0].time > biggestTime)
     biggestTime = array[0].time;
 
-  // Add to the html
+  // Append the info to HTML
   var numSkillsToShow = (array.length <= MAX_SKILLS_TO_SHOW) ? array.length : MAX_SKILLS_TO_SHOW;
   var i = 0;
   while (numSkillsToShow > 0 && i < array.length) {
     if (array[i].time > 0 && !existOnArray(blackList, array[i].name)) {
-      $(divId).append(generateSkillBars(headersArray[array[i].name],
-        100 * array[i].time / biggestTime, generateFormattedTime(array[i].time),
-        100 * array[i].skill / 7, skillLvlText[array[i].skill]));
+        $(divId).append(generateSkillBars(headersArray[array[i].name],
+          100 * array[i].time / biggestTime, generateFormattedTime(array[i].time),
+          100 * array[i].skill / 7, skillLvlText[array[i].skill]));
+        numSkillsToShow--;
+    }
+    i++;
+  }
+}
+
+function appendLangArrayToHTML(array, divId, headersArray) {
+  var numSkillsToShow = (array.length <= MAX_SKILLS_TO_SHOW) ? array.length : MAX_SKILLS_TO_SHOW;
+  var i = 0;
+  while (numSkillsToShow > 0 && i < array.length) {
+    if (!existOnArray(blackList, array[i].name)) {
+      $(divId).append(generateLanguageSkillBar(headersArray[array[i].name],
+        100 * array[i].skill / 7, languageSkillLvlText[array[i].skill]));
       numSkillsToShow--;
     }
     i++;
@@ -91,3 +125,6 @@ function existOnArray(array, value) {
 
 var skillLvlText = ["", "Only Syntax", "Little Experience", "Used to it",
   "Experient", "Confident", "Very Confident", "Mastered"];
+
+var languageSkillLvlText = ["", "Beginner", "Elementary", "Intermediate",
+  "Upper Intermediate", "Advanced", "Proficient", "Native"];

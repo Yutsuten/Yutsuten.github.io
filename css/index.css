@@ -80,31 +80,31 @@ body {
 	height: 80px;
 }
 
-#skills-container h4 {
+.skills-container h4 {
   margin-top: 0px;
 }
 
-#skills-container .experience-time {
+.skills-container .experience-time {
   margin-bottom: 0px;
 }
 
-#skills-container .progress .bg-success {
+.skills-container .progress .bg-success {
   background-color: #5CB85C !important;
 }
 
-#skills-container .progress .bg-info {
+.skills-container .progress .bg-info {
   background-color: #5BC0DE !important;
 }
 
-#skills-container .progress .bg-warning {
+.skills-container .progress .bg-warning {
   background-color: #F0AD4E !important;
 }
 
-#skills-container .progress .bg-danger {
+.skills-container .progress .bg-danger {
   background-color: #D9534F !important;
 }
 
-#skills-container .progress-bar {
+.skills-container .progress-bar {
   font-size: 14px;
 }
 

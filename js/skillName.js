@@ -1,4 +1,4 @@
-var languageName = {
+var progLangName = {
   assembly: "Assembly",
   javascript: "JavaScript",
   csharp: "C#",
@@ -35,4 +35,10 @@ var toolName = {
   visualStudio: "Visual Studio",
   codeblocks: "Code Blocks",
   git: "Git",
+}
+
+var langName = {
+  portuguese: "Portuguese",
+  english: "English",
+  japanese: "Japanese",
 }

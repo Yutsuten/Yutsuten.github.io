@@ -1,11 +1,19 @@
 // Programming languages
-appendArrayToHTML(generateArrayFromObject(experience.programming.language), '#skills-container #programmingLanguages', languageName);
+appendProgExpArrayToHTML(generateArrayFromObject(experience.programming.language),
+  '.skills-container #programmingLanguages', progLangName);
 
 // Frameworks
-appendArrayToHTML(generateArrayFromObject(experience.programming.framework), '#skills-container #frameworks', frameworkName);
+appendProgExpArrayToHTML(generateArrayFromObject(experience.programming.framework),
+  '.skills-container #frameworks', frameworkName);
 
 // Databases
-//appendArrayToHTML(generateArrayFromObject(experience.programming.database), '#skills-container #databases', databaseName);
+/*appendArrayToHTML(generateArrayFromObject(experience.programming.database),
+  '.skills-container #databases', databaseName);*/
 
 // Tools
-appendArrayToHTML(generateArrayFromObject(experience.programming.tool), '#skills-container #tools', toolName);
+appendProgExpArrayToHTML(generateArrayFromObject(experience.programming.tool),
+  '.skills-container #tools', toolName);
+
+// Languages
+appendLangArrayToHTML(generateArrayFromObject(experience.language),
+  '.skills-container #languages-container', langName);
