@@ -95,11 +95,13 @@ experience.programming.concept.artificialIntelligence.time += 3;
 // (UNESP classes) Augmented Reality
 experience.programming.language.csharp.time += 2;
 experience.programming.tool.unity.time += 2;
+experience.programming.tool.visualStudio.time += 2;
 experience.programming.paradigm.objectOriented.time += 2;
 
 // (Uncompleted project) RPG_TurnBased
 experience.programming.language.csharp.time += 2;
 experience.programming.tool.unity.time += 2;
+experience.programming.tool.visualStudio.time += 2;
 experience.programming.paradigm.objectOriented.time += 2;
 
 // (Uncompleted project) App Jam (Store Website)
@@ -111,6 +113,7 @@ experience.programming.framework.angularjs.time += 1;
 experience.programming.language.csharp.time += 6;
 experience.programming.tool.unity.time += 6;
 experience.programming.tool.git.time += 2;
+experience.programming.tool.visualStudio.time += 6;
 experience.programming.paradigm.objectOriented.time += 6;
 
 // (LTIA) SEMENG 2016
@@ -133,6 +136,7 @@ experience.programming.tool.git.time += 10;
 experience.programming.language.csharp.time += 8;
 experience.programming.concept.artificialIntelligence.time += 8;
 experience.programming.tool.unity.time += 8;
+experience.programming.tool.visualStudio.time += 8;
 experience.programming.paradigm.objectOriented.time += 8;
 experience.programming.tool.git.time += 8;
 
