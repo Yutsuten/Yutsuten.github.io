@@ -19,6 +19,10 @@ body {
   margin-top: 0px;
 }
 
+#interest-container ul {
+  font-size: 20px;
+}
+
 .company-container,
 .company-container .image-logo {
 	height: 200px;
