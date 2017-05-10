@@ -11,6 +11,10 @@ body {
 	background-color: #DFEAEF;
 }
 
+.section {
+  margin-bottom: 20px;
+}
+
 .company-container,
 .company-container .image-logo {
 	height: 200px;
