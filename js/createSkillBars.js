@@ -7,7 +7,7 @@ appendProgExpArrayToHTML(generateArrayFromObject(experience.programming.framewor
   '.skills-container #frameworks', frameworkName);
 
 // Databases
-/*appendArrayToHTML(generateArrayFromObject(experience.programming.database),
+/*appendProgExpArrayToHTML(generateArrayFromObject(experience.programming.database),
   '.skills-container #databases', databaseName);*/
 
 // Tools
