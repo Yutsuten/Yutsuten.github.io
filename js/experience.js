@@ -23,7 +23,7 @@ var experience = {
       prolog: { time: 0, skill: 1 },
     },
     database: {
-      oracle: { time: 0, skill: 2 },
+      oracle: { time: 0, skill: 0 },
       mysql: { time: 0, skill: 0 },
       mongodb: { time: 0, skill: 0 },
     },
@@ -85,7 +85,7 @@ experience.programming.language.csharp.time += 3;
 experience.programming.framework.dotnet.time += 3;
 
 // (UNESP classes) Database 2
-experience.programming.database.oracle.time += 2;
+//experience.programming.database.oracle.time += 2;
 
 // (UNESP classes) Artificial Intelligence
 experience.programming.language.lisp.time += 3;
