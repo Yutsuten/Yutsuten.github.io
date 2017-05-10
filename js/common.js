@@ -1,4 +1,4 @@
-var MAX_SKILLS_TO_SHOW = 10;
+var MAX_SKILLS_TO_SHOW = 6;
 
 function generateSkillBars(languageName, expTimeBarPercentage, expTimeBarText, skillLvlBarPercentage, skillLvlBarText) {
   var htmlCode = '';
@@ -68,16 +68,25 @@ function appendArrayToHTML(array, divId, headersArray) {
 
   // Add to the html
   var numSkillsToShow = (array.length <= MAX_SKILLS_TO_SHOW) ? array.length : MAX_SKILLS_TO_SHOW;
-  for (var i = 0; i < numSkillsToShow; i++) {
-    if (array[i].time > 0) {
+  var i = 0;
+  while (numSkillsToShow > 0 && i < array.length) {
+    if (array[i].time > 0 && !existOnArray(blackList, array[i].name)) {
       $(divId).append(generateSkillBars(headersArray[array[i].name],
         100 * array[i].time / biggestTime, generateFormattedTime(array[i].time),
         100 * array[i].skill / 7, skillLvlText[array[i].skill]));
+      numSkillsToShow--;
     }
-    else {
-      break;
+    i++;
+  }
+}
+
+function existOnArray(array, value) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
     }
   }
+  return false;
 }
 
 var skillLvlText = ["", "Only Syntax", "Little Experience", "Used to it",
