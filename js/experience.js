@@ -27,9 +27,6 @@ var experience = {
       mysql: { time: 0, skill: 0 },
       mongodb: { time: 0, skill: 0 },
     },
-    testing: {
-      mocha: { time: 0, skill: 2 },
-    },
     concept: {
       artificialIntelligence: { time: 0, skill: 3 },
     },
@@ -38,6 +35,7 @@ var experience = {
       bootstrap: { time: 0, skill: 3 },
       jQuery: { time: 0, skill: 2 },
       ionic: { time: 0, skill: 2 },
+      mocha: { time: 0, skill: 2 },
       pixijs: { time: 0, skill: 4 },
       stylus: { time: 0, skill: 2 },
       pug: { time: 0, skill: 2 },
@@ -152,6 +150,6 @@ experience.programming.tool.atom.time += 2;
 experience.programming.framework.pug.time += 2;
 experience.programming.framework.stylus.time += 2;
 experience.programming.framework.angularjs.time += 2;
-experience.programming.testing.mocha.time += 2;
+experience.programming.framework.mocha.time += 2;
 experience.programming.paradigm.objectOriented.time += 2;
 experience.programming.tool.git.time += 2;

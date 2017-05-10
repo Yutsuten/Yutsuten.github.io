@@ -74,7 +74,7 @@ var maxExpTime = programmingLanguagesArray[0].time;
 var numSkillsToShow = (programmingLanguagesArray.length <= MAX_SKILLS_TO_SHOW) ? programmingLanguagesArray.length : MAX_SKILLS_TO_SHOW;
 for (var i = 0; i < numSkillsToShow; i++) {
   if (programmingLanguagesArray[i].time > 0) {
-    $('#skills-container').append(generateSkillBars(programmingLanguagesArray[i].language,
+    $('#skills-container #languages').append(generateSkillBars(programmingLanguagesArray[i].language,
       100 * programmingLanguagesArray[i].time / maxExpTime, generateFormattedTime(programmingLanguagesArray[i].time),
       100 * programmingLanguagesArray[i].skill / 7, skillLvlText[programmingLanguagesArray[i].skill]));
   }
