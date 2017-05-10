@@ -3,7 +3,7 @@ var MAX_SKILLS_TO_SHOW = 6;
 function generateSkillBars(languageName, expTimeBarPercentage, expTimeBarText, skillLvlBarPercentage, skillLvlBarText) {
   var htmlCode = '';
   htmlCode += '<div class="single-skill-container">';
-  htmlCode +=   '<h3>' + languageName + '</h3>';
+  htmlCode +=   '<h4>' + languageName + '</h4>';
   htmlCode +=   '<div class="progress experience-time">';
   htmlCode +=     '<div class="progress-bar bg-success" role="progressbar" style="width: ' + expTimeBarPercentage + '%">' + expTimeBarText + '</div>';
   htmlCode +=   '</div>';
