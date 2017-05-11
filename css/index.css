@@ -21,6 +21,10 @@ html:not(:lang(jp)) :lang(jp) {
   text-decoration: none;
 }
 
+#profile-container p {
+  min-height: 58px;
+}
+
 .section {
   margin-bottom: 20px;
 }
