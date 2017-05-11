@@ -16,4 +16,4 @@ appendProgExpArrayToHTML(generateArrayFromObject(experience.programming.tool),
 
 // Languages
 appendLangArrayToHTML(generateArrayFromObject(experience.language),
-  '.skills-container #languages-container', langName);
+  '.skills-container #languages-container');

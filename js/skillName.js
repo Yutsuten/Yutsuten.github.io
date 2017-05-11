@@ -38,7 +38,7 @@ var toolName = {
 }
 
 var langName = {
-  portuguese: "Portuguese",
-  english: "English",
-  japanese: "Japanese",
+  portuguese: {portuguese: "Português", english: "Inglês", japanese: "Japonês"},
+  english: {portuguese: "Portuguese", english: "English", japanese: "Japanese"},
+  japanese: {portuguese: "ポルトガル語", english: "英語", japanese: "日本語"},
 }
