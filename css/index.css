@@ -45,9 +45,12 @@ html:not(:lang(jp)) :lang(jp) {
   color: #333;
 }
 
-.company-container,
+.company-container {
+	height: auto;
+}
+
 .company-container .image-logo {
-	height: 200px;
+  height: 200px;
 }
 
 .company-container {
