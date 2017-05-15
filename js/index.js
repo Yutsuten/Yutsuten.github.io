@@ -4,6 +4,5 @@ for (var i = 0; i < options.length; i++) {
 	if (navigator.language.indexOf(elem.value) >= 0){
 		document.documentElement.lang = elem.value;
 		elem.setAttribute('selected', 'true');
-    break;
 	}
 }
