@@ -32,9 +32,6 @@ function generateSkillBars(languageName, expTimeBarPercentage, expTime, skillLvl
 
 function generateLanguageSkillBar(languageName, skillLvlBarPercentage, skillLvl) {
   var htmlCode = '';
-  console.log(langName.portuguese[languageName]);
-  console.log(langName.english[languageName]);
-  console.log(langName.japanese[languageName]);
   htmlCode += '<div class="single-skill-container">';
   htmlCode +=   '<h4>';
   htmlCode +=     '<span lang="pt-BR">' + langName.portuguese[languageName] + '</span>';
