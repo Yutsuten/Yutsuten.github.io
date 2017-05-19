@@ -55,7 +55,7 @@ var experience = {
   },
   language: {
     portuguese: { skill: 6 }, // Native
-    english: { skill: 4 }, // Upper-Intermediate
+    english: { skill: 5 }, // Advanced
     japanese: { skill: 4 }, // Upper-Intermediate
   },
 }
