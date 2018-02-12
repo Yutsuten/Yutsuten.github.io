@@ -1,5 +1,7 @@
 {% raw %}
 
+# Django: App views
+
 #### appname/urls.py
 ```python
 path('', views.IndexView.as_view(), name='index'),

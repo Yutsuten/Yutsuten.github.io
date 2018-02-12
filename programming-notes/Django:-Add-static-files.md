@@ -1,5 +1,7 @@
 {% raw %}
 
+# Django: Add static files
+
 #### settings.py
 ```python
 INSTALLED_APPS = [

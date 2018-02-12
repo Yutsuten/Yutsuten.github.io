@@ -1,5 +1,7 @@
 {% raw %}
 
+# Django: Using shell
+
 #### Terminal
 ```
 python manage.py shell

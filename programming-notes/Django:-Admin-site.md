@@ -1,5 +1,7 @@
 {% raw %}
 
+# Django: Admin site
+
 #### Terminal
 ```
 python manage.py createsuperuser

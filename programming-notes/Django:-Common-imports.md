@@ -1,30 +1,40 @@
-{% raw %}
+# Django: Common imports
 
 ## HTTP responses
-`django.http.HttpResponseRedirect` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-Authentication#viewspy)\
-`django.shortcuts.render` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-Authentication#viewspy)
+`django.http.HttpResponseRedirect`
+
+`django.shortcuts.render`
 
 ## Views
-`django.views.generic.TemplateView` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-New-app-setup#appnameviewspy)\
-`django.views.generic.ListView` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-App-views-(from-model)#appnameviewpy)\
-`django.views.generic.DetailView` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-App-views-(from-model)#appnameviewpy)\
-`django.views.generic.edit.CreateView` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-App-views-(from-model)#appnameviewpy)\
-`django.views.generic.edit.UpdateView` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-App-views-(from-model)#appnameviewpy)\
-`django.views.generic.edit.DeleteView` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-App-views-(from-model)#appnameviewpy)
+`django.views.generic.TemplateView` [ex.]({{ site.baseurl }}{% link programming-notes/Django:-New-app-setup.md %}#appnameviewspy)
+
+`django.views.generic.ListView` [ex.]({{ site.baseurl }}{% link programming-notes/Django:-App-views-(from-model).md %}#appnameviewpy)
+
+`django.views.generic.DetailView` [ex.]({{ site.baseurl }}{% link programming-notes/Django:-App-views-(from-model).md %}#appnameviewpy)
+
+`django.views.generic.edit.CreateView` [ex.]({{ site.baseurl }}{% link programming-notes/Django:-App-views-(from-model).md %}#appnameviewpy)
+
+`django.views.generic.edit.UpdateView` [ex.]({{ site.baseurl }}{% link programming-notes/Django:-App-views-(from-model).md %}#appnameviewpy)
+
+`django.views.generic.edit.DeleteView` [ex.]({{ site.baseurl }}{% link programming-notes/Django:-App-views-(from-model).md %}#appnameviewpy)
 
 ## URLs
-`django.urls.reverse` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-Authentication#viewspy)\
-`django.urls.reverse_lazy` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-App-views-(from-model)#appnameviewpy)
+`django.urls.reverse` [ex.]({{ site.baseurl }}{% link programming-notes/Django:-App-views-(from-model).md %}#appnamemodelspy)
+
+`django.urls.reverse_lazy` [ex.]({{ site.baseurl }}{% link programming-notes/Django:-App-views-(from-model).md %}#appnameviewpy)
 
 ## App scripts
-`.models.ModelName` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-App-views-(from-model)#appnameviewpy)\
-`.views.ViewName` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-New-app-setup#appnameurlspy)\
+`.models.ModelName` [ex.]({{ site.baseurl }}{% link programming-notes/Django:-App-views-(from-model).md %}#appnameviewpy)
+
+`.views.ViewName` [ex.]({{ site.baseurl }}{% link programming-notes/Django:-New-app-setup.md %}#appnameurlspy)
+
 `.forms.FormName`
 
 ## Authentication
-`django.contrib.auth.authenticate` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-Authentication#viewspy)\
-`django.contrib.auth.login` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-Authentication#viewspy)\
-`django.contrib.auth.logout` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-Authentication#viewspy)\
-`django.contrib.auth.mixins.LoginRequiredMixin` [ex.](https://github.com/Yutsuten/Yutsuten.github.io/wiki/Django:-Authentication#viewspy-1)
+`django.contrib.auth.authenticate`
 
-{% endraw %}
+`django.contrib.auth.login`
+
+`django.contrib.auth.logout`
+
+`django.contrib.auth.mixins.LoginRequiredMixin` ex.

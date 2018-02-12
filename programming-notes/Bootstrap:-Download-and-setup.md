@@ -1,11 +1,13 @@
 {% raw %}
 
-# Download
+# Bootstrap: Download and setup
+
+## Download
 - [jQuery](https://jquery.com/download/) (Requirement)
 - [Popper.js](https://github.com/FezVrasta/popper.js/releases) (Requirement)
 - [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/download/)
 
-# Directory setup
+## Directory setup
 ```
 static/libs/
   bootstrap.min.css
@@ -17,7 +19,7 @@ static/libs/
   popper.min.js.map  (UMD)
 ```
 
-# Basic html
+## Basic html
 ```html
 <!doctype html>
 <html lang="en">

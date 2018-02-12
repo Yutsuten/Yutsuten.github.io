@@ -1,5 +1,7 @@
 {% raw %}
 
+# Django: Model setup
+
 #### appname/models.py
 ```python
 from django.db import models

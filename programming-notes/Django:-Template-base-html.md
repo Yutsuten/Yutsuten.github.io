@@ -1,5 +1,7 @@
 {% raw %}
 
+# Django: Template base html
+
 #### base.html
 ```html
 <h1>Common text</h1>
