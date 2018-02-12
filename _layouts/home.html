@@ -1,4 +1,6 @@
 ---
 layout: default
 ---
-{{ content }}
+
+{% capture my_include %}{% include menu.md %}{% endcapture %}
+{{ my_include | markdownify }}
