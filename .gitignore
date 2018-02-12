@@ -1,1 +1,6 @@
-bower_components
+*.swp
+*.swo
+
+_site
+.sass-cache
+.jekyll-metadata
