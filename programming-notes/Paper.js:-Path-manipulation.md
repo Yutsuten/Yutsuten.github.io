@@ -1,6 +1,8 @@
 {% raw %}
 
-# Creating lines
+# Paper.js: Path manipulation
+
+## Creating lines
 #### canvas-draw.js
 ```javascript
 var path = new Path();
@@ -19,20 +21,20 @@ path.fillColor.alpha = 0.2;
 path.insert(1, new Point(15, 40));
 ```
 
-## Get segment (node)
+### Get segment (node)
 #### canvas-draw.js
 ```javascript
 path.segments[index].point
 ```
 
-## Removing paths
+### Removing paths
 #### canvas-draw.js
 ```javascript
 path.removeSegment(index);
 path.removeSegments();
 ```
 
-# Creating circles
+## Creating circles
 #### canvas-draw.js
 ```javascript
 var circle = new Path.Circle({

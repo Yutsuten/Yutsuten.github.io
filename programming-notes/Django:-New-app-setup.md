@@ -1,5 +1,7 @@
 {% raw %}
 
+# Django: New app setup
+
 #### Terminal
 ```
 python manage.py startapp appname

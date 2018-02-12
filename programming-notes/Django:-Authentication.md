@@ -1,5 +1,7 @@
 {% raw %}
 
+# Django: Authentication
+
 #### settings.py
 ```python
 LOGIN_URL = 'login'
@@ -26,7 +28,7 @@ class CustomAuthenticationForm(AuthenticationForm):
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'}))
 ```
 
-#### registration\/login.html
+#### registration/login.html
 ```html
 {% if form.errors %}
 <div class="row">

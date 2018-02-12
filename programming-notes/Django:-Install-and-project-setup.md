@@ -1,12 +1,14 @@
 {% raw %}
 
-# Install Django
+# Django: Install and project setup
+
+## Install Django
 #### Terminal
 ```
 sudo pip3 install Django
 ```
 
-# Project setup
+## Project setup
 #### Terminal
 ```
 django-admin startproject projectname
@@ -51,5 +53,6 @@ TIME_ZONE = 'Asia/Tokyo'
 #### Terminal
 ```
 python manage.py migrate
+```
 
 {% endraw %}

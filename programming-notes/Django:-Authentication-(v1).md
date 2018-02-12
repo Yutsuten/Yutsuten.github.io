@@ -1,5 +1,7 @@
 {% raw %}
 
+# Django: Authentication
+
 #### login.html
 ```python
 <form action="{% url 'auth' %}" method="post">{% csrf_token %}

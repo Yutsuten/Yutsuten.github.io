@@ -1,9 +1,11 @@
 {% raw %}
 
-# Install
+# Paper.js: Install and setup
+
+## Install
 [Paper.js download](http://paperjs.org/download/)
 
-# Setup
+## Setup
 #### index.html
 ```html
 <head>

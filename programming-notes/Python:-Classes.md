@@ -1,5 +1,7 @@
 {% raw %}
 
+# Python: Classes
+
 ```python
 class MyClass(object):
   property = 10

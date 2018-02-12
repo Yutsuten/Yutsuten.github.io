@@ -1,5 +1,7 @@
 {% raw %}
 
+# Django: Redirect
+
 #### urls.py
 ```python
 from django.views.generic import RedirectView
