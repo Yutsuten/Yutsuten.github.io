@@ -70,7 +70,7 @@ class DeleteView(LoginRequiredMixin, DeleteView):
 ```
 
 #### index.html
-```python
+```html
 {% if project_list %}
 <ul>
     {% for project in project_list %}
@@ -83,15 +83,33 @@ class DeleteView(LoginRequiredMixin, DeleteView):
 ```
 
 #### details.html
-```python
+```html
 <h2>{{ project.name }}</h2>
 <p>{{ project.description }}</p>
 <p><b>Created:</b>{{ project.created }}</p>
 <p><b>Last modified:</b>{{ project.last_modified }}</p>
+
+# Reverse relationships
+{% if project.task_set.count > 0 %}
+{% for task in project.task_set.all %}
+<tr>
+    <td>{{ task.name }}</td>
+    <td>{{ task.deadline }}</td>
+    <td>{{ task.difficulty }}</td>
+    <td>{{ task.priority }}</td>
+    <td>{{ task.status }}</td>
+    <td></td>
+</tr>
+{% endfor %}
+{% else %}
+<tr>
+    <td colspan="6">タスクはまだありません。</td>
+</tr>
+{% endif %}
 ```
 
 #### form.html
-```python
+```html
 <form action="" method="post">{% csrf_token %}
     {% for field in form %}
     <div class="form-group">
@@ -107,7 +125,7 @@ class DeleteView(LoginRequiredMixin, DeleteView):
 ```
 
 #### delete.html
-```python
+```html
 <form action="" method="post">{% csrf_token %}
     <p>Are you sure you want to delete "{{ object }}"?</p>
     <input type="submit" value="Confirm" />
