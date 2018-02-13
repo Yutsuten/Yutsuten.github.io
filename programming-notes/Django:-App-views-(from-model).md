@@ -23,6 +23,9 @@ class ModelName(models.model):
         return reverse('appname:view', kwargs={'pk': self.pk})
 
 class ModelNameForm(forms.ModelForm):
+    # Overwrite the field name
+    name = charField(initial='Hello')
+
     class Meta:
         model = ModelName
         fields = ['name', 'description']
@@ -47,6 +50,8 @@ class IndexView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['new_info'] = 'Hello World!!'
+        # Get variable captured from urls.py
+        captured = self.kwargs # An dictionary
         return context
 
 class DetailView(generic.DetailView):
