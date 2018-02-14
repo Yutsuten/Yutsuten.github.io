@@ -1,6 +1,6 @@
 {% raw %}
 
-# Django: App views
+# Django: App views (from model)
 
 #### appname/urls.py
 ```python
@@ -102,7 +102,7 @@ class DeleteView(LoginRequiredMixin, DeleteView):
     <td>{{ task.deadline }}</td>
     <td>{{ task.difficulty }}</td>
     <td>{{ task.priority }}</td>
-    <td>{{ task.status }}</td>
+    <td>{{ task.get_status_display }}</td>
     <td></td>
 </tr>
 {% endfor %}
