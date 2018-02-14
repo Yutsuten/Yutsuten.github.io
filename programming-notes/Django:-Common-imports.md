@@ -1,5 +1,8 @@
 # Django: Common imports
 
+## Utils
+`django.utils.timezone`
+
 ## HTTP responses
 `django.http.HttpResponseRedirect`
 
