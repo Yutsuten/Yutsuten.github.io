@@ -12,6 +12,12 @@ class SimpleFormView(generic.edit.FormView):
     form_class = forms.SimpleForm
     success_url = reverse_lazy('index')
 
+    # Initialize form data
+    def get_initial(self):
+        self.initial['field1'] = 'Default text form field1'
+        return self.initial
+
+    # When POSTing the form
     def form_valid(self, form):
         print(form.cleaned_data)
         return super().form_valid(form)
@@ -20,7 +26,7 @@ class SimpleFormView(generic.edit.FormView):
 ### forms.py
 ```python
 class SimpleForm(forms.Form):
-    field1 = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
+    field1 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
     field2 = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
 ```
 
@@ -39,5 +45,7 @@ class SimpleForm(forms.Form):
     <button class="btn btn-primary" type="submit">Save</button>
 </form>
 ```
+
+Ref: [https://docs.djangoproject.com/en/2.0/ref/class-based-views/mixins-editing/](https://docs.djangoproject.com/en/2.0/ref/class-based-views/mixins-editing/)
 
 {% endraw %}
