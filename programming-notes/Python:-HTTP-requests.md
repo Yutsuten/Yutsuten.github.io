@@ -24,6 +24,8 @@ data = {
 
 response = requests.get(url, headers=headers)
 response = requests.post(url, headers=headers, data=data)
+response = requests.put(url, headers=headers, data=data)
+response = requests.delete(url, headers=headers)
 
 print(response.status_code)
 print(response.json())
