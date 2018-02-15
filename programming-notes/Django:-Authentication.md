@@ -6,6 +6,7 @@
 ```python
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'projects:index'
+LOGOUT_REDIRECT_URL = 'login'
 ```
 
 #### urls.py
@@ -15,6 +16,7 @@ from . import forms
 
 urlpatterns = [
     path('login', auth_views.LoginView.as_view(authentication_form = forms.CustomAuthenticationForm), name='login'),
+    path('logout', auth_views.LogoutView.as_view(), name='logout'),
 ]
 ```
 
