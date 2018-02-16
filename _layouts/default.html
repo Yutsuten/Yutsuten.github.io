@@ -10,13 +10,14 @@
   <script src="../libraries/jquery.min.js"></script>
   <script src="../libraries/bootstrap.min.js"></script>
 
+  <script src="../common.js"></script>
   <link href="../syntax-highlighting.css" rel="stylesheet">
   <link href="../style.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-3 scroll-block">
+      <div class="col-md-3 scroll-block" id="menu">
         <h4><a href="{{ site.baseurl }}{% link programming-notes/index.md %}">Home</a></h4>
 
         <h4><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></h4>
@@ -105,8 +106,7 @@
         </ul>
 
       </div>
-      <div class="col-md-9 scroll-block">
-        <h1></h1>
+      <div class="col-md-9 scroll-block" id="content">
         {{ content }}
       </div>
     </div>
