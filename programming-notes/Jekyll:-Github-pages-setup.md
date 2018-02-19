@@ -15,11 +15,13 @@ gem 'github-pages', group: :jekyll_plugins
 ```
 
 ## Install gems
+#### Console
 ```
 bundle install
 ```
 
 ## Build or run
+#### Console
 ```
 bundle exec jekyll build --watch
 bundle exec jekyll serve
