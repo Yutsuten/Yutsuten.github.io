@@ -52,6 +52,7 @@ class IndexView(generic.ListView):
         context['new_info'] = 'Hello World!!'
         # Get variable captured from urls.py
         captured = self.kwargs # An dictionary
+        url_search_parameters = self.request.GET # An dictionary
         return context
 
 class DetailView(generic.DetailView):
