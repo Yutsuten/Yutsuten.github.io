@@ -24,13 +24,23 @@ def index():
     return send_from_directory(directory=app.root_path, filename='sound.mp3')
 ```
 
-## Get URL parameters from GET
+## Get named parameters
 ```python
 import flask
 
 @app.route('/user/<user_id>', methods=['GET'])
 def user(user_id):
     print(user_id)
+    return flask.jsonify({'success': True})
+```
+
+## Get search parameters from URL
+```python
+import flask
+
+@app.route('/search', methods=['GET'])
+def search():
+    print(flask.request.args.get('field1'))
     return flask.jsonify({'success': True})
 ```
 
