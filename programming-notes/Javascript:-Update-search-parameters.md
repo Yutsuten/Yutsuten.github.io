@@ -20,7 +20,7 @@ var searchQuery = {
     toString: function(queryObject) {
         params = [];
         for (var key in queryObject) {
-            if (queryObject.hasOwnProperty(key)) {
+            if (queryObject.hasOwnProperty(key) && queryObject[key]) {
                 params.push(key + '=' + queryObject[key]);
             }
         }
