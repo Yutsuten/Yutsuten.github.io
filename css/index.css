@@ -73,7 +73,8 @@ html:not(:lang(jp)) :lang(jp) {
 }
 
 .image-logo img {
-	height: 120px;
+  max-height: 120px;
+  min-height: 70px;
   max-width: 150px;
   position: absolute;
   top: 0;
