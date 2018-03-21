@@ -243,3 +243,8 @@ html:not(:lang(jp)) :lang(jp) {
 .single-project-container:hover .project-links {
 	opacity: 1;
 }
+
+.scroll-block {
+  height: 100vh;
+  overflow-y: auto;
+}
