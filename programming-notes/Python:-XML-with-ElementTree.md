@@ -1,3 +1,7 @@
+---
+layout: empty
+---
+
 {% raw %}
 
 # Python: XML with ElementTree

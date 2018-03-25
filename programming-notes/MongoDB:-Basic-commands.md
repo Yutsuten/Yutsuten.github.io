@@ -1,3 +1,7 @@
+---
+layout: empty
+---
+
 {% raw %}
 
 # MongoDB: Basic commands

@@ -1,3 +1,7 @@
+---
+layout: empty
+---
+
 {% raw %}
 
 # Django: Ajax POST

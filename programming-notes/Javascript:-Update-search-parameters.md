@@ -1,3 +1,7 @@
+---
+layout: empty
+---
+
 {% raw %}
 
 # Javascript: Update search parameters

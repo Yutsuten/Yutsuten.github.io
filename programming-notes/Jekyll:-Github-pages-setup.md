@@ -1,3 +1,7 @@
+---
+layout: empty
+---
+
 {% raw %}
 
 # Jekyll: Github-pages setup

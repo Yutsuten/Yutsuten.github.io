@@ -1,3 +1,7 @@
+---
+layout: empty
+---
+
 {% raw %}
 
 # Django: Add static files

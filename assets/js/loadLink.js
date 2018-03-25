@@ -3,7 +3,7 @@ $(document).ready(function() {
     var href = $(this).attr('href');
     if (href.charAt(0) == '/') {
       $.get(href, function(data) {
-        $('#content').html($(data).find('#content').contents());
+        $('#content').html(data);
       });
       return false;
     }
