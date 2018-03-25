@@ -1,5 +1,6 @@
 ---
 layout: notes
+redirect_from: "/programming-notes/"
 ---
 
 # Home
