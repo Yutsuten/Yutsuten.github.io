@@ -9,12 +9,17 @@ html:not(:lang(jp)) :lang(jp) {
 }
 
 .affix {
-	top: 20px;
+  top: 20px;
+  position: fixed;
 }
 
 .jumbotron {
-	height: 340px;
-	background-color: #DFEAEF;
+  height: 340px;
+  background-color: #DFEAEF;
+}
+
+.jumbotron h1 {
+  font-size: 63px;
 }
 
 #cv-download-container a:hover {
@@ -45,31 +50,35 @@ html:not(:lang(jp)) :lang(jp) {
   color: #333;
 }
 
-.company-container {
-	height: auto;
-}
-
 .company-container .image-logo {
   height: 200px;
 }
 
 .company-container {
+  height: auto;
   margin-left: 6px;
   margin-right: 6px;
-	margin-bottom: 8px;
-	background-color: #F5F5F5;
+  margin-bottom: 8px;
+  background-color: #F5F5F5;
   border-radius: 6px;
-	border: 1px solid #CCCCCC;
+  border: 1px solid #CCCCCC;
+}
+
+.company-container h3 {
+  font-size: 24px;
+  margin-top: 18px;
+  margin-bottom: 10px;
 }
 
 .company-container a,
 .company-container a:hover {
-	text-decoration : none;
-	color: #333333;
+  text-decoration : none;
+  color: #333333;
+  width: 100%;
 }
 
 .company-container:hover {
-	background-color: #EEEEEE;
+  background-color: #EEEEEE;
 }
 
 .image-logo img {
@@ -85,30 +94,30 @@ html:not(:lang(jp)) :lang(jp) {
 }
 
 #photo-container img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #choose-language-container {
-	font-size: 20px;
-	text-align: right;
+  font-size: 20px;
+  text-align: right;
 }
 
 #navigation-menu-container ul {
-	width: 165px;
+  width: 165px;
 }
 
 #navigation-menu-container .nav > .active > a,
 #navigation-menu-container .nav > .active:hover > a,
 #navigation-menu-container .nav > .active:focus > a {
-	color: #FFFFFF;
-	background-color: #337AB7;
-	border-color: #337AB7;
+  color: #FFFFFF;
+  background-color: #337AB7;
+  border-color: #337AB7;
 }
 
 #footer-container {
-	height: 80px;
+  height: 80px;
 }
 
 .skills-container h4 {
@@ -117,6 +126,11 @@ html:not(:lang(jp)) :lang(jp) {
 
 .skills-container .experience-time {
   margin-bottom: 0px;
+}
+
+.skills-container .progress {
+  margin-bottom: 20px;
+  height: 1.3rem;
 }
 
 .skills-container .progress .bg-success {
@@ -142,17 +156,18 @@ html:not(:lang(jp)) :lang(jp) {
 .projects-done .single-project {
   border-radius: 6px;
   border: 3px solid #CCCCCC;
+  overflow: hidden;
 }
 
 .projects-done .single-project figure {
-  overflow: hidden;
   width: 100%;
-	height: 100%;
+  height: 100%;
+  display: initial;
 }
 
 .projects-done img {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
   border-radius: 4px;
 }
 
@@ -165,28 +180,28 @@ html:not(:lang(jp)) :lang(jp) {
 .projects-done .single-project h5 {
   position: absolute;
   top: 60%;
-	left: 0;
+  left: 0;
   width: 100%;
   margin-top: -6em;
   padding-left: 25px;
   padding-right: 25px;
   font-size: 18px;
-	font-weight: 700;
-	text-align: center;
+  font-weight: 700;
+  text-align: center;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	z-index: 1;
+  z-index: 1;
 }
 
 .projects-done .single-project ul {
-	position: absolute;
-	bottom: 3%;
-	left: 0;
-	width: 100%;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  width: 100%;
   text-align: left;
-	margin-top: 0.7em;
-	opacity: 0;
-	z-index: 1;
+  margin-top: 0.7em;
+  opacity: 0;
+  z-index: 1;
   list-style-type: none;
 }
 
@@ -198,14 +213,14 @@ html:not(:lang(jp)) :lang(jp) {
 
 .animate {
   -webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .project-img {
-	 /* Webkit for Chrome and Safari */
+  /* Webkit for Chrome and Safari */
   -webkit-transform: scale(1, 1);
   -webkit-transition-duration: 300ms;
   -webkit-transition-timing-function: ease-out;
@@ -222,7 +237,7 @@ html:not(:lang(jp)) :lang(jp) {
 }
 
 .single-project-container:hover .project-img {
-	 /* Webkit for Chrome and Safari */
+  /* Webkit for Chrome and Safari */
   -webkit-transform: scale(1.2, 1.2);
   -webkit-transition-duration: 300ms;
   -webkit-transition-timing-function: ease-out;
@@ -241,7 +256,7 @@ html:not(:lang(jp)) :lang(jp) {
 }
 
 .single-project-container:hover .project-links {
-	opacity: 1;
+  opacity: 1;
 }
 
 .scroll-block {

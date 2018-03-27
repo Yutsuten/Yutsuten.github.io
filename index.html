@@ -10,16 +10,6 @@ layout: base
       </div>
       <div class="col-xs-6 col-md-6" id="name-container">
         <h1>Mateus Etto</h1>
-      </div>
-      <div class="col-xs-2 col-md-3" id="choose-language-container">
-        Language:
-        <select onchange="document.documentElement.lang=this.value">
-          <option value="pt-BR">Português</option>
-          <option value="en">English</option>
-          <option value="jp">日本語</option>
-        </select>
-      </div>
-      <div class="col-xs-8 col-md-9" id="profile-container">
         <p lang="pt-BR" class="lead">
           Desenvolvedor de Software focado em aprender novas tecnologias,
           trabalho em equipe e criação de códigos bem estruturados.
@@ -31,8 +21,6 @@ layout: base
         <p lang="jp" class="lead">
           新技術、チームワーク、良い構造のコードを作成することに集中しているソフトウェア開発者。
         </p>
-      </div>
-      <div class="col-xs-8 col-md-9" id="cv-download-container">
         <a lang="pt-BR" href="javascript:void(0);">
           <button type="button" class="btn btn-primary" disabled>Currículo Download</button>
         </a>
@@ -46,13 +34,21 @@ layout: base
           <button type="button" class="btn btn-primary" disabled>職務経歴書ダウンロード</button>
         </a>
       </div>
+      <div class="col-xs-2 col-md-3" id="choose-language-container">
+        Language:
+        <select onchange="document.documentElement.lang=this.value">
+          <option value="pt-BR">Português</option>
+          <option value="en">English</option>
+          <option value="jp">日本語</option>
+        </select>
+      </div>
     </div>
   </div>
 </header>
 <div class="container" id="page-content-container">
   <div class="row">
     <nav class="col-md-2 hidden-sm hidden-xs" id="navigation-menu-container">
-      <ul class="list-group nav" role="tablist" data-spy="affix" data-offset-top="350">
+      <ul class="list-group nav" role="tablist">
         <li><a lang="pt-BR" href="#profile" class="list-group-item list-group-item-action">Perfil</a></li>
         <li><a lang="pt-BR" href="#interests" class="list-group-item list-group-item-action">Interesses</a></li>
         <li><a lang="pt-BR" href="#education" class="list-group-item list-group-item-action">Educação</a></li>
@@ -108,8 +104,8 @@ layout: base
           <span lang="en">Education</span>
           <span lang="jp">学歴</span>
         </h2>
-        <div class="row company-container" id="about-unesp-container">
-          <a href="http://www.bauru.unesp.br/" target="_blank">
+        <div class="company-container" id="about-unesp-container">
+          <a class="row" href="http://www.bauru.unesp.br/" target="_blank">
             <div class="col-xs-3 col-md-3 image-logo">
               <img src="{% link assets/img/UnespLogo.png %}" alt="Unesp Logo" />
             </div>
@@ -131,8 +127,8 @@ layout: base
             </div>
           </a>
         </div>
-        <div class="row company-container" id="about-waseda-container">
-          <a href="https://www.waseda.jp/top" target="_blank">
+        <div class="company-container" id="about-waseda-container">
+          <a class="row" href="https://www.waseda.jp/top" target="_blank">
             <div class="col-xs-3 col-md-3 image-logo">
               <img src="{% link assets/img/WasedaLogo.png %}" alt="Waseda Logo" />
             </div>
@@ -161,8 +157,8 @@ layout: base
           <span lang="en">Work Experience</span>
           <span lang="jp">職歴</span>
         </h2>
-        <div class="row company-container" id="about-ltia-container">
-          <a href="http://www.ltia.fc.unesp.br/" target="_blank">
+        <div class="company-container" id="about-ltia-container">
+          <a class="row" href="http://www.ltia.fc.unesp.br/" target="_blank">
             <div class="col-xs-3 col-md-3 image-logo">
               <img src="{% link assets/img/LtiaLogo.png %}" alt="Ltia Logo" />
             </div>
@@ -184,8 +180,8 @@ layout: base
             </div>
           </a>
         </div>
-        <div class="row company-container" id="about-voxus-container">
-          <a href="http://www.voxus.com.br/" target="_blank">
+        <div class="company-container" id="about-voxus-container">
+          <a class="row" href="http://www.voxus.com.br/" target="_blank">
             <div class="col-xs-3 col-md-3 image-logo">
               <img src="{% link assets/img/voxus.svg %}" alt="Voxus Logo" />
             </div>
@@ -207,8 +203,8 @@ layout: base
             </div>
           </a>
         </div>
-        <div class="row company-container" id="about-cograph-container">
-          <a href="http://co-graph.com/" target="_blank">
+        <div class="company-container" id="about-cograph-container">
+          <a class="row" href="http://co-graph.com/" target="_blank">
             <div class="col-xs-3 col-md-3 image-logo">
               <img src="{% link assets/img/CographLogo.png %}" alt="Cograph Logo" />
             </div>
@@ -237,61 +233,51 @@ layout: base
           <span lang="en">Skills</span>
           <span lang="jp">技術</span>
         </h2>
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
-              <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <span lang="pt-BR">Linguagens de Programação</span>
                   <span lang="en">Programming Languages</span>
                   <span lang="jp">プログラミング言語</span>
-                </a>
-              </h4>
+                </button>
+              </h5>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-              <div class="panel-body" id="programmingLanguages"></div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body" id="programmingLanguages">
+              </div>
             </div>
           </div>
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingTwo">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   <span lang="pt-BR">Frameworks</span>
                   <span lang="en">Frameworks</span>
                   <span lang="jp">フレームワーク</span>
-                </a>
-              </h4>
+                </button>
+              </h5>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-              <div class="panel-body" id="frameworks"></div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body" id="frameworks">
+              </div>
             </div>
           </div>
-          <!--<div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <span lang="pt-BR">Banco de Dados</span>
-                  <span lang="en">Database</span>
-                  <span lang="jp">データベース</span>
-                </a>
-              </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-              <div class="panel-body" id="databases"></div>
-            </div>
-          </div>-->
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingFour">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                   <span lang="pt-BR">Ferramentas</span>
                   <span lang="en">Tools</span>
                   <span lang="jp">ツール</span>
-                </a>
-              </h4>
+                </button>
+              </h5>
             </div>
-            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-              <div class="panel-body" id="tools"></div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body" id="tools">
+              </div>
             </div>
           </div>
         </div>
@@ -400,6 +386,3 @@ layout: base
   </div>
 </div>
 <footer class="container" id="footer-container"></footer>
-
-<script src="{% link assets/js/createSkillBars.js %}" charset="utf-8"></script>
-<script src="{% link assets/js/index.js %}" charset="utf-8"></script>

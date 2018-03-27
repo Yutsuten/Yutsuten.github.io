@@ -1,6 +1,17 @@
+# Vim
+*~
 *.swp
 *.swo
 
-_site
+# Jekyll
 .sass-cache
 .jekyll-metadata
+
+# Compiled scripts
+bundle.js
+bundle.css
+
+# Distribution / packaging
+_site/
+node_modules/
+

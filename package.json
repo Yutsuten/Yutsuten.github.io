@@ -1,0 +1,35 @@
+{
+  "name": "Yutsuten.github.io",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "repository": "git@github.com:Yutsuten/Yutsuten.github.io.git",
+  "author": "Mateus Etto <mateus.etto@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-css"
+    ]
+  },
+  "browserify-css": {
+    "autoInject": false,
+    "minify": true,
+    "output": "bundle.css"
+  },
+  "devDependencies": {
+    "browserify": "^16.1.1",
+    "browserify-css": "^0.14.0",
+    "gulp": "^3.9.1",
+    "gulplog": "^1.0.0",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.0"
+  },
+  "scripts": {
+      "test": "test/test"
+  }
+}
