@@ -6,6 +6,7 @@ branches:
 language: node_js
 node_js:
   - "lts/carbon"
+script: true
 after_success:
   - git config user.name 'TravisCI Auto-publisher'
   - git config user.email 'travis-auto-publish@example.com'
