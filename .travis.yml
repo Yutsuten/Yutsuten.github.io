@@ -3,6 +3,13 @@ branches:
   only:
     - release
 
+language: ruby
+rvm:
+  - 2.4.1
+
+script: true
+
+
 language: node_js
 node_js:
   - "lts/carbon"
