@@ -1,6 +1,10 @@
-body {
-  position: relative;
-}
+@import url('base.css');
+@import url('navigation_bar.css');
+@import url('syntax-highlighting.css');
+
+/*body {*/
+  /*position: relative;*/
+/*}*/
 
 html:not(:lang(pt-BR)) :lang(pt-BR),
 html:not(:lang(en)) :lang(en),
