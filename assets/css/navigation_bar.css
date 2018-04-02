@@ -1,3 +1,13 @@
 .header nav {
   background-color: #002B36;
 }
+
+.header nav {
+  border-bottom: 2px #93A1A1 solid;
+}
+
+.navbar-nav .nav-link {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
