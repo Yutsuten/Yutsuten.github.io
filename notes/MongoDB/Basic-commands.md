@@ -8,7 +8,11 @@ layout: empty
 
 ## Open mongo
 ```shell
-mongo # Open mongo
+mongo
+```
+
+### Mongo shell
+```shell
 db # Show current database
 show dbs # Show available databases
 use my_database # Switch/create database
