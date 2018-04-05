@@ -7,35 +7,40 @@ layout: empty
 # MongoDB: Basic commands
 
 ## Open mongo
-```
-mongo
-```
+```shell
+mongo # Open mongo
+db # Show current database
+show dbs # Show available databases
+use my_database # Switch/create database
+show collections # Show collections (tables)
 
-## Show current database
-```
-db
-```
+# Insert (automatically creates the collection groups)
+db.groups.insert({'_id': 'f43nm39f', 'name': 'party1', 'type': 'party'})
 
-## Show available databases
-```
-show dbs
-```
+# Query
+db.groups.find({}) # All
+db.groups.find({name: 'party1'}).pretty()
+db.groups.find({name: 'party1'}, {chat: 1}).pretty()
 
-## Switch database
-```
-use habitrpg
-```
+# AND
+db.groups.find(
+  {name: 'party1'}, {type: 'party'}
+)
 
-## Show collections
-```
-show collections
-```
+# OR
+db.groups.find(
+  {$or: [
+    {name: 'party1'}, {type: 'party'}
+  ]}
+)
 
-## Query
-```
-db.collection.find({})
-db.groups.find({name: "party1"}).pretty()
-db.groups.find({name: "party1"}, {chat: 1}).pretty()
+# Update
+db.groups.update({_id: 'f43nm39f'}, {$set: {'name': 'cool_party'}})
+
+# Drop
+db.groups.drop() # Drop collection
+db.dropDatabase() # Drop current database
+
 ```
 
 {% endraw %}
