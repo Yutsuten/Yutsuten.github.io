@@ -52,6 +52,8 @@ class ProjectCreateViewTests(TestCase):
 ### Run tests
 ```
 python manage.py test projects
+
+coverage run --source='.' manage.py test projects
 ```
 
 {% endraw %}
