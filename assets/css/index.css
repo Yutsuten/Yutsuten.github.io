@@ -1,7 +1,8 @@
 @import url('base.css');
 @import url('navigation_bar.css');
 @import url('home.css');
-@import url('syntax-highlighting.css');
+@import url('notes.css');
+@import url('syntax_highlight.css');
 
 /*body {*/
   /*position: relative;*/
@@ -262,9 +263,4 @@ html:not(:lang(jp)) :lang(jp) {
 
 .single-project-container:hover .project-links {
   opacity: 1;
-}
-
-.scroll-block {
-  height: 100vh;
-  overflow-y: auto;
 }
