@@ -55,7 +55,7 @@
 }
 
 
-/* Resume content */
+/* Resume content - Menu */
 .resume .resume-content {
   display: flex;
   padding-top: 50px;
@@ -80,5 +80,38 @@
 
 .resume .resume-content .details {
   width: 75%;
+}
+
+/* Resume content - card */
+.resume .resume-content .resume-card {
+  display: flex;
+  background-color: #586E75;
+  padding: 17px 0;
+  margin: 10px 0 20px;
+  border-radius: 10px;
+}
+
+.resume .resume-content .resume-card .card-logo {
+  width: 25%;
+  display: flex;
+}
+
+.resume .resume-content .resume-card .card-logo img {
+  height: 80px;
+  max-width: calc(100% - 75px);
+  display: block;
+  margin: auto;
+}
+
+.resume .resume-content .resume-card .card-logo.university img {
+  height: 110px;
+}
+
+.resume .resume-content .resume-card .card-details {
+  width: 75%;
+}
+
+.resume .resume-content .resume-card .card-details h3 {
+  margin: 6px 0;
 }
 
