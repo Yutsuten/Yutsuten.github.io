@@ -27,7 +27,7 @@ div.footer {
 }
 
 /* Elements default */
-h1, h2, h3, h4, h5, p, span, ul, li {
+body, h1, h2, h3, h4, h5, p, span, ul, li {
   color: #EEE8D5;
 }
 

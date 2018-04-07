@@ -1,0 +1,84 @@
+.resume {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+
+/* Personal card */
+.resume .personal-card {
+  display: flex;
+  padding: 50px 0;
+  height: 300px;
+  border-bottom: 1px solid #93A1A1;
+}
+
+.resume .personal-card .photo {
+  width: 30%;
+}
+
+.resume .personal-card .photo img {
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.resume .personal-card .basic-info {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.resume .personal-card .basic-info .name {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.resume .personal-card .basic-info .name h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.resume .personal-card .basic-info .job {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.resume .personal-card .basic-info .job h2 {
+  font-size: 38px;
+  margin: 0;
+}
+
+
+/* Resume content */
+.resume .resume-content {
+  display: flex;
+  padding-top: 50px;
+}
+
+.resume .resume-content .menu {
+  width: 25%;
+  margin-left: 20px;
+}
+
+.resume .resume-content .menu a {
+  color: #839496;
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.resume .resume-content .menu a.active {
+  color: #EEE8D5;
+}
+
+.resume .resume-content .details {
+  width: 75%;
+}
+
