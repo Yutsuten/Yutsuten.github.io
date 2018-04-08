@@ -1,0 +1,135 @@
+.resume {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+
+/* Personal card */
+.resume .personal-card {
+  display: flex;
+  padding: 50px 0;
+  height: 300px;
+  border-bottom: 1px solid #93A1A1;
+}
+
+.resume .personal-card .photo {
+  width: 30%;
+}
+
+.resume .personal-card .photo img {
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 10px;
+  opacity: 0.85;
+}
+
+.resume .personal-card .basic-info {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.resume .personal-card .basic-info .name {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.resume .personal-card .basic-info .name h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.resume .personal-card .basic-info .job {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.resume .personal-card .basic-info .job h2 {
+  font-size: 38px;
+  margin: 0;
+}
+
+
+/* Resume content - Menu */
+.resume .resume-content {
+  display: flex;
+  padding-top: 50px;
+}
+
+.resume .resume-content .menu {
+  width: 25%;
+  margin-left: 20px;
+}
+
+.resume .resume-content .menu a {
+  color: #839496;
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.resume .resume-content .menu a.active {
+  color: #EEE8D5;
+}
+
+.resume .resume-content .details {
+  width: 75%;
+}
+
+/* Resume content - card */
+.resume .resume-content .resume-card {
+  display: flex;
+  background-color: #586E75;
+  padding: 17px 0;
+  margin: 10px 0 20px;
+  border-radius: 10px;
+}
+
+.resume .resume-content .resume-card .card-logo {
+  width: 25%;
+  display: flex;
+}
+
+.resume .resume-content .resume-card .card-logo img {
+  height: 80px;
+  max-width: calc(100% - 75px);
+  display: block;
+  margin: auto;
+}
+
+.resume .resume-content .resume-card .card-logo.university img {
+  height: 110px;
+}
+
+.resume .resume-content .resume-card .card-details {
+  width: 75%;
+}
+
+.resume .resume-content .resume-card .card-details h3 {
+  margin: 6px 0;
+}
+
+/* Resume content: Skill block */
+.resume .resume-content h3 {
+  margin-bottom: 4px;
+}
+
+.resume .resume-content .skill-block {
+  margin-bottom: 8px;
+}
+
+.resume .resume-content .skill-block .skill {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #586E75;
+  border-radius: 4px;
+  font-size: 18px;
+}
+

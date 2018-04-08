@@ -1,7 +1,6 @@
 # Vim
 *~
-*.swp
-*.swo
+*.sw*
 
 # Jekyll
 .sass-cache
