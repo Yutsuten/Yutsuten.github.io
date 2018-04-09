@@ -26,6 +26,8 @@ INSTALLED_APPS = [
 
 #### urls.py
 ```python
+from django.conf.urls import include
+
 path('appname/', include('appname.urls')),
 ```
 
@@ -35,6 +37,7 @@ from django.urls import path
 
 from . import views
 
+app_name = 'appname'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
 ]
