@@ -62,6 +62,7 @@ References: [link](https://docs.mongodb.com/manual/reference/method/Mongo.setRea
 
 ```shell
 # Set this on every mongo instance
-rs.setReadPref('secondaryPreferred')
+db.getMongo().setReadPref('secondaryPreferred')
+db.getMongo().setSlaveOk()
 ```
 
