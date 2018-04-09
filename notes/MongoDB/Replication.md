@@ -1,5 +1,19 @@
 # MongoDB: Replication
 
+## Deploy a Replica Set for Production (same server)
+```shell
+# Create 3 separate folders for each instance (uses the current directory of the terminal)
+mkdir -p mongodb/rs0-0  mongodb/rs0-1 mongodb/rs0-2
+
+# Start 3 instances of mongod - hostname is the local IP (not public)
+mongod --replSet rs0 --port 27018 --bind_ip localhost,<private IP> --dbpath mongodb/rs0-0 --fork --logpath mongodb-0.log
+mongod --replSet rs0 --port 27019 --bind_ip localhost,<private IP> --dbpath mongodb/rs0-1 --fork --logpath mongodb-1.log
+mongod --replSet rs0 --port 27020 --bind_ip localhost,<private IP> --dbpath mongodb/rs0-2 --fork --logpath mongodb-2.log
+
+# To connect to those instances, use mongo --host <public IP>
+# Settings continue on 'Connect to one instance' bellow
+```
+
 ## Deploy a Replica Set for Testing and Development
 Reference: [link](https://docs.mongodb.com/manual/tutorial/deploy-replica-set-for-testing/)
 
@@ -8,9 +22,9 @@ Reference: [link](https://docs.mongodb.com/manual/tutorial/deploy-replica-set-fo
 mkdir -p /srv/mongodb/rs0-0  /srv/mongodb/rs0-1 /srv/mongodb/rs0-2
 
 # Start 3 instances of mongod
-mongod --replSet rs0 --port 27018 --bind_ip localhost,<ip address of mongod host> --dbpath /srv/mongodb/rs0-0 --smallfiles --oplogSize 128
-mongod --replSet rs0 --port 27019 --bind_ip localhost,<ip address of mongod host> --dbpath /srv/mongodb/rs0-1 --smallfiles --oplogSize 128
-mongod --replSet rs0 --port 27020 --bind_ip localhost,<ip address of mongod host> --dbpath /srv/mongodb/rs0-2 --smallfiles --oplogSize 128
+mongod --replSet rs0 --port 27018 --bind_ip localhost,<private IP> --dbpath /srv/mongodb/rs0-0 --smallfiles --oplogSize 128
+mongod --replSet rs0 --port 27019 --bind_ip localhost,<private IP> --dbpath /srv/mongodb/rs0-1 --smallfiles --oplogSize 128
+mongod --replSet rs0 --port 27020 --bind_ip localhost,<private IP> --dbpath /srv/mongodb/rs0-2 --smallfiles --oplogSize 128
 
 # Connect to one instance
 mongo --port 27018
