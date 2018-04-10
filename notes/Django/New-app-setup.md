@@ -43,18 +43,5 @@ urlpatterns = [
 ]
 ```
 
-#### appname/views.py
-```python
-from django.views.generic import TemplateView
-
-class IndexView(TemplateView):
-    template_name = 'projects/index.html'
-```
-
-#### appname/templates/appname/index.html
-```
-<h1>Hello, {{ user.get_username }}</h1>
-<a href="{% url 'signout' %}">Logout</a>
-```
 
 {% endraw %}

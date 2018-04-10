@@ -1,7 +1,3 @@
----
-layout: empty
----
-
 {% raw %}
 
 # Django: App views (from model)
