@@ -4,15 +4,10 @@
 
 #### views.py
 ```python
-from django.views.generic import TemplateView
+from django.views import generic
 
-class AppnameIndexView(TemplateView):
+class AppnameIndexView(generic.TemplateView):
     template_name = 'appname/index.html'
-```
-
-#### templates/appname/index.html
-```
-<h1>Hello World</h1>
 ```
 
 {% endraw %}

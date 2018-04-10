@@ -2,7 +2,7 @@
 
 # Django: List Basic
 
-#### appname/view.py
+#### appname/views.py
 ```python
 from django.views import generic
 from . import models

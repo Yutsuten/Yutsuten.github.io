@@ -2,12 +2,12 @@
 
 # Django: List Pagination
 
-### views.py
+#### appname/views.py
 ```python
 from django.views import generic
 from . import models
 
-class IndexView(generic.ListView):
+class AppnameIndexView(generic.ListView):
     model = models.Modelname
     template_name = 'modelname/index.html'
     paginate_by = 5
