@@ -35,7 +35,7 @@ class ModelNameForm(forms.ModelForm):
         }
 ```
 
-#### appname/view.py
+#### appname/views.py
 ```python
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView

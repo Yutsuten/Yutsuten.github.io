@@ -6,7 +6,7 @@ layout: empty
 
 # Create form
 
-### views.py
+#### appname/views.py
 ```python
 from django.views import generic
 from . import forms

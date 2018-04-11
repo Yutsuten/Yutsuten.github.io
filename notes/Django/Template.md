@@ -1,8 +1,8 @@
 {% raw %}
 
-# Django: Template
+# Django: View Template
 
-#### views.py
+#### appname/views.py
 ```python
 from django.views import generic
 
