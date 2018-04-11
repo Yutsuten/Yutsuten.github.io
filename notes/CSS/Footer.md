@@ -8,7 +8,7 @@ Reference: [Link](http://matthewjamestaylor.com/blog/keeping-footers-at-the-bott
 
 ## HTML
 ```html
-<div id="wrapper">
+<div class="wrapper">
    <div class="header"></div>
    <div class="body"></div>
    <div class="footer"></div>
