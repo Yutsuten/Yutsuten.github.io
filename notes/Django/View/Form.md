@@ -2,6 +2,8 @@
 
 # Django: View Form
 
+Ref: [https://docs.djangoproject.com/en/2.0/ref/class-based-views/mixins-editing/](https://docs.djangoproject.com/en/2.0/ref/class-based-views/mixins-editing/)
+
 #### appname/views.py
 ```python
 from django.views import generic

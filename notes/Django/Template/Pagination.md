@@ -1,18 +1,6 @@
----
-layout: empty
----
-
 {% raw %}
 
 # Django: Pagination
-
-### views.py
-```python
-class IndexView(LoginRequiredMixin, generic.ListView):
-    model = models.Project
-    template_name = 'projects/index.html'
-    paginate_by = 5
-```
 
 ### index.html
 ```html

@@ -1,6 +1,6 @@
 {% raw %}
 
-# Django: Model setup
+# Django: Model Custom
 
 #### appname/models.py
 ```python
@@ -20,13 +20,6 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
-```
-
-#### Terminal
-```
-python manage.py makemigrations appname
-python manage.py sqlmigrate appname 0001
-python manage.py migrate
 ```
 
 {% endraw %}

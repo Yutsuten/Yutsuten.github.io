@@ -1,6 +1,6 @@
 {% raw %}
 
-# Django: Add template directory
+# Django: Add static directory
 
 #### settings.py
 ```python

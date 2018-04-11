@@ -13,27 +13,27 @@ layout: empty
 `django.shortcuts.render`
 
 ## Views
-`django.views.generic.TemplateView` [ex.]({% link notes/Django/New-app-setup.md %}#appnameviewspy)
+`django.views.generic.TemplateView`
 
-`django.views.generic.ListView` [ex.]({% link notes/Django/App-views-(from-model).md %}#appnameviewpy)
+`django.views.generic.ListView`
 
-`django.views.generic.DetailView` [ex.]({% link notes/Django/App-views-(from-model).md %}#appnameviewpy)
+`django.views.generic.DetailView`
 
-`django.views.generic.edit.CreateView` [ex.]({% link notes/Django/App-views-(from-model).md %}#appnameviewpy)
+`django.views.generic.edit.CreateView`
 
-`django.views.generic.edit.UpdateView` [ex.]({% link notes/Django/App-views-(from-model).md %}#appnameviewpy)
+`django.views.generic.edit.UpdateView`
 
-`django.views.generic.edit.DeleteView` [ex.]({% link notes/Django/App-views-(from-model).md %}#appnameviewpy)
+`django.views.generic.edit.DeleteView`
 
 ## URLs
-`django.urls.reverse` [ex.]({% link notes/Django/App-views-(from-model).md %}#appnamemodelspy)
+`django.urls.reverse`
 
-`django.urls.reverse_lazy` [ex.]({% link notes/Django/App-views-(from-model).md %}#appnameviewpy)
+`django.urls.reverse_lazy`
 
 ## App scripts
-`.models.ModelName` [ex.]({% link notes/Django/App-views-(from-model).md %}#appnameviewpy)
+`.models.ModelName`
 
-`.views.ViewName` [ex.]({% link notes/Django/New-app-setup.md %}#appnameurlspy)
+`.views.ViewName`
 
 `.forms.FormName`
 
@@ -44,4 +44,4 @@ layout: empty
 
 `django.contrib.auth.logout`
 
-`django.contrib.auth.mixins.LoginRequiredMixin` ex.
+`django.contrib.auth.mixins.LoginRequiredMixin`

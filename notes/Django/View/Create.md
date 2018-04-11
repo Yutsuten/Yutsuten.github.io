@@ -1,6 +1,6 @@
 {% raw %}
 
-# Django: View Edit
+# Django: View Create
 
 ## From model
 
@@ -9,10 +9,10 @@
 from django.views import generic
 from . import models
 
-class AppnameEditView(generic.edit.UpdateView):
+class AppnameCreateView(generic.edit.CreateView):
     model = models.ModelName
     fields = ['field1', 'field2']
-    template_name = 'appname/edit.html'
+    template_name = 'appname/form.html'
 ```
 
 ## Model + Form
@@ -22,10 +22,11 @@ class AppnameEditView(generic.edit.UpdateView):
 from django.views import generic
 from . import models, forms
 
-class AppnameEditView(generic.edit.UpdateView):
+class AppnameCreateView(generic.edit.CreateView):
     model = models.ModelName
     form_class = forms.ModelNameForm
-    template_name = 'appname/edit.html'
+    template_name = 'appname/form.html'
 ```
 
 {% endraw %}
+
