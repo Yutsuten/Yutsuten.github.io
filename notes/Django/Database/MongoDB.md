@@ -1,6 +1,6 @@
 {% raw %}
 
-# Django: MongoDB setup
+# Django: Database MongoDB
 
 ## Djongo
 

@@ -1,15 +1,14 @@
----
-layout: empty
----
-
 {% raw %}
 
-# Django: Using shell
+# Django: Terminal Shell
 
-#### Terminal
+## Creating user:
+```python
+from django.contrib.auth.models import User
+user = User.objects.create_user('myusername', password='password')
+user.save()
 ```
-python manage.py shell
-```
+[Reference](https://docs.djangoproject.com/en/2.0/ref/contrib/auth/)
 
 ## Creating data
 ```python
@@ -42,4 +41,5 @@ q.choice_set.create(choice_text='Not much', votes=0)
 q.choice_set.all()
 q.choice_set.count()
 ```
+
 {% endraw %}

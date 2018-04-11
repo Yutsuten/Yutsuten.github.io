@@ -1,10 +1,6 @@
----
-layout: empty
----
-
 {% raw %}
 
-# Django: Tests
+# Django: Test Integration
 
 #### tests.py
 ```python
