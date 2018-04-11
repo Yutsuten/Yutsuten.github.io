@@ -1,10 +1,6 @@
----
-layout: empty
----
-
 {% raw %}
 
-# Django: Authentication
+# Django: Authentication Manual
 
 #### login.html
 ```python

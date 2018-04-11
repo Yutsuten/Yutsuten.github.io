@@ -1,10 +1,6 @@
----
-layout: empty
----
-
 {% raw %}
 
-# Django: Authentication
+# Django: Authentication Automatic
 
 ## Setting up
 
@@ -66,16 +62,6 @@ class CustomAuthenticationForm(AuthenticationForm):
         </div>
     </div>
 </div>
-```
-
-## Require login
-#### views.py
-```python
-from django.contrib.auth.mixins import LoginRequiredMixin
-
-class IndexView(LoginRequiredMixin, generic.ListView):
-    model = models.Project
-    template_name = 'projects/index.html'
 ```
 
 {% endraw %}
