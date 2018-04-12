@@ -41,6 +41,9 @@ db.groups.find(
 # Update
 db.groups.update({_id: 'f43nm39f'}, {$set: {'name': 'cool_party'}})
 
+# Remove
+db.groups.remove({_id: 'f43nm39f'})
+
 # Drop
 db.groups.drop() # Drop collection
 db.dropDatabase() # Drop current database
