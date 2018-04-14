@@ -35,3 +35,9 @@ a, a:hover {
   color: #268BD2;
 }
 
+ul {
+  margin-left: 0;
+  padding-left: 18px;
+  list-style-type: square;
+}
+
