@@ -89,6 +89,13 @@
   width: 75%;
 }
 
+.resume .resume-content .section {
+  padding-top: 1px;
+  margin-top: -1px;
+  padding-bottom: 1px;
+  margin-bottom: -1px;
+}
+
 /* Resume content - card */
 .resume .resume-content .resume-card {
   display: flex;
