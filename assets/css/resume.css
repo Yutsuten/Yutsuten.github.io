@@ -61,12 +61,12 @@
   padding-top: 50px;
 }
 
-.resume .resume-content .menu {
+.resume .resume-content .menu-block {
   width: 25%;
   margin-left: 20px;
 }
 
-.resume .resume-content .menu a {
+.resume .resume-content .menu-block .menu a {
   color: #839496;
   display: block;
   padding: 2px;
@@ -74,9 +74,16 @@
   font-size: 22px;
 }
 
-.resume .resume-content .menu a.active {
+.resume .resume-content .menu-block .menu a.active {
   color: #EEE8D5;
 }
+
+.resume .resume-content .menu-block .menu.affix {
+  top: 20px;
+  position: fixed;
+}
+
+/* Resume content - details */
 
 .resume .resume-content .details {
   width: 75%;
