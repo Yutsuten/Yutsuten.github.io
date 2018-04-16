@@ -1,5 +1,12 @@
 # Javascript
 
+### Check if contains value
+#### index.js
+```javascript
+var myArray = [2, 3, 5]
+console.log(myArray.indexOf(3) != -1)
+```
+
 ### Map
 
 #### index.js
