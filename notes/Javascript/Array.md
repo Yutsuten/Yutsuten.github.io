@@ -16,3 +16,11 @@ var doubles = list.map(num => num * 2);
 // [4, 6, 10, 14]
 ```
 
+### Simple methods
+```javascript
+// Join values into a string
+var list = ['car', 'bike', 'cookie'];
+list.join(' and ');
+// Returs: car and bike and cookie
+```
+
