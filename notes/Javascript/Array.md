@@ -1,4 +1,4 @@
-# Javascript
+# Javascript: Array
 
 ### Check if contains value
 #### index.js
