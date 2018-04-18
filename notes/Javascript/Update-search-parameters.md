@@ -1,10 +1,6 @@
----
-layout: empty
----
-
 {% raw %}
 
-# Javascript: Update search parameters
+# Javascript: How to Update search parameters
 
 ## Simple with no dependencies
 ### Functions
