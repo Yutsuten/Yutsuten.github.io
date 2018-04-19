@@ -1,5 +1,13 @@
 # Javascript: How to Simple ones
 
+### JSON
+#### index.js
+```javascript
+// Object to JSON
+var myObject = {field1: 'hello', field2: [1, 2, 3]};
+var jsonString = JSON.stringify(myObject);
+```
+
 ### Auto-scroll (no animation)
 #### index.js
 ```javascript
