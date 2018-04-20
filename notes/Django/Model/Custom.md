@@ -21,6 +21,7 @@ class Question(models.Model):
     )
 
     question_text = models.CharField(max_length=200)
+    description = models.CharField(max_length=100, null=True, blank=True)
     pub_date = models.DateTimeField('date published')
     difficulty = models.IntegerField(choices=DIFFICULTY_CHOICES, default=EASY)
     created = models.DateTimeField(auto_now_add=True, editable=False)
