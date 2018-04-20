@@ -1,7 +1,3 @@
----
-layout: empty
----
-
 # Amazon: Zappa
 
 ## Settings for big projects (>50MB)
@@ -61,9 +57,13 @@ STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 ```
 
 #### zappa-update.sh
+
+Reference: [link](https://edgarroman.github.io/zappa-django-guide/walk_database/)
+
 ```
 python manage.py collectstatic --noinput &&
-zappa update dev
+zappa update dev &&
+zappa manage dev migrate
 ```
 
 #### console
