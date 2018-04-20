@@ -6,6 +6,9 @@
 // Object to JSON
 var myObject = {field1: 'hello', field2: [1, 2, 3]};
 var jsonString = JSON.stringify(myObject);
+
+// JSON to Object
+myObject = JSON.parse(jsonString);
 ```
 
 ### Auto-scroll (no animation)
