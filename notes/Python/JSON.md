@@ -1,7 +1,3 @@
----
-layout: empty
----
-
 {% raw %}
 
 # Python: JSON
@@ -10,7 +6,14 @@ layout: empty
 ```python
 include json
 
-json.dumps({'foo': 'boo'}) # Returns an string
+jsonString = json.dumps({'foo': 'boo'})
+```
+
+## Load a JSON into a object
+```python
+include json
+
+decodedInfo = json.loads(jsonString)
 ```
 
 {% endraw %}
