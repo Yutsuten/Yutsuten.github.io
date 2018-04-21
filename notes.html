@@ -11,8 +11,8 @@ permalink: notes
 
 {% for site_page in site.pages %}
 {% assign page_path = site_page.path | split: '/' %}
-{% if page_path[0] == 'notes' and page_path.size > 2 %}
-{% assign note_path = page_path | join: '/' | remove_first: 'notes/' | remove: '.md' | split: '/' %}
+{% if page_path[0] == 'pnotes' and page_path.size > 2 %}
+{% assign note_path = page_path | join: '/' | remove_first: 'pnotes/' | remove: '.md' | split: '/' %}
 
 {% unless first_level contains note_path[0] %}
 {% capture first_level %}{{ first_level }}|{{ note_path[0] }}{% endcapture %}
@@ -71,8 +71,8 @@ permalink: notes
   </div>
   {% for site_page in site.pages %}
   {% assign page_path = site_page.path | split: '/' %}
-  {% if page_path[0] == 'notes' and page_path.size > 2 %}
-  {% assign page_id = page_path | join: '-' | remove_first: 'notes-' | remove: '.md' %}
+  {% if page_path[0] == 'pnotes' and page_path.size > 2 %}
+  {% assign page_id = page_path | join: '-' | remove_first: 'pnotes-' | remove: '.md' %}
   <div class="note-content" id="{{ page_id }}" style="display: none;">
     <h1>{{ page_id | replace_first: '-', ': ' | replace: '-', ' ' }}</h1>
     {{ site_page.content | markdownify }}
