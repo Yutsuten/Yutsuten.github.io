@@ -5,3 +5,9 @@ $('#menu a').click(function(e) {
 
 $('#content').html($('#content').html().replace(/{% raw %}/g, '').replace(/{% endraw %}/g, ''));
 
+if (location.hash) {
+  $('div' + location.hash).show();
+} else {
+  $('div#home').show();
+}
+
