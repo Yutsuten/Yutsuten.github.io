@@ -65,7 +65,7 @@ permalink: notes
   {% endfor %}
 </div>
 <div class="col-md-9 scroll-block" id="content">
-  <div id="home">
+  <div class="note-content" id="home" style="display: none;">
     <h1>Home</h1>
     Welcome to my programming notes!
   </div>
@@ -73,7 +73,7 @@ permalink: notes
   {% assign page_path = site_page.path | split: '/' %}
   {% if page_path[0] == 'notes' and page_path.size > 2 %}
   {% assign page_id = page_path | join: '-' | remove_first: 'notes-' | remove: '.md' %}
-  <div id="{{ page_id }}">
+  <div class="note-content" id="{{ page_id }}" style="display: none;">
     <h1>{{ page_id | replace_first: '-', ': ' | replace: '-', ' ' }}</h1>
     {{ site_page.content | markdownify }}
   </div>
