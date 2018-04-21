@@ -1,7 +1,5 @@
 {% raw %}
 
-# Django: Template Extend
-
 #### base.html
 ```html
 <h1>Common text</h1>
@@ -17,4 +15,3 @@
 ```
 
 {% endraw %}
-

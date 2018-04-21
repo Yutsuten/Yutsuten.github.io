@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: Add template directory
-
 #### settings.py
 ```python
 TEMPLATES = [
@@ -13,4 +9,3 @@ TEMPLATES = [
 ]
 ```
 
-{% endraw %}

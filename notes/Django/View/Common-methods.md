@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: View Common methods
-
 #### appname/views.py
 ```python
 from django.views import generic
@@ -26,4 +22,3 @@ class AppnameIndexView(generic.TemplateView):
         return context
 ```
 
-{% endraw %}

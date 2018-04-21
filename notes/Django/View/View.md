@@ -1,6 +1,3 @@
-{% raw %}
-
-# Django: View View (Class)
 #### views.py
 ```python
 from django.views import View
@@ -17,6 +14,4 @@ class CustomView(View):
         print(post_data.get('field1'))
         return HttpResponseRedirect(reverse_lazy('appname:viewname'))
 ```
-
-{% endraw %}
 

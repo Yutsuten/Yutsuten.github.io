@@ -1,7 +1,3 @@
-{% raw %}
-
-# Flask: Install and setup
-
 ## Install
 ### Terminal
 ```
@@ -30,4 +26,3 @@ export FLASK_DEBUG=1
 flask run
 ```
 
-{% endraw %}

@@ -1,5 +1,3 @@
-# Javascript: Object
-
 ### Loop all keys
 #### index.js
 ```javascript

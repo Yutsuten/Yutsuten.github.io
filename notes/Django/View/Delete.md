@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: View Delete
-
 #### appname/views.py
 ```python
 from django.views import generic
@@ -14,4 +10,3 @@ class DeleteView(generic.edit.DeleteView):
     success_url = reverse_lazy('appname:index')
 ```
 
-{% endraw %}

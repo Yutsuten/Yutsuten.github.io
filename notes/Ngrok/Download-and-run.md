@@ -1,7 +1,3 @@
-{% raw %}
-
-# Ngrok: Download and run
-
 ## Download
 - [ngrok](https://ngrok.com/download)
 
@@ -17,4 +13,3 @@
 ngrok http <port>
 ```
 
-{% endraw %}

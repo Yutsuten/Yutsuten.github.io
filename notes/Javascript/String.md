@@ -1,5 +1,3 @@
-# Javascript: String
-
 ### Split
 
 #### index.js

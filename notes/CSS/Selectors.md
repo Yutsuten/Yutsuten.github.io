@@ -1,5 +1,3 @@
-# CSS: Selectors
-
 #### index.css
 ```css
 /* Select even or odd */

@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: XML with ElementTree
-
 ### views.py
 ```python
 import xml.etree.ElementTree as ET
@@ -19,4 +15,3 @@ result = ET.tostring(root).decode('utf-8')
 
 [Reference](http://effbot.org/zone/element-index.htm)
 
-{% endraw %}

@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: File manipulation
-
 ### views.py
 ```python
 def write_binary(data):
@@ -9,4 +5,3 @@ def write_binary(data):
         audio_file.write(data)
 ```
 
-{% endraw %}

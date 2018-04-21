@@ -1,6 +1,3 @@
-{% raw %}
-
-# Python: Pygal
 [Official website](http://pygal.org/en/stable/)
 
 ## Install
@@ -29,4 +26,3 @@ return flask.send_file('tmp/result.svg', mimetype='image/svg+xml')
 </figure>
 ```
 
-{% endraw %}

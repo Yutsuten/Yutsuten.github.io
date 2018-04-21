@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: Test Integration
-
 #### tests.py
 ```python
 from django.test import TestCase
@@ -52,4 +48,3 @@ python manage.py test projects
 coverage run --source='.' manage.py test projects
 ```
 
-{% endraw %}

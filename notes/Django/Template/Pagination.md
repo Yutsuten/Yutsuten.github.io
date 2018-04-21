@@ -1,7 +1,5 @@
 {% raw %}
 
-# Django: Pagination
-
 ### index.html
 ```html
 <nav aria-label="...">

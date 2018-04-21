@@ -1,5 +1,3 @@
-# MongoDB: Authentication
-
 ## Roles
 **Reference:** [Link](https://docs.mongodb.com/manual/reference/built-in-roles/)
 

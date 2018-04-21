@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: Form Custom
-
 #### forms.py
 from django import forms
 
@@ -11,4 +7,3 @@ class SimpleForm(forms.Form):
     field2 = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
 ```
 
-{% endraw %}

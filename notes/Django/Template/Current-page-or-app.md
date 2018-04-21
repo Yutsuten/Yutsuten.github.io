@@ -1,7 +1,5 @@
 {% raw %}
 
-# Django: Template Current page or app
-
 Ref: [request.resolver_match](https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#django.urls.ResolverMatch)
 
 #### index.html

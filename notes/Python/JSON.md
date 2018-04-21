@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: JSON
-
 ## Encode a dictionary into JSON
 ```python
 include json
@@ -16,4 +12,3 @@ include json
 decodedInfo = json.loads(jsonString)
 ```
 
-{% endraw %}

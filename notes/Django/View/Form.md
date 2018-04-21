@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: View Form
-
 Ref: [https://docs.djangoproject.com/en/2.0/ref/class-based-views/mixins-editing/](https://docs.djangoproject.com/en/2.0/ref/class-based-views/mixins-editing/)
 
 #### appname/views.py
@@ -25,4 +21,3 @@ class SimpleFormView(generic.edit.FormView):
         return super().form_valid(form)
 ```
 
-{% endraw %}

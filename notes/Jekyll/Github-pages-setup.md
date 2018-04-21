@@ -1,7 +1,3 @@
-{% raw %}
-
-# Jekyll: Github-pages setup
-
 ## Install bundler
 #### Console
 ```
@@ -27,4 +23,3 @@ bundle exec jekyll build --watch
 bundle exec jekyll serve
 ```
 
-{% endraw %}

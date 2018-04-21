@@ -1,5 +1,3 @@
-# MongoDB: Replication
-
 ## Deploy a Replica Set for Production (same server)
 ```shell
 # Create 3 separate folders for each instance (uses the current directory of the terminal)

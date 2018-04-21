@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: Basic syntax
-
 ## Comment
 ```python
 # Single line comment
@@ -136,4 +132,3 @@ print("%.2f" % my_float)
 print("Title", variable) # Title <variable>
 ```
 
-{% endraw %}

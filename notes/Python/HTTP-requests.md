@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: HTTP requests
-
 ## Module
 ```
 pip install requests
@@ -33,4 +29,3 @@ print(response.json())
 
 [Ref](http://docs.python-requests.org/en/master/)
 
-{% endraw %}

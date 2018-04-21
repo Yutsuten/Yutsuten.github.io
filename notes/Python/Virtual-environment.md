@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: Virtual environment
-
 ## Install (python 2)
 ```shell
 virtualenv --python=/Users/username/.pyenv/shims/python2.7 venv
@@ -20,4 +16,3 @@ source venv/bin/activate
 deactivate
 ```
 
-{% endraw %}

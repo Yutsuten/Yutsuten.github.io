@@ -1,7 +1,5 @@
 {% raw %}
 
-# Django: Template Details
-
 #### details.html
 ```html
 <h2>{{ project.name }}</h2>

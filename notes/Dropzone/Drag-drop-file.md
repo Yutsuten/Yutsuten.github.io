@@ -1,5 +1,3 @@
-# Dropzone: Drag & drop file
-
 #### index.html
 ```html
 <div class="drag-and-drop-box">

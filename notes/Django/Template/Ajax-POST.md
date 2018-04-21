@@ -1,6 +1,3 @@
-{% raw %}
-
-# Django: Template Ajax POST
 Adding the CSRF to the post so django accepts the request.
 
 ### script.js
@@ -16,4 +13,3 @@ $.post(url, {
 });
 ```
 
-{% endraw %}

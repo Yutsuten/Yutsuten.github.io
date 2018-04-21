@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: Admin Site
-
 Admin site: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
 #### appname/admin.py
@@ -12,4 +8,3 @@ from . import models
 admin.site.register(models.ModelName)
 ```
 
-{% endraw %}

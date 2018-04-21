@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: View Details
-
 #### appname/views.py
 ```python
 from django.views import generic
@@ -12,6 +8,4 @@ class AppnameDetailView(generic.DetailView):
     template_name = 'appname/details.html'
     # appname is set on template scope
 ```
-
-{% endraw %}
 

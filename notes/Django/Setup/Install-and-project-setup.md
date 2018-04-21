@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: Install and project setup
-
 ## Install Django
 #### Terminal
 ```
@@ -55,4 +51,3 @@ TIME_ZONE = 'Asia/Tokyo'
 python manage.py migrate
 ```
 
-{% endraw %}

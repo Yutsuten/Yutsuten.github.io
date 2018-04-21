@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: URL Main app
-
 #### main/urls.py
 ```python
 from django.contrib import admin
@@ -13,4 +9,3 @@ urlpatterns = [
 ]
 ```
 
-{% endraw %}

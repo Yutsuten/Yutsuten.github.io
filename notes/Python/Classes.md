@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: Classes
-
 ```python
 class MyClass(object):
   property = 10
@@ -21,4 +17,3 @@ myclass = MyClass(5)
 print(myclass.customMethod(10)) # => 50
 ```
 
-{% endraw %}

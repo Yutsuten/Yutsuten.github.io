@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: Database MongoDB
-
 ## Djongo
 
 ### Install
@@ -32,4 +28,3 @@ DATABASES = {
 python manage.py migrate
 ```
 
-{% endraw %}

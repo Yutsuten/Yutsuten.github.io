@@ -1,7 +1,5 @@
 {% raw %}
 
-# Django: Template Form
-
 #### form.html
 ```html
 <form action="" method="post">{% csrf_token %}
@@ -19,4 +17,3 @@
 ```
 
 {% endraw %}
-

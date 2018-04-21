@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: Form Extend model
-
 #### forms.py
 ```python
 from django import forms
@@ -17,4 +13,3 @@ class ModelNameForm(forms.ModelForm):
         }
 ```
 
-{% endraw %}

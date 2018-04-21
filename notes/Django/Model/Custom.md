@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: Model Custom
-
 #### appname/models.py
 ```python
 from django.db import models
@@ -63,4 +59,3 @@ class Choice(models.Model):
         verbose_name = 'Pool Choice'
 ```
 
-{% endraw %}

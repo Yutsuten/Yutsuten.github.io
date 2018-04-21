@@ -1,7 +1,5 @@
 {% raw %}
 
-# Django: Template Load static file
-
 #### template.html
 ```html
 {% load static %}

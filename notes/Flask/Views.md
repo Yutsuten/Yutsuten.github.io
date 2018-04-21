@@ -1,7 +1,3 @@
-{% raw %}
-
-# Flask: Views
-
 ### views.py
 ```python
 from flask import Flask
@@ -23,6 +19,4 @@ def answer_call():
     if request.method == 'DELETE':
         return 'Delete'
 ```
-
-{% endraw %}
 

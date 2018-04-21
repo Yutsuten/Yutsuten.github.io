@@ -1,7 +1,3 @@
-{% raw %}
-
-# Paper.js: Path manipulation
-
 ## Creating lines
 #### canvas-draw.js
 ```javascript
@@ -44,4 +40,3 @@ var circle = new Path.Circle({
 });
 ```
 
-{% endraw %}

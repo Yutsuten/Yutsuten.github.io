@@ -1,7 +1,3 @@
-{% raw %}
-
-# Javascript: How to Update search parameters
-
 ## Simple with no dependencies
 ### Functions
 ```javascript
@@ -57,4 +53,3 @@ query.rows = 10;
 location.search = queryString.stringify(query);
 ```
 
-{% endraw %}

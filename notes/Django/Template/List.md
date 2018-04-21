@@ -1,7 +1,5 @@
 {% raw %}
 
-# Django: Template List
-
 #### index.html
 ```html
 {% if modelname_list %}

@@ -1,7 +1,5 @@
 {% raw %}
 
-# Django: Setup Internationalization and localization
-
 Ref: [link](https://docs.djangoproject.com/en/2.0/topics/i18n/)
 
 #### settings.py

@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: ReportLab
-
 ## Font for Japanese
 [https://ipafont.ipa.go.jp/#jp](https://ipafont.ipa.go.jp/#jp)
 
@@ -52,6 +48,4 @@ parts.append(table)
 
 doc.build(parts)
 ```
-
-{% endraw %}
 

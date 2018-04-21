@@ -1,5 +1,3 @@
-# MongoDB: Dump
-
 ```shell
 # Simple way, all defaults
 mongodump

@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: List Basic
-
 #### appname/views.py
 ```python
 from django.views import generic
@@ -15,4 +11,3 @@ class AppnameIndexView(generic.ListView):
     paginate_by = 5 # Optional: To paginate
 ```
 
-{% endraw %}

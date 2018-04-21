@@ -1,7 +1,3 @@
-{% raw %}
-
-# Flask: Responses
-
 ## Respond with custom headers
 ### views.py
 ```python
@@ -55,4 +51,3 @@ def post_data():
     return flask.jsonify({'success': True})
 ```
 
-{% endraw %}

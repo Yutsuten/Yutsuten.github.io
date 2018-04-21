@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: Multiple versions
-
 ## Pyenv
 [GitHub](https://github.com/pyenv/pyenv)
 
@@ -30,4 +26,3 @@ pyenv local 3.6.4
 pyenv global 3.6.4
 ```
 
-{% endraw %}

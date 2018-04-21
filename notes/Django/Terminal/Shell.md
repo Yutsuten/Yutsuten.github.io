@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: Terminal Shell
-
 ## Creating user:
 ```python
 from django.contrib.auth.models import User
@@ -42,4 +38,3 @@ q.choice_set.all()
 q.choice_set.count()
 ```
 
-{% endraw %}

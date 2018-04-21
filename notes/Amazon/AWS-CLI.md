@@ -1,5 +1,3 @@
-# Amazon: AWS CLI
-
 ## Install
 ```
 sudo pip install awscli

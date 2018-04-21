@@ -1,5 +1,3 @@
-# Django: Common imports
-
 ## Utils
 `django.utils.timezone`
 

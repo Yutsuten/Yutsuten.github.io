@@ -7,3 +7,6 @@ $('#menu a').click(function(e) {
     return false;
   }
 });
+
+$('#content').html($('#content').html().replace(/{% raw %}/g, '').replace(/{% endraw %}/g, ''));
+

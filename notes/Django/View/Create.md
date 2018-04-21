@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: View Create
-
 ## From model
 
 #### appname/views.py
@@ -35,6 +31,4 @@ class AppnameCreateView(generic.edit.CreateView):
     form_class = forms.ModelNameForm
     template_name = 'appname/form.html'
 ```
-
-{% endraw %}
 

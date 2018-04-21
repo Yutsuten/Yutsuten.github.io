@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: Terminal manage.py commands
-
 #### Terminal
 ```shell
 # Run server
@@ -20,4 +16,3 @@ python manage.py createsuperuser
 python manage.py shell
 ```
 
-{% endraw %}

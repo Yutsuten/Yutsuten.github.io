@@ -1,5 +1,3 @@
-# Amazon: Zappa
-
 ## Settings for big projects (>50MB)
 ### Flask project
 

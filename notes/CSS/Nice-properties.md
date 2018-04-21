@@ -1,5 +1,3 @@
-# CSS: Nice properties
-
 #### index.css
 ```css
 /* Background with gradient */

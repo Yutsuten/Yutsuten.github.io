@@ -1,5 +1,3 @@
-# Javascript: How to Simple ones
-
 ### JSON
 #### index.js
 ```javascript

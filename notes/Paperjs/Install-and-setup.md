@@ -1,7 +1,3 @@
-{% raw %}
-
-# Paper.js: Install and setup
-
 ## Install
 [Paper.js download](http://paperjs.org/download/)
 
@@ -25,4 +21,3 @@ var myPath = new Path();
 // Do something with the path
 ```
 
-{% endraw %}

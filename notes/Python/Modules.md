@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: Modules
-
 ## Importing
 ```python
 # Extern modules
@@ -29,4 +25,3 @@ import random
 random.randint(1, 6)
 ```
 
-{% endraw %}

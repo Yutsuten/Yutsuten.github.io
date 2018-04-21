@@ -1,7 +1,3 @@
-{% raw %}
-
-# MongoDB: Basic commands
-
 ## Open mongo
 ```shell
 mongo
@@ -46,4 +42,3 @@ db.dropDatabase() # Drop current database
 
 ```
 
-{% endraw %}

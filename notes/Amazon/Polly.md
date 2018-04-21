@@ -1,7 +1,3 @@
-{% raw %}
-
-# Amazon: Polly
-
 ## Install
 ```
 pip install boto3
@@ -22,4 +18,3 @@ def get_answer_mp3():
     return 'site.com/sound.mp3'
 ```
 
-{% endraw %}

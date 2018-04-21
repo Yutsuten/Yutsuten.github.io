@@ -1,7 +1,5 @@
 {% raw %}
 
-# Django: Authentication Automatic
-
 ## Setting up
 
 #### settings.py

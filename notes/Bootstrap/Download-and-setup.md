@@ -1,7 +1,3 @@
-{% raw %}
-
-# Bootstrap: Download and setup
-
 ## Download
 - [jQuery](https://jquery.com/download/) (Requirement)
 - [Popper.js](https://github.com/FezVrasta/popper.js/releases) (Requirement)
@@ -41,4 +37,3 @@ static/libs/
 </html>
 ```
 
-{% endraw %}

@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: Authentication Require permission
-
 Reference: [link](https://docs.djangoproject.com/en/1.11/topics/auth/default/#default-permissions)
 
 #### views.py
@@ -23,4 +19,3 @@ class CreateView(PermissionRequiredMixin, generic.edit.CreateView):
 - appname.change_modelname
 - appname.delete_modelname
 
-{% endraw %}

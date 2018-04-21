@@ -1,0 +1,82 @@
+---
+layout: base
+redirect_from: "/programming-notes/"
+title: Notes
+permalink: notes
+---
+
+{% assign first_level = '' %}
+{% assign second_level = '' %}
+{% assign pages_full_path = '' %}
+
+{% for site_page in site.pages %}
+{% assign page_path = site_page.path | split: '/' %}
+{% if page_path[0] == 'notes' and page_path.size > 2 %}
+{% assign note_path = page_path | join: '/' | remove_first: 'notes/' | remove: '.md' | split: '/' %}
+
+{% unless first_level contains note_path[0] %}
+{% capture first_level %}{{ first_level }}|{{ note_path[0] }}{% endcapture %}
+{% endunless %}
+
+{% if note_path.size > 2 %}
+{% assign tmp_second_level = note_path[0] | append: '/' | append: note_path[1] %}
+{% unless second_level contains tmp_second_level %}
+{% capture second_level %}{{ second_level }}|{{ tmp_second_level }}{% endcapture %}
+{% endunless %}
+{% endif %}
+
+{% capture pages_full_path %}{{ pages_full_path }}|{{ note_path | join: '/' }}{% endcapture %}
+
+{% endif %}
+{% endfor %}
+
+{% assign first_level_list = first_level | remove_first: '|' | split: '|' %}
+{% assign second_level_list = second_level | remove_first: '|' | split: '|' %}
+{% assign pages_full_path_list = pages_full_path | remove_first: '|' | split: '|' %}
+
+<div class="col-md-3 scroll-block" id="menu">
+  {% for first_level in first_level_list %}
+  <h4>{{ first_level }}</h4>
+
+  <ul>
+    {% for second_level in second_level_list %}
+    {% assign second_level_steps = second_level | split: '/' %}
+    {% if first_level == second_level_steps[0] %}
+    <li>{{ second_level_steps[1] }}</li>
+    <ul>
+      {% for page_full_path in pages_full_path_list %}
+      {% assign page_full_path_steps = page_full_path | split: '/' %}
+      {% if first_level == page_full_path_steps[0] and second_level_steps[1] == page_full_path_steps[1] %}
+      <li><a href="#{{ page_full_path_steps | join: '-' }}">{{ page_full_path_steps[2] | replace: '-', ' ' }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+
+    {% for page_full_path in pages_full_path_list %}
+    {% assign page_full_path_steps = page_full_path | split: '/' %}
+    {% if page_full_path_steps.size == 2 and first_level == page_full_path_steps[0] %}
+    <li><a href="#{{ page_full_path_steps | join: '-' }}">{{ page_full_path_steps[1] | replace: '-', ' ' }}</a></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% endfor %}
+</div>
+<div class="col-md-9 scroll-block" id="content">
+  <div id="home">
+    <h1>Home</h1>
+    Welcome to my programming notes!
+  </div>
+  {% for site_page in site.pages %}
+  {% assign page_path = site_page.path | split: '/' %}
+  {% if page_path[0] == 'notes' and page_path.size > 2 %}
+  {% assign page_id = page_path | join: '-' | remove_first: 'notes-' | remove: '.md' %}
+  <div id="{{ page_id }}">
+    <h1>{{ page_id | replace_first: '-', ': ' | replace: '-', ' ' }}</h1>
+    {{ site_page.content | markdownify }}
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>

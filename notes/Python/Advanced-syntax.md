@@ -1,7 +1,3 @@
-{% raw %}
-
-# Python: Advanced syntax
-
 ## List comprehension
 ```python
 # Three parts
@@ -30,4 +26,3 @@ my_list = [x for x in range(10)]
 print(list(filter(lambda x: x % 2), my_list))
 ```
 
-{% endraw %}

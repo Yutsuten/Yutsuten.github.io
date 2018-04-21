@@ -1,7 +1,3 @@
-{% raw %}
-
-# Django: View Edit
-
 ## From model
 
 #### appname/views.py
@@ -36,4 +32,3 @@ class AppnameEditView(generic.edit.UpdateView):
     template_name = 'appname/form.html'
 ```
 
-{% endraw %}
