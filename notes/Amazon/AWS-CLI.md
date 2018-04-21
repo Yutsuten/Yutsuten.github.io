@@ -1,7 +1,3 @@
----
-layout: empty
----
-
 # Amazon: AWS CLI
 
 ## Install

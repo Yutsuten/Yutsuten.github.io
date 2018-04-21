@@ -207,5 +207,13 @@ layout: base
 
 </div>
 <div class="col-md-9 scroll-block" id="content">
-  {{ content }}
+  {% for site_page in site.pages %}
+  {% assign page_path = site_page.path | split: '/' %}
+  {% if page_path[0] == 'notes' and page_path.size > 2 %}
+  {% assign page_id = page_path | join: '-' | remove: 'notes-' | remove: '.md' %}
+  <div id="{{ page_id }}">
+    {{ site_page.content | markdownify }}
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>

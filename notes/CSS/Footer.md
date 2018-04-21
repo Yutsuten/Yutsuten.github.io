@@ -1,7 +1,3 @@
----
-layout: empty
----
-
 # CSS: Footer
 
 Reference: [Link](http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page)

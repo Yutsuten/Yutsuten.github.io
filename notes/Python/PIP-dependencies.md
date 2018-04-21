@@ -1,7 +1,3 @@
----
-layout: empty
----
-
 {% raw %}
 
 # Python: PIP dependencies

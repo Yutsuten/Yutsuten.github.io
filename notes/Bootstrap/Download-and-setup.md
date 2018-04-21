@@ -1,7 +1,3 @@
----
-layout: empty
----
-
 {% raw %}
 
 # Bootstrap: Download and setup

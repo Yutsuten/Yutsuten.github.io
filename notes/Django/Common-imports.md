@@ -1,7 +1,3 @@
----
-layout: empty
----
-
 # Django: Common imports
 
 ## Utils
