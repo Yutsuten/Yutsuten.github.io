@@ -5,6 +5,13 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import Project
 
+def setSession(self):
+    curr_session = self.client.session
+    curr_session.update({
+        'company_id': 1
+    })
+    curr_session.save()
+
 class ProjectIndexViewTests(TestCase):
     def setUp(self):
         if not User.objects.filter(username='test_user'):
@@ -44,6 +51,7 @@ class ProjectCreateViewTests(TestCase):
 
 ### Run tests
 ```
+python manage.py test
 python manage.py test projects
 
 coverage run --source='.' manage.py test projects
