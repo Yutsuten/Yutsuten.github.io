@@ -2,6 +2,7 @@
 ```python
 from django.contrib.auth.models import User
 user = User.objects.create_user('myusername', password='password')
+user = User.objects.create_superuser('myusername', password='password')
 user.save()
 ```
 [Reference](https://docs.djangoproject.com/en/2.0/ref/contrib/auth/)
