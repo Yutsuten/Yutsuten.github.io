@@ -7,7 +7,8 @@ from .models import Project
 
 class ProjectIndexViewTests(TestCase):
     def setUp(self):
-        user = User.objects.create_user('test_user', 'test@test.com', 'test_password')
+        if not User.objects.filter(username='test_user'):
+            user = User.objects.create_superuser('test_user', 'test@test.com', 'test_password')
         self.client.login(username='test_user', password='test_password')
 
     def test_no_projects(self):
