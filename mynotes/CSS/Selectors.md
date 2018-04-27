@@ -12,5 +12,13 @@ td:nth-child(odd) {
 div:nth-of-type(2) {
     background: blue;
 }
+
+/* Before and after pseudo-classes */
+h1::before {
+    content: '- ';
+}
+h1::after {
+    content: ':';
+}
 ```
 
