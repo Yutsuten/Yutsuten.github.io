@@ -72,9 +72,10 @@ permalink: notes
   {% for site_page in site.pages %}
   {% assign page_path = site_page.path | split: '/' %}
   {% if page_path[0] == 'mynotes' and page_path.size > 2 %}
+  {% assign title = page_path | join: ' > ' | remove_first: 'mynotes > ' | remove: '.md' | replace: '-', ' ' %}
   {% assign page_id = page_path | join: '-' | remove_first: 'mynotes-' | remove: '.md' %}
   <div class="note-content" id="{{ page_id }}" style="display: none;">
-    <h1>{{ page_id | replace_first: '-', ': ' | replace: '-', ' ' }}</h1>
+    <h1>{{ title }}</h1>
     {{ site_page.content | markdownify }}
   </div>
   {% endif %}
