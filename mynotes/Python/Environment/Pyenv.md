@@ -1,8 +1,8 @@
-## Pyenv
-[GitHub](https://github.com/pyenv/pyenv)
+[pyenv](https://github.com/pyenv/pyenv) lets you easily switch between multiple versions of Python.
 
-### Install
-[GitHub](https://github.com/pyenv/pyenv-installer)
+### Installing
+[Guide](https://github.com/pyenv/pyenv-installer)
+
 #### Terminal
 ```
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
@@ -16,7 +16,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
-### Add new python version
+### Usage
 #### Terminal
 ```
 pyenv install 3.6.4

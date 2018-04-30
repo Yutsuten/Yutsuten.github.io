@@ -1,3 +1,5 @@
+Generate and manipulate XML.
+
 ### views.py
 ```python
 import xml.etree.ElementTree as ET

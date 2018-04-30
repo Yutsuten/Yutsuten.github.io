@@ -39,6 +39,13 @@ permalink: notes
   <h4>{{ first_level }}</h4>
 
   <ul>
+    {% for page_full_path in pages_full_path_list %}
+    {% assign page_full_path_steps = page_full_path | split: '/' %}
+    {% if page_full_path_steps.size == 2 and first_level == page_full_path_steps[0] %}
+    <li><a href="#{{ page_full_path_steps | join: '-' }}">{{ page_full_path_steps[1] | replace: '-', ' ' }}</a></li>
+    {% endif %}
+    {% endfor %}
+
     {% for second_level in second_level_list %}
     {% assign second_level_steps = second_level | split: '/' %}
     {% if first_level == second_level_steps[0] %}
@@ -51,13 +58,6 @@ permalink: notes
       {% endif %}
       {% endfor %}
     </ul>
-    {% endif %}
-    {% endfor %}
-
-    {% for page_full_path in pages_full_path_list %}
-    {% assign page_full_path_steps = page_full_path | split: '/' %}
-    {% if page_full_path_steps.size == 2 and first_level == page_full_path_steps[0] %}
-    <li><a href="#{{ page_full_path_steps | join: '-' }}">{{ page_full_path_steps[1] | replace: '-', ' ' }}</a></li>
     {% endif %}
     {% endfor %}
   </ul>
