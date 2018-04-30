@@ -1,25 +1,3 @@
-## Roles
-**Reference:** [Link](https://docs.mongodb.com/manual/reference/built-in-roles/)
-
-#### User
-- read
-- readWrite
-
-#### Admin
-- userAdmin
-- dbAdmin
-- dbOwner
-
-#### Users in admin database
-- readAnyDatabase
-- readWriteAnyDatabase
-- userAdminAnyDatabase
-- dbAdminAnyDatabase
-
-#### Superuser
-- root
-
-
 ## Enabling Authentication
 
 ### Create User Administrator
@@ -102,3 +80,24 @@ db.updateUser(
 )
 ```
 
+
+## Roles
+**Reference:** [Link](https://docs.mongodb.com/manual/reference/built-in-roles/)
+
+#### User
+- read
+- readWrite
+
+#### Admin
+- userAdmin
+- dbAdmin
+- dbOwner
+
+#### Users in admin database
+- readAnyDatabase
+- readWriteAnyDatabase
+- userAdminAnyDatabase
+- dbAdminAnyDatabase
+
+#### Superuser
+- root
