@@ -1,5 +1,15 @@
 #### index.js
 ```javascript
+// Instantiate
+var now = new Date();
+var anotherDay = new Date('2018-04-30');
+var aMonth = new Date('2018/04');
+
+// ISO standart (UTC timezone)
+now.toISOString(); // YYYY-MM-DDTHH:mm:ss.sssZ
+now.toISOString().split('T')[0]; // YYYY-MM-DD
+
+// YYYY-MM-DD (local timezone)
 function formatDate(date) {
     var d = new Date(date),
         month = '' + (d.getMonth() + 1),
