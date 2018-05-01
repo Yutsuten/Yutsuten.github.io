@@ -53,7 +53,5 @@ class ProjectCreateViewTests(TestCase):
 ```
 python manage.py test
 python manage.py test projects
-
-coverage run --source='.' manage.py test projects
 ```
 
