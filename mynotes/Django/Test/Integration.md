@@ -48,10 +48,3 @@ class ProjectCreateViewTests(TestCase):
         self.assertRedirects(response, reverse('projects:detail', kwargs={'pk': proj.id}))
         self.assertEqual(proj.description, 'The description of my test project.')
 ```
-
-### Run tests
-```
-python manage.py test
-python manage.py test projects
-```
-
