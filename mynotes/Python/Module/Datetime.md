@@ -16,6 +16,8 @@ fromisostring = datetime.datetime.strptime('2018-04-30', '%Y-%m-%d')
 fromiso8601 = dateparser.parse('2018-04-30T06:37:10.751Z').replace(tzinfo=tz.tzutc()).astimezone(tz.tzlocal())
 fromiso8601 = dateparser.parse('2018-04-30T06:37:10.751Z').replace(tzinfo=tz.gettz('UTC')).astimezone(tz.gettz('Asia/Tokyo'))
 
+toiso8601 = mydate.isoformat()
+
 now = datetime.datetime.now()
 print(now)
 print(now.year)
