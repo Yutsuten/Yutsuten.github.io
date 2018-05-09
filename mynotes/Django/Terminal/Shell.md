@@ -26,7 +26,6 @@ q = ModelName.objects.filter(difficulty=1).exclude(id__in=[1, 2, 3])
 # Update data
 q = ModelName.objects.get(id=1)
 q.update(question='Whats up?')
-q.save()
 
 # Delete data
 q.delete()
