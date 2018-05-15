@@ -19,6 +19,7 @@ eval "$(pyenv virtualenv-init -)"
 ### Usage
 #### Terminal
 ```
+sudo apt install zlib1g-dev libssl-dev libbz2-dev libreadline-dev libsqlite-dev
 pyenv install 3.6.4
 
 pyenv versions
