@@ -133,6 +133,32 @@ class CompanyView(generic.edit.CreateView):
         return super().form_valid(form)
 ```
 
+### JSON encoding
+```python
+from djongo.models import Model
+from django.forms.models import model_to_dict
+from django.core.serializers.json import DjangoJSONEncoder
+from datetime import date, datetime
+
+def json_serial(obj):
+    """JSON serializer for objects not serializable by default json code"""
+    if isinstance(obj, (datetime, date)):
+        return obj.isoformat()
+    if isinstance(obj, Model):
+        return model_to_dict(obj)
+    raise TypeError("Type %s not serializable" % type(obj))
+
+class JSONEncoder(DjangoJSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, Model):
+            return model_to_dict(obj)
+        return DjangoJSONEncoder.default(self, obj)
+
+# When calling json.dumps or JsonResponse
+json.dumps(data, default=json_serial)
+JsonResponse(context, encoder=JSONEncoder)
+```
+
 
 ### Push changes to database (when there are new tables)
 ```
