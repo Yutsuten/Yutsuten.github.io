@@ -39,6 +39,7 @@ class ProjectCreateViewTests(TestCase):
     def test_create_empty(self):
         response = self.client.post(reverse('projects:create'), {})
         self.assertEqual(response.status_code, 200)
+        self.assertNotEqual(response.status_code, 302)
         self.assertEqual(response.template_name, ['projects/create.html'])
         self.assertContains(response, 'This field is required')
 
