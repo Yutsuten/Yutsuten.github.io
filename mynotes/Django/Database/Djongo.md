@@ -77,12 +77,64 @@ class ProjectView(generic.edit.CreateView):
         setattr(project.meta_data, 'modified_date', timezone.now())
 
         project.save()
-        self.request.session['company_id'] = form.instance.id
+        return super().form_valid(form)
+```
+
+### Embedded Model as Array
+#### models.py
+```python
+from djongo import models
+from django.forms.models import model_to_dict
+
+class PhoneNumber(models.Model):
+    number = models.CharField(max_length=15)
+
+    def __str__(self):
+        return str(model_to_dict(self))
+
+    class Meta:
+        abstract = True
+
+class Company(models.Model):
+    name = models.CharField(max_length=200)
+    phone_numbers = models.ArrayModelField(model_container=PhoneNumber)
+
+    def save(self, *args, **kwargs):
+        if not self.phone_numbers:
+            self.phone_numbers = []
+        super().save(*args, **kwargs)
+```
+
+#### views.py
+```python
+from django.views import generic
+from . import models, forms
+from django.utils import timezone
+
+class CompanyView(generic.edit.CreateView):
+    model = models.Company
+    form_class = forms.CompanyForm # Add phone_numbers to form if it is editable
+    template_name = 'company/create.html' # Add phone_numbers as any other field
+
+    def form_valid(self, form):
+        company = form.save(commit=False)
+
+        company.phone_numbers = []
+
+        phone1 = models.PhoneNumber()
+        phone1.number = '1234-5678'
+        company.phone_numbers.append(phone1)
+
+        phone2 = models.PhoneNumber()
+        phone2.number = '8765-4321'
+        company.phone_numbers.append(phone2)
+
+        company.save()
         return super().form_valid(form)
 ```
 
 
-### Push changes to database
+### Push changes to database (when there are new tables)
 ```
 python manage.py migrate
 ```
