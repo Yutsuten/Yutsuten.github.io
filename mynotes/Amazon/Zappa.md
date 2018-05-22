@@ -2,7 +2,7 @@
 ### Flask project
 
 #### console
-```
+```shell
 pip install packaging setuptools
 ```
 
@@ -37,7 +37,7 @@ pip install packaging setuptools
 ### Django project
 
 #### console
-```
+```shell
 pip install django-storages boto
 ```
 
@@ -58,14 +58,19 @@ STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 Reference: [link](https://edgarroman.github.io/zappa-django-guide/walk_database/)
 
-```
+```shell
 python manage.py collectstatic --noinput &&
 zappa update dev &&
 zappa manage dev migrate
 ```
 
 #### console
-```
+```shell
 ./zappa-update.sh
+```
+
+### Django create super user
+```shell
+zappa invoke --raw dev "from django.contrib.auth.models import User; User.objects.create_superuser('admin', '', 'admin')"
 ```
 
