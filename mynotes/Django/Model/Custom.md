@@ -30,7 +30,9 @@ class Question(models.Model):
         return self.question_text
 
     class Meta:
+        # Change name in Admin
         verbose_name = 'Pool Question'
+        verbose_name_plural = 'Pool Questions'
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
