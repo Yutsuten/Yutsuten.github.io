@@ -16,6 +16,9 @@ var doubles = list.map(num => num * 2);
 
 ### Simple methods
 ```javascript
+// Remove element by index
+array.splice(index, 1);
+
 // Join values into a string
 var list = ['car', 'bike', 'cookie'];
 list.join(' and ');
