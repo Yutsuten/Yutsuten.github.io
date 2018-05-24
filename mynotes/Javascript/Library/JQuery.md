@@ -7,6 +7,9 @@ $('.selector').length;
 $('.selector').addClass('selected');
 $('.selector').removeClass('selected');
 
+// Selected radio box
+$('input[name=group1]:checked').val()
+
 // Events
 $('select').change(function() {
     // Remove element in select
