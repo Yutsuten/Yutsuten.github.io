@@ -8,6 +8,10 @@ var lines = text.split(/\r?\n/);
 
 ### Simple methods
 ```javascript
+// Substring
+myString.substring(initialIndex, finalIndex);
+myString.substr(initialIndex, numChars);
+
 // Remove space from begin and end
 myString.trim();
 ```
