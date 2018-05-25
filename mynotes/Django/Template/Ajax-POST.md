@@ -5,8 +5,11 @@ Adding the CSRF to the post so django accepts the request.
 ```javascript
 var Cookies = require('js-cookie');
 
-data = {field1 = true}
-$.post(url, {data, 'csrfmiddlewaretoken': Cookies.get('csrftoken')}, response => {
+data = {
+    field1 = true,
+    csrfmiddlewaretoken: Cookies.get('csrftoken')
+}
+$.post(url, data, response => {
     console.log(response);
 });
 ```
@@ -29,8 +32,11 @@ function getCookie(name) {
     return cookieValue;
 }
 
-data = {field1 = true}
-$.post(url, {data, 'csrfmiddlewaretoken': getCookie('csrftoken')}, response => {
+data = {
+    field1 = true,
+    csrfmiddlewaretoken: getCookie('csrftoken')
+}
+$.post(url, data, response => {
     console.log(response);
 });
 ```
