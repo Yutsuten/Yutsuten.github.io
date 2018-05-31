@@ -1,6 +1,9 @@
 ## Open mongo
 ```shell
 mongo
+
+# With database name
+mongo my_database
 ```
 
 ### Mongo shell
