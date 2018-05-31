@@ -15,5 +15,8 @@ for (var key in myObject) {
         console.log(key + ': ' + myObject[value]);
     }
 }
+
+// Merge objects
+console.log(Object.assign({'Duck': 'Quack'}, myObject));
 ```
 
