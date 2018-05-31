@@ -5,13 +5,13 @@ var myArray = [2, 3, 5]
 console.log(myArray.indexOf(3) != -1)
 ```
 
-### Map
-
+### Prototype methods
 #### index.js
 ```javascript
 var list = [2, 3, 5, 7];
-var doubles = list.map(num => num * 2);
-// [4, 6, 10, 14]
+var initialValue = 1000; // On reduce, if no initial value is passed, the first value in the array is used
+var doubles = list.map(num => num * 2); // [4, 6, 10, 14]
+var sum = list.reduce((accumulator, current) => accumulator + current, initialValue); // 1017
 ```
 
 ### Simple methods
