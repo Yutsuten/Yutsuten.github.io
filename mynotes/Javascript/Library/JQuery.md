@@ -7,6 +7,10 @@ $('.selector').length;
 $('.selector').addClass('selected');
 $('.selector').removeClass('selected');
 
+// Add and remove attributes
+$('.selector').attr('disabled', '');
+$('.selector').removeAttr('disabled');
+
 // Selected radio box
 $('input[name=group1]:checked').val()
 
