@@ -3,7 +3,7 @@
 # Create 3 separate folders for each instance (uses the current directory of the terminal)
 mkdir -p mongodb/rs0-0  mongodb/rs0-1 mongodb/rs0-2
 
-# Start 3 instances of mongod - hostname is the local IP (not public)
+# Start 3 instances of mongod - hostname is the local IP (not public) (ifconfig)
 mongod --replSet rs0 --port 27018 --bind_ip localhost,<private IP> --dbpath mongodb/rs0-0 --fork --logpath mongodb-0.log
 mongod --replSet rs0 --port 27019 --bind_ip localhost,<private IP> --dbpath mongodb/rs0-1 --fork --logpath mongodb-1.log
 mongod --replSet rs0 --port 27020 --bind_ip localhost,<private IP> --dbpath mongodb/rs0-2 --fork --logpath mongodb-2.log
