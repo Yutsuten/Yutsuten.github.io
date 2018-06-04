@@ -8,6 +8,9 @@ mongod --replSet rs0 --port 27018 --bind_ip localhost,<private IP> --dbpath mong
 mongod --replSet rs0 --port 27019 --bind_ip localhost,<private IP> --dbpath mongodb/rs0-1 --fork --logpath mongodb-1.log
 mongod --replSet rs0 --port 27020 --bind_ip localhost,<private IP> --dbpath mongodb/rs0-2 --fork --logpath mongodb-2.log
 
+# For running in background
+mongod --fork --logpath ~/mongod-rs0.log
+
 # To connect to those instances, use mongo --host <public IP>
 # Settings continue on 'Connect to one instance' bellow
 ```
