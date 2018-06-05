@@ -4,6 +4,11 @@ git add .             # Add all
 git add directory/    # Add all files inside a directory
 git add path/to/file  # Add single file
 
+# See difference
+git diff
+git diff --staged # After git add
+git diff -- path/to/file.txt # Difference of a single file
+
 # Remove files from staging area
 git reset HEAD .
 git reset HEAD directory/
