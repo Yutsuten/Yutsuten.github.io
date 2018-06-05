@@ -25,5 +25,5 @@ print(now.month)
 print(now.day)
 
 # Add a month to date
-date_forecast = now.replace(day=1) + datetime.timedelta(days=32)
+future_date = now.replace(day=1) + datetime.timedelta(days=32)
 ```
