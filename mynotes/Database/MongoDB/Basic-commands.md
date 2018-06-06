@@ -23,6 +23,7 @@ db.groups.insert({'_id': 'f43nm39f', 'name': 'party1', 'type': 'party'})
 db.groups.find({}) # All
 db.groups.find({name: 'party1'}).pretty()
 db.groups.find({name: 'party1'}, {chat: 1}).pretty()
+db.groups.count()
 
 # AND
 db.groups.find(
@@ -47,5 +48,11 @@ db.groups.remove({_id: 'f43nm39f'})
 # Drop
 db.groups.drop() # Drop collection
 db.dropDatabase() # Drop current database
+
+# Rename collection
+db.groups.renameCollection('party')
+
+# Rename field
+db.groups.updateMany({}, {$rename: {'type': 'category'}})
 ```
 
