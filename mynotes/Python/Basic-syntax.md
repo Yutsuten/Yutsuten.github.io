@@ -133,3 +133,9 @@ print("%.2f" % my_float)
 print("Title", variable) # Title <variable>
 ```
 
+## Raise exception
+```python
+if some_condition:
+    raise Exception('Message')
+```
+
