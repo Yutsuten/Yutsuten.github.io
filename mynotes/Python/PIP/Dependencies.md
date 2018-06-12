@@ -1,12 +1,15 @@
-## Save pip dependencies into requirements.txt
 ### Terminal
-```
-pip freeze -l > requirements.txt
-```
+```shell
+# Install
+pip install <package>
 
-## Install requirements from requirements.txt
-### Terminal
-```
+# Upgrade
+pip install --upgrade <package>
+
+# Save pip dependencies into requirements.txt
+pip freeze -l > requirements.txt
+
+# Install requirements from requirements.txt
 pip install -r requirements.txt
 ```
 
