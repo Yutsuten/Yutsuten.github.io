@@ -1,4 +1,8 @@
 ```shell
+# Clone
+git clone git@github:me/name.git    # Normal
+git clone git@github:me/name.git .  # Clone contents inside existing folder
+
 # Add files to staging area
 git add .             # Add all
 git add directory/    # Add all files inside a directory
