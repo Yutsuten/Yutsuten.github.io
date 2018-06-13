@@ -1,4 +1,5 @@
 ### Tips
+- [Checkers](https://github.com/vim-syntastic/syntastic/blob/master/doc/syntastic-checkers.txt)
 - Press ENTER on a error and cursor will jump there;
 
 ### Useful commands
