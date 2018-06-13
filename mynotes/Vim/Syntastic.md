@@ -21,5 +21,8 @@ eslint --init
 
 # Add to vimrc:
 # let g:syntastic_javascript_checkers = ['eslint']
+
+# Disable lint in a single line
+// eslint-disable-line no-unused-vars
 ```
 
