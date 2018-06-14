@@ -1,4 +1,6 @@
 #### tests.py
+Assert methods: [link](https://docs.python.org/3/library/unittest.html#assert-methods)
+
 ```python
 from django.test import TestCase
 from django.urls import reverse
@@ -27,6 +29,7 @@ class ProjectIndexViewTests(TestCase):
         response = self.client.get(reverse('projects:index'))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "There are no projects")
+        self.assertIn('2018', '2018-01')
         self.assertQuerysetEqual(response.context['project_list'], [])
 
 class ProjectCreateViewTests(TestCase):
