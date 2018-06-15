@@ -20,6 +20,13 @@ $('select').change(function() {
     $(this).find('option[value=""]').remove();
 });
 
+// Select: add/remove options
+$('select').empty();
+$('select').append($('<option>', {
+    value: '',
+    text: 'Select an option'
+}));
+
 // Ajax
 $.get(url, function(response) {
     console.log(response);
