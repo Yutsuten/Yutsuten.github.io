@@ -25,4 +25,7 @@ function formatDate(date) {
 
     return [year, month, day].join('-');
 }
+
+// Set day
+now.setDate(3);
 ```
