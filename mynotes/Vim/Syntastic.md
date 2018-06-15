@@ -9,6 +9,9 @@
 
 # Invoke syntax check
 :SyntasticCheck
+
+# Hide errors
+:SyntasticReset
 ```
 
 ### ESLint (Javascript linter)
