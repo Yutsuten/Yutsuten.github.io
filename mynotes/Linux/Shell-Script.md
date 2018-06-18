@@ -1,7 +1,7 @@
 ```shell
 # Check the number of arguments
 if [ "$#" -ne 1 ]; then
-  echo "Usage: $0 [stage]" >&2
+  echo "Usage: $0 [stage]" >&2 # >&2 Echo output to standard error instead of standard out
   exit 1
 fi
 
