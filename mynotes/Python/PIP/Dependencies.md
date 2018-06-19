@@ -3,6 +3,9 @@
 # Install
 pip install <package>
 
+# Uninstall
+pip uninstall <package>
+
 # Upgrade
 pip install --upgrade <package>
 
