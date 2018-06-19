@@ -5,10 +5,12 @@ pip install python-dateutil
 
 ### Usage
 ```python
+from django.utils import timezone
 import datetime
 from dateutil import tz, parser as dateparser
 
 mydate = datetime.datetime(2018, 5, 2, 10, 30)
+datetime.datetime(2018, 6, 2).replace(tzinfo=timezone.utc)
 
 fromtimestamp = datetime.datetime.fromtimestamp(1525069936)
 fromisostring = datetime.datetime.strptime('2018-04-30', '%Y-%m-%d')
