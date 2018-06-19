@@ -39,6 +39,7 @@ db.groups.find(
 
 # Update
 db.groups.update({_id: 'f43nm39f'}, {$set: {'name': 'cool_party'}})
+db.groups.update({_id: 'f43nm39f'}, {$set: {'member_count': NumberInt(2)}})
 db.groups.update({_id: 'f43nm39f'}, {$set: {'settings.type': 'party'}}) # Embedded object
 db.groups.update({_id: 'f43nm39f'}, {$set: {'members.0.name': 'leader'}}) # Array
 
