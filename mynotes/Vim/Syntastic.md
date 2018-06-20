@@ -29,3 +29,9 @@ eslint --init
 // eslint-disable-line no-unused-vars
 ```
 
+### Flake8 (Python linter PEP8)
+[Site](https://github.com/PyCQA/flake8)
+```shell
+pip install flake8
+```
+
