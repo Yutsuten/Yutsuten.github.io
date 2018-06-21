@@ -12,6 +12,7 @@ git add path/to/file  # Add single file
 git diff
 git diff --staged # After git add
 git diff -- path/to/file.txt # Difference of a single file
+git diff commit1 commit2
 
 # Remove files from staging area
 git reset HEAD .
