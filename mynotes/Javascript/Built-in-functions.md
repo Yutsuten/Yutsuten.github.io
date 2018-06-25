@@ -1,5 +1,12 @@
 #### index.js
 ```javascript
+typeof my_variable;
+// 'string'
+// 'number'
+// 'boolean'
+// 'object' (array is object too)
+// 'undefined'
+
 // Run a code 1 time after some time
 setTimeout(() => {
     console.log('Hello');
