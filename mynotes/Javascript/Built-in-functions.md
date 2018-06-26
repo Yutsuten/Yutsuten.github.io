@@ -7,6 +7,8 @@ typeof my_variable;
 // 'object' (array is object too)
 // 'undefined'
 
+isNaN(my_variable);
+
 // Run a code 1 time after some time
 setTimeout(() => {
     console.log('Hello');
