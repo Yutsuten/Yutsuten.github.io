@@ -55,5 +55,11 @@ db.groups.renameCollection('party')
 
 # Rename field
 db.groups.updateMany({}, {$rename: {'type': 'category'}})
+
+# Rename field in collection (loop)
+db.getCollection('my_collection').find({}).forEach(function(obj) {
+    obj.id = NumberInt(obj.id);
+    db.getCollection('my_collection').save(obj);
+})
 ```
 
