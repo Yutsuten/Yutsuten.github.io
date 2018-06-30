@@ -4,6 +4,10 @@
 grep -r 'search_value' .
 grep -r --exclude="*.swp" 'search_value' .
 
+# Removing folder without asking for confirmation
+# -f force
+rm -rf folder/
+
 # Current directory
 pwd
 
