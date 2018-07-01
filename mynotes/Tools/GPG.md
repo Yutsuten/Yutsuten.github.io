@@ -24,6 +24,14 @@ gpg --full-generate-key
 gpg --armor --export 3AA5C34371567BD2
 ```
 
+### Delete key
+```shell
+gpg --recv-keys 3AA5C34371567BD2
+gpg --import [revocation-certificate-file]
+gpg --send-keys 3AA5C34371567BD2
+gpg --delete-secret-key "Full Name"
+```
+
 ### Telling Git about your GPG key
 ```shell
 # Register key to git
@@ -34,4 +42,29 @@ export GPG_TTY=$(tty)
 
 # Sign commits by default
 git config --global commit.gpgsign true
+```
+
+### Backup key
+Ref: [link](https://askubuntu.com/questions/32438/how-to-share-one-pgp-key-on-multiple-machines)
+```shell
+gpg --export-secret-key -a > secretkey.asc
+gpg --import secretkey.asc
+
+# Securely delete it
+shred --remove secretkey.asc
+```
+
+### Encript/decript file
+```shell
+# Encrypt
+gpg -c filename
+
+# Decrypt
+gpg -d filename.gpg
+```
+
+Ref: [Link](https://wiki.debian.org/Subkeys?action=show&redirect=subkeys)
+### Subkey
+```shell
+# TODO
 ```
