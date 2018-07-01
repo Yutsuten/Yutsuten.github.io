@@ -14,4 +14,7 @@ pwd
 # SSH copy folder - terminal is on local
 # Host name is in file ~/.ssh/config
 scp -r folder/to/copy/ user-name@host-name:/home/ubuntu/
+
+# Generate random password
+</dev/urandom tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' | head -c 16  ; echo
 ```
