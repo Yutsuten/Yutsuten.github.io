@@ -43,6 +43,9 @@ db.groups.update({_id: 'f43nm39f'}, {$set: {'member_count': NumberInt(2)}})
 db.groups.update({_id: 'f43nm39f'}, {$set: {'settings.type': 'party'}}) # Embedded object
 db.groups.update({_id: 'f43nm39f'}, {$set: {'members.0.name': 'leader'}}) # Array
 
+db.groups.update({_id: 'f43nm39f'}, {$unset: {'member_count': ''}}) # Remove field
+db.groups.update({'name': 'wat'}, {$unset: {'member_count': ''}}, {multi: true}) # Update multiple
+
 # Remove
 db.groups.remove({_id: 'f43nm39f'})
 
