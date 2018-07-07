@@ -8,4 +8,3 @@ require('bootstrap');
 
 // Load javascript files from assets
 require('./assets/js');
-
