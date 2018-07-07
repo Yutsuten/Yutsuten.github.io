@@ -5,6 +5,7 @@
 # Jekyll
 .sass-cache
 .jekyll-metadata
+Gemfile.lock
 
 # Compiled scripts
 bundle.js
