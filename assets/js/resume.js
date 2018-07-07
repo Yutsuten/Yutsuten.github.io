@@ -17,7 +17,6 @@ if (location.pathname.indexOf('resume') !== -1) {
         if (refElement.position().top - 1 <= scrollValue && refElement.position().top + refElement.height() > scrollValue) {
           $('#menu-center ul li a').removeClass('active');
           currLink.addClass('active');
-          hasActive = true;
         }
         else {
           currLink.removeClass('active');
