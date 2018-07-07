@@ -14,7 +14,7 @@ if (location.pathname.indexOf('resume') !== -1) {
       var currLink = $(this);
       if (currLink.attr('href') != '#top') {
         var refElement = $(currLink.attr('href'));
-        if (refElement.position().top <= scrollValue && refElement.position().top + refElement.height() + 1 > scrollValue) {
+        if (refElement.position().top - 1 <= scrollValue && refElement.position().top + refElement.height() > scrollValue) {
           $('#menu-center ul li a').removeClass('active');
           currLink.addClass('active');
           hasActive = true;
@@ -25,7 +25,7 @@ if (location.pathname.indexOf('resume') !== -1) {
       }
     });
 
-    if (scrollValue < 392) {
+    if (scrollValue < 391) {
       $('a[href="#top"]').addClass('active');
     } else {
       $('a[href="#top"]').removeClass('active');
