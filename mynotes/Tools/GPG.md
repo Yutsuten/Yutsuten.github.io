@@ -56,10 +56,13 @@ shred --remove secretkey.asc
 
 ### Encript/decript file
 ```shell
-# Encrypt
+# Encrypt with a password
 gpg -c filename
 
-# Decrypt
+# Encrypt with recipient's public key
+gpg -e -r recipient@email.com file_name
+
+# Decrypt (with password or private key)
 gpg -d filename.gpg
 ```
 
