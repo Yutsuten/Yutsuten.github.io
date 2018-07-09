@@ -7,6 +7,10 @@
 :noh
 :nohlsearch
 
+# Replace
+:%s/before/after/g      # All file
+:'<,'>s/before/after/g  # Only selection
+
 # Change case of characters
 <visual mode> u
 <visual mode> U
