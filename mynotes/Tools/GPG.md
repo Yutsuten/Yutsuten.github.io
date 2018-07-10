@@ -19,20 +19,19 @@ gpg --full-generate-key
 # ssb   4096R/42B317FD4BA89E7A 2016-03-10
 ```
 
-### Checking for existing GPG keys
+### List GPG keys
 ```shell
 gpg --list-keys --keyid-format LONG
 gpg --list-secret-keys --keyid-format LONG
-
-# Trust a key
-gpg --edit-key 'Full Name'
-> trust
 ```
 
 ### Export/import key
+Ref: [link](https://superuser.com/questions/879977/how-to-have-a-different-pass-phrase-for-a-gpg-subkey)
 ```shell
-gpg --armor --export > pgp-public-keys.asc
-gpg --armor --export-secret-keys > pgp-private-keys.asc
+# Don't forget the exclamation mark, it makes sure GnuPG actually works with the subkey itself
+# and not with the primary key it belongs to!
+gpg --armor --export [optional: keyid!] > pgp-public-keys.asc
+gpg --armor --export-secret-keys [optional: keyid!]> pgp-private-keys.asc
 gpg --export-ownertrust > pgp-ownertrust.asc
 gpg --armor --gen-revoke [your key ID] > pgp-revocation.asc
 
@@ -57,9 +56,20 @@ gpg -d filename.gpg
 ```
 
 Ref: [Link](https://wiki.debian.org/Subkeys?action=show&redirect=subkeys)
-### Subkey
+### Edit key
 ```shell
-# TODO
+gpg --edit-key 'Full Name'
+
+# Trust a key
+> trust
+
+# Add subkey
+> addkey
+> save
+
+# Change passphrase
+> passwd
+> save
 ```
 
 ### Delete key
@@ -67,5 +77,5 @@ Ref: [Link](https://wiki.debian.org/Subkeys?action=show&redirect=subkeys)
 gpg --recv-keys [your key ID]
 gpg --import pgp-revocation.asc
 gpg --send-keys [your key ID]
-gpg --delete-secret-key "Full Name"
+gpg --delete-secret-key 'Full Name'
 ```
