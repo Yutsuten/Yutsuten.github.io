@@ -1,11 +1,16 @@
 Ref: [link](https://help.github.com/articles/signing-commits-with-gpg/)
 [link2](https://msol.io/blog/tech/back-up-your-pgp-keys-with-gpg/)
 [link3](https://askubuntu.com/questions/32438/how-to-share-one-pgp-key-on-multiple-machines)
+[link4](https://wiki.debian.org/Subkeys)
 
 ### Install gpg
 ```shell
 # Mac
 brew install gnupg
+
+# All
+# Add this to ~/.bash_profile
+export GPG_TTY=$(tty)
 ```
 
 ### Generating a new GPG key
@@ -70,6 +75,15 @@ gpg --edit-key 'Full Name'
 # Change passphrase
 > passwd
 > save
+```
+
+### Remove only private master key
+```shell
+# Find master key keygrip
+gpg --with-keygrip --list-key YOURMASTERKEYID
+
+# Securely delete it from .gnupg folder
+rm -P $HOME/.gnupg/private-keys-v1.d/KEYGRIP.key
 ```
 
 ### Delete key
