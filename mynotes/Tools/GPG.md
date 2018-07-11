@@ -27,23 +27,45 @@ gpg --list-keys --keyid-format LONG
 gpg --list-secret-keys --keyid-format LONG
 ```
 
+### Edit key
+[Ref1](https://wiki.debian.org/Subkeys?action=show&redirect=subkeys)
+[Ref2](https://superuser.com/questions/879977/how-to-have-a-different-pass-phrase-for-a-gpg-subkey)
+```shell
+gpg --edit-key 'Full Name'
+
+> list    # Listing keys
+> key 0   # Select key (0 is master)
+> trust   # Trust a key
+> addkey  # Add subkey
+> delkey  # Delete subkey
+> passwd  # Change passphrase
+> expire  # Change expire date
+> save   # Save changes
+```
+
 ### Export/import key
 [Ref1](https://askubuntu.com/questions/32438/how-to-share-one-pgp-key-on-multiple-machines)
 [Ref2](https://msol.io/blog/tech/back-up-your-pgp-keys-with-gpg/)
 ```shell
 # Don't forget the exclamation mark, it makes sure GnuPG actually works with the subkey itself
 # and not with the primary key it belongs to!
-gpg --armor --export [optional: keyid!] > pgp-public-keys.asc
-gpg --armor --export-secret-keys [optional: keyid!] > pgp-private-keys.asc
-gpg --export-ownertrust > pgp-ownertrust.asc
-gpg --armor --gen-revoke [your key ID] > pgp-revocation.asc
+gpg --armor --export [optional: keyid!] > gpg-public-keys.asc
+gpg --armor --export-secret-keys [optional: keyid!] > gpg-private-keys.asc
+gpg --export-ownertrust > gpg-ownertrust.asc
+gpg --armor --gen-revoke [your key ID] > gpg-revocation.asc
 
-gpg --import pgp-public-keys.asc
-gpg --import pgp-private-keys.asc
-gpg --import-ownertrust pgp-ownertrust.asc
+gpg --import gpg-public-keys.asc
+gpg --import gpg-private-keys.asc
+gpg --import-ownertrust gpg-ownertrust.asc
 
 # Securely delete it
-shred --remove secretkey.asc
+shred --remove gpg-private-keys.asc
+```
+
+### Change GPG home folder
+```shell
+export GNUPGHOME=/media/path/to/gnupg
+export GNUPGHOME=~/.gnupg
 ```
 
 ### Encript/decript file
@@ -56,24 +78,6 @@ gpg -e -r recipient@email.com file_name
 
 # Decrypt (with password or private key)
 gpg -d filename.gpg
-```
-
-### Edit key
-[Ref1](https://wiki.debian.org/Subkeys?action=show&redirect=subkeys)
-[Ref2](https://superuser.com/questions/879977/how-to-have-a-different-pass-phrase-for-a-gpg-subkey)
-```shell
-gpg --edit-key 'Full Name'
-
-# Trust a key
-> trust
-
-# Add subkey
-> addkey
-> save
-
-# Change passphrase
-> passwd
-> save
 ```
 
 ### Remove only private master key
