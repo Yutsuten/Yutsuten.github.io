@@ -1,7 +1,4 @@
-Ref: [link](https://help.github.com/articles/signing-commits-with-gpg/)
-[link2](https://msol.io/blog/tech/back-up-your-pgp-keys-with-gpg/)
-[link3](https://askubuntu.com/questions/32438/how-to-share-one-pgp-key-on-multiple-machines)
-[link4](https://wiki.debian.org/Subkeys)
+[Ref1](https://help.github.com/articles/signing-commits-with-gpg/)
 
 ### Install gpg
 ```shell
@@ -31,7 +28,8 @@ gpg --list-secret-keys --keyid-format LONG
 ```
 
 ### Export/import key
-Ref: [link](https://superuser.com/questions/879977/how-to-have-a-different-pass-phrase-for-a-gpg-subkey)
+[Ref1](https://askubuntu.com/questions/32438/how-to-share-one-pgp-key-on-multiple-machines)
+[Ref2](https://msol.io/blog/tech/back-up-your-pgp-keys-with-gpg/)
 ```shell
 # Don't forget the exclamation mark, it makes sure GnuPG actually works with the subkey itself
 # and not with the primary key it belongs to!
@@ -60,8 +58,9 @@ gpg -e -r recipient@email.com file_name
 gpg -d filename.gpg
 ```
 
-Ref: [Link](https://wiki.debian.org/Subkeys?action=show&redirect=subkeys)
 ### Edit key
+[Ref1](https://wiki.debian.org/Subkeys?action=show&redirect=subkeys)
+[Ref2](https://superuser.com/questions/879977/how-to-have-a-different-pass-phrase-for-a-gpg-subkey)
 ```shell
 gpg --edit-key 'Full Name'
 
@@ -84,6 +83,16 @@ gpg --with-keygrip --list-key YOURMASTERKEYID
 
 # Securely delete it from .gnupg folder
 rm -P $HOME/.gnupg/private-keys-v1.d/KEYGRIP.key
+```
+
+## Always ask for password
+[Ref](https://security.stackexchange.com/questions/103034/gnupg-decryption-not-asking-for-passphrase)
+```shell
+# Create/edit file ~/.gnupg/gpg-agent.conf adding
+max-cache-ttl 0
+
+# Kill gpg-agent process (it will restart automatically)
+echo RELOADAGENT | gpg-connect-agent
 ```
 
 ### Delete key
