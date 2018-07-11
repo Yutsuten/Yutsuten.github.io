@@ -1,4 +1,4 @@
-[Ref1](https://help.github.com/articles/signing-commits-with-gpg/)
+[Ref](https://help.github.com/articles/signing-commits-with-gpg/)
 
 ### Install gpg
 ```shell
@@ -34,7 +34,7 @@ gpg --list-secret-keys --keyid-format LONG
 # Don't forget the exclamation mark, it makes sure GnuPG actually works with the subkey itself
 # and not with the primary key it belongs to!
 gpg --armor --export [optional: keyid!] > pgp-public-keys.asc
-gpg --armor --export-secret-keys [optional: keyid!]> pgp-private-keys.asc
+gpg --armor --export-secret-keys [optional: keyid!] > pgp-private-keys.asc
 gpg --export-ownertrust > pgp-ownertrust.asc
 gpg --armor --gen-revoke [your key ID] > pgp-revocation.asc
 
