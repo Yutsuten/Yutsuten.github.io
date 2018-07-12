@@ -8,6 +8,9 @@ grep -r --exclude="*.swp" 'search_value' .
 # -f force
 rm -rf folder/
 
+# List directory contents
+ls -lAF  # l full output, A include hidden files, F show special characters on each entry
+
 # Current directory
 pwd
 
