@@ -14,6 +14,13 @@ ls -lAF  # l full output, A include hidden files, F show special characters on e
 # Current directory
 pwd
 
+# List all processes
+ps -A
+
+# Kill process
+kill <PID>
+xkill  # Click window
+
 # SSH copy folder - terminal is on local
 # Host name is in file ~/.ssh/config
 scp -r folder/to/copy/ user-name@host-name:/home/ubuntu/
