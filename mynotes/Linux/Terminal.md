@@ -21,6 +21,12 @@ ps -A
 kill <PID>
 xkill  # Click window
 
+# Extract from .tgz
+tar -xzf file.tgz
+# x for extract
+# z for gnuzip
+# f for file (the .tgz file directory)
+
 # SSH copy folder - terminal is on local
 # Host name is in file ~/.ssh/config
 scp -r folder/to/copy/ user-name@host-name:/home/ubuntu/
