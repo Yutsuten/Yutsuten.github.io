@@ -1,5 +1,6 @@
 ## Install (python 2)
 ```shell
+pip2 install virtualenv
 virtualenv --python=/Users/username/.pyenv/shims/python2.7 venv
 ```
 
