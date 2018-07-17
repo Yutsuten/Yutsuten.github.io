@@ -17,6 +17,12 @@
 gu<movement>
 gU<movement>
 
+# Cursor history
+Ctrl + I  # Forward
+Ctrl + O  # Backward
+g,  # Forward
+g;  # Backward
+
 # Mark a line (not visible)
 ma  # Second letter can be in [a-z] for same file, [A-Z] for global
 'a  # Jump to the line the mark is
