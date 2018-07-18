@@ -18,14 +18,19 @@ gu<movement>
 gU<movement>
 
 # Cursor history
-Ctrl + I  # Forward
-Ctrl + O  # Backward
+<c-i>  # Forward
+<c-o>  # Backward
 g,  # Forward
 g;  # Backward
 
 # Fast scroll
-<c - F>  # Forward
-<c - B>  # Backward
+<c-f>  # Forward
+<c-b>  # Backward
+
+# Windows manipulation
+<c-w>s  # Split horizontally
+<c-w>v  # Split vertically
+<c-w><c-r>  # Rotate (invert) windows
 
 # Mark a line (not visible)
 ma  # Second letter can be in [a-z] for same file, [A-Z] for global
@@ -36,4 +41,3 @@ ma  # Second letter can be in [a-z] for same file, [A-Z] for global
 :set fenc=utf8
 :set ff=unix
 ```
-
