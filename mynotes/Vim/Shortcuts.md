@@ -23,6 +23,10 @@ Ctrl + O  # Backward
 g,  # Forward
 g;  # Backward
 
+# Fast scroll
+<c - F>  # Forward
+<c - B>  # Backward
+
 # Mark a line (not visible)
 ma  # Second letter can be in [a-z] for same file, [A-Z] for global
 'a  # Jump to the line the mark is
