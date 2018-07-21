@@ -26,3 +26,8 @@ my_list = [x for x in range(10)]
 print(list(filter(lambda x: x % 2), my_list))
 ```
 
+## Access named attributes from string
+```python
+getattr(x, 'foobar')       # Equivalent to x.foobar
+setattr(x, 'foobar', 123)  # Equivalent to x.foobar = 123
+```
