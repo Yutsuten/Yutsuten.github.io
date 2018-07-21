@@ -9,7 +9,7 @@ git submodule init
 git submodule update
 git submodule update --init       # Initialize if it isn't
 git submodule update --recursive  # Update recursively (submodules inside submodules)
-git submodule update --remote     # Update submodules to the latest commit (needed?)
+git submodule update --remote     # Update submodules to the latest commit
 
 # Pull with submodules
 git pull --recurse-submodules
@@ -18,7 +18,6 @@ git pull --recurse-submodules
 git clone --recurse-submodules
 
 # Remove submodules
-git submodule deinit -f path/to/submodule
-rm -rf .git/modules/path/to/submodule
-git rm -f path/to/submodule
+SUBMODULE_PATH='path/to/submodule'
+git submodule deinit -f $SUBMODULE_PATH && rm -rf .git/modules/$SUBMODULE_PATH && git rm -f $SUBMODULE_PATH
 ```
