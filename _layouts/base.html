@@ -13,8 +13,8 @@
 
     <title>{{ page.title }} - Mateus Etto Website</title>
   </head>
-  <body data-spy="scroll" data-target="#navigation-menu-container">
-    <div class="wrapper">
+  <body>
+    <div class="wrapper" id="app">
       <div class="header">
         <nav class="navbar navbar-expand-lg navbar-dark">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,6 +54,7 @@
       <div class="footer">
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type="text/javascript" src="{% link bundle.js %}"></script>
   </body>
 </html>

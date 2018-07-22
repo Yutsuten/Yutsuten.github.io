@@ -17,12 +17,12 @@ permalink: resume
 
   <div class="resume-content">
     <div class="menu-block">
-      <div class="menu">
-        <a href="#top" class="active">Profile</a>
-        <a href="#education">Education</a>
-        <a href="#work-experience">Work Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+      <div v-bind:class="menu_class">
+        <a href="#top" v-bind:class="profile_class">Profile</a>
+        <a href="#education" v-bind:class="education_class">Education</a>
+        <a href="#work-experience" v-bind:class="work_class">Work Experience</a>
+        <a href="#skills" v-bind:class="skills_class">Skills</a>
+        <a href="#contact" v-bind:class="contact_class">Contact</a>
       </div>
     </div>
     <div class="details">

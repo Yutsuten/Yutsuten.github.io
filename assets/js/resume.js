@@ -1,33 +1,73 @@
 if (location.pathname.indexOf('resume') !== -1) {
-  $(window).on('scroll', function() {
-    var scrollValue = $(window).scrollTop();
-
-    // Affix menu
-    if (scrollValue > 370) {
-      $('.resume-content .menu').addClass('affix');
-    } else {
-      $('.resume-content .menu').removeClass('affix');
-    }
-
-    // Change active on scroll
-    $('.resume .resume-content .menu a').each(function() {
-      var currLink = $(this);
-      if (currLink.attr('href') != '#top') {
-        var refElement = $(currLink.attr('href'));
-        if (refElement.position().top - 1 <= scrollValue && refElement.position().top + refElement.height() > scrollValue) {
-          $('#menu-center ul li a').removeClass('active');
-          currLink.addClass('active');
+  global.app = new global.Vue({
+    el: '#app',
+    data: {
+      menu_class: 'menu',
+      profile_class: 'active',
+      education_class: '',
+      work_class: '',
+      skills_class: '',
+      contact_class: '',
+    },
+    methods: {
+      handleScroll: function () {
+        if (window.scrollY > 370) {
+          this.menu_class = 'menu affix';
+        } else {
+          this.menu_class = 'menu';
         }
-        else {
-          currLink.removeClass('active');
+
+        let elementsId = ['education', 'work-experience', 'skills', 'contact'];
+        let elementsTop = {};
+
+        // Find top of each element relative to the viewport
+        for (let i = 0; i < elementsId.length; i++) {
+          let elem = document.getElementById(elementsId[i]);
+          let elemRect = elem.getBoundingClientRect();
+          elementsTop[elementsId[i]] = elemRect.top;
+        }
+
+        // Find the biggest that doesn't surpass the threshold
+        let threshold = 20;
+        let biggestTopElement = 'top';
+        let biggestTop = -999999;
+        for (let elementId in elementsTop) {
+          let top = elementsTop[elementId];
+          if (top < threshold && top > biggestTop) {
+            biggestTop = top;
+            biggestTopElement = elementId;
+          }
+        }
+
+        this.profile_class = '';
+        this.education_class = '';
+        this.work_class = '';
+        this.skills_class = '';
+        this.contact_class = '';
+        switch (biggestTopElement) {
+          case 'top':
+            this.profile_class = 'active';
+            break;
+          case 'education':
+            this.education_class = 'active';
+            break;
+          case 'work-experience':
+            this.work_class = 'active';
+            break;
+          case 'skills':
+            this.skills_class = 'active';
+            break;
+          case 'contact':
+            this.contact_class = 'active';
+            break;
         }
       }
-    });
-
-    if (scrollValue < 391) {
-      $('a[href="#top"]').addClass('active');
-    } else {
-      $('a[href="#top"]').removeClass('active');
+    },
+    created () {
+      document.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed () {
+      document.removeEventListener('scroll', this.handleScroll);
     }
   });
 }

@@ -1,5 +1,5 @@
 ```javascript
-global.app = new global.Vue({
+let app = new Vue({
   el: '#app',
   data: {
     scroll: 0
