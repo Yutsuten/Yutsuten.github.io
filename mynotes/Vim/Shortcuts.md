@@ -10,6 +10,8 @@
 # Replace
 :%s/before/after/g      # All file
 :'<,'>s/before/after/g  # Only selection
+:%s/\v(\w+)/ \1 /g      # \v "very magic" mode, full regex. Captured group \1
+:%s/\(\w\+)/ \1 /g      # Without "very magic" mode, escape ( and )
 
 # Change case of characters
 <visual mode> u

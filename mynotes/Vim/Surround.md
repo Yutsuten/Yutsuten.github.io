@@ -16,6 +16,9 @@ cs"}      # Change " to {}
 # Delete
 ds"       # Delete "
 
+# Visual mode
+S"        # Surround with double quotes
+
 # Multiple lines: Visual mode with capital V
 Hello world!
  ↓
