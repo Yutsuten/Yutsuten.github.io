@@ -48,6 +48,7 @@ var app = new Vue({
 ```
 
 ### Condition (if)
+Any javascript is valid inside if or other vue directives
 ```html
 <div id="app">
   <span v-if="flag">Visible text</span>
@@ -92,6 +93,7 @@ var app = new Vue({
 <div id="app">
   <p>{{ message }}</p>
   <button v-on:click="reverseMessage">Reverse Message</button>
+  <button v-on:click="calculate(param1, param2)">Calculate</button>
 </div>
 ```
 
@@ -104,6 +106,9 @@ var app = new Vue({
   methods: {
     reverseMessage: function () {
       this.message = this.message.split('').reverse().join('')
+    }
+    calculate: function (param1, param2) {
+      this.message = param1 + param2
     }
   }
 })
@@ -126,3 +131,18 @@ var app = new Vue({
 })
 ```
 
+### Hide element while Vue is loading
+v-cloak will remain on the element until the associated Vue instance finishes compilation.
+```html
+<div id="app">
+  <div v-cloak>
+    Hello {{ name }}
+  </div>
+</div>
+
+<style>
+  [v-cloak] {
+    display: none;
+  }
+</style>
+```
