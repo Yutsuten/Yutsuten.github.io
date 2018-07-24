@@ -1,14 +1,13 @@
 if (location.pathname.indexOf('notes') !== -1) {
-  $('#menu a').click(function() {
-    $('div.note-content').hide();
-    $('div' + $(this).attr('href')).show();
+  global.app = new global.Vue({
+    el: '#app',
+    data: {
+      activeNote: window.location.href.split('#')[1]
+    },
+    methods: {
+      seeNote: function (note) {
+        this.activeNote = note;
+      }
+    }
   });
-
-  $('#content').html($('#content').html().replace(/{% raw %}/g, '').replace(/{% endraw %}/g, ''));
-
-  if (location.hash) {
-    $('div' + location.hash).show();
-  } else {
-    $('div#home').show();
-  }
 }
