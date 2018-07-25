@@ -6,11 +6,7 @@
   "repository": "git@github.com:Yutsuten/Yutsuten.github.io.git",
   "author": "Mateus Etto <mateus.etto@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "bootstrap": "^4.0.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.1"
-  },
+  "dependencies": {},
   "browserify": {
     "transform": [
       "browserify-css"

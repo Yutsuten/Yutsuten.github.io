@@ -3,7 +3,6 @@ var source = require('vinyl-source-stream');
 var log = require('gulplog');
 
 var browserify = require('browserify');
-var browserify_css = require('browserify-css');
 var watchify = require('watchify');
 
 var b = watchify(browserify({
