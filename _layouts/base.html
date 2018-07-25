@@ -9,6 +9,8 @@
     {% endif %}
 
     <link rel="shortcut icon" type="image/png" href="{% link favicon.png %}"/>
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
     <link rel="stylesheet" href="{% link bundle.css %}" media="screen">
 
     <title>{{ page.title }} - Mateus Etto Website</title>
@@ -55,6 +57,8 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
     <script type="text/javascript" src="{% link bundle.js %}"></script>
   </body>
 </html>

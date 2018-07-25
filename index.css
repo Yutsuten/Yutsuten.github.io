@@ -1,6 +1,2 @@
-/* Load global css files */
-@import url('./node_modules/bootstrap/dist/css/bootstrap.css');
-
 /* Load css files from assets */
 @import url('./assets/css/index.css');
-
