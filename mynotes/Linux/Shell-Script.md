@@ -7,4 +7,9 @@ fi
 
 python manage.py collectstatic --settings my_project.settings_deploy.$1 --noinput &&
 zappa update $1
+
+# Bulk copy with renaming
+for file in ./*; do
+  cp "${file##*/}" "/path/to/destination/m_${file##*/}"
+done
 ```
