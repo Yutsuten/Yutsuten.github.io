@@ -1,6 +1,8 @@
 import Vue from 'vue'
 
 
+Vue.options.delimiters = ['[[', ']]']
+
 if (location.pathname.indexOf('notes') !== -1) {
   new Vue({
     el: '#app',

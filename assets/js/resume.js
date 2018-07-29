@@ -1,6 +1,8 @@
 import Vue from 'vue'
 
 
+Vue.options.delimiters = ['[[', ']]']
+
 if (location.pathname.indexOf('resume') !== -1) {
   new Vue({
     el: '#app',

@@ -1,6 +1,6 @@
 {% raw %}
 
-## Setting up
+### Setting up
 
 #### settings.py
 ```python

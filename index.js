@@ -6,4 +6,3 @@ import './index.css'
 import './assets/js'
 
 Vue.use(BootstrapVue)
-Vue.options.delimiters = ['[[', ']]']
