@@ -1,2 +1,2 @@
-require('./notes.js');
-require('./resume.js');
+import './resume.js'
+import './notes.js'
