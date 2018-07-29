@@ -2,33 +2,24 @@
   "name": "Yutsuten.github.io",
   "version": "1.0.0",
   "description": "Personal Website",
+  "scripts": {
+    "build": "webpack"
+  },
   "private": true,
   "repository": "git@github.com:Yutsuten/Yutsuten.github.io.git",
   "author": "Mateus Etto <mateus.etto@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
-  "browserify": {
-    "transform": [
-      "browserify-css"
-    ]
-  },
-  "browserify-css": {
-    "autoInject": false,
-    "minify": true,
-    "output": "bundle.css"
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "vue": "^2.5.16"
   },
   "devDependencies": {
-    "browserify": "^16.1.1",
-    "browserify-css": "^0.14.0",
     "css-loader": "^1.0.0",
     "extract-loader": "^2.0.1",
     "file-loader": "^1.1.11",
-    "gulp": "^3.9.1",
-    "gulplog": "^1.0.0",
     "mini-css-extract-plugin": "^0.4.1",
     "style-loader": "^0.21.0",
-    "vinyl-source-stream": "^2.0.0",
-    "watchify": "^3.11.0",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0"
   }

@@ -1,9 +1,12 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  mode: 'production',
-  entry: './index.js',
+  mode: 'development',
+  entry: [
+    'babel-polyfill',
+    './index.js'
+  ],
   output: {
     path: path.resolve(__dirname),
     filename: 'bundle.js'
@@ -29,5 +32,10 @@ module.exports = {
       filename: 'bundle.css',
       chunkFilename: '[id].css'
     })
-  ]
-};
+  ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  }
+}
