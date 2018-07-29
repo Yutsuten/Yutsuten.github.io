@@ -1,4 +1,7 @@
 sudo: false
+branches:
+  only:
+    - webpack
 
 language: node_js
 node_js:
@@ -11,9 +14,9 @@ after_success:
       printf '#!/bin/sh -e\necho %s' "$GH_PUBLISH_TOKEN" > gh-publish-pass.sh &&
       chmod u+x gh-publish-pass.sh &&
       yarn run build &&
-      rm index.css index.js .travis.yml .vimrc gulpfile.js package.json yarn.lock &&
+      rm index.css index.js .travis.yml .vimrc package.json yarn.lock &&
       rm -r assets/css/ assets/js/ &&
-      git add -f bundle.js bundle.css index.css index.js .travis.yml .vimrc gulpfile.js package.json yarn.lock assets/css assets/js &&
+      git add -f bundle.js bundle.css index.css index.js .travis.yml .vimrc package.json yarn.lock assets/css assets/js &&
       git commit -m 'Auto-publishing via TravisCI [skip ci]' &&
       GIT_ASKPASS=./gh-publish-pass.sh git push origin +HEAD:refs/heads/master;
     fi
