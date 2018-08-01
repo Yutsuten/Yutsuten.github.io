@@ -1,7 +1,5 @@
-import Vue from 'vue'
+import Vue from './Vue'
 
-
-Vue.options.delimiters = ['[[', ']]']
 
 if (location.pathname.indexOf('resume') !== -1) {
   new Vue({
