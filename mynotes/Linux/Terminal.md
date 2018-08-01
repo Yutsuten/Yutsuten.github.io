@@ -27,6 +27,28 @@ tar -xzf file.tgz
 # z for gnuzip
 # f for file (the .tgz file directory)
 
+# Writing command output to file
+ls > file  # Only write to file
+ls | tee file  # Writes to terminal and file
+
+# Filter and transform text
+sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p' .pylint
+score=$(sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p' .pylint)
+
+# Number comparison
+(($score > 7.5))
+echo $score'<7.5' | bc -l
+
+# Download file from remote
+curl -o pylint.svg "https://img.shields.io/badge/pylint-$score-$color.svg"
+
+# If elif
+if (( $(echo $score'>=9' | bc -l) )); then
+    color='brightgreen';
+elif (( $(echo $score'>=7.5' | bc -l) )); then
+    color='yellow';
+fi
+
 # SSH copy folder - terminal is on local
 # Host name is in file ~/.ssh/config
 scp -r folder/to/copy/ user-name@host-name:/home/ubuntu/
