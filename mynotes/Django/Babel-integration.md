@@ -8,7 +8,7 @@ yarn add babel-cli babel-preset-env --dev
 ```
 
 #### .babelrc
-```
+```json
 { "presets": ["env"] }
 ```
 
