@@ -14,6 +14,12 @@ ls -lAF  # l full output, A include hidden files, F show special characters on e
 # Current directory
 pwd
 
+# Print file content from the end of the file
+tail -10 /var/log/file  # Last 10 lines of a log
+
+# Run in background, output to file
+command > /var/log/file 2>&1 &  # 2 (stderr) to 1 (stdout)
+
 # List all processes
 ps -A
 
