@@ -20,8 +20,10 @@ tail -10 /var/log/file  # Last 10 lines of a log
 # Run in background, output to file
 command > /var/log/file 2>&1 &  # 2 (stderr) to 1 (stdout)
 
-# List all processes
-ps -A
+# List processes
+ps -A  # All
+ps  # Created in this bash
+ps -ef | grep jekyll  # filter within all processes
 
 # Kill process
 kill <PID>
