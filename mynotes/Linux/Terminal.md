@@ -50,16 +50,13 @@ echo $score'<7.5' | bc -l
 # Download file from remote
 curl -o pylint.svg "https://img.shields.io/badge/pylint-$score-$color.svg"
 
-# If elif
-if (( $(echo $score'>=9' | bc -l) )); then
-    color='brightgreen';
-elif (( $(echo $score'>=7.5' | bc -l) )); then
-    color='yellow';
-fi
-
 # SSH copy folder - terminal is on local
 # Host name is in file ~/.ssh/config
 scp -r folder/to/copy/ user-name@host-name:/home/ubuntu/
+
+# Root
+sudo command
+sudo -s  # Same as sudo su -
 
 # Generate random password
 </dev/urandom tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' | head -c 16  ; echo
