@@ -56,7 +56,7 @@ scp -r folder/to/copy/ user-name@host-name:/home/ubuntu/
 
 # Root
 sudo command
-sudo -s  # Same as sudo su -
+sudo -Es  # Same as sudo su -
 
 # Generate random password
 </dev/urandom tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' | head -c 16  ; echo
