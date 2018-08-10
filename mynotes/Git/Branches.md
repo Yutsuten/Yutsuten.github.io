@@ -5,6 +5,10 @@ git checkout -b new-feature
 # Change to another branch
 git checkout another-feature
 
+# Change to remote branch
+git checkout feature # Only newer versions
+git checkout -b feature origin/feature
+
 # See all branches
 git branch
 
