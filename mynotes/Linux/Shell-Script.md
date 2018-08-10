@@ -12,4 +12,11 @@ zappa update $1
 for file in ./*; do
   cp "${file##*/}" "/path/to/destination/m_${file##*/}"
 done
+
+# If elif
+if (( $(echo $score'>=9' | bc -l) )); then
+    color='brightgreen';
+elif (( $(echo $score'>=7.5' | bc -l) )); then
+    color='yellow';
+fi
 ```

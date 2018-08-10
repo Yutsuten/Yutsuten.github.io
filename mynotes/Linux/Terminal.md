@@ -14,8 +14,16 @@ ls -lAF  # l full output, A include hidden files, F show special characters on e
 # Current directory
 pwd
 
-# List all processes
-ps -A
+# Print file content from the end of the file
+tail -10 /var/log/file  # Last 10 lines of a log
+
+# Run in background, output to file
+command > /var/log/file 2>&1 &  # 2 (stderr) to 1 (stdout)
+
+# List processes
+ps -A  # All
+ps  # Created in this bash
+ps -ef | grep jekyll  # filter within all processes
 
 # Kill process
 kill <PID>
@@ -42,16 +50,13 @@ echo $score'<7.5' | bc -l
 # Download file from remote
 curl -o pylint.svg "https://img.shields.io/badge/pylint-$score-$color.svg"
 
-# If elif
-if (( $(echo $score'>=9' | bc -l) )); then
-    color='brightgreen';
-elif (( $(echo $score'>=7.5' | bc -l) )); then
-    color='yellow';
-fi
-
 # SSH copy folder - terminal is on local
 # Host name is in file ~/.ssh/config
 scp -r folder/to/copy/ user-name@host-name:/home/ubuntu/
+
+# Root
+sudo command
+sudo -Es  # Same as sudo su -
 
 # Generate random password
 </dev/urandom tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' | head -c 16  ; echo
