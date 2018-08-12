@@ -1,6 +1,8 @@
 ## Utils
 `django.utils.timezone`
 
+`django.forms.models.model_to_dict`
+
 ## HTTP responses
 `django.http.HttpResponseRedirect`
 

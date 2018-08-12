@@ -1,5 +1,5 @@
 ```shell
-$ psql  # Start postgresql bash
+$ psql    # Start postgresql bash
 
 > \l      # list databases
 > \dt     # show tables
