@@ -4,10 +4,14 @@ Ref: [Link](https://help.github.com/articles/generating-a-new-ssh-key-and-adding
 ```shell
 # Generate key
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa
+
+# Check for current keys
+ls ~/.ssh
 
 # Get public key
 cat ~/.ssh/id_rsa.pub
-# Copy the contents and put it to GitHub or GitLab
 
 # Removing credentials from agent
 rm -rf /tmp/ssh && ssh-add -D

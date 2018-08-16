@@ -1,4 +1,3 @@
-### Grep
 ```shell
 # Creating alias
 alias aliasname='commands'
