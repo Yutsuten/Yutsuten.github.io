@@ -75,7 +75,7 @@ int(3.14)
 float(3)
 round(3.14)
 word = raw_input("Enter a word: ")
-del(word)
+del word
 range(6) # => [0, 1, 2, 3, 4, 5] (In python 3: a range class, not a list)
 range(1, 6) # => [1, 2, 3, 4, 5]
 range(1, 6, 3) # => [1, 4]

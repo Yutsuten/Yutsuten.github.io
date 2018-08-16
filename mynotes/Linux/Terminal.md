@@ -1,6 +1,9 @@
 ### Grep
 ```shell
-# Recursively in current folder
+# Creating alias
+alias aliasname='commands'
+
+# Grep recursively in current folder
 grep -r 'search_value' .
 grep -r --exclude="*.swp" 'search_value' .
 
