@@ -20,6 +20,8 @@ fromiso8601 = dateparser.parse('2018-04-30T06:37:10.751Z').replace(tzinfo=tz.get
 
 toiso8601 = mydate.isoformat()
 
+tostring = mydate.strftime('%Y-%m')
+
 now = datetime.datetime.now()
 print(now)
 print(now.year)
