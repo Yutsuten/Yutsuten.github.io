@@ -19,3 +19,15 @@ rm -rf /tmp/ssh && ssh-add -D
 # Check all saved credentials
 ssh-add -l
 ```
+
+### Running GUI applications
+```shell
+# Windows requirement: install Xming
+
+# Install xauth on server
+sudo yum install xorg-x11-xauth
+sudo apt-get install xauth
+
+# Login using X11
+ssh -X <credentials>
+```
