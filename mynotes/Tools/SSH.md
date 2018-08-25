@@ -31,3 +31,12 @@ sudo apt-get install xauth
 # Login using X11
 ssh -X <credentials>
 ```
+
+### Automatic configuration
+#### ~/.ssh/config
+```
+Host ec2-server
+    HostName ec2server.ddns.net
+    User ec2-user
+    IdentityFile ~/.ssh/ec2-server.pem
+```
