@@ -15,6 +15,11 @@ C-b "
 # Navigating
 C-b <arrow key>
 
+# Scroll
+C-b [
+Arrow keys to movement
+q
+
 # Close panel
 C-d
 

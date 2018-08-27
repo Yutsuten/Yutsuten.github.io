@@ -43,11 +43,11 @@ Host ec2-server
 
 # Step server with proxy
 Host step-server
-    ProxyCommand connect -S username@proxyserver.com:port %h %p
     HostName myhost.com
     Port 1234
     User myuser
     IdentityFile key.pem
+    ProxyCommand connect -S username@proxyserver.com:port %h %p
 
 Host destination-server
     HostName url-from-step.com
@@ -55,7 +55,7 @@ Host destination-server
     IdentityFile key.pem
     ProxyCommand ssh -X step-server -W %h:%p
 
-# Last is the default (first match wins rule)
+# Last is the default (first match wins)
 Host *
     ProxyCommand connect -H username@proxyserver.com:port %h %p
 ```
