@@ -35,8 +35,27 @@ ssh -X <credentials>
 ### Automatic configuration
 #### ~/.ssh/config
 ```
+# Direct connection
 Host ec2-server
     HostName ec2server.ddns.net
     User ec2-user
     IdentityFile ~/.ssh/ec2-server.pem
+
+# Step server with proxy
+Host step-server
+    ProxyCommand connect -S username@proxyserver.com:port %h %p
+    HostName myhost.com
+    Port 1234
+    User myuser
+    IdentityFile key.pem
+
+Host destination-server
+    HostName url-from-step.com
+    User finaluser
+    IdentityFile key.pem
+    ProxyCommand ssh -X step-server -W %h:%p
+
+# Last is the default (first match wins rule)
+Host *
+    ProxyCommand connect -H username@proxyserver.com:port %h %p
 ```
