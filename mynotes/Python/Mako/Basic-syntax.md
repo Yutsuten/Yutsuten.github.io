@@ -4,7 +4,7 @@
 
 # Template level
 <% locale = Locale('en', 'US') %>
-!{locale.territories['US']}
+${locale.territories['US']}
 
 # Control structures
 % if x == 5:

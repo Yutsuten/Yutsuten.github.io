@@ -6,12 +6,18 @@ alias aliasname='commands'
 grep -r 'search_value' .
 grep -r --exclude="*.swp" 'search_value' .
 
+# Find files by name
+find ./ -name "*.js"
+
 # Removing folder without asking for confirmation
 # -f force
 rm -rf folder/
 
 # List directory contents
 ls -lAF  # l full output, A include hidden files, F show special characters on each entry
+
+# Create directory recursively (p: parents)
+mkdir -p path/to/directory
 
 # Current directory
 pwd
