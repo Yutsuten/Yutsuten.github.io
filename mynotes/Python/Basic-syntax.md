@@ -134,6 +134,13 @@ print("%.2f" % my_float)
 print("Title", variable) # Title <variable>
 ```
 
+## Unicode support
+```python
+# coding:utf-8
+mystring = u'こんにちは'
+mystring = 'こんにちは'.decode('utf-8')
+```
+
 ## Raise exception
 ```python
 if some_condition:
