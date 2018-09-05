@@ -1,2 +1,6 @@
+menu:
+  home: Home
+  resume: Resume
+  notes: Notes
 home:
   welcome: Welcome to my Website!
