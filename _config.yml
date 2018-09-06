@@ -29,7 +29,7 @@ plugins:
 
 # Jekyll Multiple Languages Plugin
 languages: ["en", "ja"]
-exclude_from_localizations: ["javascript", "images", "css"]
+exclude_from_localizations: ["assets", "projects", "bundle.js", "bundle.css"]
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
