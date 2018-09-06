@@ -4,3 +4,11 @@ menu:
   notes: メモ帳
 home:
   welcome: 僕のウェブサイトへようこそ！
+resume:
+  name: エット マテウス
+  job: ソフトウェアエンジニア・ウェブ開発者
+  profile: プロフィール
+  education: 学歴
+  work_experience: 職歴
+  skills: 技術
+  contact: 連絡

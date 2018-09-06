@@ -4,3 +4,11 @@ menu:
   notes: Notes
 home:
   welcome: Welcome to my Website!
+resume:
+  name: Mateus Etto
+  job: Software Engineer - Web Developer
+  profile: Profile
+  education: Education
+  work_experience: Work Experience
+  skills: Skills
+  contact: Contact
