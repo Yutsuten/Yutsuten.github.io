@@ -1,36 +1,37 @@
 ---
 layout: base
 title: Resume
-permalink: resume
+namespace: resume
+permalink: /resume
 ---
 
 <div class="resume">
   <div class="personal-card">
     <div class="photo">
-      <img src="{% link assets/img/profile_photo.jpg %}" alt="Profile Photo">
+      <img src="{{ 'assets/img/profile_photo.jpg' | prepend: site.baseurl_root }}" alt="Profile Photo">
     </div>
     <div class="basic-info">
-      <div class="name"><h1><b>Mateus Etto</b></h1></div>
-      <div class="job"><h2>Software Engineer - Web Developer</h2></div>
+      <div class="name"><h1><b>{% t resume.name %}</b></h1></div>
+      <div class="job"><h2>{% t resume.job %}</h2></div>
     </div>
   </div>
 
   <div class="resume-content">
     <div class="menu-block">
       <div v-bind:class="menu_class">
-        <a href="#top" v-bind:class="profile_class">Profile</a>
-        <a href="#education" v-bind:class="education_class">Education</a>
-        <a href="#work-experience" v-bind:class="work_class">Work Experience</a>
-        <a href="#skills" v-bind:class="skills_class">Skills</a>
-        <a href="#contact" v-bind:class="contact_class">Contact</a>
+        <a href="#top" v-bind:class="profile_class">{% t resume.profile %}</a>
+        <a href="#education" v-bind:class="education_class">{% t resume.education %}</a>
+        <a href="#work-experience" v-bind:class="work_class">{% t resume.work_experience %}</a>
+        <a href="#skills" v-bind:class="skills_class">{% t resume.skills %}</a>
+        <a href="#contact" v-bind:class="contact_class">{% t resume.contact %}</a>
       </div>
     </div>
     <div class="details">
       <div id="education" class="section">
-        <h1><b>Education</b></h1>
+        <h1><b>{% t resume.education %}</b></h1>
         <div class="resume-card">
           <div class="card-logo university">
-            <img src="{% link assets/img/logo_unesp.png %}" alt="Card Logo">
+            <img src="{{ 'assets/img/logo_unesp.png' | prepend: site.baseurl_root }}" alt="Card Logo">
           </div>
           <div class="card-details">
             <h3>Sao Paulo State University</h3>
@@ -41,7 +42,7 @@ permalink: resume
         </div>
         <div class="resume-card">
           <div class="card-logo university">
-            <img src="{% link assets/img/logo_waseda.png %}" alt="Card Logo">
+            <img src="{{ 'assets/img/logo_waseda.png' | prepend: site.baseurl_root }}" alt="Card Logo">
           </div>
           <div class="card-details">
             <h3>Waseda University (Study abroad)</h3>
@@ -53,10 +54,10 @@ permalink: resume
       </div>
 
       <div id="work-experience" class="section">
-        <h1><b>Work Experience</b></h1>
+        <h1><b>{% t resume.work_experience %}</b></h1>
         <div class="resume-card">
           <div class="card-logo">
-            <img src="{% link assets/img/logo_cograph.png %}" alt="Card Logo">
+            <img src="{{ 'assets/img/logo_cograph.png' | prepend: site.baseurl_root }}" alt="Card Logo">
           </div>
           <div class="card-details">
             <h3>Co-graph</h3>
@@ -66,7 +67,7 @@ permalink: resume
         </div>
         <div class="resume-card">
           <div class="card-logo">
-            <img src="{% link assets/img/logo_voxus.svg %}" alt="Card Logo">
+            <img src="{{ 'assets/img/logo_voxus.svg' | prepend: site.baseurl_root }}" alt="Card Logo">
           </div>
           <div class="card-details">
             <h3>Voxus</h3>
@@ -76,7 +77,7 @@ permalink: resume
         </div>
         <div class="resume-card">
           <div class="card-logo">
-            <img src="{% link assets/img/logo_ltia.png %}" alt="Card Logo">
+            <img src="{{ 'assets/img/logo_ltia.png' | prepend: site.baseurl_root }}" alt="Card Logo">
           </div>
           <div class="card-details">
             <h3>Laboratory of Applied Information Technology</h3>
@@ -87,7 +88,7 @@ permalink: resume
       </div>
 
       <div id="skills" class="section">
-        <h1><b>Skills</b></h1>
+        <h1><b>{% t resume.skills %}</b></h1>
         <h3>Server-side Languages:</h3>
         <div class="skill-block">
           <div class="skill">PHP</div>
@@ -110,7 +111,7 @@ permalink: resume
       </div>
 
       <div id="contact" class="section">
-        <h1><b>Contact</b></h1>
+        <h1><b>{% t resume.contact %}</b></h1>
         <div class="contact-block">
           <div class="contact-info">
             <b class="contact-title">Email:</b>
