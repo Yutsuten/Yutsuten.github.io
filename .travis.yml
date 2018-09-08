@@ -1,12 +1,26 @@
 sudo: false
 branches:
   only:
-    - release
+    - i18n
 
 language: node_js
 node_js:
   - 'lts/carbon'
 script: true
+before_install:
+  - sudo apt-get install ruby
+  - gem install bundler
+install:
+  - node --version
+  - npm --version
+  - nvm --version
+  - yarn --version
+  - gem --version
+  - bundle --version
+  - bundle install
+  - bundle exec jekyll build
+  - yarn
+  - yarn run build
 after_success:
   - git config user.name 'TravisCI Auto-publisher'
   - git config user.email 'travis-auto-publish@example.com'
@@ -14,9 +28,11 @@ after_success:
       printf '#!/bin/sh -e\necho %s' "$GH_PUBLISH_TOKEN" > gh-publish-pass.sh &&
       chmod u+x gh-publish-pass.sh &&
       yarn run build &&
-      rm index.css index.js .travis.yml .vimrc package.json yarn.lock &&
-      rm -r assets/css/ assets/js/ &&
-      git add -f bundle.js bundle.css index.css index.js .travis.yml .vimrc package.json yarn.lock assets/css assets/js &&
-      git commit -m 'Auto-publishing via TravisCI [skip ci]' &&
+      GLOBIGNORE='.git:_site' &&
+      rm -r * &&
+      mv _site/* ./ &&
+      rm -r _site/ &&
+      git add . &&
+      git commit -m 'Auto-publishing via TravisCI' &&
       GIT_ASKPASS=./gh-publish-pass.sh git push origin +HEAD:refs/heads/master;
     fi
