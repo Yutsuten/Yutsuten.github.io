@@ -1,17 +1,17 @@
 sudo: false
 branches:
   only:
-    - i18n
+    - release
 
 language: node_js
 node_js:
   - 'lts/carbon'
 script: true
 before_install:
-  - gem install bundler
   - gem --version
-  - bundle install
+  - gem install bundler
   - bundle --version
+  - bundle install
   - yarn
 install:
   - yarn run build
