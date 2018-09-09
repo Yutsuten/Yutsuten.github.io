@@ -7,7 +7,10 @@ grep -r 'search_value' .
 grep -r --exclude="*.swp" 'search_value' .
 
 # Find files by name
-find ./ -name "*.js"
+find . -name "*.js"
+
+# Difference between files
+diff file1 file2
 
 # Removing folder without asking for confirmation
 # -f force
