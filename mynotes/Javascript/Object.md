@@ -17,6 +17,15 @@ for (var key in myObject) {
 }
 
 // Merge objects
-console.log(Object.assign({'Duck': 'Quack'}, myObject));
-```
+var result = Object.assign({'Duck': 'Quack'}, myObject);
 
+// Shallow object copy
+result = Object.assign({}, myObject);
+
+// Deep object copy
+result = JSON.parse(JSON.stringify(myObject));
+$.extend(true, {}, oldObject);
+
+var _ = require('lodash')
+var deepcloned = _.clonedeep(original)
+```
