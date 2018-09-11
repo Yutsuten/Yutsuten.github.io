@@ -58,4 +58,5 @@ Host destination-server
 # Last is the default (first match wins)
 Host *
     ProxyCommand connect -H username@proxyserver.com:port %h %p
+    ServerAliveInterval 120
 ```
