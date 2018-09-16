@@ -29,28 +29,19 @@ permalink: /resume
     <div class="details">
       <div id="education" class="section">
         <h1><b>{% t resume.education %}</b></h1>
+        {% for university in site.data.universities[site.lang] %}
         <div class="resume-card">
           <div class="card-logo university">
-            <img src="{{ '/assets/img/logo_unesp.png' | prepend: site.baseurl_root }}" alt="Card Logo">
+            <img src="{{ university.logo | prepend: site.baseurl_root }}" alt="Card Logo">
           </div>
           <div class="card-details">
-            <h3>Sao Paulo State University</h3>
-            <h3>Computer Science</h3>
-            <h3>February/2012 ~ March/2017</h3>
-            <h3>Bauru, Brazil</h3>
+            <h3>{{ university.name }}</h3>
+            <h3>{{ university.course }}</h3>
+            <h3>{{ university.period }}</h3>
+            <h3>{{ university.place }}</h3>
           </div>
         </div>
-        <div class="resume-card">
-          <div class="card-logo university">
-            <img src="{{ '/assets/img/logo_waseda.png' | prepend: site.baseurl_root }}" alt="Card Logo">
-          </div>
-          <div class="card-details">
-            <h3>Waseda University (Study abroad)</h3>
-            <h3>Computer Engineering</h3>
-            <h3>September/2014 ~ August/2015</h3>
-            <h3>Tokyo, Japan</h3>
-          </div>
-        </div>
+        {% endfor %}
       </div>
 
       <div id="work-experience" class="section">
