@@ -46,36 +46,18 @@ permalink: /resume
 
       <div id="work-experience" class="section">
         <h1><b>{% t resume.work_experience %}</b></h1>
+        {% for job in site.data.jobs[site.lang] %}
         <div class="resume-card">
           <div class="card-logo">
-            <img src="{{ '/assets/img/logo_cograph.png' | prepend: site.baseurl_root }}" alt="Card Logo">
+            <img src="{{ job.logo | prepend: site.baseurl_root }}" alt="Card Logo">
           </div>
           <div class="card-details">
-            <h3>Co-graph</h3>
-            <h3>January/2018 ~ Now</h3>
-            <h3>Tokyo, Japan</h3>
+            <h3>{{ job.name }}</h3>
+            <h3>{{ job.period }}</h3>
+            <h3>{{ job.place }}</h3>
           </div>
         </div>
-        <div class="resume-card">
-          <div class="card-logo">
-            <img src="{{ '/assets/img/logo_voxus.svg' | prepend: site.baseurl_root }}" alt="Card Logo">
-          </div>
-          <div class="card-details">
-            <h3>Voxus</h3>
-            <h3>June/2017 ~ November/2017</h3>
-            <h3>Sao Paulo, Brazil</h3>
-          </div>
-        </div>
-        <div class="resume-card">
-          <div class="card-logo">
-            <img src="{{ '/assets/img/logo_ltia.png' | prepend: site.baseurl_root }}" alt="Card Logo">
-          </div>
-          <div class="card-details">
-            <h3>Laboratory of Applied Information Technology</h3>
-            <h3>October/2012 ~ March/2017</h3>
-            <h3>Bauru, Brazil</h3>
-          </div>
-        </div>
+        {% endfor %}
       </div>
 
       <div id="skills" class="section">

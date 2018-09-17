@@ -1,0 +1,14 @@
+- name: コグラフ
+  period: １月２０１８年～現在
+  place: 東京
+  logo: /assets/img/logo_cograph.png
+
+- name: Voxus
+  period: ６月２０１７年～１１月２０１７年
+  place: ブラジル・サンパウロ
+  logo: /assets/img/logo_voxus.svg
+
+- name: 応用情報技術研究所（アルバイト）
+  period: １０月２０１２年～３月２０１７年
+  place: ブラジル・バウル
+  logo: /assets/img/logo_ltia.png
