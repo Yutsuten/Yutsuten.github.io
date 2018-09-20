@@ -62,20 +62,20 @@ permalink: /resume
 
       <div id="skills" class="section">
         <h1><b>{% t resume.skills %}</b></h1>
-        <h3>Server-side Languages:</h3>
-        <div class="skill-block">
-          <div class="skill">PHP</div>
-          <div class="skill">Python</div>
-        </div>
-
-        <h3>Front-end Languages:</h3>
+        <h3>{% t resume.front_end_langs %}</h3>
         <div class="skill-block">
           <div class="skill">HTML</div>
           <div class="skill">CSS</div>
           <div class="skill">Javascript</div>
         </div>
 
-        <h3>Frameworks:</h3>
+        <h3>{% t resume.back_end_langs %}</h3>
+        <div class="skill-block">
+          <div class="skill">PHP</div>
+          <div class="skill">Python</div>
+        </div>
+
+        <h3>{% t resume.frameworks %}</h3>
         <div class="skill-block">
           <div class="skill">CakePHP</div>
           <div class="skill">Django</div>
@@ -87,11 +87,11 @@ permalink: /resume
         <h1><b>{% t resume.contact %}</b></h1>
         <div class="contact-block">
           <div class="contact-info">
-            <b class="contact-title">Email:</b>
+            <b class="contact-title">{% t resume.email %}:</b>
             <span class="details">mateus.etto at gmail.com</span>
           </div>
           <div class="contact-info">
-            <b class="contact-title">LinkedIn:</b>
+            <b class="contact-title">{% t resume.linkedin %}:</b>
             <span class="details"><a href="https://www.linkedin.com/in/mateus-etto/">Mateus Etto</a></span>
           </div>
         </div>
