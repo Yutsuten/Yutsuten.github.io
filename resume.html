@@ -64,22 +64,23 @@ permalink: /resume
         <h1><b>{% t resume.skills %}</b></h1>
         <h3>{% t resume.front_end_langs %}</h3>
         <div class="skill-block">
-          <div class="skill">HTML</div>
-          <div class="skill">CSS</div>
-          <div class="skill">Javascript</div>
+          {% for skill in site.data.skills[site.lang].frontend %}
+          <div class="skill">{{ skill.name }}</div>
+          {% endfor %}
         </div>
 
         <h3>{% t resume.back_end_langs %}</h3>
         <div class="skill-block">
-          <div class="skill">PHP</div>
-          <div class="skill">Python</div>
+          {% for skill in site.data.skills[site.lang].backend %}
+          <div class="skill">{{ skill.name }}</div>
+          {% endfor %}
         </div>
 
         <h3>{% t resume.frameworks %}</h3>
         <div class="skill-block">
-          <div class="skill">CakePHP</div>
-          <div class="skill">Django</div>
-          <div class="skill">Flask</div>
+          {% for skill in site.data.skills[site.lang].frameworks %}
+          <div class="skill">{{ skill.name }}</div>
+          {% endfor %}
         </div>
       </div>
 

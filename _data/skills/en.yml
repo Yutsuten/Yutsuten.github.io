@@ -1,0 +1,13 @@
+frontend:
+  - name: HTML
+  - name: CSS
+  - name: Javascript
+
+backend:
+  - name: PHP
+  - name: Python
+
+frameworks:
+  - name: CakePHP
+  - name: Flask
+  - name: Django
