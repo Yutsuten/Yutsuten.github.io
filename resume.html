@@ -18,7 +18,7 @@ permalink: /resume
 
   <div class="resume-content">
     <div class="menu-block">
-      <div v-bind:class="menu_class">
+      <div v-cloak v-bind:class="menu_class">
         <a href="#top" v-bind:class="profile_class">{% t resume.profile %}</a>
         <a href="#education" v-bind:class="education_class">{% t resume.education %}</a>
         <a href="#work-experience" v-bind:class="work_class">{% t resume.work_experience %}</a>
