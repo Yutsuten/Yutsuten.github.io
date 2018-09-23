@@ -88,3 +88,7 @@ permalink: /notes
   {% endif %}
   {% endfor %}
 </div>
+
+<input type="hidden" ref="firstLevel" value="{{ first_level | remove_first: '|' }}" />
+<input type="hidden" ref="secondLevel" value="{{ second_level | remove_first: '|' }}" />
+<input type="hidden" ref="thirdLevel" value="{{ pages_full_path | remove_first: '|' }}" />
