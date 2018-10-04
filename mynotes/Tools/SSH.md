@@ -5,7 +5,7 @@ Ref: [Link](https://help.github.com/articles/generating-a-new-ssh-key-and-adding
 # Generate key
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 eval "$(ssh-agent -s)"
-ssh-add -K ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_rsa  # -K parameter required on mac
 
 # Check for current keys
 ls ~/.ssh
@@ -18,6 +18,12 @@ rm -rf /tmp/ssh && ssh-add -D
 
 # Check all saved credentials
 ssh-add -l
+```
+
+### File permissions
+```shell
+chmod 400 ~/.ssh/id_rsa
+chmod 600 ~/.ssh/config
 ```
 
 ### Running GUI applications
@@ -33,6 +39,11 @@ ssh -X <credentials>
 ```
 
 ### Automatic configuration
+#### Terminal
+```
+sudo apt install connect-proxy
+```
+
 #### ~/.ssh/config
 ```
 # Direct connection
