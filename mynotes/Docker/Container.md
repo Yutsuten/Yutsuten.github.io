@@ -1,4 +1,4 @@
-[Get started](https://docs.docker.com/get-started/)
+- [Guide](https://docs.docker.com/get-started/part2/)
 
 ### Define a container
 #### Dockerfile
