@@ -64,4 +64,8 @@ C-b p
 
 # Detach session
 C-b d
+
+# Change default directory
+C-b :
+attach -c ~/Projects
 ```
