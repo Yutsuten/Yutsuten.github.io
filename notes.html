@@ -6,89 +6,65 @@ namespace: notes
 permalink: /notes
 ---
 
-{% assign first_level = '' %}
-{% assign second_level = '' %}
-{% assign pages_full_path = '' %}
-
-{% for site_page in site.pages %}
-{% assign page_path = site_page.path | split: '/' %}
-{% if page_path[0] == 'mynotes' and page_path.size > 2 %}
-{% assign note_path = page_path | join: '/' | remove_first: 'mynotes/' | remove: '.md' | split: '/' %}
-
-{% unless first_level contains note_path[0] %}
-{% capture first_level %}{{ first_level }}|{{ note_path[0] }}{% endcapture %}
-{% endunless %}
-
-{% if note_path.size > 2 %}
-{% assign tmp_second_level = note_path[0] | append: '/' | append: note_path[1] %}
-{% unless second_level contains tmp_second_level %}
-{% capture second_level %}{{ second_level }}|{{ tmp_second_level }}{% endcapture %}
-{% endunless %}
-{% endif %}
-
-{% capture pages_full_path %}{{ pages_full_path }}|{{ note_path | join: '/' }}{% endcapture %}
-
-{% endif %}
-{% endfor %}
-
-{% assign first_level_list = first_level | remove_first: '|' | split: '|' %}
-{% assign second_level_list = second_level | remove_first: '|' | split: '|' %}
-{% assign pages_full_path_list = pages_full_path | remove_first: '|' | split: '|' %}
+{%- assign lv1_last = '' -%}
+{%- assign lv2_last = '' -%}
+{%- assign lv3_last = '' -%}
 
 <div class="col-md-3 scroll-block" id="menu">
-  {% for first_level in first_level_list %}
-  <h4>{{ first_level }}</h4>
+  {%- for note in site.notes -%}
+  {%- assign note_path_arr = note.relative_path | remove_first: '_notes/' | remove: '.md' | split: '/' -%}
 
-  <ul>
-    {% for page_full_path in pages_full_path_list %}
-    {% assign page_full_path_steps = page_full_path | split: '/' %}
-    {% if page_full_path_steps.size == 2 and first_level == page_full_path_steps[0] %}
-    {% assign note_id = page_full_path_steps | join: '-' %}
-    <li><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ page_full_path_steps[1] | replace: '-', ' ' }}</a></li>
-    {% endif %}
-    {% endfor %}
+  {%- if lv1_last != note_path_arr[0] -%}
+    {%- if lv1_last != '' -%}
+      </ul>
+    {%- endif -%}
+    {%- if lv2_last != '' -%}
+      </ul>
+    {%- endif -%}
 
-    {% for second_level in second_level_list %}
-    {% assign second_level_steps = second_level | split: '/' %}
-    {% if first_level == second_level_steps[0] %}
-    <li>{{ second_level_steps[1] }}</li>
+    <h4>{{ note_path_arr[0] }}</h4>
     <ul>
-      {% for page_full_path in pages_full_path_list %}
-      {% assign page_full_path_steps = page_full_path | split: '/' %}
-      {% if first_level == page_full_path_steps[0] and second_level_steps[1] == page_full_path_steps[1] %}
-    {% assign note_id = page_full_path_steps | join: '-' %}
-      <li><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ page_full_path_steps[2] | replace: '-', ' ' }}</a></li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-    {% endif %}
-    {% endfor %}
-  </ul>
+    {%- assign lv1_last = note_path_arr[0] -%}
+    {%- assign lv2_last = '' -%}
+  {%- endif -%}
+
+  {%- if note_path_arr.size == 2 -%}
+    {%- assign note_id = note_path_arr | join: '-' -%}
+    <li><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[1] | replace: '-', ' ' }}</a></li>
+
+  {%- elsif note_path_arr.size > 2 -%}
+    {%- if lv2_last != note_path_arr[1] -%}
+      {%- if lv2_last != '' -%}
+        </ul>
+      {%- endif -%}
+
+      <li>{{ note_path_arr[1] | replace: '-', ' ' }}</li>
+      <ul>
+      {%- assign lv2_last = note_path_arr[1] -%}
+    {%- endif -%}
+
+    {%- if note_path_arr.size == 3 -%}
+      {%- assign note_id = note_path_arr | join: '-' -%}
+      <li><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[2] | replace: '-', ' ' }}</a></li>
+    {%- endif -%}
+  {%- endif -%}
 
   {% endfor %}
+  </ul>
 </div>
+
 <div class="col-md-9 scroll-block" id="content">
   <div v-if="typeof activeNote !== 'string'" class="note-content" id="home">
     <h1>Home</h1>
     Welcome to my programming notes!
   </div>
-  {% for site_page in site.pages %}
-  {% assign page_path = site_page.path | split: '/' %}
-  {% if page_path[0] == 'mynotes' and page_path.size > 2 %}
-  {% assign title = page_path | join: ' > ' | remove_first: 'mynotes > ' | remove: '.md' | replace: '-', ' ' %}
-  {% assign page_id = page_path | join: '-' | remove_first: 'mynotes-' | remove: '.md' %}
-  <div v-cloak v-if="activeNote === '{{ page_id }}'" class="note-content">
-    <h1>{{ title }}</h1>
-    {% comment %}
-    The url_encode and url_decode is a workaround to remove <p>{% raw %}</p> and
-    <p>{% endraw %}</p> from the templates.
-    {% endcomment %}
-    {{ site_page.content | markdownify | url_encode | remove: '%3Cp%3E%7B%25+raw+%25%7D%3C%2Fp%3E' | remove: '%3Cp%3E%7B%25+endraw+%25%7D%3C%2Fp%3E%0A' | url_decode }}
-  </div>
-  {% endif %}
-  {% endfor %}
+  {%- for note in site.notes -%}
+    {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
+    {%- assign title = note_path | replace: '/', ' > ' | replace: '-', ' ' -%}
+    {%- assign note_id = note_path | replace: '/', '-' -%}
+    <div v-cloak v-if="activeNote === '{{ note_id }}'" class="note-content">
+      <h1>{{ title }}</h1>
+      {{ note.content | markdownify }}
+    </div>
+  {%- endfor -%}
 </div>
-
-<input type="hidden" ref="firstLevel" value="{{ first_level | remove_first: '|' }}" />
-<input type="hidden" ref="secondLevel" value="{{ second_level | remove_first: '|' }}" />
-<input type="hidden" ref="thirdLevel" value="{{ pages_full_path | remove_first: '|' }}" />
