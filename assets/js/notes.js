@@ -14,14 +14,14 @@ if (location.pathname.indexOf('notes') !== -1) {
       seeNote: function (note) {
         this.activeNote = note
       },
-      fetchInitialData: function () {
+      /*fetchInitialData: function () {
         this.firstLevel = this.$refs.firstLevel.value
         this.secondLevel = this.$refs.secondLevel.value
         this.thirdLevel = this.$refs.thirdLevel.value
-      }
+      }*/
     },
     mounted: function () {
-      this.fetchInitialData()
+      //this.fetchInitialData()
     }
   })
 }
