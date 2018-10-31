@@ -1,3 +1,6 @@
+---
+---
+
 Download: [Split.js](https://github.com/nathancahill/Split.js)
 
 #### index.html

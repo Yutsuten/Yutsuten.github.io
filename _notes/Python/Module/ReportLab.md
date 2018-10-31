@@ -1,3 +1,6 @@
+---
+---
+
 ## Font for Japanese
 [https://ipafont.ipa.go.jp/#jp](https://ipafont.ipa.go.jp/#jp)
 

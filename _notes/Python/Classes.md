@@ -1,3 +1,6 @@
+---
+---
+
 ```python
 class MyClass(object):
   property = 10

@@ -1,3 +1,6 @@
+---
+---
+
 ```shell
 # Check the number of arguments
 if [ "$#" -ne 1 ]; then

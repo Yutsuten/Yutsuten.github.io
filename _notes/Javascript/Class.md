@@ -1,3 +1,6 @@
+---
+---
+
 #### ClassName.js
 ```javascript
 class MyCoolClass {

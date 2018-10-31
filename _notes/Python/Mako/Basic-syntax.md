@@ -1,3 +1,6 @@
+---
+---
+
 ```python
 # Module level
 <%! from babel import Locale %>

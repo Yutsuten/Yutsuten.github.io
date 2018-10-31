@@ -1,3 +1,6 @@
+---
+---
+
 #### .gitlab-ci.yml
 ```yaml
 # Node + eslint

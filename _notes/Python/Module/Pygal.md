@@ -1,3 +1,6 @@
+---
+---
+
 [Official website](http://pygal.org/en/stable/)
 
 ## Install

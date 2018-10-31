@@ -1,3 +1,6 @@
+---
+---
+
 ### Bash personalization
 - [Make Bash on Ubuntu on Windows 10 Look Like the Ubuntu Terminal](https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2)
 - [Solarized colors for vim in bash on windows works!](https://www.reddit.com/r/bashonubuntuonwindows/comments/60da1u/solarized_colors_for_vim_in_bash_on_windows_works/)

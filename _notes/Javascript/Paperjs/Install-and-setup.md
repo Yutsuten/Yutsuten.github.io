@@ -1,3 +1,6 @@
+---
+---
+
 ## Install
 [Paper.js download](http://paperjs.org/download/)
 

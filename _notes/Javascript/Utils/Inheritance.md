@@ -1,3 +1,6 @@
+---
+---
+
 ### ES5
 ```javascript
 // Superclass

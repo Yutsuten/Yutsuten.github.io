@@ -1,3 +1,6 @@
+---
+---
+
 ```shell
 npm install -g gh-badges
 badge 'build' 'passed' :brightgreen @flat > build.svg

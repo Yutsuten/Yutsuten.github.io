@@ -1,3 +1,6 @@
+---
+---
+
 #### index.js
 ```javascript
 // Instantiate

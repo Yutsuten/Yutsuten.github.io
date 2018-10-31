@@ -1,3 +1,6 @@
+---
+---
+
 ```javascript
 element = document.getElementById(id);
 

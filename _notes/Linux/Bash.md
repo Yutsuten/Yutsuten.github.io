@@ -1,3 +1,6 @@
+---
+---
+
 ### Set environment variables
 #### .bashrc
 ```shell
