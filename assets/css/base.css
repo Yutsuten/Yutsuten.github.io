@@ -41,6 +41,17 @@ ul {
   list-style-type: square;
 }
 
+input {
+  background-color: #002b36;
+  border-color: #586e75;
+  color: #93a1a1;
+  padding: 1px 5px;
+}
+
+input:focus {
+  outline-color: #839496;
+}
+
 [v-cloak] {
   display: none;
 }
