@@ -6,6 +6,17 @@ namespace: notes
 permalink: /notes
 ---
 
+{%- assign note_arr = '' -%}
+{%- for note in site.notes -%}
+  {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
+  {%- assign note_path_arr = note_path | split: '/' -%}
+  {%- assign last_index = note_path_arr.size | minus: 1 -%}
+  {%- assign new_filename = '!' | append: note_path_arr[last_index] -%}
+  {%- assign note_path = note_path | replace: note_path_arr[last_index], new_filename -%}
+  {%- capture note_arr -%}{{ note_arr }};{{ note_path }}{%- endcapture -%}
+{%- endfor -%}
+{%- assign note_arr = note_arr | slice: 1, note_arr.size | split: ';' | sort -%}
+
 {%- assign lv1_last = '' -%}
 {%- assign lv2_last = '' -%}
 {%- assign lv3_last = '' -%}
@@ -13,8 +24,8 @@ permalink: /notes
 <div class="col-md-3 scroll-block" id="menu">
   <input type="text" class="search-input" v-model="search" v-on:input="searchChange()" placeholder="Search" />
 
-  {%- for note in site.notes -%}
-  {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
+  {%- for note in note_arr -%}
+  {%- assign note_path = note | replace: '!', '' -%}
   {%- assign note_path_arr = note_path | split: '/' -%}
 
   {%- if lv1_last != note_path_arr[0] -%}
@@ -67,7 +78,7 @@ permalink: /notes
   </div>
   {%- for note in site.notes -%}
     {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
-    {%- assign title = note_path | replace: '/', ' > ' | replace: '-', ' ' -%}
+    {%- assign title = note_path | replace: '/', ' > ' | replace: '-', ' ' | capitalize -%}
     {%- assign note_id = note_path | replace: '/', '-' -%}
     <div v-cloak v-if="activeNote === '{{ note_id }}'" class="note-content">
       <h1>{{ title }}</h1>
