@@ -6,13 +6,26 @@ namespace: notes
 permalink: /notes
 ---
 
+{%- assign note_arr = '' -%}
+{%- for note in site.notes -%}
+  {%- assign note_path = note.relative_path | remove_first: '_notes/' -%}
+  {%- assign note_path_arr = note_path | split: '/' -%}
+  {%- assign new_filename = '!' | append: note_path_arr.last -%}
+  {%- assign note_path = note_path | replace: note_path_arr.last, new_filename | remove: '.md' -%}
+  {%- capture note_arr -%}{{ note_arr }};{{ note_path }}{%- endcapture -%}
+{%- endfor -%}
+{%- assign note_arr = note_arr | slice: 1, note_arr.size | split: ';' | sort -%}
+
 {%- assign lv1_last = '' -%}
 {%- assign lv2_last = '' -%}
 {%- assign lv3_last = '' -%}
 
 <div class="col-md-3 scroll-block" id="menu">
-  {%- for note in site.notes -%}
-  {%- assign note_path_arr = note.relative_path | remove_first: '_notes/' | remove: '.md' | split: '/' -%}
+  <input type="text" class="search-input" v-model="search" placeholder="Search" />
+
+  {%- for note in note_arr -%}
+  {%- assign note_path = note | replace: '!', '' -%}
+  {%- assign note_path_arr = note_path | split: '/' -%}
 
   {%- if lv1_last != note_path_arr[0] -%}
     {%- if lv1_last != '' -%}
@@ -22,35 +35,39 @@ permalink: /notes
       </ul>
     {%- endif -%}
 
-    <h4>{{ note_path_arr[0] }}</h4>
-    <ul>
+    <h4>{{ note_path_arr[0] | replace: '_', ' ' | capitalize }}</h4>
+    <ul ref="{{ note_path_arr[0] }}">
     {%- assign lv1_last = note_path_arr[0] -%}
     {%- assign lv2_last = '' -%}
   {%- endif -%}
 
   {%- if note_path_arr.size == 2 -%}
     {%- assign note_id = note_path_arr | join: '-' -%}
-    <li><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[1] | replace: '-', ' ' }}</a></li>
+    <li v-if="'{{ note_path }}'.indexOf(search.toLowerCase()) != -1"><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[1] | replace: '_', ' ' | capitalize }}</a></li>
 
   {%- elsif note_path_arr.size > 2 -%}
     {%- if lv2_last != note_path_arr[1] -%}
+      {%- assign lv2_path = note_path_arr[0] | append: '/' | append: note_path_arr[1] -%}
       {%- if lv2_last != '' -%}
         </ul>
       {%- endif -%}
 
-      <li>{{ note_path_arr[1] | replace: '-', ' ' }}</li>
-      <ul>
+      <li>{{ note_path_arr[1] | replace: '_', ' ' | capitalize }}</li>
+      <ul ref="{{ lv2_path | replace: '/', '_' }}">
       {%- assign lv2_last = note_path_arr[1] -%}
     {%- endif -%}
 
     {%- if note_path_arr.size == 3 -%}
       {%- assign note_id = note_path_arr | join: '-' -%}
-      <li><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[2] | replace: '-', ' ' }}</a></li>
+      <li v-if="'{{ note_path }}'.indexOf(search.toLowerCase()) != -1"><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[2] | replace: '_', ' ' | capitalize }}</a></li>
     {%- endif -%}
   {%- endif -%}
 
   {% endfor %}
   </ul>
+  {%- if lv2_last != '' -%}
+    </ul>
+  {%- endif -%}
 </div>
 
 <div class="col-md-9 scroll-block" id="content">
@@ -60,7 +77,7 @@ permalink: /notes
   </div>
   {%- for note in site.notes -%}
     {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
-    {%- assign title = note_path | replace: '/', ' > ' | replace: '-', ' ' -%}
+    {%- assign title = note_path | replace: '/', ' > ' | replace: '_', ' ' | capitalize -%}
     {%- assign note_id = note_path | replace: '/', '-' -%}
     <div v-cloak v-if="activeNote === '{{ note_id }}'" class="note-content">
       <h1>{{ title }}</h1>
