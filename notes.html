@@ -43,7 +43,7 @@ permalink: /notes
 
   {%- if note_path_arr.size == 2 -%}
     {%- assign note_id = note_path_arr | join: '-' -%}
-    <li class="{{ note_path }}" v-if="'{{ note_path }}'.indexOf(search.toLowerCase()) != -1"><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[1] | replace: '_', ' ' | capitalize }}</a></li>
+    <li v-if="'{{ note_path }}'.indexOf(search.toLowerCase()) != -1"><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[1] | replace: '_', ' ' | capitalize }}</a></li>
 
   {%- elsif note_path_arr.size > 2 -%}
     {%- if lv2_last != note_path_arr[1] -%}
@@ -59,7 +59,7 @@ permalink: /notes
 
     {%- if note_path_arr.size == 3 -%}
       {%- assign note_id = note_path_arr | join: '-' -%}
-      <li class="{{ note_path }}" v-if="'{{ note_path }}'.indexOf(search.toLowerCase()) != -1"><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[2] | replace: '_', ' ' | capitalize }}</a></li>
+      <li v-if="'{{ note_path }}'.indexOf(search.toLowerCase()) != -1"><a v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[2] | replace: '_', ' ' | capitalize }}</a></li>
     {%- endif -%}
   {%- endif -%}
 
