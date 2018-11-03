@@ -11,8 +11,6 @@ if (location.pathname.indexOf('notes') !== -1) {
     methods: {
       seeNote: function (note) {
         this.activeNote = note
-      },
-      searchChange: function () {
       }
     },
     updated: function () {

@@ -21,7 +21,7 @@ permalink: /notes
 {%- assign lv3_last = '' -%}
 
 <div class="col-md-3 scroll-block" id="menu">
-  <input type="text" class="search-input" v-model="search" v-on:input="searchChange()" placeholder="Search" />
+  <input type="text" class="search-input" v-model="search" placeholder="Search" />
 
   {%- for note in note_arr -%}
   {%- assign note_path = note | replace: '!', '' -%}
@@ -77,7 +77,7 @@ permalink: /notes
   </div>
   {%- for note in site.notes -%}
     {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
-    {%- assign title = note_path | replace: '/', ' > ' | replace: '-', ' ' | capitalize -%}
+    {%- assign title = note_path | replace: '/', ' > ' | replace: '_', ' ' | capitalize -%}
     {%- assign note_id = note_path | replace: '/', '-' -%}
     <div v-cloak v-if="activeNote === '{{ note_id }}'" class="note-content">
       <h1>{{ title }}</h1>
