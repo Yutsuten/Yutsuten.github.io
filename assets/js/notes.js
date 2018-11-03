@@ -15,5 +15,19 @@ if (location.pathname.indexOf('notes') !== -1) {
       searchChange: function () {
       }
     },
+    updated: function () {
+      var ulElem
+
+      for (var refName in this.$refs) {
+        ulElem = this.$refs[refName]
+        if (ulElem.getElementsByTagName('a').length === 0) {
+          ulElem.style.display = 'none'
+          ulElem.previousElementSibling.style.display = 'none'
+        } else {
+          ulElem.style.display = ''
+          ulElem.previousElementSibling.style.display = ''
+        }
+      }
+    }
   })
 }

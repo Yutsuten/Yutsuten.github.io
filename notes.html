@@ -8,11 +8,10 @@ permalink: /notes
 
 {%- assign note_arr = '' -%}
 {%- for note in site.notes -%}
-  {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
+  {%- assign note_path = note.relative_path | remove_first: '_notes/' -%}
   {%- assign note_path_arr = note_path | split: '/' -%}
-  {%- assign last_index = note_path_arr.size | minus: 1 -%}
-  {%- assign new_filename = '!' | append: note_path_arr[last_index] -%}
-  {%- assign note_path = note_path | replace: note_path_arr[last_index], new_filename -%}
+  {%- assign new_filename = '!' | append: note_path_arr.last -%}
+  {%- assign note_path = note_path | replace: note_path_arr.last, new_filename | remove: '.md' -%}
   {%- capture note_arr -%}{{ note_arr }};{{ note_path }}{%- endcapture -%}
 {%- endfor -%}
 {%- assign note_arr = note_arr | slice: 1, note_arr.size | split: ';' | sort -%}
@@ -37,7 +36,7 @@ permalink: /notes
     {%- endif -%}
 
     <h4>{{ note_path_arr[0] | replace: '_', ' ' | capitalize }}</h4>
-    <ul>
+    <ul ref="{{ note_path_arr[0] }}">
     {%- assign lv1_last = note_path_arr[0] -%}
     {%- assign lv2_last = '' -%}
   {%- endif -%}
@@ -54,7 +53,7 @@ permalink: /notes
       {%- endif -%}
 
       <li>{{ note_path_arr[1] | replace: '_', ' ' | capitalize }}</li>
-      <ul>
+      <ul ref="{{ lv2_path | replace: '/', '_' }}">
       {%- assign lv2_last = note_path_arr[1] -%}
     {%- endif -%}
 
