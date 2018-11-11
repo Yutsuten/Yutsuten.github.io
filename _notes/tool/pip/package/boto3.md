@@ -6,7 +6,7 @@
 pip install boto3
 ```
 
-## Usage
+## Polly
 ```python
 import boto3
 

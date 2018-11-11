@@ -74,3 +74,9 @@ Host *
     ProxyCommand connect -H username@proxyserver.com:port %h %p
     ServerAliveInterval 120
 ```
+
+### SSH copy folder
+```shell
+# Terminal is on local, host name is in file ~/.ssh/config
+scp -r folder/to/copy/ user-name@host-name:/home/ubuntu/
+```
