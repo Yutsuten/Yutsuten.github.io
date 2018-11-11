@@ -17,6 +17,16 @@ HKEY_CURRENT_USER\Console\%SystemRoot%_system32_bash.exe
 add/modify item CodePage->(DWORD)FDE9(65001)
 ```
 
+#### Hide scroll bar
+- [Reference](https://github.com/Microsoft/WSL/issues/407#issuecomment-295761589)
+
+Make the default settings for the initial window's Screen Buffer Size and Window Size to be the same value.
+
+#### Fullscreen mode
+```
+Alt+Shift+Enter
+```
+
 ### Solarized theme
 ```
 SLOT SOLARIZED  HEX      RGB             HSB            L*A*B          16/8   TERMCOL   XTERM/HEX

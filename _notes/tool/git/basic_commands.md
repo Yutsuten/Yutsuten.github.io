@@ -10,6 +10,7 @@ git clone git@github:me/name.git .  # Clone contents inside existing folder
 git add .             # Add all
 git add directory/    # Add all files inside a directory
 git add path/to/file  # Add single file
+git add -p file       # Add only part of the file (--patch)
 
 # See difference
 git diff

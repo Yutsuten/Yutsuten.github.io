@@ -75,6 +75,16 @@ Host *
     ServerAliveInterval 120
 ```
 
+#### SSH with proxy, specify password though environment variables
+- [connect-proxy](http://manpages.ubuntu.com/manpages/trusty/man1/connect-proxy.1.html)
+
+```shell
+export SOCKS5_PASSWORD=12345
+export SOCKS_PASSWORD=12345
+export HTTP_PROXY_PASSWORD=12345
+export CONNECT_PASSWORD=12345
+```
+
 ### SSH copy folder
 ```shell
 # Terminal is on local, host name is in file ~/.ssh/config

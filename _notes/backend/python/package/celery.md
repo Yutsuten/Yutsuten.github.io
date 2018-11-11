@@ -31,3 +31,17 @@ celery -A tasks worker --loglevel=info
 >>> from tasks import add
 >>> add.delay(2, 3)  # Returns AsyncResult
 ```
+
+### Task status
+- [Documentation](http://docs.celeryproject.org/en/latest/reference/celery.result.html)
+
+```python
+from celery.result import AsyncResult
+task = AsyncResult("task-id")
+task.ready()  # True or False
+```
+
+### Raise SoftTimeLimitExceeded exception on the task
+```python
+task.revoke(terminate=True, signal='SIGUSR1')
+```

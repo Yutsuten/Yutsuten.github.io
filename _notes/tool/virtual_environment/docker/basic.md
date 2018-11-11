@@ -20,3 +20,8 @@ docker run hello-world
 ## List Docker images
 docker image ls
 ```
+
+### Cleanup
+```shell
+docker system prune -a
+```
