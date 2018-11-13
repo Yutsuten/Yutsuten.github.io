@@ -10,7 +10,8 @@
 ### Edit
 ```shell
 sed -ie 's/some_pattern/hello/g' my_text_file  # Replace
-sed -ie '/pattern/a some text here/' my_text_file  # Add after
+sed -ie '/pattern/a some text here' my_text_file  # Add after
+sed -ie '/pattern/i some text here' my_text_file  # Add before
 ```
 
 ### Find
