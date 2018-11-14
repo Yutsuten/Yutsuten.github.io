@@ -13,4 +13,8 @@ git merge --abort
 
 # After fixing conflicts, commit merge
 git commit --no-edit  # (Recommended) Default merge message
+
+# Squash all commits into one
+git merge --squash new-feature
+git commit
 ```
