@@ -29,6 +29,14 @@ chmod 400 ~/.ssh/id_rsa
 chmod 600 ~/.ssh/config
 ```
 
+### Access to remote machine
+```shell
+ssh myhost
+
+# Sending a command to remote
+ssh myhost 'ls -l'
+```
+
 ### Running GUI applications
 ```shell
 # Windows requirement: install Xming
@@ -38,7 +46,7 @@ sudo yum install xorg-x11-xauth
 sudo apt-get install xauth
 
 # Login using X11
-ssh -X <credentials>
+ssh -Y myhost
 ```
 
 ### Automatic configuration
