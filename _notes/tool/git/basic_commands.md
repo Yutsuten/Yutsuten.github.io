@@ -17,6 +17,10 @@ git diff
 git diff --staged # After git add
 git diff -- path/to/file.txt # Difference of a single file
 git diff commit1 commit2
+git diff HEAD~1 HEAD
+
+# See commit data (diff included)
+git show  # parameter can be a commit, default is HEAD
 
 # Remove files from staging area
 git reset HEAD .
