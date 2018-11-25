@@ -57,13 +57,6 @@ my_dict = {'name': 'John', 'age': 28}
 my_dict['hobby'] = 'games'
 ```
 
-## String methods
-```python
-"Hello".lower()
-"Hello".upper()
-"HTml5".isalpha() # False
-```
-
 ## Built-in functions
 ```python
 len("Hello")
