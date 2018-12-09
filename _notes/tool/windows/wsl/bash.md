@@ -1,7 +1,6 @@
 ---
 ---
 
-## Using Windows bash
 ### Personalization
 - [Make Bash on Ubuntu on Windows 10 Look Like the Ubuntu Terminal](https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2)
 - [Solarized colors for vim in bash on windows works!](https://www.reddit.com/r/bashonubuntuonwindows/comments/60da1u/solarized_colors_for_vim_in_bash_on_windows_works/)
@@ -47,16 +46,3 @@ SLOT SOLARIZED  HEX      RGB             HSB            L*A*B          16/8   TE
 14   base00     #657b83  101  123  131   195  23   51   50  -07  -07   11/7   bryellow  241  #626262
 15   base3      #fdf6e3  253  246  227   44   10   99   97  00   10    15/7   brwhite   230  #ffffd7
 ```
-
-## Using Linux terminal
-### Setup X11
-```shell
-# On windows install a X server (like xming)
-# Then inside the linux machine
-echo 'export DISPLAY=127.0.0.1:0' >> ~/.bashrc
-
-sudo apt install dbus-x11  # Not sure - https://github.com/Microsoft/WSL/issues/2016
-```
-
-### Guide
-- [Setup and install](https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-wsl/)
