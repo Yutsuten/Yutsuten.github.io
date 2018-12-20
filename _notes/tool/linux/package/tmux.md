@@ -71,4 +71,7 @@ C-b d
 # Change default directory
 C-b :
 attach -c ~/Projects
+
+# Show big clock
+C-b + t
 ```

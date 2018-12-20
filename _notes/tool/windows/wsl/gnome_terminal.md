@@ -28,7 +28,7 @@ bash -c -l "cd && gnome-terminal"
 
 - Create the vbs script to launch the application with a hidden command window
 ```vb
-args = "-c" & " -l " & """cd && gnome-terminal"""
+args = "-c" & " -l " & """cd && gnome-terminal; read"""
 WScript.CreateObject("Shell.Application").ShellExecute "bash", args, "", "open", 0
 ```
 
