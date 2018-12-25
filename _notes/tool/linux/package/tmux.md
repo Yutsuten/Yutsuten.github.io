@@ -23,12 +23,15 @@ sudo mv tmux-${VERSION} /usr/local/src
 ```
 
 ### Run
-```
+```shell
 tmux
 tmux new -s sessionname
 tmux rename-session -t 0 sessionname
 tmux ls
 tmux attach -t 0
+
+# When nesting, this parameter may be necessary to avoid colours issues
+tmux -2  # Force tmux to assume the terminal supports 256 colours
 ```
 
 ### Commands

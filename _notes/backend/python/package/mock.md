@@ -25,9 +25,13 @@ class TestCalc(TestCase):
     def setUp(self):
         self.calc = Calculator
 
+    @mock.patch('calc.requests')
     @mock.patch('calc.Calculator.sum')
-    def test_sum_return_value(self, sum):
+    def test_sum_return_value(self, sum, mock_requests):
         sum.return_value = 9
+
+        mock_requests.get.return_value.content = 'Content of the request'
+        # Mocks requests.get().content
 
         answer = self.calc.sum(2, 4)
         self.assertEqual(answer, 9)
