@@ -1,13 +1,19 @@
 ---
 ---
 
+### Managing users
+```shell
+sudo adduser test
+sudo userdel -r test
+
+sudo passwd test
+```
 ### Add sudo permissions to user
 ```shell
-sudo usermod -aG sudo,adm mateus
-sudo adduser mateus
+sudo usermod -aG sudo test
 ```
 
-### Change password
+### Allow access to x-server
 ```shell
-passwd mateus
+xhost +SI:localuser:test
 ```

@@ -75,6 +75,12 @@ C-b d
 C-b :
 attach -c ~/Projects
 
+# Sessions
+Prefix :new
+Prefix (
+Prefix )
+Prefix s
+
 # Show big clock
 C-b + t
 ```
