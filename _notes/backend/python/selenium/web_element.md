@@ -24,7 +24,7 @@ element.submit()  # If within a form
 from selenium.webdriver.support.ui import Select
 select = Select(element)
 select.deselect_all()
-select.select_by_visible_text("boo")
+select.select_by_visible_text('boo')
 
 # Input text
 from selenium.webdriver.common.keys import Keys
