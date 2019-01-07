@@ -3,7 +3,7 @@
 
 [Selenium Documentation](https://www.seleniumhq.org/docs/03_webdriver.jsp)
 
-#### Setup
+### Setup
 ```shell
 sudo apt install chromium-browser
 
@@ -16,16 +16,17 @@ mv chromedriver ~/bin/chromedriver
 pip install selenium
 ```
 
-#### Script sample
+### Basic script
 ```python
 # main.py
 from selenium import webdriver
 
 browser = webdriver.Chrome()
 browser.get('http://seleniumhq.org/')
+browser.quit()
 ```
 
-#### Run
+### Run
 ```shell
 python main.py
 ```
