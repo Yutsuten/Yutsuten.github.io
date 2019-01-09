@@ -3,6 +3,11 @@
 
 #### index.js
 ```javascript
+document.getElementById('foo')
+document.getElementsByClassName('foo')
+document.getElementsByName('foo')
+document.getElementsByTagName('foo')
+
 typeof my_variable;
 // 'string'
 // 'number'
