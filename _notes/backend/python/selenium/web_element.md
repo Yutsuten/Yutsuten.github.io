@@ -12,6 +12,9 @@ element = browser.find_element_by_link_text('foo')  # text within a elements
 element = browser.find_element_by_partial_link_text('foo')
 element = browser.find_element_by_css('foo')
 element = browser.find_element_by_xpath('foo')
+
+# Nesting is possible
+element.find_element_by_id('boo')
 ```
 
 ### Interact with elements
