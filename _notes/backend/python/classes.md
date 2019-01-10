@@ -15,6 +15,10 @@ class MyClass(object):
   def customMethod(self, parameter):
     return self.property * parameter
 
+  # Destructor
+  def __del__(self, instance):
+    del self.property
+
 
 myclass = MyClass(5)
 print(myclass.customMethod(10)) # => 50
