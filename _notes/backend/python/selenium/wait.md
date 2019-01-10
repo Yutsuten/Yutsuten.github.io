@@ -1,6 +1,8 @@
 ---
 ---
 
+[Documentation](https://selenium-python.readthedocs.io/waits.html)
+
 ### Wait until element is available
 ```python
 # Implicit
