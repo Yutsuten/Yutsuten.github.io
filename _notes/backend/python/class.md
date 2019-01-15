@@ -22,5 +22,9 @@ class MyClass(object):
 
 myclass = MyClass(5)
 print(myclass.customMethod(10)) # => 50
+
+# Access named attributes from string
+getattr(x, 'foobar')       # Equivalent to x.foobar
+setattr(x, 'foobar', 123)  # Equivalent to x.foobar = 123
 ```
 
