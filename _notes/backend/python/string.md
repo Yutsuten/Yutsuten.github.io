@@ -2,16 +2,28 @@
 ---
 
 ```python
-'Hello'.lower()
-'Hello'.upper()
-'HTml5'.isalpha() # False
-```
+# Simple string manipulations
+text.lower()
+text.upper()
+text.isalpha()  # Returns True if it only has letters
+text.isdigit()  # Returns True if it only has numbers
+text.isalnum()  # Returns True if it has letters or numbers
 
-### Split
-```python
-# Split string to list
-'What is your name?'.split() # Default is ' '
-'some,data,here'.split(',')
+len(text)
+
+# Replace
+text.replace('Hello', '')
+
+# Split
+text.split()  # Default is ' '
+
+# String addtion
+text_sum = 'Hello ' + 'world!'
+
+# Unicode support
+# coding:utf-8
+mystring = u'こんにちは'
+mystring = 'こんにちは'.decode('utf-8')
 ```
 
 ### Format (new style)

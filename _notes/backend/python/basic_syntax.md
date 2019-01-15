@@ -29,8 +29,6 @@ multiplication = 108 * 0.5
 division = 108 / 9
 exponentiation = 10 ** 2
 modulo = 10 % 2
-array_addition = [1, 2, 3] + [4, 5, 6]
-string_addition = 'Hello ' + 'world!'
 ```
 
 ## Bool evaluations
@@ -40,101 +38,79 @@ string_addition = 'Hello ' + 'world!'
 not False
 ```
 
-## Array operations
-```python
-my_array = ['a', 'b', 'c', 'd', 'e', 'g', 'f']
-my_array[2]
-my_array.append('z')
-my_array.index('d')
-my_array.remove('z')
-my_array.pop(0)
-my_array.sort()
-```
-
-## Dictionary operations
-```python
-my_dict = {'name': 'John', 'age': 28}
-my_dict['hobby'] = 'games'
-```
-
 ## Built-in functions
 ```python
-len("Hello")
-len([1, 2, 3])
+# Math
 max(3, 4, 5)
 min(3, 4, 5)
 abs(-7)
 sum(2, 3, 4)
-type(3.14) # == float
+round(3.14)
+
+# Cast
 str(3.14)
 int(3.14)
 float(3)
-round(3.14)
+
+# Type
+type(3.14) # == float
+isinstance(3.14, float)
+
+# Delete variable
+del my_variable
+
+# Console interaction
 word = raw_input("Enter a word: ")
-del word
-range(6) # => [0, 1, 2, 3, 4, 5] (In python 3: a range class, not a list)
-range(1, 6) # => [1, 2, 3, 4, 5]
-range(1, 6, 3) # => [1, 4]
-'2'.isdigit() # True
+
+# Print
+print(my_int)
+print(span())
+print('%.2f' % my_float)
+print('Title', variable) # Title <variable>
 ```
 
 ## Condition
 ```python
 if 3 < 4:
-  pass
+    pass
 elif 3 > 4:
-  pass
+    pass
 else
-  pass
+    pass
 ```
 
 ## For loop
 ```python
 my_array = [6, 2, 5]
 for number in my_array:
-  print(number)
+    print(number)
 
 for i in range(len(my_array)):
-  print(my_array[i])
+    print(my_array[i])
 
 for i, item in enumerate(my_array):
-  print(i, item)
+    print(i, item)
 
 my_dict = {'name': 'John', 'age': 28}
 for key in my_dict:
-  print(key, my_dict[key])
+    print(key, my_dict[key])
 ```
 
 ## While loop
 ```python
 while var1 < var2
-  pass
+    pass
 else
-  # Only if while condition became false
-  pass
+    # Only if while condition became false
+    pass
 # Result of break
 ```
 
 ## Function
 ```python
 def spam():
-  eggs = 12
-  return eggs
-```
-
-## Printing
-```python
-print(my_int)
-print(span())
-print("%.2f" % my_float)
-print("Title", variable) # Title <variable>
-```
-
-## Unicode support
-```python
-# coding:utf-8
-mystring = u'こんにちは'
-mystring = 'こんにちは'.decode('utf-8')
+    eggs = 12
+    return eggs
 ```
 
 ## Raise exception
@@ -142,4 +118,3 @@ mystring = 'こんにちは'.decode('utf-8')
 if some_condition:
     raise Exception('Message')
 ```
-
