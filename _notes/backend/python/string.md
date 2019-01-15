@@ -12,7 +12,8 @@ text.isalnum()  # Returns True if it has letters or numbers
 len(text)
 
 # Replace
-text.replace('Hello', '')
+text.replace('Hello', '')  # Replace all
+text.replace('Hello', '', 1)  # Number of ocurrences to replace
 
 # Split
 text.split()  # Default is ' '
