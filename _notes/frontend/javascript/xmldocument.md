@@ -13,7 +13,7 @@ var doc = document.implementation.createDocument('http://www.w3.org/1999/02/22-r
 var root = doc.documentElement;
 var anElement = doc.createElement('div');
 anElement.setAttribute('class', 'container');
-anElement.textContent('Hello World');
+anElement.textContent = 'Hello World';
 root.appendChild(anElement);
 
 // Serialize
