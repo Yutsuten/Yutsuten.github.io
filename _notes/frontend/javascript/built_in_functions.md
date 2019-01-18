@@ -17,13 +17,15 @@ typeof my_variable;
 
 isNaN(my_variable);
 
-// Run a code 1 time after some time
-setTimeout(() => {
+// Run a code once after some time
+var timeoutId = setTimeout(() => {
     console.log('Hello');
 }, 1000);
+clearTimeout(timeoutId);
 
 // Repeat a code on fixed interval
-setInterval(() => {
+var intervalId = setInterval(() => {
     console.log('Hello');
 }, 1000);
+clearInterval(intervalId);
 ```
