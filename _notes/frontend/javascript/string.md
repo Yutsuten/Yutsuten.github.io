@@ -18,7 +18,9 @@ myString.substr(initialIndex, numChars); // Last parameter optional
 // Find
 myString.indexOf('foo')  // -1 or index
 myString.search(/foo*/)  // -1 or index
-RegExp('foo*').test(myString);  // true or false
+/foo*/.test(myString);  // true or false
+let regex = new RegExp('foo*');
+regex.test(myString);  // true or false
 
 // Replace
 myString.replace('-', ''); // Only first occurrence
