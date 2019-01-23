@@ -15,6 +15,9 @@ element = browser.find_element_by_xpath('foo')
 
 # Nesting is possible
 element.find_element_by_id('boo')
+
+# Parent element
+parent = child.find_element_by_xpath('..')
 ```
 
 ### Interact with elements
@@ -23,10 +26,17 @@ element.text
 element.click()
 element.submit()  # If within a form
 
+# Checkbox
+element.is_selected()
+
 # Select
 from selenium.webdriver.support.ui import Select
 select = Select(element)
+select.options  # Return option elements
+select.all_selected_options  # Return selected option elements
 select.deselect_all()
+select.select_by_index(0)
+select.select_by_value('boo')
 select.select_by_visible_text('boo')
 
 # Input text
