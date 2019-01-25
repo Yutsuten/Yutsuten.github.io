@@ -43,4 +43,6 @@ select.select_by_visible_text('boo')
 # Input text
 from selenium.webdriver.common.keys import Keys
 element.send_keys('seleniumhq' + Keys.RETURN)
+element.send_keys(' ')  # May work as click()
+element.send_keys(Keys.RETURN)  # May work as click()
 ```
