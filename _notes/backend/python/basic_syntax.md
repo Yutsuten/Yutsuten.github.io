@@ -85,11 +85,15 @@ my_array = [6, 2, 5]
 for number in my_array:
     print(number)
 
-for i in range(len(my_array)):
-    print(my_array[i])
-
 for i, item in enumerate(my_array):
     print(i, item)
+
+for _ in range(10):  # If iterator is unnecessary
+    pass
+
+import itertools  # This is faster than the above
+for _ in itertools.repeat(None, 10):
+    pass
 
 my_dict = {'name': 'John', 'age': 28}
 for key in my_dict:
