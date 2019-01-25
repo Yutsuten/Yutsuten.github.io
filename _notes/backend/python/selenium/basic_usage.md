@@ -21,9 +21,19 @@ pip install selenium
 # main.py
 from selenium import webdriver
 
+# No options
 browser = webdriver.Chrome()
 browser.get('http://seleniumhq.org/')
 browser.quit()
+
+# With options
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')  # Hidden browser
+options.add_argument('--disable-infobars')
+options.add_argument('--disable-extensions')
+options.add_argument('--window-position=0,0')
+options.add_argument('--window-size=1280,920')
+browser = webdriver.Chrome(options=options)
 ```
 
 ### Run
