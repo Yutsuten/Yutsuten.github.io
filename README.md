@@ -11,8 +11,12 @@ bundle install
 
 #### Compiling JS
 ```shell
+# With docker
+docker-compose up -d assets
+
+# Without docker
 sudo apt install nodejs yarn
-yarn global add webpack-cli
+yarn
 npx webpack  # --watch
 ```
 
