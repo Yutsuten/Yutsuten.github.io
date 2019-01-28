@@ -40,6 +40,9 @@ select.select_by_index(0)
 select.select_by_value('boo')
 select.select_by_visible_text('boo')
 
+# Date
+browser.execute_script('document.getElementById("startDate").value="{}"'.format('2019-01-28'))
+
 # Input text
 from selenium.webdriver.common.keys import Keys
 element.send_keys('seleniumhq' + Keys.RETURN)

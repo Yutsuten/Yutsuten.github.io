@@ -8,6 +8,10 @@
 # All the assert methods accept a msg argument
 assertEqual(a, b)
 assertNotEqual(a, b)
+assertGreater(a, b)
+assertGreaterEqual(a, b)
+assertLess(a, b)
+assertLessEqual(a, b)
 assertTrue(x)
 assertFalse(x)
 assertIs(a, b)
