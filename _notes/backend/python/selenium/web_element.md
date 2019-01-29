@@ -23,6 +23,7 @@ parent = child.find_element_by_xpath('..')
 ### Interact with elements
 ```python
 element.text
+element.get_attribute('innerText')  # May work better than element.text
 element.get_attribute('value')
 element.click()
 element.submit()  # If within a form
