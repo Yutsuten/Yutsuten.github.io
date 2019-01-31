@@ -22,7 +22,10 @@ CMD ["binname", "arg"]
 version: "3"
 services:
   <service_name>:
-    build: .
+    # build: .
+    build:
+      context: .
+      dockerfile: ./path/to/Dockerfile
     volumes:
       - .:/code
 ```
