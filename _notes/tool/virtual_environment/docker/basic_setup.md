@@ -18,19 +18,34 @@ CMD ["binname", "arg"]
 ```
 
 #### docker-compose.yml
-```
+```yml
 version: "3"
 services:
   <service_name>:
-    # build: .
+    build: .
+    ports:
+      - "4050:4000"  # HOST:CONTAINER
+    volumes:
+      - .:/code
+```
+
+```yml
+# If build directory and Dockerfile are in different locations
+services:
+  <service_name>:
     build:
       context: .
       dockerfile: ./path/to/Dockerfile
-    volumes:
-      - .:/code
 ```
 
 ### Running the container's bash (for debug)
 ```shell
 docker-compose run <service_name> bash
+```
+
+### Start the services
+```shell
+docker-compose up -d  # Detached mode
+docker-compose up -d --build  # Rebuild containers
+docker-compose up -d <service_name>
 ```
