@@ -1,6 +1,14 @@
 version: '3'
 services:
-  assets:
+  web:
     build: .
+    ports:
+      - "4050:4000"
+    volumes:
+      - .:/code
+  assets:
+    build:
+      context: .
+      dockerfile: assets.Dockerfile
     volumes:
       - .:/code

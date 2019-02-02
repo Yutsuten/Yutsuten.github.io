@@ -1,5 +1,4 @@
-FROM node
+FROM jekyll/jekyll
 WORKDIR /code
 COPY . /code
-RUN yarn
-CMD ["npx", "webpack", "--watch"]
+CMD ["jekyll", "serve"]
