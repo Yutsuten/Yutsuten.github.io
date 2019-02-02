@@ -17,6 +17,8 @@ brew install grip
 ### Usage
 ```shell
 cd myrepo
+python -m grip
+# or
 grip
  * Running on http://localhost:6419/
 ```
