@@ -5,19 +5,15 @@
 
 [Django Static Precompiler](http://django-static-precompiler.readthedocs.io/en/stable/)
 
-## Install babel
+### Install packages
 ```shell
 yarn add babel-cli babel-preset-env --dev
+pip install django-static-precompiler
 ```
 
 #### .babelrc
 ```json
 { "presets": ["env"] }
-```
-
-## Install Django Static Precompiler
-```shell
-pip install django-static-precompiler
 ```
 
 #### settings.py
@@ -45,19 +41,19 @@ STATIC_PRECOMPILER_COMPILERS = (
 STATIC_PRECOMPILER_ROOT = os.path.join(BASE_DIR, 'static_root')
 ```
 
-## Migration
+### Migration
 ```shell
 python manage.py migrate static_precompiler
 ```
 
-## Usage
+### Usage
 ```html
 {% load compile_static %}
 
-<script type="text/javascript" src="{% static 'js/script.es6'|compile %}"></script>
+<script type="text/javascript" src="{% static 'js/script.es6' | compile %}"></script>
 ```
 
-## Deploy compiled scripts
+### Deploy compiled scripts
 #### settings.py
 ```python
 STATIC_PRECOMPILER_DISABLE_AUTO_COMPILE = True
@@ -71,7 +67,7 @@ python manage.py collectstatic --settings myapp.deploy_settings.dev --noinput -v
 rm -rf myapp/static/COMPILED
 ```
 
-## Gitlab CI
+### Gitlab CI
 #### .gitlab-ci.yml
 ```yml
 dev:
