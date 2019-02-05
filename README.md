@@ -13,10 +13,12 @@ bundle install
 
 # Assets (javascript, css)
 sudo apt install nodejs yarn
+cd assets/
 yarn
 npx webpack  # --watch
+cd ../
 
-# Compile and run server
+# Build and run server
 bundle exec jekyll serve
 ```
 
