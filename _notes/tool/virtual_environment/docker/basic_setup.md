@@ -27,6 +27,7 @@ services:
       - "4050:4000"  # HOST:CONTAINER
     volumes:
       - .:/code
+      - /code/node_modules  # Data volume for compiled code on build
 ```
 
 ```yml
