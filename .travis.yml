@@ -12,9 +12,8 @@ before_install:
   - gem install bundler
   - bundle --version
   - bundle install
-  - yarn
 install:
-  - yarn run build
+  - cd assets/ && yarn && yarn run build && cd ../
   - bundle exec jekyll build
 after_success:
   - git config user.name 'TravisCI Auto-publisher'

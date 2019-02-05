@@ -7,8 +7,7 @@ services:
     volumes:
       - .:/code
   assets:
-    build:
-      context: .
-      dockerfile: assets.Dockerfile
+    build: ./assets
     volumes:
-      - .:/code
+      - ./assets:/code
+      - /code/node_modules
