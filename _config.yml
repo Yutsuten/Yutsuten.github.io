@@ -16,7 +16,3 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
 exclude: ["assets/node_modules"]
-
-# Jekyll Multiple Languages Plugin
-languages: ["en", "ja"]
-exclude_from_localizations: ["assets", "projects", "bundle.js", "bundle.css"]
