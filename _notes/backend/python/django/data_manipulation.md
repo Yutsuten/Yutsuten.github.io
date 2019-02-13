@@ -37,6 +37,9 @@ Question.objects.exclude(id__in=[1, 2, 3])
 
 # Nesting
 Question.objects.filter(difficulty=1).exclude(id__in=[1, 2, 3])
+
+# Lookups
+Question.objects.filter(text__startswith='How ')
 ```
 
 ### Data set
