@@ -3,7 +3,7 @@
 
 ```shell
 # Check the number of arguments
-if [ "$#" -ne 2 ]; then
+if [[ "$#" -ne 2 ]]; then
   # >&2 Echo output to standard error instead of standard out
   echo "Usage: $0 arg1 arg2" >&2
   exit 1
