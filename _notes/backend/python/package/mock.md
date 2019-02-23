@@ -42,4 +42,9 @@ class TestCalc(TestCase):
 
         answer = self.calc.sum(2, 4)
         self.assertEqual(answer, 6)
+
+    @mock.patch('calc.Calculator.sum', side_effect=Exception('Test'))
+    def test_sum_side_effect(self, sum):
+        answer = self.calc.sum(2, 4)  # raises exception
+        self.assertEqual(answer, 6)
 ```
