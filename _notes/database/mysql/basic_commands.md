@@ -40,6 +40,8 @@ SELECT * FROM users WHERE nick BETWEEN 'A' AND 'J';
 SELECT * FROM users WHERE achievements BETWEEN 10 AND 20;
 SELECT * FROM users WHERE server = 'Poring' AND achievements > 5;
 SELECT * FROM users WHERE achievements < 5 OR achievements > 10;
+SELECT * FROM users WHERE id IN (1, 5, 8);
+SELECT * FROM users WHERE id NOT IN (1, 5, 8);
 SELECT nick AS 'Nickname' FROM users;
 
 -- Order
