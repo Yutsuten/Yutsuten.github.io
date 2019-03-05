@@ -45,3 +45,22 @@ task.ready()  # True or False
 ```python
 task.revoke(terminate=True, signal='SIGUSR1')
 ```
+
+### Abortable task
+[Reference](http://docs.celeryproject.org/en/latest/reference/celery.contrib.abortable.html)
+```python
+from celery.contrib.abortable import AbortableTask, AbortableAsyncResult
+
+@app.task(bind=True, base=AbortableTask)
+def long_running_task(self):
+    # ...
+    if self.is_aborted():
+        # respect aborted state, and terminate gracefully.
+        logger.warning('Task aborted')
+        return
+    # ...
+
+def cancel_task(task_id):
+    task = AbortableAsyncResult(task_id)
+    task.abort()
+```
