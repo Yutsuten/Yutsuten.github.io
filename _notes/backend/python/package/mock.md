@@ -47,4 +47,8 @@ class TestCalc(TestCase):
     def test_sum_side_effect(self, sum):
         answer = self.calc.sum(2, 4)  # raises exception
         self.assertEqual(answer, 6)
+
+    @mock.patch('calc.Calculator.sum')
+    def test_call_count(self, sum):
+        assert sum.call_count == 3
 ```
