@@ -5,6 +5,7 @@
 Assert methods: [link](https://docs.python.org/3/library/unittest.html#assert-methods)
 
 ```python
+import json
 from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
@@ -50,6 +51,9 @@ class ProjectCreateViewTests(TestCase):
         self.assertNotEqual(response.status_code, 302)
         self.assertEqual(response.template_name, ['projects/create.html'])
         self.assertContains(response, 'This field is required')
+
+    def test_ajax_post(self):
+        self.client.post(reverse('projects:create'), json.dumps({}), content_type='application/json')
 
     def test_create_filled(self):
         response = self.client.post(reverse('projects:create'), {'name': 'Test Project', 'description': 'The description of my test project.'})
