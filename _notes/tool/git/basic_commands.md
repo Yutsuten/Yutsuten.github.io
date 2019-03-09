@@ -45,4 +45,5 @@ git push origin master
 
 # Pull commits from remote
 git pull origin master
+git pull --rebase origin master
 ```
