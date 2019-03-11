@@ -15,8 +15,9 @@ user.save()
 ```python
 # Creating data
 from polls.models import Question
-q = Question(question_text="What's new?")
+q = Question(question_text='Whats new?')
 q.save()
+q = Question.objects.create(question_text='Whats new?')
 
 # Update data
 Question.objects.get(id=1).update(question='Whats up?')
