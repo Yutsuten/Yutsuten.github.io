@@ -39,17 +39,6 @@ g;  # Backward
 <c-f>  # Forward
 <c-b>  # Backward
 
-# Windows manipulation
-<c-w>s  # Split horizontally
-:sp
-<c-w>v  # Split vertically
-:vs
-<c-w><c-r>  # Rotate (invert) windows
-<c-w> + # Change size horizontally
-<c-w> -
-<c-w> > # Change size vertically
-<c-w> <
-
 # Mark a line (not visible)
 ma  # Second letter can be in [a-z] for same file, [A-Z] for global
 'a  # Jump to the line the mark is
