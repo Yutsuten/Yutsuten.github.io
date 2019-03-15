@@ -3,6 +3,15 @@
 
 [Documentation](https://docs.python.org/3/library/unittest.html)
 
+### Skip
+```python
+import unittest
+
+@unittest.skip('Skip me')
+def test_nothing(self):
+    pass
+```
+
 ### Asserts
 ```python
 # All the assert methods accept a msg argument
