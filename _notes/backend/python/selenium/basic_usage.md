@@ -24,6 +24,7 @@ from selenium import webdriver
 # No options
 browser = webdriver.Chrome()
 browser.get('http://seleniumhq.org/')
+browser.refresh()
 browser.quit()
 
 # With options
