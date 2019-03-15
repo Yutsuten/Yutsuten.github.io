@@ -46,6 +46,7 @@ browser.execute_script('document.getElementById("startDate").value="{}"'.format(
 
 # Input text
 from selenium.webdriver.common.keys import Keys
+element.clear()
 element.send_keys('seleniumhq' + Keys.RETURN)
 element.send_keys(' ')  # May work as click()
 element.send_keys(Keys.RETURN)  # May work as click()
