@@ -14,6 +14,9 @@
 :noh
 :nohlsearch
 
+# Change syntax coloring
+:set syntax=html
+
 # Replace
 :%s/before/after/g      # All file
 :'<,'>s/before/after/g  # Only selection
