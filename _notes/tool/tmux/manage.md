@@ -12,6 +12,8 @@ tmux new-window
 tmux ls
 tmux attach -t 0
 tmux attach -c ~/Projects
+
+tmux kill-session -t 0
 tmux kill-server
 
 tmux split-window -v
