@@ -10,7 +10,7 @@ element = browser.find_element_by_tag_name('foo')
 element = browser.find_element_by_name('foo')
 element = browser.find_element_by_link_text('foo')  # text within a elements
 element = browser.find_element_by_partial_link_text('foo')
-element = browser.find_element_by_css('foo')
+element = browser.find_element_by_css_selector('foo')
 element = browser.find_element_by_xpath('foo')
 
 # Nesting is possible
