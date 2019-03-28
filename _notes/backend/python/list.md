@@ -29,6 +29,13 @@ range(1, 6) # => [1, 2, 3, 4, 5]
 range(1, 6, 3) # => [1, 4]
 ```
 
+### Looping
+```python
+my_list = ['apple', 'banana', 'grapes', 'pear']
+for c, value in enumerate(my_list, 1):
+    print(c, value)
+```
+
 ### List comprehension
 ```python
 # Three parts
