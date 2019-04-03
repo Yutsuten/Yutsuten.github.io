@@ -17,13 +17,21 @@ user.save()
 from polls.models import Question
 q = Question(question_text='Whats new?')
 q.save()
-q = Question.objects.create(question_text='Whats new?')
+q = Question.objects.create(question='Whats new?')
 
 # Update data
 Question.objects.get(id=1).update(question='Whats up?')
 
 # Delete data
 Question.objects.get(id=1).delete()
+```
+
+### Try except
+```python
+try:
+    Question.objects.get(question('Whats up?'))
+except Question.DoesNotExist:
+    Question.objects.create(question='Whats new?')
 ```
 
 ### Queryset
