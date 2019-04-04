@@ -18,6 +18,9 @@ text.replace('Hello', '', 1)  # Number of ocurrences to replace
 # Split
 text.split()  # Default is ' '
 
+# Strip
+text.strip()  # Default is ' '
+
 # String addtion
 text_sum = 'Hello ' + 'world!'
 
