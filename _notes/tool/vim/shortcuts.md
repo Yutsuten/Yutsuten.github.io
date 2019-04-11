@@ -23,6 +23,9 @@
 :%s/\v(\w+)/ \1 /g      # \v "very magic" mode, full regex. Captured group \1
 :%s/\(\w\+)/ \1 /g      # Without "very magic" mode, escape ( and )
 
+# Copy file path to clipboard
+:let @+ = @%
+
 # See buffers list
 :buffers
 
