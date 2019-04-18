@@ -45,7 +45,8 @@ max(3, 4, 5)
 min(3, 4, 5)
 abs(-7)
 sum(2, 3, 4)
-round(3.14)
+round(3.14)  # Default 0 decimal digits
+round(3.14, 1)  # 1 decimal digits
 
 # Cast
 str(3.14)

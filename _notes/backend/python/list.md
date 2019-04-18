@@ -17,6 +17,7 @@ len(list_sum)
 # Sorting
 from operator import itemgetter
 list_of_dicts.sort(key=itemgetter('date'))
+my_list = sorted(list_of_dicts, key=itemgetter('date'), reverse=True)
 
 # Copy list
 from copy import deepcopy
