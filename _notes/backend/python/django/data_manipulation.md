@@ -12,6 +12,7 @@ user.save()
 ```
 
 ### Create, update, delete
+[Reference](https://docs.djangoproject.com/en/2.1/ref/models/querysets/)
 ```python
 # Creating data
 from polls.models import Question
@@ -24,6 +25,19 @@ Question.objects.get(id=1).update(question='Whats up?')
 
 # Delete data
 Question.objects.get(id=1).delete()
+```
+
+### Convenience methods
+```python
+obj, created = Person.objects.get_or_create(
+    first_name='John', last_name='Lennon',
+    defaults={'birthday': date(1940, 10, 9)},
+)
+
+obj, created = Person.objects.update_or_create(
+    first_name='John', last_name='Lennon',
+    defaults={'first_name': 'Bob'},
+)
 ```
 
 ### Try except
