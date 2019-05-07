@@ -1,12 +1,27 @@
 ---
 ---
 
-[Site](http://htmlhint.com/)
-```shell
+### Install
+
+```bash
 yarn global add htmlhint
 ```
 
-#### .htmlhintrc
+### Configuration file
+
+[Documentation](https://github.com/htmlhint/HTMLHint/wiki/Usage)
+
+#### Naming / path
+
+| Home | Parent |
+| ---- | ------ |
+| - | `.htmlhintrc` |
+
+#### Command
+
+There is not command to generate a configuration file.
+
+#### Sample
 ```json
 {
   "tagname-lowercase": true,

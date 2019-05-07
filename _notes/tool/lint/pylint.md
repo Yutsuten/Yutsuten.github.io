@@ -1,16 +1,41 @@
 ---
 ---
 
-### Install (locally preferred)
+### Install
+
 ```shell
-pip install pylint pylint-django
+python -m pip install pylint
 ```
 
-#### .pylintrc
-```shell
-[MASTER]
-load-plugins=pylint_django # For django projects
+### Configuration file
 
+[Documentation](https://docs.pylint.org/en/1.6.0/run.html)
+
+#### Naming / path
+
+| Home | Parent |
+| ---- | ------ |
+| `~/.pylintrc`, `.config/pylintrc` | `pylintrc` |
+
+#### Command
+
+```bash
+pylint --generate-rcfile
+```
+
+#### Sample
+
+Usage with `pylint-django`, for django projects:
+
+```
+[MASTER]
+load-plugins=pylint_django
+```
+
+Customizing checks:
+
+```
+[MASTER]
 # If there are dependencies, add to path
 init-hook='import sys, os; sys.path.append(os.getcwd() + '/anki')'
 
