@@ -56,5 +56,5 @@ ignored-modules=aqt.qt
 
 [MESSAGES CONTROL]
 # Disable rules
-disable=unused-argument,protected-access,redefined-outer-name
+disable=import-error,no-name-in-module,unused-argument,protected-access,redefined-outer-name
 ```
