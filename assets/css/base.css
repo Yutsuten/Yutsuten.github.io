@@ -55,3 +55,14 @@ input:focus {
 [v-cloak] {
   display: none;
 }
+
+table {
+  border: 1px solid #EEE8D5;
+  margin: 15px 0px;
+}
+
+table th,
+table td {
+  border: 1px solid #EEE8D5;
+  padding: 5px 8px;
+}
