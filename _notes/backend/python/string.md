@@ -28,6 +28,9 @@ text_sum = 'Hello ' + 'world!'
 # coding:utf-8
 mystring = u'こんにちは'
 mystring = 'こんにちは'.decode('utf-8')
+
+import unicodedata
+mystring = unicodedata.normalize('NFC', u'こんにちは')
 ```
 
 ### Format (new style)
