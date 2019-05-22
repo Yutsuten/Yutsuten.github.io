@@ -23,15 +23,15 @@ event.wait()  # Wait for event.set() be called
 import threading
 
 def sleep_raise_event(event, seconds):
-  from time import sleep
-  sleep(seconds)
-  event.set()
+    from time import sleep
+    sleep(seconds)
+    event.set()
 
 def lazy_sleep(seconds):
-  event = threading.Event()
-  threading.Thread(target=sleep_raise_event, args=(event, seconds)).start()
-  event.wait()
+    event = threading.Event()
+    threading.Thread(target=sleep_raise_event, args=(event, seconds)).start()
+    event.wait()
 
 while True:
-  lazy_sleep(1)
+    lazy_sleep(1)
 ```
