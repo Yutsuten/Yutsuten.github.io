@@ -35,6 +35,9 @@ range(1, 6, 3) # => [1, 4]
 my_list = ['apple', 'banana', 'grapes', 'pear']
 for c, value in enumerate(my_list, 1):
     print(c, value)
+
+for elem1, elem2 in zip(my_list1, my_list2):
+    print(elem1, elem2)
 ```
 
 ### List comprehension
