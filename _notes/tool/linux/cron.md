@@ -6,7 +6,8 @@
 crontab -e
 ```
 
-```crontab
+Add:
+```
 @reboot ${HOME}/test.sh
 ```
 
