@@ -55,6 +55,10 @@ Question.objects.get(id=1)
 Question.objects.filter(id=1)
 Question.objects.exclude(id=1)
 
+# Selecting colums
+Question.objects.values_list('id')  # Returns queryset of tuples
+Question.objects.values_list('id', flat=True)  # Returns queryset of values
+
 # List
 Question.objects.exclude(id__in=[1, 2, 3])
 
