@@ -10,4 +10,7 @@ my_bool = true
 "Hello".reverse
 "Hello".upcase
 "Hello".downcase
+"hello".capitalize
+
+my_name.capitalize!  # Assign the result to the variable
 ```
