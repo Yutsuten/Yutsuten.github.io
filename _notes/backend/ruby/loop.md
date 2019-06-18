@@ -30,6 +30,10 @@ my_array.each do |item|
   do_something
 end
 
+my_hash.each do |key, value|
+  do_something
+end
+
 10.times do
   do_something
 end
