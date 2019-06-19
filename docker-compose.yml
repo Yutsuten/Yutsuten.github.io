@@ -1,13 +1,10 @@
 version: '3'
 services:
   web:
-    build: .
+    command: jekyll serve
+    image: jekyll/jekyll
     ports:
       - "4050:4000"
     volumes:
       - .:/code
-  assets:
-    build: ./assets
-    volumes:
-      - ./assets:/code
-      - /code/node_modules
+    working_dir: /code

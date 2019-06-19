@@ -15,4 +15,3 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
-exclude: ["assets/node_modules"]
