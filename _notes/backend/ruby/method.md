@@ -10,7 +10,7 @@ end
 method_name  # Call it
 
 # With parameters
-def method_name(param, *splat)
+def method_name(param=5, *splat)
   # splat becomes an array
   do_something
   return something
