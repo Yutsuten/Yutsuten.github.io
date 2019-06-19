@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     {% if jekyll.environment == 'production' %}
-    {% include analytics.html %}
+      {% include analytics.html %}
     {% endif %}
 
     <link rel="shortcut icon" type="image/png" href="{% link favicon.png %}"/>
+
+    <!-- Load required Bootstrap and BootstrapVue CSS -->
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+    <!-- Load polyfills to support older browsers -->
+    <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script>
+
+    <!-- Load Vue followed by BootstrapVue -->
+    {% if jekyll.environment == 'production' %}
+      <script src="{% link assets/js/vue.min.js %}"></script>
+    {% else %}
+      <script src="{% link assets/js/vue.js %}"></script>
+    {% endif %}
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+
+    <!-- Load custom styles -->
     <link rel="stylesheet" href="{% link assets/css/base.css %}" media="screen">
     <link rel="stylesheet" href="{% link assets/css/navigation_bar.css %}" media="screen">
+    <link rel="stylesheet" href="{% link assets/css/syntax_highlight.css %}" media="screen">
 
     {% if page.css %}
-    <link rel="stylesheet" href="{{page.css}}">
+    <link rel="stylesheet" href="{{ page.css }}">
     {% endif %}
 
     <title>{{ page.title }} - Mateus Etto Website</title>
@@ -51,6 +69,10 @@
       <div class="footer">
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    {% if page.javascript %}
+    <script src="{{ page.javascript }}"></script>
+    {% endif %}
+
   </body>
 </html>
