@@ -5,6 +5,7 @@
 my_hash = Hash.new
 my_hash = Hash.new("default value")
 my_hash["id"] = 1
+my_hash.delete(key)
 
 my_hash = {
   "name" => "Taro",
