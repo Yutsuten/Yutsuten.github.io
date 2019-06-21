@@ -20,6 +20,14 @@ for num in 1...10
   puts num
 end
 
+95.upto(100) do |num|
+  puts num
+end
+
+95.downto(90) do |num|
+  puts num
+end
+
 loop do
   next if cond  # Same as continue, skip this interaction
   do_something

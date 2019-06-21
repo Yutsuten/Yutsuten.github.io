@@ -12,5 +12,7 @@ my_string.capitalize
 my_string.gsub(/s/, "th")  # Global substitution
 my_string.include? "substring"
 
+my_string << "concatenate me"
+
 words_array = my_string.split(" ")
 ```

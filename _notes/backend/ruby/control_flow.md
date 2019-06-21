@@ -16,7 +16,10 @@ else
   do_something
 end
 
+do_something if cond
 do_something unless cond
+
+cond ? was_true : was_false
 
 case my_var
   when 0
