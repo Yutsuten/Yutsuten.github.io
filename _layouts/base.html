@@ -27,7 +27,6 @@
 
     <!-- Load custom styles -->
     <link rel="stylesheet" href="{% link assets/css/base.css %}" media="screen">
-    <link rel="stylesheet" href="{% link assets/css/navigation_bar.css %}" media="screen">
     <link rel="stylesheet" href="{% link assets/css/syntax_highlight.css %}" media="screen">
 
     {% if page.css %}
@@ -38,25 +37,6 @@
   </head>
   <body>
     <div class="wrapper" id="app">
-      <div class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link{% if page.title == 'Notes' %} active{% endif %}" href="{% link notes.html %}">メモ帳</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/Yutsuten" target="_blank">GitHub</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
       <div class="content">
         {{ content }}
       </div>
