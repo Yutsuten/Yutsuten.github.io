@@ -1,5 +1,6 @@
 new Vue({
   el: '#app',
+  delimiters: ['[[', ']]'],
   data: {
     menu_class: 'menu',
     profile_class: 'active',

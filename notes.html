@@ -117,7 +117,7 @@ javascript: assets/js/notes.js
     {%- assign note_id = note_path | replace: '/', '-' -%}
     <div v-cloak v-if="activeNote === '{{ note_id }}'" class="note-content">
       <h1>{{ title }}</h1>
-      {{ note.content | markdownify }}
+      {{ note.content }}
     </div>
   {%- endfor -%}
 </div>

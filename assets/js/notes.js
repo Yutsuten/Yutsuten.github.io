@@ -1,5 +1,6 @@
 new Vue({
   el: '#app',
+  delimiters: ['[[', ']]'],
   data: {
     search: '',
     activeNote: window.location.href.split('#')[1]
