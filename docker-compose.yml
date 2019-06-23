@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    command: jekyll serve
+    command: jekyll serve --host 0.0.0.0
     image: jekyll/jekyll
     ports:
       - "4050:4000"
