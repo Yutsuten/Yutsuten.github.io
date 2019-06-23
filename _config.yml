@@ -2,7 +2,7 @@ title: Mateus Etto
 email: mateus.etto@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Personal website.
-baseurl: "notes" # the subpath of your site, e.g. /blog
+baseurl: "/notes" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: Yutsuten
 
