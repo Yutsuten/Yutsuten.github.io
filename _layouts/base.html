@@ -26,12 +26,8 @@
     <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 
     <!-- Load custom styles -->
-    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/base.css %}" media="screen">
+    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/index.css %}" media="screen">
     <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/syntax_highlight.css %}" media="screen">
-
-    {% if page.css %}
-    <link rel="stylesheet" href="{{ page.css | relative_url }}">
-    {% endif %}
 
     <title>{{ page.title }} - Mateus Etto Website</title>
   </head>
@@ -43,10 +39,6 @@
       <div class="footer">
       </div>
     </div>
-
-    {% if page.javascript %}
-    <script src="{{ page.javascript | relative_url }}"></script>
-    {% endif %}
-
+    <script src="{{ site.baseurl }}{% link assets/js/index.js %}"></script>
   </body>
 </html>
