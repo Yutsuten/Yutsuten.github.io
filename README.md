@@ -11,13 +11,6 @@ ruby --version  # Must be >2.1.0
 gem install bundler
 bundle install
 
-# Assets (javascript, css)
-sudo apt install nodejs yarn
-cd assets/
-yarn
-npx webpack  # --watch
-cd ../
-
 # Build and run server
 bundle exec jekyll serve
 ```
