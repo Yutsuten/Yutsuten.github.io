@@ -4,7 +4,7 @@ services:
     command: jekyll serve --host 0.0.0.0
     image: jekyll/jekyll
     ports:
-      - "4050:4000"
+      - "4000:4000"
     volumes:
       - .:/code
     working_dir: /code
