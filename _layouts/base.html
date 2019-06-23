@@ -8,7 +8,7 @@
       {% include analytics.html %}
     {% endif %}
 
-    <link rel="shortcut icon" type="image/png" href="{% link favicon.png %}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}{% link favicon.png %}"/>
 
     <!-- Load required Bootstrap and BootstrapVue CSS -->
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/syntax_highlight.css %}" media="screen">
 
     {% if page.css %}
-    <link rel="stylesheet" href="{{ site.baseurl }}{{ page.css }}">
+    <link rel="stylesheet" href="{{ page.css | relative_url }}">
     {% endif %}
 
     <title>{{ page.title }} - Mateus Etto Website</title>
@@ -45,7 +45,7 @@
     </div>
 
     {% if page.javascript %}
-    <script src="{{ site.baseurl }}{{ page.javascript }}"></script>
+    <script src="{{ page.javascript | relative_url }}"></script>
     {% endif %}
 
   </body>
