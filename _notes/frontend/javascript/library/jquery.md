@@ -5,10 +5,17 @@
 ```javascript
 // Get the number of selected items by the selector
 $('.selector').length;
+$('.selector').toArray();
+
+// Loop results of a selector
+$('.selector').each(function (index, element) {
+    // Do something
+});
 
 // Add and remove class
 $('.selector').addClass('selected');
 $('.selector').removeClass('selected');
+$('.selector').toggleClass('selected', true);
 
 // Add and remove attributes
 $('.selector').attr('disabled', '');
