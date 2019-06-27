@@ -16,4 +16,7 @@ my_array = my_array.sort_by do |key, value|
   value
 end
 my_array.reverse!
+
+# Map
+my_nums.collect { |num| num ** 2 }
 ```
