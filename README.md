@@ -17,5 +17,5 @@ bundle exec jekyll serve
 
 ### Docker
 ```shell
-docker-compose up -d
+docker run -d --name notes -p 4000:4000 -w /code -v $(pwd):/code jekyll/jekyll jekyll serve --host 0.0.0.0
 ```
