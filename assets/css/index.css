@@ -4,20 +4,17 @@ html, body {
   height: 100%;
 }
 
-div.wrapper {
+.container-fluid {
   min-height: 100%;
   position: relative;
   background-color: #073642;
 }
 
-div.content {
-  display: flex;
-}
-
-div.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.search-bar {
+  padding: 6px 0;
+  background-color: #002b36;
+  font-size: 1.2rem;
+  cursor: default;
 }
 
 body, h1, h2, h3, h4, h5, p, span, ul, li {
