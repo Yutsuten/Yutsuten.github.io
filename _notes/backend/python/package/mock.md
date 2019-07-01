@@ -50,5 +50,9 @@ class TestCalc(TestCase):
 
     @mock.patch('calc.Calculator.sum')
     def test_call_count(self, sum):
+        sum.assert_called_with(1)  # Asserts the last call's parameters
+        sum.assert_any_call(1)     # Asserts any call's parameters
+        sum.assert_any_call(2)     # Asserts any call's parameters
+
         assert sum.call_count == 3
 ```
