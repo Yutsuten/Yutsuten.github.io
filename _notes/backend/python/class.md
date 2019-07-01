@@ -12,12 +12,22 @@ class MyClass(object):
   def __repr__(self):
     return '%.2f' % (self.property)
 
-  def customMethod(self, parameter):
+  def custom_method(self, parameter):
     return self.property * parameter
 
   # Destructor
   def __del__(self, instance):
     del self.property
+
+
+class InheritanceExample(MyClass):
+  # Python 2
+  def custom_method(self, parameter):
+    self(InheritanceExample, self).custom_method(parameter)
+
+  # Python 3
+  def custom_method(self, parameter):
+    self().custom_method(parameter)
 
 
 myclass = MyClass(5)
