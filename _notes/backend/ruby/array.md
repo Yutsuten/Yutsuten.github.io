@@ -18,5 +18,6 @@ end
 my_array.reverse!
 
 # Map
+my_nums.map { |num| num ** 2 }
 my_nums.collect { |num| num ** 2 }
 ```

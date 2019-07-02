@@ -26,4 +26,7 @@ method_name { |n| puts "Hello #{n}" }
 ```ruby
 say_hello = Proc.new { |n| puts "Hello #{n}" }
 method_name &say_hello
+say_hello.call
+
+method_name &:to_i  # to_i becomes a block
 ```

@@ -4,6 +4,7 @@
 ```ruby
 my_name = "Taro"
 my_int = 10
+my_float = 3.14
 my_bool = true
 my_nil = nil
 my_symbol = :hello
@@ -15,11 +16,10 @@ my_symbol.to_s  # to string
 # Check if an object can receive a method
 my_var.respond_to?(:next)
 
-# Add 1 to an integer
-my_int.next
+my_int.next  # Add 1 to an integer
+my_int.to_s  # Convert to string
 
-# Convert to string
-my_int.to_s
+my_float.floor  # Round down
 
 # Assign the result to the variable
 my_name.capitalize!
