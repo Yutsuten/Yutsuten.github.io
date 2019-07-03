@@ -2,12 +2,12 @@
 ---
 
 ```ruby
-my_name = "Taro"
-my_int = 10
+my_name = "Taro"    # String
+my_int = 10         # Integer
 my_float = 3.14
 my_bool = true
 my_nil = nil
-my_symbol = :hello
+my_symbol = :hello  # Symbol
 
 my_name.to_sym  # to symbol
 my_name.intern  # to symbol
