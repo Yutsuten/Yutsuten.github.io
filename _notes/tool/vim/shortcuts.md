@@ -10,10 +10,6 @@
 # Repeat last command
 .
 
-# Remove search highlighting
-:noh
-:nohlsearch
-
 # Change syntax coloring
 :set syntax=html
 
