@@ -12,6 +12,10 @@ class MyClass(object):
   def __repr__(self):
     return '%.2f' % (self.property)
 
+  @staticmethod
+  def my_static_method(parameter):
+    return parameter + 1
+
   def custom_method(self, parameter):
     return self.property * parameter
 
