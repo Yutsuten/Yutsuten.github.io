@@ -1,21 +1,20 @@
 ---
 ---
 
-#### Searching
+
 ```
 /search_text
 /search_text\c  # Case insensitive
 /search_text\C  # Case sensitive (default)
-```
 
-#### Enable/disable highlight on search
-```
-:set hlsearch
-:set nohlsearch
-```
+n   # next matching search pattern
+N   # previous matching search pattern
 
-#### Disable highlight to current search
-```
+# Highlight - Current search
 :noh
 :nohlsearch
+
+# Highlight - All searches
+:set hlsearch
+:set nohlsearch
 ```
