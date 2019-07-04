@@ -21,6 +21,11 @@ tmux split-window -h
 tmux send-keys 'bash_command' Enter
 ```
 
+### Detaching
+```shell
+Prefix + d
+```
+
 ### Fixing colours issues when nesting
 ```shell
 tmux -2  # Force tmux to assume the terminal supports 256 colours

@@ -25,6 +25,5 @@ Prefix + C-o
 #### Closing
 ```
 C-d
-
 Prefix + x  # Kill
 ```
