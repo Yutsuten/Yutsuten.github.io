@@ -37,13 +37,17 @@ g_  # move to last non-blank character of the line
 
 #### File movements
 ```
+H   # move to top of screen
+M   # move to middle of screen
+L   # move to bottom of screen
+
 %   # jump to matching bracket { } [ ] ( )
 
 gg  # move to first line
 G   # move to last line
 
-ngg move to n'th line of file (n is a number; 12gg moves to line 12)
-nG  move to n'th line of file (n is a number; 12G moves to line 12)
+ngg # move to n'th line of file (n is a number; 12gg moves to line 12)
+nG  # move to n'th line of file (n is a number; 12G moves to line 12)
 ```
 
 #### Set scroll relatively to cursor position
