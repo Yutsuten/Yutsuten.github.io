@@ -3,13 +3,29 @@
 
 ```ruby
 class BaseClass
+
+  attr_reader :name
+  attr_writer :name
+  attr_accessor :name  # Both read and write
   def initialize(name)
     @name = name
   end
+
   def do_something(param1, param2)
     # ...
   end
-  def BaseClass.class_method:
+
+  def BaseClass.class_method
+    # ...
+  end
+
+  public
+  def my_public_method
+    # ...
+  end
+
+  private
+  def my_private_method
     # ...
   end
 end
