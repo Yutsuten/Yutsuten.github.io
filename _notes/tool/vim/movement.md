@@ -48,6 +48,9 @@ G   # move to last line
 
 ngg # move to n'th line of file (n is a number; 12gg moves to line 12)
 nG  # move to n'th line of file (n is a number; 12G moves to line 12)
+
+Ctrl-B  # page up
+Ctrl-F  # page down
 ```
 
 #### Set scroll relatively to cursor position
