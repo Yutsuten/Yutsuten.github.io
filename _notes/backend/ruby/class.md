@@ -13,7 +13,7 @@ class BaseClass
     @name = name
   end
 
-  def do_something(param1, param2)
+  def do_something(param1, param2=true)
     # ...
   end
 
