@@ -3,6 +3,8 @@
 
 ```ruby
 class BaseClass
+  include Math  # Variables and methods are inherited to class instances
+  extend Math  # Variables and methods are inherited to the class itself
 
   attr_reader :name
   attr_writer :name
