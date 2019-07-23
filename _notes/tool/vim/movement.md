@@ -49,6 +49,10 @@ G   # move to last line
 ngg # move to n'th line of file (n is a number; 12gg moves to line 12)
 nG  # move to n'th line of file (n is a number; 12G moves to line 12)
 
+*   # next whole word under cursor
+#   # previous whole word under cursor
+gd  # go to definition/first occurrence of the word under cursor
+
 Ctrl-B  # page up
 Ctrl-F  # page down
 ```
