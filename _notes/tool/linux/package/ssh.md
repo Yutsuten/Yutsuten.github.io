@@ -49,6 +49,11 @@ sudo apt-get install xauth
 ssh -Y myhost
 ```
 
+### Port forwarding
+```shell
+ssh -L localaddress:1234:targetaddress:1234 myhost
+```
+
 ### Automatic configuration
 #### Terminal
 ```
@@ -81,6 +86,9 @@ Host destination-server
 Host *
     ProxyCommand connect -H username@proxyserver.com:port %h %p
     ServerAliveInterval 120
+
+    # Port forwarding
+    LocalForward localaddress:1234 targetaddress:1234
 ```
 
 #### SSH with proxy, specify password though environment variables
