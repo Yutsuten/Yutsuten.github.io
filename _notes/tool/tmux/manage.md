@@ -26,7 +26,8 @@ tmux send-keys 'bash_command' Enter
 Prefix + d
 ```
 
-### Fixing colours issues when nesting
+### Fixing issues
 ```shell
 tmux -2  # Force tmux to assume the terminal supports 256 colours
+tmux -u  # Fix issues with unicode
 ```
