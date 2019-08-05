@@ -25,6 +25,7 @@ parent = child.find_element_by_xpath('..')
 element.text
 element.get_attribute('innerText')  # May work better than element.text
 element.get_attribute('value')
+element.get_property('value')
 element.is_enabled()
 element.click()
 element.submit()  # If within a form
