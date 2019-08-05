@@ -2,6 +2,8 @@
 ---
 
 ```
+:new
+
 :find filename.py
 :b filename.py
 
