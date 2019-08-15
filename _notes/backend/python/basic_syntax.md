@@ -80,27 +80,6 @@ else
     pass
 ```
 
-### For loop
-```python
-my_array = [6, 2, 5]
-for number in my_array:
-    print(number)
-
-for i, item in enumerate(my_array):
-    print(i, item)
-
-for _ in range(10):  # If iterator is unnecessary
-    pass
-
-import itertools  # This is faster than the above
-for _ in itertools.repeat(None, 10):
-    pass
-
-my_dict = {'name': 'John', 'age': 28}
-for key in my_dict:
-    print(key, my_dict[key])
-```
-
 ### While loop
 ```python
 while var1 < var2
