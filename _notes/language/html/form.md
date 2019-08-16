@@ -16,3 +16,15 @@
     <input type="submit" value="Apply" />
 </form>
 ```
+
+### Validation
+```html
+<form method="post" action="/some/url">
+    <input type="number" name="myNumber" value="100" min="1" required
+           oninvalid="this.setCustomValidity('Custom error message')"
+           oninput="setCustomValidity('')" />
+
+    <!-- Submit button -->
+    <input type="submit" value="Apply" />
+</form>
+```
