@@ -12,7 +12,7 @@ class MyClass(object):
   def __repr__(self):
     return '%.2f' % (self.property)
 
-  @staticmethod
+  @staticmethod  # Decorator
   def my_static_method(parameter):
     return parameter + 1
 
@@ -41,4 +41,3 @@ print(myclass.customMethod(10)) # => 50
 getattr(x, 'foobar')       # Equivalent to x.foobar
 setattr(x, 'foobar', 123)  # Equivalent to x.foobar = 123
 ```
-
