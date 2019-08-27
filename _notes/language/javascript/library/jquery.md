@@ -45,4 +45,10 @@ var data = {field1: 'hello'}
 $.post(url, data, function(response) {
     console.log(response);
 });
+
+var response = $.ajax({
+    async: false,  // Async defaults to true
+    method: 'GET',
+    url: url
+});
 ```
