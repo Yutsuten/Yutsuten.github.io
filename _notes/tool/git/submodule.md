@@ -20,6 +20,9 @@ git pull --recurse-submodules
 # Clone with submodules
 git clone --recurse-submodules
 
+# Move submodule
+git mv previous/submodule target/submodule
+
 # Remove submodules
 SUBMODULE_PATH='path/to/submodule'
 git submodule deinit -f $SUBMODULE_PATH && rm -rf .git/modules/$SUBMODULE_PATH && git rm -f $SUBMODULE_PATH
