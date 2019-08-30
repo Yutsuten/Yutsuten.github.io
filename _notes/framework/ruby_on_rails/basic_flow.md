@@ -4,7 +4,7 @@
 ### Empty application
 ```bash
 # Generate basic files for the Ruby on Rails app
-rails new AppName
+rails new appname
 
 # Install necessary gems (written in Gemfile)
 bundle install

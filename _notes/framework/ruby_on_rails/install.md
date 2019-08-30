@@ -10,3 +10,8 @@ sqlite3 --version
 gem install rails
 rails --version
 ```
+
+### Ubuntu extra requirements
+```bash
+sudo apt install libsqlite3-dev
+```
