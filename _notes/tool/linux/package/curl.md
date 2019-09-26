@@ -3,12 +3,14 @@
 
 ```
 -o  # Write data into file
+-L  # Follow redirect
 ```
 
 ### Download file from remote
 ```shell
 curl "https://img.shields.io/badge/pylint-10-green.svg"
 curl -o pylint.svg "https://img.shields.io/badge/pylint-10-green.svg"
+curl -o nvim.appimage -L https://github.com/neovim/neovim/releases/download/v0.4.2/nvim.appimage
 ```
 
 ### Put request
