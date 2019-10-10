@@ -2,7 +2,7 @@
 ---
 
 ### Normal mode
-```shell
+```
 # :redir command redirects the output of a command to a register (@+).
 # The register @+ refers to the clipboard.
 :redir @+ | set guifont | redir END
@@ -51,4 +51,7 @@ ma  # Second letter can be in [a-z] for same file, [A-Z] for global
 # Save file in new encoding and format (new lines)
 :set fenc=utf8
 :set ff=unix
+
+# Syntax highlighting
+:set syntax=markdown
 ```
