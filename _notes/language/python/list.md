@@ -14,6 +14,9 @@ my_list.sort()
 list_sum = [1, 2, 3] + [4, 5, 6]
 len(list_sum)
 
+# Join
+' '.join(my_list)
+
 # Sorting
 from operator import itemgetter
 list_of_dicts.sort(key=itemgetter('date'))
