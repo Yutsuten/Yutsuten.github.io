@@ -23,13 +23,14 @@ rails generate controller Welcome index
 Customize the view (template).
 
 ```html
-<!-- /home/mateus/Project/blog/app/views/welcome/index.html.erb -->
+<!-- blog/app/views/welcome/index.html.erb -->
 <h1>Hello, Rails!</h1>
 ```
 
 Setup the routing.
 
 ```ruby
+# blog/config/routes.rb
 Rails.application.routes.draw do
   get 'welcome/index'
 
