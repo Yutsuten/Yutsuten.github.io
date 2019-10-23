@@ -15,6 +15,7 @@ rails db:migrate
 
 ### Save the data in the controller
 ```ruby
+# app/controllers/articles_controller.rb
 class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
@@ -39,6 +40,7 @@ end
 
 ### View template
 ```html
+<!-- app/views/articles/show.html.erb -->
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
