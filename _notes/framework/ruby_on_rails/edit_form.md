@@ -10,6 +10,7 @@ end
 ```
 
 ```html
+<!-- /home/mateus/Projects/blog/app/views/articles/edit.html.erb -->
 <h1>Edit article</h1>
 
 <%= form_with(model: @article, local: true) do |form| %>
