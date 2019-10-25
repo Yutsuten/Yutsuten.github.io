@@ -13,6 +13,7 @@ end
 ```
 
 ```html
+<!-- app/views/articles/index.html.erb -->
 <h1>Listing articles</h1>
 
 <table>
@@ -30,4 +31,20 @@ end
     </tr>
   <% end %>
 </table>
+```
+
+### Add links
+```html
+<!-- app/views/welcome/index.html.erb -->
+<h1>Hello, Rails!</h1>
+<%= link_to 'My Blog', controller: 'articles' %>
+
+<!-- app/views/articles/index.html.erb -->
+<%= link_to 'New article', new_article_path %>
+
+<!-- app/views/articles/new.html.erb -->
+<%= link_to 'Back', articles_path %>
+
+<!-- app/views/articles/show.html.erb -->
+<%= link_to 'Back', articles_path %>
 ```
