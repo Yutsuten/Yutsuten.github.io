@@ -3,14 +3,14 @@
 
 ## Encode a dictionary into JSON
 ```python
-include json
+import json
 
-jsonString = json.dumps({'foo': 'boo'})
+json_string = json.dumps({'foo': 'boo'})
 ```
 
 ## Load a JSON into a object
 ```python
-include json
+import json
 
-decodedInfo = json.loads(jsonString)
+decodedInfo = json.loads(json_string)
 ```
