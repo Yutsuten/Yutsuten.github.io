@@ -1,6 +1,13 @@
 ---
 ---
 
+### Options
+```bash
+# Run SQL inline
+mysql -e "SELECT ..."
+```
+
+### Basic commands
 ```sql
 CREATE DATABASE cool_game;
 DROP DATABASE cool_game;
