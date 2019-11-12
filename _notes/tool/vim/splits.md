@@ -7,6 +7,9 @@
 :sp
 <c-w>v  # Split vertically
 :vs
+
+set wfh  # WinFixHeight
+set wfw  # WinFixWidth
 ```
 
 ### Rotating
