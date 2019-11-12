@@ -2,7 +2,7 @@
 ---
 
 ### Splitting
-```shell
+```
 <c-w>s  # Split horizontally
 :sp
 <c-w>v  # Split vertically
@@ -14,8 +14,13 @@
 <c-w><c-r>  # Rotate (invert) windows
 ```
 
+### Move split into new tab
+```
+<c-w>T
+```
+
 ### Split size
-```shell
+```
 # Change size horizontally
 <c-w> +
 <c-w> -
