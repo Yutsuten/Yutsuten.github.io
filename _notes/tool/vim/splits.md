@@ -38,4 +38,7 @@ set wfw  # WinFixWidth
 
 # Equal dimensions
 <c-w> =
+
+<c-w> |  # Window size to widest possible
+<c-w> _  # Window size to highest possible
 ```
