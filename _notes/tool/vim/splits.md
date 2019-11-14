@@ -8,6 +8,9 @@
 <c-w>v  # Split vertically
 :vs
 
+resize N           # resize a horizontal split
+vertical resize N  # resize a vertical split
+
 set wfh  # WinFixHeight
 set wfw  # WinFixWidth
 ```
