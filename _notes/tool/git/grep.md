@@ -1,11 +1,16 @@
 ---
 ---
 
-```bash
-# Basic usage
-git grep some_text
+### Recommended configuration
+Do not break lines on long lines matches (minified scripts!).
 
-# With spaces
+```shell
+git config --global core.pager 'less -S'
+```
+
+### Usage
+```shell
+git grep some_text
 git grep 'some text'
 
 # With filter for files
