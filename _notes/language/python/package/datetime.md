@@ -17,6 +17,7 @@ mydate = datetime.datetime(2018, 5, 2, 10, 30)
 datetime.datetime(2018, 6, 2).replace(tzinfo=timezone.utc)
 
 fromtimestamp = datetime.datetime.fromtimestamp(1525069936)
+fromisoformat = datetime.datetime.fromisoformat('2011-11-04 00:05:23.283')
 fromisostring = datetime.datetime.strptime('2018-04-30', '%Y-%m-%d')
 
 fromiso8601 = dateparser.parse('2018-04-30T06:37:10.751Z').replace(tzinfo=tz.tzutc()).astimezone(tz.tzlocal())
