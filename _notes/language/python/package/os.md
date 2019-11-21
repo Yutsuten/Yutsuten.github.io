@@ -11,7 +11,11 @@ os.environ.get('HOME')
 ### Local files
 ```python
 import os
+
+os.path.exists('sound.mp3')
+os.path.isfile('sound.mp3')
+os.path.isdir('somefolder')
+
 os.listdir(path)
 os.path.join(folder_name, file_name)
-os.path.isfile(node_path)
 ```
