@@ -5,6 +5,7 @@
 ```shell
 # Install
 pip install <package>
+pip install --user <package>  # Installs into ~/.local/bin
 
 # Uninstall
 pip uninstall <package>
@@ -18,4 +19,3 @@ pip freeze -l > requirements.txt
 # Install requirements from requirements.txt
 pip install -r requirements.txt
 ```
-
