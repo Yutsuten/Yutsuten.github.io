@@ -13,3 +13,10 @@ dd  # add --patch (file under cursor)
 dp  # put (while patching)
 do  # obtain (while patching)
 ```
+
+### Grep
+```shell
+:Ggrep keyword  # It uses something similar to :vimgrep
+:cn  # [c]ount next
+:cp  # [c]ount previous
+```
