@@ -5,6 +5,8 @@
 
 ```shell
 :G  # open an improved git status
+:Gtabedit :  # open git status in a new tab
+
 s   # stage file under cursor
 u   # unstage file under cursor
 cc  # commit
