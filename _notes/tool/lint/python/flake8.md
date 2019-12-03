@@ -6,6 +6,7 @@
 Flake8 changes its behaviour depending on the python used to install it.
 
 ```bash
+pacman -S flake8
 python -m pip install flake8
 ```
 

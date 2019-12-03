@@ -4,6 +4,7 @@
 ### Install
 
 ```shell
+pacman -S python-pylint
 python -m pip install pylint
 ```
 
