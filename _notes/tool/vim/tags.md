@@ -10,6 +10,8 @@ sudo apt install ctags
 cd ~/path/to/project
 ctags -R
 
-# Type <C-]> to jump to a symbol
-# Type <C-t> to jump back
+# <C-]> to jump to a symbol
+# <C-t> to jump back
+:po[p]  # to jump back
+:tags   # list of tags
 ```
