@@ -54,6 +54,12 @@ nG  # move to n'th line of file (n is a number; 12G moves to line 12)
 gd  # go to definition/first occurrence of the word under cursor
 gf  # go to file under cursor
 
+Ctrl-F  # scroll forward
+Ctrl-B  # scroll backward
+
+Ctrl-I  # redo cursor movement
+Ctrl-O  # undo cursor movement
+
 Ctrl-B  # page up
 Ctrl-F  # page down
 ```
