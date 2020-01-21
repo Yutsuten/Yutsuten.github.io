@@ -23,12 +23,17 @@ body, h1, h2, h3, h4, h5, p, span, ul, li {
 
 a, a:hover {
   color: #268BD2;
+  text-decoration: none;
 }
 
 ul {
   margin-left: 0;
   padding-left: 18px;
-  list-style-type: square;
+  list-style-type: disclosure-closed;
+}
+
+h4:hover, ul>li:hover {
+  background-color: #002B36;
 }
 
 input {

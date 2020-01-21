@@ -26,10 +26,8 @@ new Vue({
   mounted: function () {
     const self = this
     window.addEventListener('keydown', function(e) {
-      if (e.keyCode === 8) {
-        self.search = self.search.slice(0, -1)
-      } else if (e.keyCode >= 65 && e.keyCode <= 90) {
-        self.search += String.fromCharCode(e.keyCode).toLowerCase()
+      if (document.activeElement.id !== 'search') {
+        document.getElementById('search').focus()
       }
     })
   }
