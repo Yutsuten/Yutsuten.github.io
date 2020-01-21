@@ -25,6 +25,10 @@ new Vue({
   },
   mounted: function () {
     window.addEventListener('keydown', function(e) {
+      // Autofocus only on backspace and letters
+      if (e.keyCode !== 8 && (e.keyCode < 65 || e.keyCode > 90)) {
+        return;
+      }
       if (document.activeElement.id !== 'search') {
         document.getElementById('search').focus()
       }

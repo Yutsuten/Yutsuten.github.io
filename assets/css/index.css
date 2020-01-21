@@ -26,6 +26,10 @@ a, a:hover {
   text-decoration: none;
 }
 
+a:focus {
+  color: #EEE8D5;
+}
+
 ul {
   margin-left: 0;
   padding-left: 18px;
