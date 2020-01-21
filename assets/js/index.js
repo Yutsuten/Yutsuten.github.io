@@ -24,7 +24,6 @@ new Vue({
     }
   },
   mounted: function () {
-    const self = this
     window.addEventListener('keydown', function(e) {
       if (document.activeElement.id !== 'search') {
         document.getElementById('search').focus()

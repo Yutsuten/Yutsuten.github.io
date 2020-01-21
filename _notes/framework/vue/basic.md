@@ -2,27 +2,8 @@
 ---
 
 {% raw %}
+
 [Reference](https://vuejs.org/v2/guide/index.html)
-### Install
-```html
-<!-- Development version -->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-<!-- Production version -->
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-```
-
-### Change delimiters
-```javascript
-# Vue < 2.0
-Vue.options.delimiters = ['[[', ']]'];
-
-# Vue >= 2.0
-new Vue({
-  delimiters: ['[[', ']]'],
-  # ...
-});
-```
 
 ### Variable rendering
 ```html
@@ -142,19 +123,4 @@ var app = new Vue({
 })
 ```
 
-### Hide element while Vue is loading
-v-cloak will remain on the element until the associated Vue instance finishes compilation.
-```html
-<div id="app">
-  <div v-cloak>
-    Hello {{ name }}
-  </div>
-</div>
-
-<style>
-  [v-cloak] {
-    display: none;
-  }
-</style>
-```
 {% endraw %}
