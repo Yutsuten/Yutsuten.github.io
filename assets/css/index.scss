@@ -1,0 +1,96 @@
+---
+---
+
+.container-fluid {
+  min-height: 100%;
+  position: relative;
+  background-color: #073642;
+  color: #EEE8D5;
+}
+
+.scroll-block {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.search-bar {
+  padding: 6px 0;
+  background-color: #002b36;
+  font-size: 1.2rem;
+  cursor: default;
+}
+
+.index-area {
+  @extend .scroll-block;
+  border-right: 2px #002b36 solid;
+
+  .link {
+    color: #268BD2;
+  }
+
+  .link:hover {
+    text-decoration: none;
+  }
+
+  .link:focus {
+    color: #EEE8D5;
+  }
+
+  > .search {
+    width: 100%;
+    margin: 10px 0;
+    background-color: #002b36;
+    border-color: #586e75;
+    color: #93a1a1;
+    padding: 1px 5px;
+  }
+
+  > .search:focus {
+    outline-color: #839496;
+  }
+
+  > .index.-root {
+    margin-bottom: 2px;
+  }
+
+  .index:hover {
+    background-color: #002B36;
+  }
+
+  .list {
+    margin-left: 0;
+    padding-left: 18px;
+    list-style-type: disclosure-closed;
+  }
+
+  .list.-root {
+    margin-bottom: 8px;
+  }
+
+  .list.-sub {
+    margin-bottom: 0;
+  }
+}
+
+.content-area {
+  @extend .scroll-block;
+
+  a {
+    color: #268BD2;
+  }
+
+  table {
+    border: 1px solid #EEE8D5;
+    margin: 15px 0px;
+  }
+
+  table th,
+  table td {
+    border: 1px solid #EEE8D5;
+    padding: 5px 8px;
+  }
+}
+
+[v-cloak] {
+  display: none;
+}
