@@ -19,16 +19,14 @@ permalink: /
 {%- assign lv3_last = '' -%}
 {%- assign lv4_last = '' -%}
 
-<div class="row d-md-none search-bar">
-  <div class="col-12">
-    <span class="float-right"><b-button v-b-toggle.menu><i class="fas fa-search"></i></b-button></span>
-  </div>
-</div>
-
 <div class="row">
-  <b-collapse class="col-12 col-md-4 col-lg-3 index-area" visible id="menu">
-    <input type="text" class="search" id="search" v-model="search" placeholder="Type to search" autofocus />
+  <div class="col-12 col-md-4 col-lg-3 menu-area" visible id="menu">
+    <div class="row search-bar">
+      <input type="text" class="input col-10 col-md-12" id="search" v-model="search" placeholder="Type to search" autofocus />
+      <b-button class="col-2 menutoggler d-md-none" v-b-toggle.index><i class="fas fa-search"></i></b-button>
+    </div>
 
+    <b-collapse class="index-area" visible id="index">
     {%- for note in note_arr -%}
       {%- assign note_path = note | replace: '!', '' -%}
       {%- assign note_path_arr = note_path | split: '/' -%}
@@ -108,9 +106,10 @@ permalink: /
     {%- if lv2_last != '' -%} </ul> {%- endif -%}
     {%- if lv3_last != '' -%} </ul> {%- endif -%}
     {%- if lv4_last != '' -%} </ul> {%- endif -%}
-  </b-collapse>
+    </b-collapse>
+  </div>
 
-  <b-collapse class="col-12 col-md-8 col-lg-9 content-area" visible id="content">
+  <div class="col content-area" id="content">
     <div v-if="typeof activeNote !== 'string'" class="note-content" id="home">
       <h1>Home</h1>
       Welcome to my programming notes!
@@ -124,5 +123,5 @@ permalink: /
         {{ note.content }}
       </div>
     {%- endfor -%}
-  </b-collapse>
+  </div>
 </div>

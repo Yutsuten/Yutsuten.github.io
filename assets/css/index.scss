@@ -2,28 +2,45 @@
 ---
 
 .container-fluid {
-  min-height: 100%;
+  min-height: 100vh;
   position: relative;
   background-color: #073642;
   color: #EEE8D5;
 }
 
-.scroll-block {
-  height: 100vh;
-  overflow-y: auto;
-}
-
 .search-bar {
   padding: 6px 0;
-  background-color: #002b36;
   font-size: 1.2rem;
   cursor: default;
+  margin-left: 0;
+  margin-right: 0;
+
+  > .input {
+    background-color: #002b36;
+    border-color: #586e75;
+    color: #93a1a1;
+    padding: 1px 5px;
+  }
+
+  > .input:focus {
+    outline-color: #839496;
+  }
+
+  > .menutoggler {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  > .menutoggler:focus {
+    box-shadow: none;
+  }
+}
+
+.menu-area {
+  border-right: 2px #002b36 solid;
 }
 
 .index-area {
-  @extend .scroll-block;
-  border-right: 2px #002b36 solid;
-
   .link {
     color: #268BD2;
   }
@@ -34,19 +51,6 @@
 
   .link:focus {
     color: #EEE8D5;
-  }
-
-  > .search {
-    width: 100%;
-    margin: 10px 0;
-    background-color: #002b36;
-    border-color: #586e75;
-    color: #93a1a1;
-    padding: 1px 5px;
-  }
-
-  > .search:focus {
-    outline-color: #839496;
   }
 
   > .index.-root {
@@ -73,7 +77,7 @@
 }
 
 .content-area {
-  @extend .scroll-block;
+  min-height: 100vh;
 
   a {
     color: #268BD2;
