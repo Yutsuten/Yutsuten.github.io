@@ -3,11 +3,15 @@ new Vue({
   delimiters: ['[[', ']]'],
   data: {
     search: '',
-    activeNote: window.location.href.split('#')[1]
+    activeNote: window.location.href.split('#')[1],
+    menuShown: true
   },
   methods: {
     seeNote: function (note) {
       this.activeNote = note
+      if (window.innerWidth < 768) {
+        this.$root.$emit('bv::toggle::collapse', 'index')
+      }
     }
   },
   updated: function () {
@@ -24,7 +28,8 @@ new Vue({
     }
   },
   mounted: function () {
-    window.addEventListener('keydown', function(e) {
+    var self = this
+    window.addEventListener('keydown', function (e) {
       var ctrl = e.ctrlKey
       var backspace = e.keyCode === 8
       var slash = e.keyCode === 191
@@ -32,6 +37,14 @@ new Vue({
       if (!ctrl && (backspace || slash || letter)) {
         document.getElementById('search').focus()
       }
+    })
+    document.getElementById('search').addEventListener('focus', function () {
+      if (!self.menuShown) {
+        self.$root.$emit('bv::toggle::collapse', 'index')
+      }
+    })
+    self.$root.$on('bv::collapse::state', function (collapseId, isJustShown) {
+      self.menuShown = isJustShown
     })
   }
 })
