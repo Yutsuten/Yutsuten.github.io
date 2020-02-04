@@ -4,6 +4,7 @@
 ```bash
 ssh myhost
 ssh myhost 'command to run on myhost'
+ssh -t myhost 'command that needs tty'
 
 # Port forwarding
 ssh -L localaddress:1234:targetaddress:1234 myhost
