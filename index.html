@@ -116,7 +116,7 @@ permalink: /
     </div>
     {%- for note in site.notes -%}
       {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
-      {%- assign title = note_path | replace: '/', ' > ' | replace: '_', ' ' | capitalize -%}
+      {%- assign title = note_path | replace: '/', ' » ' | replace: '_', ' ' | capitalize -%}
       {%- assign note_id = note_path | replace: '/', '-' -%}
       <div v-cloak v-if="activeNote === '{{ note_id }}'" class="note-content">
         <h1>{{ title }}</h1>
