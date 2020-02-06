@@ -26,6 +26,16 @@ new Vue({
         ulElem.previousElementSibling.style.display = ''
       }
     }
+    // Update URL with new search value
+    if (window.history.replaceState) {
+      var url = new URL(window.location.href)
+      if (this.search) {
+        url.searchParams.set('search', this.search)
+      } else {
+        url.searchParams.delete('search')
+      }
+      window.history.replaceState({}, null, url.href)
+    }
   },
   mounted: function () {
     var self = this
@@ -46,5 +56,8 @@ new Vue({
     self.$root.$on('bv::collapse::state', function (collapseId, isJustShown) {
       self.menuShown = isJustShown
     })
+
+    var url = new URL(window.location.href)
+    self.search = url.searchParams.get('search')
   }
 })
