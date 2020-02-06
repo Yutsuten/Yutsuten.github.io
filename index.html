@@ -22,7 +22,7 @@ permalink: /
 <div class="row">
   <div class="col-12 col-md-4 col-lg-3 menu-area" visible id="menu">
     <div class="row search-bar">
-      <input type="text" class="input col-10 col-md-12" id="search" v-model="search" placeholder="Type to search" autofocus />
+      <input type="text" class="input col-10 col-md-12" id="search" v-model="search" v-on:focus="showMenu" placeholder="Type to search" autofocus />
       <b-button class="col-2 menutoggler d-md-none" v-b-toggle.index><i class="fas fa-search"></i></b-button>
     </div>
 

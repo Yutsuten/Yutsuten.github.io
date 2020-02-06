@@ -12,6 +12,11 @@ new Vue({
       if (window.innerWidth < 768) {
         this.$root.$emit('bv::toggle::collapse', 'index')
       }
+    },
+    showMenu: function() {
+      if (!this.menuShown) {
+        this.$root.$emit('bv::toggle::collapse', 'index')
+      }
     }
   },
   updated: function () {
@@ -46,16 +51,14 @@ new Vue({
         document.getElementById('search').focus()
       }
     })
-    document.getElementById('search').addEventListener('focus', function () {
-      if (!self.menuShown) {
-        self.$root.$emit('bv::toggle::collapse', 'index')
-      }
-    })
     self.$root.$on('bv::collapse::state', function (collapseId, isJustShown) {
       self.menuShown = isJustShown
     })
 
     let url = new URL(window.location.href)
-    self.search = url.searchParams.get('search')
+    let search = url.searchParams.get('search', '')
+    if (search) {
+      self.search = search
+    }
   }
 })
