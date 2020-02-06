@@ -15,8 +15,8 @@ new Vue({
     }
   },
   updated: function () {
-    var ulElem
-    for (var refName in this.$refs) {
+    let ulElem
+    for (let refName in this.$refs) {
       ulElem = this.$refs[refName]
       if (ulElem.getElementsByTagName('a').length === 0) {
         ulElem.style.display = 'none'
@@ -28,7 +28,7 @@ new Vue({
     }
     // Update URL with new search value
     if (window.history.replaceState) {
-      var url = new URL(window.location.href)
+      let url = new URL(window.location.href)
       if (this.search) {
         url.searchParams.set('search', this.search)
       } else {
@@ -38,12 +38,12 @@ new Vue({
     }
   },
   mounted: function () {
-    var self = this
+    let self = this
     window.addEventListener('keydown', function (e) {
-      var ctrl = e.ctrlKey
-      var backspace = e.keyCode === 8
-      var slash = e.keyCode === 191
-      var letter = e.keyCode >= 65 && e.keyCode <= 90
+      let ctrl = e.ctrlKey
+      let backspace = e.keyCode === 8
+      let slash = e.keyCode === 191
+      let letter = e.keyCode >= 65 && e.keyCode <= 90
       if (!ctrl && (backspace || slash || letter)) {
         document.getElementById('search').focus()
       }
@@ -57,7 +57,7 @@ new Vue({
       self.menuShown = isJustShown
     })
 
-    var url = new URL(window.location.href)
+    let url = new URL(window.location.href)
     self.search = url.searchParams.get('search')
   }
 })
