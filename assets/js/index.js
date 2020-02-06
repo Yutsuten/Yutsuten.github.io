@@ -27,15 +27,13 @@ new Vue({
       }
     }
     // Update URL with new search value
-    if (window.history.replaceState) {
-      let url = new URL(window.location.href)
-      if (this.search) {
-        url.searchParams.set('search', this.search)
-      } else {
-        url.searchParams.delete('search')
-      }
-      window.history.replaceState({}, null, url.href)
+    let url = new URL(window.location.href)
+    if (this.search) {
+      url.searchParams.set('search', this.search)
+    } else {
+      url.searchParams.delete('search')
     }
+    window.history.replaceState({}, null, url.href)
   },
   mounted: function () {
     let self = this
