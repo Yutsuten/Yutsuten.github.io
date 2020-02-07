@@ -1,17 +1,21 @@
 ---
 ---
 
+## Initialization
+
 ```bash
-# Run server
+django-admin startproject <projectname> .
+django-admin startapp <appname>
+```
+
+## Common commands
+
+```bash
 python manage.py runserver
+python manage.py createsuperuser
+python manage.py shell
 
 # Migration
 python manage.py makemigrations appname
 python manage.py migrate
-
-# Create superuser
-python manage.py createsuperuser
-
-# Open shell
-python manage.py shell
 ```
