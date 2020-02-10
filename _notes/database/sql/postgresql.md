@@ -1,18 +1,33 @@
 ---
 ---
 
-```shell
-$ psql    # Start postgresql bash
+## Generic queries
 
-> \l      # list databases
-> \dt     # show tables
-> \d tbl  # describe table
-> \c mydb # change database
-> \q      # quit
+```sql
+\l       -- List databases
+\dt      -- Show tables
+\d tbl   -- Describe table
+\c mydb  -- Change database
+\q       -- Quit
+```
+
+## Create user
+
+```sql
+CREATE USER myuser WITH PASSWORD 'myuser_pass';
+```
+
+## Granting permissions
+
+```sql
+GRANT ALL PRIVILEGES ON DATABASE dbname to myuser;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO myuser;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO myuser;
 ```
 
 ### Generate / restore dump
-```bash
+
+```
 pg_dump dbname > outfile.sql
 psql dbname < infile.sql
 ```

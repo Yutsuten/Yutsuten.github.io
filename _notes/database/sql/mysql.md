@@ -1,13 +1,14 @@
 ---
 ---
 
-### Options
+## Command parameters
+
 ```bash
-# Run SQL inline
-mysql -e "SELECT ..."
+mysql -e "SELECT ..."  # Run SQL inline
 ```
 
 ### Basic commands
+
 ```sql
 CREATE DATABASE cool_game;
 DROP DATABASE cool_game;
@@ -26,4 +27,11 @@ FLUSH PRIVILEGES;
 
 ```sql
 SELECT * FROM my_table \G
+```
+
+## Dump
+
+```bash
+mysqldump -u user -p mydb > ~/dump.sql
+mysql -u user -p mydb < ~/dump.sql
 ```
