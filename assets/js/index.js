@@ -58,6 +58,6 @@ new Vue({
     this.$root.$on('bv::collapse::state', this.collapseStateChanged)
 
     let search = new URL(window.location.href).searchParams.get('search')
-    this.search = search ? search : '';
+    this.search = search ? search : ''
   }
 })

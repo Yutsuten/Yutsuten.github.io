@@ -3,7 +3,7 @@
 
 ### Install
 ```bash
-yarn global add eslint
+sudo pacman -S eslint
 ```
 
 ### Configuration file
