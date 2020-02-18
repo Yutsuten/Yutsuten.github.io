@@ -50,7 +50,7 @@
   }
 
   .link:focus {
-    color: #EEE8D5;
+    color: #6C71C4;
   }
 
   > .index.-root {
@@ -80,7 +80,11 @@
   min-height: 100vh;
   font-size: 0.8rem;
 
-  h1 {font-size: 1.5rem;}
+  h1 {
+    @extend .h1separator;
+    font-size: 1.5rem;
+  }
+
   h2 {font-size: 1.2rem;}
   h3 {font-size: 1.1rem;}
   h4 {font-size: 1.0rem;}
@@ -93,7 +97,11 @@
   @media only screen and (min-width: 768px) {
     font-size: 1rem;
 
-    h1 {font-size: 2.3rem;}
+    h1 {
+      @extend .h1separator;
+      font-size: 2.3rem;
+    }
+
     h2 {font-size: 1.7rem;}
     h3 {font-size: 1.5rem;}
     h4 {font-size: 1.3rem;}
@@ -110,6 +118,11 @@
     border: 1px solid #EEE8D5;
     padding: 5px 8px;
   }
+}
+
+.h1separator {
+  border-bottom: 1px solid #586E75;
+  padding-bottom: .3em;
 }
 
 [v-cloak] {
