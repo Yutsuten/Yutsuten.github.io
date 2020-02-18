@@ -1,6 +1,29 @@
 ---
 ---
 
+## Basic
+
+Update options of a select element.
+
+```html
+<select data-bind="options: names" multiple></select>
+```
+
+```javascript
+function AppViewModel() {
+    this.names = ko.observableArray();
+
+    this.someEvent = function () {
+        this.names(['Name 1', 'Name 2']);
+    };
+}
+
+// Activates knockout.js
+ko.applyBindings(new AppViewModel());
+```
+
+## Nested ViewModel
+
 ```html
 <h2>Your seat reservations (<span data-bind="text: seats().length"></span>)</h2>
 <button data-bind="click: addSeat, enable: seats().length < 5">Reserve another seat</button>
