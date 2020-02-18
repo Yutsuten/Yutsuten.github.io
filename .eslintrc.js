@@ -10,7 +10,7 @@ module.exports = {
   },
   "globals": {
     "Vue": true
-  }
+  },
   "rules": {
     "indent": [
       "error",
