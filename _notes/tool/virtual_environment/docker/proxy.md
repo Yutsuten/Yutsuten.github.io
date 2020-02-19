@@ -4,6 +4,7 @@
 - [Reference](https://docs.docker.com/network/proxy/)
 
 #### ~/.docker/config.json
+
 ```json
 {
  "proxies":
@@ -16,4 +17,11 @@
    }
  }
 }
+```
+
+#### /etc/systemd/system/docker.service.d/http-proxy.conf
+
+```conf
+[Service]
+Environment="HTTP_PROXY=http://username:password@proxy.com:8080/" "HTTPS_PROXY=http://username:password@proxy.com:8080/" "NO_PROXY=localhost,127.0.0.1,192.168.1.1,::1,*.local"
 ```
