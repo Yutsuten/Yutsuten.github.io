@@ -1,19 +1,22 @@
 ---
 ---
 
-### Split
+## Template string
 
-#### index.js
 ```javascript
-// Split by lines
-var lines = text.split(/\r?\n/);
+var text = `The value of a is ${a}`;
 ```
 
-### Simple methods
+## Prototype methods
+
 ```javascript
 // Substring
 myString.substring(initialIndex, finalIndex); // Last parameter optional
 myString.substr(initialIndex, numChars); // Last parameter optional
+
+// Split
+var lines = text.split(/\r?\n/);  // Split by lines
+var items = text.split('-');
 
 // Find
 myString.indexOf('foo')  // -1 or index
@@ -26,10 +29,6 @@ regex.test(myString);  // true or false
 myString.replace('-', ''); // Only first occurrence
 myString.replace(/-/g, ''); // All occurrences
 
-// Split (string into array)
-myString.split('-');
-
 // Remove space from begin and end
 myString.trim();
 ```
-
