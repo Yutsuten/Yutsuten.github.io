@@ -38,6 +38,13 @@
     <div class="container-fluid" id="app">
       {{ content }}
     </div>
+    <script type="application/json" id="raw-index-data">
+    {%- assign index_json = '' -%}
+    {%- for note in site.notes -%}
+      {%- capture index_json -%}{{ index_json }},"{{ note.relative_path | remove_first: '_notes/' }}"{%- endcapture -%}
+    {%- endfor -%}
+    [{{ index_json | remove_first: ',' }}]
+    </script>
     <script src="{{ site.baseurl }}{% link assets/js/index.js %}"></script>
   </body>
 </html>

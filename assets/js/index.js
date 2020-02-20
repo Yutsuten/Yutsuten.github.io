@@ -59,5 +59,10 @@ new Vue({
 
     let search = new URL(window.location.href).searchParams.get('search')
     this.search = search ? search : ''
+
+    let rawIndexDataElement = document.getElementById('raw-index-data')
+    let rawIndexData = JSON.parse(rawIndexDataElement.textContent)
+    rawIndexDataElement.remove()
+    console.log(rawIndexData)
   }
 })
