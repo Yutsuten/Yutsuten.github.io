@@ -35,12 +35,26 @@ new Vue({
     updateIndexTree: function () {
       let self = this
       self.indexTree = []
+
+      let notesIndexDict = {}
       self.notesIndexList.forEach(function (noteIndex) {
-        self.indexTree.push({
-          text: noteIndex,
+        let pathArray = noteIndex.split('/')
+        let rootIndex = pathArray.shift()
+        if (!Object.prototype.hasOwnProperty.call(notesIndexDict, rootIndex)) {
+          notesIndexDict[rootIndex] = []
+        }
+        notesIndexDict[rootIndex].push({
+          text: pathArray.join('/'),
           href: `#${noteIndex.replace(/\//g, '-')}`
         })
       })
+
+      for (let rootIndex in notesIndexDict) {
+        self.indexTree.push({
+          text: rootIndex.charAt(0).toUpperCase() + rootIndex.slice(1),
+          list: notesIndexDict[rootIndex]
+        })
+      }
     }
   },
   updated: function () {

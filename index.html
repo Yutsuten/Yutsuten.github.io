@@ -11,10 +11,13 @@ title: Programming Notes
     </div>
 
     <b-collapse class="index-area" visible id="index">
-      <ul class="list -sub">
-        <li class="index" v-for="index in indexTree">
-          <a class="link" v-bind:href="index.href" v-on:click="seeNote">[[ index.text ]]</a>
-        </li>
+      <ul class="list -root" v-for="rootIndex in indexTree">
+        <li class="index -root">[[ rootIndex.text ]]</li>
+        <ul class="list -sub">
+          <li class="index" v-for="index in rootIndex.list">
+            <a class="link" v-bind:href="index.href" v-on:click="seeNote">[[ index.text ]]</a>
+          </li>
+        </ul>
       </ul>
     </b-collapse>
   </div>
