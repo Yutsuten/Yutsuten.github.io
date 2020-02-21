@@ -3,21 +3,6 @@ layout: base
 title: Programming Notes
 ---
 
-{%- assign note_arr = '' -%}
-{%- for note in site.notes -%}
-  {%- assign note_path = note.relative_path | remove_first: '_notes/' -%}
-  {%- assign note_path_arr = note_path | split: '/' -%}
-  {%- assign new_filename = '!' | append: note_path_arr.last -%}
-  {%- assign note_path = note_path | replace: note_path_arr.last, new_filename | remove: '.md' -%}
-  {%- capture note_arr -%}{{ note_arr }};{{ note_path }}{%- endcapture -%}
-{%- endfor -%}
-{%- assign note_arr = note_arr | slice: 1, note_arr.size | split: ';' | sort -%}
-
-{%- assign lv1_last = '' -%}
-{%- assign lv2_last = '' -%}
-{%- assign lv3_last = '' -%}
-{%- assign lv4_last = '' -%}
-
 <div class="row">
   <div class="col-12 col-md-4 col-lg-3 menu-area" visible id="menu">
     <div class="row search-bar">
@@ -26,85 +11,11 @@ title: Programming Notes
     </div>
 
     <b-collapse class="index-area" visible id="index">
-    {%- for note in note_arr -%}
-      {%- assign note_path = note | replace: '!', '' -%}
-      {%- assign note_path_arr = note_path | split: '/' -%}
-
-      {%- if lv1_last != note_path_arr[0] -%}
-        {%- if lv1_last != '' -%} </ul> {%- endif -%}
-        {%- if lv2_last != '' -%} </ul> {%- endif -%}
-        {%- if lv3_last != '' -%} </ul> {%- endif -%}
-        {%- if lv4_last != '' -%} </ul> {%- endif -%}
-
-        <h4 class="index -root">{{ note_path_arr[0] | replace: '_', ' ' | capitalize }}</h4>
-        <ul class="list -root" ref="{{ note_path_arr[0] }}">
-        {%- assign lv1_last = note_path_arr[0] -%}
-        {%- assign lv2_last = '' -%}
-        {%- assign lv3_last = '' -%}
-        {%- assign lv4_last = '' -%}
-      {%- endif -%}
-
-      {%- if note_path_arr.size == 2 -%}
-        {%- assign note_id = note_path_arr | join: '-' -%}
-        <li class="index" v-if="'{{ note_path }}'.indexOf(search.toLowerCase()) != -1"><a class="link" v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[1] | replace: '_', ' ' | capitalize }}</a></li>
-
-      {%- elsif note_path_arr.size > 2 -%}
-        {%- if lv2_last != note_path_arr[1] -%}
-          {%- assign lv2_path = note_path_arr[0] | append: '/' | append: note_path_arr[1] -%}
-          {%- if lv2_last != '' -%} </ul> {%- endif -%}
-          {%- if lv3_last != '' -%} </ul> {%- endif -%}
-          {%- if lv4_last != '' -%} </ul> {%- endif -%}
-
-          <li class="index">{{ note_path_arr[1] | replace: '_', ' ' | capitalize }}</li>
-          <ul class="list -sub" ref="{{ lv2_path | replace: '/', '_' }}">
-          {%- assign lv2_last = note_path_arr[1] -%}
-          {%- assign lv3_last = '' -%}
-          {%- assign lv4_last = '' -%}
-        {%- endif -%}
-
-        {%- if note_path_arr.size == 3 -%}
-          {%- assign note_id = note_path_arr | join: '-' -%}
-          <li class="index" v-if="'{{ note_path }}'.indexOf(search.toLowerCase()) != -1"><a class="link" v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[2] | replace: '_', ' ' | capitalize }}</a></li>
-
-        {%- elsif note_path_arr.size > 3 -%}
-          {%- if lv3_last != note_path_arr[2] -%}
-            {%- assign lv3_path = note_path_arr[0] | append: '/' | append: note_path_arr[1] | append: '/' | append: note_path_arr[2] -%}
-            {%- if lv3_last != '' -%} </ul> {%- endif -%}
-            {%- if lv4_last != '' -%} </ul> {%- endif -%}
-
-            <li class="index">{{ note_path_arr[2] | replace: '_', ' ' | capitalize }}</li>
-            <ul class="list -sub" ref="{{ lv3_path | replace: '/', '_' }}">
-            {%- assign lv3_last = note_path_arr[2] -%}
-            {%- assign lv4_last = '' -%}
-          {%- endif -%}
-
-          {%- if note_path_arr.size == 4 -%}
-            {%- assign note_id = note_path_arr | join: '-' -%}
-            <li class="index" v-if="'{{ note_path }}'.indexOf(search.toLowerCase()) != -1"><a class="link" v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[3] | replace: '_', ' ' | capitalize }}</a></li>
-
-          {%- elsif note_path_arr.size > 4 -%}
-            {%- if lv4_last != note_path_arr[3] -%}
-              {%- assign lv4_path = note_path_arr[0] | append: '/' | append: note_path_arr[1] | append: '/' | append: note_path_arr[2] | append: '/' | append: note_path_arr[3] -%}
-              {%- if lv4_last != '' -%} </ul> {%- endif -%}
-
-              <li class="index">{{ note_path_arr[3] | replace: '_', ' ' | capitalize }}</li>
-              <ul class="list -sub" ref="{{ lv4_path | replace: '/', '_' }}">
-              {%- assign lv4_last = note_path_arr[3] -%}
-            {%- endif -%}
-
-            {%- if note_path_arr.size == 5 -%}
-              {%- assign note_id = note_path_arr | join: '-' -%}
-              <li class="index" v-if="'{{ note_path }}'.indexOf(search.toLowerCase()) != -1"><a class="link" v-on:click="seeNote('{{ note_id }}')" href="#{{ note_id }}">{{ note_path_arr[4] | replace: '_', ' ' | capitalize }}</a></li>
-            {%- endif -%}
-          {%- endif -%}
-        {%- endif -%}
-      {%- endif -%}
-
-    {% endfor %}
-    </ul>
-    {%- if lv2_last != '' -%} </ul> {%- endif -%}
-    {%- if lv3_last != '' -%} </ul> {%- endif -%}
-    {%- if lv4_last != '' -%} </ul> {%- endif -%}
+      <ul class="list -sub">
+        <li class="index" v-for="index in indexTree">
+          <a class="link" v-bind:href="index.href" v-on:click="seeNote">[[ index.text ]]</a>
+        </li>
+      </ul>
     </b-collapse>
   </div>
 
