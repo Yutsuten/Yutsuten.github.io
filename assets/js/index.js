@@ -1,3 +1,24 @@
+class IndexTree {
+  constructor () {
+    this.root = {children: []}
+  }
+
+  addNode (path) {
+    let currentNode = this.root
+    path.split('/').forEach(function (subPath, index, pathArray) {
+      let text = subPath.charAt(0).toUpperCase() + subPath.slice(1)
+      let childNode = currentNode.children.find(node => node.text === text)
+      if (!childNode) {
+        let href = index === pathArray.length - 1 ? `#${path.replace(/\//g, '-')}` : null
+        childNode = {text: text, href: href, children: []}
+        currentNode.children.push(childNode)
+      }
+      currentNode = childNode
+    })
+  }
+}
+
+
 new Vue({
   el: '#app',
   delimiters: ['[[', ']]'],
@@ -33,28 +54,9 @@ new Vue({
       this.menuShown = isJustShown
     },
     updateIndexTree: function () {
-      let self = this
-      self.indexTree = []
-
-      let notesIndexDict = {}
-      self.notesIndexList.forEach(function (noteIndex) {
-        let pathArray = noteIndex.split('/')
-        let rootIndex = pathArray.shift()
-        if (!Object.prototype.hasOwnProperty.call(notesIndexDict, rootIndex)) {
-          notesIndexDict[rootIndex] = []
-        }
-        notesIndexDict[rootIndex].push({
-          text: pathArray.join('/'),
-          href: `#${noteIndex.replace(/\//g, '-')}`
-        })
-      })
-
-      for (let rootIndex in notesIndexDict) {
-        self.indexTree.push({
-          text: rootIndex.charAt(0).toUpperCase() + rootIndex.slice(1),
-          list: notesIndexDict[rootIndex]
-        })
-      }
+      let indexTree = new IndexTree()
+      this.notesIndexList.forEach(path => indexTree.addNode(path))
+      this.indexTree = indexTree.root.children
     }
   },
   updated: function () {
