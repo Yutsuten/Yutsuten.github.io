@@ -50,35 +50,46 @@ new Vue({
         document.getElementById('search').focus()
       }
     },
+    searchUpdated: function () {
+      // Update URL with the new search text
+      let url = new URL(window.location.href)
+      if (this.search) {
+        url.searchParams.set('search', this.search)
+      } else {
+        url.searchParams.delete('search')
+      }
+      window.history.replaceState({}, null, url.href)
+
+      this.updateIndexTree()
+    },
     collapseStateChanged: function (collapseId, isJustShown) {
       this.menuShown = isJustShown
     },
     updateIndexTree: function () {
+      let filteredIndexList
+      if (this.search) {
+        let filter = new RegExp(`.*${this.search.split('*').join('.*')}.*`)
+        filteredIndexList = this.notesIndexList.filter(index => filter.test(index))
+      } else {
+        filteredIndexList = this.notesIndexList
+      }
+
       let indexTree = new IndexTree()
-      this.notesIndexList.forEach(path => indexTree.addNode(path))
+      filteredIndexList.forEach(path => indexTree.addNode(path))
       this.indexTree = indexTree.root.children
     }
-  },
-  updated: function () {
-    // Update URL with the new search value
-    let url = new URL(window.location.href)
-    if (this.search) {
-      url.searchParams.set('search', this.search)
-    } else {
-      url.searchParams.delete('search')
-    }
-    window.history.replaceState({}, null, url.href)
   },
   mounted: function () {
     let rawIndexDataElement = document.getElementById('raw-index-data')
     this.notesIndexList = JSON.parse(rawIndexDataElement.textContent)
     rawIndexDataElement.remove()
-    this.updateIndexTree()
 
     window.addEventListener('keydown', this.keydown)
     this.$root.$on('bv::collapse::state', this.collapseStateChanged)
 
     let search = new URL(window.location.href).searchParams.get('search')
     this.search = search ? search : ''
+
+    this.updateIndexTree()
   }
 })
