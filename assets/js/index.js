@@ -4,12 +4,18 @@ class IndexTree {
   }
 
   addNode (path) {
-    let currentNode = this.root
+    let currentNode, text, isLeaf, childNode, href
+    currentNode = this.root
     path.split('/').forEach(function (subPath, index, pathArray) {
-      let text = subPath.charAt(0).toUpperCase() + subPath.slice(1).replace(/_/g, ' ')
-      let childNode = currentNode.children.find(node => node.text === text)
+      text = subPath.charAt(0).toUpperCase() + subPath.slice(1).replace(/_/g, ' ')
+      isLeaf = index === pathArray.length - 1
+      if (isLeaf) {
+        childNode = null
+      } else {
+        childNode = currentNode.children.find(node => node.text === text)
+      }
       if (!childNode) {
-        let href = index === pathArray.length - 1 ? `#${path.replace(/\//g, '-')}` : null
+        href = isLeaf ? `#${path.replace(/\//g, '-')}` : null
         childNode = {text: text, href: href, children: []}
         currentNode.children.push(childNode)
       }
