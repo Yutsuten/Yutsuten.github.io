@@ -54,15 +54,14 @@
   }
 
   > .list.-root {
-    padding-left: 0px;
+    padding-left: 0;
     list-style-type: none;
-    margin-bottom: 8px;
+    margin-bottom: 0;
   }
 
   > .list.-root > .index.-root {
     font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 2px;
   }
 
   .index:hover {
@@ -116,7 +115,7 @@
 
   table {
     border: 1px solid #EEE8D5;
-    margin: 15px 0px;
+    margin: 15px 0;
   }
 
   table th,

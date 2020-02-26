@@ -6,7 +6,7 @@ class IndexTree {
   addNode (path) {
     let currentNode = this.root
     path.split('/').forEach(function (subPath, index, pathArray) {
-      let text = subPath.charAt(0).toUpperCase() + subPath.slice(1)
+      let text = subPath.charAt(0).toUpperCase() + subPath.slice(1).replace(/_/g, ' ')
       let childNode = currentNode.children.find(node => node.text === text)
       if (!childNode) {
         let href = index === pathArray.length - 1 ? `#${path.replace(/\//g, '-')}` : null
