@@ -56,7 +56,7 @@
     {%- for note in notes -%}
       {%- capture index_json -%}{{ index_json }},"{{ note | replace: '!', '' }}"{%- endcapture -%}
     {%- endfor -%}
-    [{{ index_json | remove_first: ',' }}]
+    [{{ index_json | slice: 1, index_json.size }}]
     </script>
     <script src="{{ site.baseurl }}{% link assets/js/index.js %}"></script>
   </body>
