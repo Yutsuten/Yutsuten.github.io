@@ -1,34 +1,51 @@
 ---
 ---
 
-#### index.js
+## Basic
+
 ```javascript
-var myObject = {
-   'Cow' : 'Moo',
-   'Cat' : 'Meow',
-   'Dog' : 'Bark'
-};
+let obj = {
+   'cat' : 'Meow',
+   'dog' : 'Bark'
+}
+obj.cat === obj['cat']
+delete obj.cat  // delete key
+for (let key in obj) {}
+```
 
-// Delete key
-delete myObject['Cow'];
+## Calls from Object class
 
-// Loop all keys
-for (var key in myObject) {
-    if (myObject.hasOwnProperty(key)) {
-        console.log(key + ': ' + myObject[value]);
-    }
+```javascript
+Object.prototype.hasOwnProperty.call(obj, key)
+Object.assign(obj1, obj2)  // merge
+Object.keys(obj)
+Object.values(obj)
+```
+
+## Techniques
+
+### Looping object keys
+
+```javascript
+for (let key in obj) {
+  if (Object.prototype.hasOwnProperty.call(obj, key)) {}
 }
 
-// Merge objects
-var result = Object.assign({'Duck': 'Quack'}, myObject);
+Object.keys(obj).forEach(function (key) {})
+```
 
-// Shallow object copy
-result = Object.assign({}, myObject);
+### Shallow and deep object copy
 
-// Deep object copy
-result = JSON.parse(JSON.stringify(myObject));
-$.extend(true, {}, oldObject);
+```javascript
+// Shallow
+Object.assign({}, obj)
 
-var _ = require('lodash')
-var deepcloned = _.clonedeep(original)
+// Deep
+JSON.parse(JSON.stringify(obj))
+
+let $ = require('jquery')
+$.extend(true, {}, oldObject)
+
+let _ = require('lodash')
+_.clonedeep(original)
 ```

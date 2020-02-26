@@ -1,34 +1,57 @@
 ---
 ---
 
-## Template string
+## Basic
 
 ```javascript
-var text = `The value of a is ${a}`;
+let str1 = 'Some string'
+let str2 = `Value of a is ${a}`  // Template string [ES6]
+
+// Regex
+let reg1 = /[abc]/
+let reg2 = new RegExp('[abc]')
 ```
 
-## Prototype methods
+## Methods
 
 ```javascript
-// Substring
-myString.substring(initialIndex, finalIndex); // Last parameter optional
-myString.substr(initialIndex, numChars); // Last parameter optional
+str.substring(beginIndex, endIndex)
+str.slice(beginIndex, endIndex)
+str.substr(beginIndex, numChars)
+str.trim()
+str.split(separator)
+str.replace(pattern, newPattern)  // first occurence
+str.charAt(index)
+str.toUpperCase()
+str.toLowerCase()
 
-// Split
-var lines = text.split(/\r?\n/);  // Split by lines
-var items = text.split('-');
+// Find index
+str.indexOf(text)
+str.search(reg)
 
-// Find
-myString.indexOf('foo')  // -1 or index
-myString.search(/foo*/)  // -1 or index
-/foo*/.test(myString);  // true or false
-let regex = new RegExp('foo*');
-regex.test(myString);  // true or false
+// Existence of pattern
+reg.test(text)
+```
 
-// Replace
-myString.replace('-', ''); // Only first occurrence
-myString.replace(/-/g, ''); // All occurrences
+## Techniques
 
-// Remove space from begin and end
-myString.trim();
+### Split by lines
+
+```javascript
+let lines = text.split(/\r?\n/)
+```
+
+### Replace all
+
+```javascript
+let reg = /-/g  // Must have the g option
+text.replace(reg, '')
+
+text.split('-').join('')
+```
+
+### Capitalize
+
+```javascript
+text.charAt(0).toUpperCase() + text.slice(1)
 ```
