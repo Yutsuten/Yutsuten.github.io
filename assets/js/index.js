@@ -31,7 +31,10 @@ new Vue({
   },
   methods: {
     seeNote: function (click) {
-      this.activeNote = click.target.hash.substr(1)
+      let targetHash = click.target.hash
+      if (targetHash) {
+        this.activeNote = targetHash.substr(1)
+      }
       if (window.innerWidth < 768) {
         this.$root.$emit('bv::toggle::collapse', 'index')
       }
