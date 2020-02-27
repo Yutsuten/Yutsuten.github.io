@@ -125,6 +125,21 @@
   }
 }
 
+.note-content {
+  > .onlinedoc {
+    margin-bottom: 4px;
+  }
+
+  > .onlinedoc > a.external::after {
+    content: '⇗';
+    position: relative;
+    display: inline-block;
+    bottom: 3px;
+    left: 1px;
+    font-size: 0.9rem;
+  }
+}
+
 [v-cloak] {
   display: none;
 }
