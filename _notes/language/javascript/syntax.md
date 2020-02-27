@@ -1,7 +1,11 @@
 ---
+doc: https://developer.mozilla.org/docs/Web/JavaScript/Reference
 ---
 
-### Switch-case
+## Basic
+
+### Switch
+
 ```javascript
 switch (myExpr) {
     case '1':

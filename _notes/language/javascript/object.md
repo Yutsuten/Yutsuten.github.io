@@ -1,4 +1,5 @@
 ---
+doc: https://developer.mozilla.org/docs/Web/JavaScript/Reference
 ---
 
 ## Basic

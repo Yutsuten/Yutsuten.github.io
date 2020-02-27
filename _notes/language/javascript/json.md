@@ -1,10 +1,8 @@
 ---
+doc: https://developer.mozilla.org/docs/Web/JavaScript/Reference
 ---
 
 ```javascript
-// jsObj -> JSON
-JSON.stringify(jsObj)
-
-// JSON -> jsObj
-JSON.parse(jsonStr)
+JSON.stringify(obj)  // obj -> json
+JSON.parse(jsonStr)  // json -> obj
 ```

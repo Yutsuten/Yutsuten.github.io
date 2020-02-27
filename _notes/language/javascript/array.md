@@ -1,32 +1,28 @@
 ---
+doc: https://developer.mozilla.org/docs/Web/JavaScript/Reference
 ---
 
-### Check if contains value
-#### index.js
+## Basic
+
 ```javascript
-var myArray = [2, 3, 5]
-console.log(myArray.indexOf(3) != -1)
+let arr = [2, 3, 5]
 ```
 
-### Prototype methods
-#### index.js
+## Methods
+
 ```javascript
-var list = [2, 3, 5, 7];
-var initialValue = 1000; // On reduce, if no initial value is passed, the first value in the array is used
-var doubles = list.map(num => num * 2); // [4, 6, 10, 14]
-var sum = list.reduce((accumulator, current) => accumulator + current, initialValue); // 1017
+arr.push(element1, ..., elementN)
+arr.pop()    // last element
+arr.shift()  // first element
+arr.splice(startIndex, deleteCount)
+arr.indexOf(element)
+arr.join(',')
+arr.includes(element)
+arr1.concat(arr2)
 
-list.concat(doubles); // Concat two or more arrays
+arr.map(n => n * 2)
+arr.reduce((accumulator, current) => accumulator + current, initialValue)
+arr.forEach((currentValue, index, array) => doSomething())
+arr.find(element => element > 4)  // first found element
+arr.filter(element => element > 4)  // array that satisfies the condition
 ```
-
-### Simple methods
-```javascript
-// Remove element by index
-array.splice(index, 1);
-
-// Join values into a string
-var list = ['car', 'bike', 'cookie'];
-list.join(' and ');
-// Returs: car and bike and cookie
-```
-
