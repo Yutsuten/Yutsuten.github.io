@@ -69,16 +69,18 @@
     font-weight: 400;
   }
 
-  .index > a {
+  .index > .text,
+  .index > .link {
     display: block;
   }
 
-  .index > a:not([href]) {
-    cursor: default;
+  .index > .text:hover,
+  .index > .link:hover {
+    background-color: #002B36;
   }
 
-  .index > a:hover {
-    background-color: #002B36;
+  .index > .text {
+    cursor: default;
   }
 
   .list {
