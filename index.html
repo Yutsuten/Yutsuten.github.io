@@ -12,17 +12,17 @@ title: Programming Notes
 
     <b-collapse class="index-area" visible id="index">
       <ul class="list -root">
-        <li class="index -root" v-for="indexLv1 in indexTree">
+        <li class="index" v-for="indexLv1 in indexTree">
           <a class="text">[[ indexLv1.text ]]</a>
-          <ul class="list -sub">
+          <ul class="list">
             <li class="index" v-for="indexLv2 in indexLv1.children">
               <a v-if="!indexLv2.href" class="text">[[ indexLv2.text ]]</a>
               <a v-else v-bind:href="indexLv2.href" v-on:click="seeNote">[[ indexLv2.text ]]</a>
-              <ul class="list -sub">
+              <ul class="list">
                 <li class="index" v-for="indexLv3 in indexLv2.children">
                   <a v-if="!indexLv3.href" class="text">[[ indexLv3.text ]]</a>
                   <a v-else class="link" v-bind:href="indexLv3.href" v-on:click="seeNote">[[ indexLv3.text ]]</a>
-                  <ul class="list -sub">
+                  <ul class="list">
                     <li class="index" v-for="indexLv4 in indexLv3.children">
                       <a v-if="!indexLv4.href" class="text">[[ indexLv4.text ]]</a>
                       <a v-else class="link" v-bind:href="indexLv4.href" v-on:click="seeNote">[[ indexLv4.text ]]</a>

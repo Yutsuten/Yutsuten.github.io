@@ -41,27 +41,21 @@
 }
 
 .index-area {
-  .link {
-    color: #268BD2;
-  }
-
-  .link:hover {
-    text-decoration: none;
-  }
-
-  .link:focus {
-    color: #6C71C4;
-  }
-
   > .list.-root {
     padding-left: 0;
     list-style-type: none;
-    margin-bottom: 0;
   }
 
-  > .list.-root > .index.-root {
+  > .list.-root > .index {
     font-size: 1.5rem;
     font-weight: 500;
+  }
+
+  .list {
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 18px;
+    list-style-type: disclosure-closed;
   }
 
   .index {
@@ -79,18 +73,20 @@
     background-color: #002B36;
   }
 
+  .index > .link {
+    color: #268BD2;
+  }
+
+  .index > .link:hover {
+    text-decoration: none;
+  }
+
+  .index > .link:focus {
+    color: #6C71C4;
+  }
+
   .index > .text {
     cursor: default;
-  }
-
-  .list {
-    margin-left: 0;
-    padding-left: 18px;
-    list-style-type: disclosure-closed;
-  }
-
-  .list.-sub {
-    margin-bottom: 0;
   }
 }
 
