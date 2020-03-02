@@ -64,7 +64,20 @@
     font-weight: 500;
   }
 
-  .index:hover {
+  .index {
+    font-size: 1.0rem;
+    font-weight: 400;
+  }
+
+  .index > a {
+    display: block;
+  }
+
+  .index > a:not([href]) {
+    cursor: default;
+  }
+
+  .index > a:hover {
     background-color: #002B36;
   }
 
