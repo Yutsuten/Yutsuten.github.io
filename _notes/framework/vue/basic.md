@@ -1,11 +1,13 @@
 ---
+doc: https://vuejs.org/v2/guide/index.html
 ---
 
 {% raw %}
 
-[Reference](https://vuejs.org/v2/guide/index.html)
+## Variable rendering
 
-### Variable rendering
+Any javascript is valid inside vue directives
+
 ```html
 <div id="app">
   {{ message }}
@@ -21,7 +23,8 @@ var app = new Vue({
 })
 ```
 
-### Attribute binding
+## Attribute binding
+
 ```html
 <div id="app">
   <span v-bind:title="message">
@@ -39,24 +42,8 @@ var app = new Vue({
 })
 ```
 
-### Condition (if)
-Any javascript is valid inside if or other vue directives
-```html
-<div id="app">
-  <span v-if="flag">Visible text</span>
-</div>
-```
+## Loop (for)
 
-```javascript
-var app = new Vue({
-  el: '#app',
-  data: {
-    flag: true
-  }
-})
-```
-
-### Loop (for)
 ```html
 <div id="app">
   <ol>
@@ -80,7 +67,8 @@ var app = new Vue({
 })
 ```
 
-### Event
+## Event
+
 ```html
 <div id="app">
   <p>{{ message }}</p>
@@ -106,7 +94,8 @@ var app = new Vue({
 })
 ```
 
-### Input-variable binding
+## Input-variable binding
+
 ```html
 <div id="app">
   <p>{{ message }}</p>
