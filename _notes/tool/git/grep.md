@@ -5,7 +5,7 @@
 Do not break lines on long lines matches (minified scripts!).
 
 ```shell
-git config --global core.pager 'less -S'
+git config --global core.pager 'less -XFS'
 ```
 
 ### Usage
