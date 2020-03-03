@@ -11,18 +11,21 @@
     <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}{% link favicon.png %}"/>
 
     <!-- Load required Bootstrap and BootstrapVue CSS -->
-    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.5.0/dist/bootstrap-vue.min.css" />
 
     <!-- Load Vue followed by BootstrapVue -->
     {% if jekyll.environment == 'production' %}
-      <script src="{{ site.baseurl }}{% link assets/library/vue.min.js %}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
     {% else %}
-      <script src="{{ site.baseurl }}{% link assets/library/vue.js %}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
     {% endif %}
-    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.5.0/dist/bootstrap-vue.min.js"></script>
 
-    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/library/syntax_highlight.css %}" media="screen">
+    <!-- Load fontawesome -->
+    <script src="https://kit.fontawesome.com/8e31a988f2.js"></script>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/syntax_highlight.css %}" media="screen">
     <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/index.scss %}" media="screen">
 
     <title>{{ page.title }} - Mateus Etto Website</title>
