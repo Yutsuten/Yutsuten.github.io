@@ -38,9 +38,20 @@
 
 .menu-area {
   border-right: 2px #002b36 solid;
+
+  @media only screen and (min-width: 768px) {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+  }
 }
 
 .index-area {
+  @media only screen and (min-width: 768px) {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
   > .list.-root {
     padding-left: 0;
     list-style-type: none;
@@ -94,6 +105,11 @@
   min-height: 100vh;
   font-size: 0.8rem;
 
+  @media only screen and (min-width: 768px) {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
   h1 {
     font-size: 1.5rem;
     border-bottom: 1px solid #586E75;
@@ -133,6 +149,10 @@
   table td {
     border: 1px solid #EEE8D5;
     padding: 5px 8px;
+  }
+
+  .highlight {
+    overflow: hidden;
   }
 }
 
