@@ -14,23 +14,16 @@
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
 
-    <!-- Load polyfills to support older browsers -->
-    <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CMutationObserver" crossorigin="anonymous"></script>
-
     <!-- Load Vue followed by BootstrapVue -->
     {% if jekyll.environment == 'production' %}
-      <script src="{{ site.baseurl }}{% link assets/js/vue.min.js %}"></script>
+      <script src="{{ site.baseurl }}{% link assets/library/vue.min.js %}"></script>
     {% else %}
-      <script src="{{ site.baseurl }}{% link assets/js/vue.js %}"></script>
+      <script src="{{ site.baseurl }}{% link assets/library/vue.js %}"></script>
     {% endif %}
     <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 
-    <!-- Load fontawesome -->
-    <script src="https://kit.fontawesome.com/8e31a988f2.js"></script>
-
-    <!-- Load custom styles -->
-    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/index.scss %}" media="screen">
-    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/syntax_highlight.css %}" media="screen">
+    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/library/syntax_highlight.css %}" media="screen">
+    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/index.scss %}" media="screen">
 
     <title>{{ page.title }} - Mateus Etto Website</title>
   </head>
@@ -58,6 +51,6 @@
     {%- endfor -%}
     [{{ index_json | slice: 1, index_json.size }}]
     </script>
-    <script src="{{ site.baseurl }}{% link assets/js/index.js %}"></script>
+    <script src="{{ site.baseurl }}{% link assets/index.js %}"></script>
   </body>
 </html>
