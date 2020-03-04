@@ -26,6 +26,12 @@ title: Programming Notes
                     <li class="index" v-for="indexLv4 in indexLv3.children">
                       <a v-if="!indexLv4.href" class="text">[[ indexLv4.text ]]</a>
                       <a v-else class="link" v-bind:href="indexLv4.href" v-on:click="seeNote">[[ indexLv4.text ]]</a>
+                      <ul class="list">
+                        <li class="index" v-for="indexLv5 in indexLv4.children">
+                          <a v-if="!indexLv5.href" class="text">[[ indexLv5.text ]]</a>
+                          <a v-else class="link" v-bind:href="indexLv5.href" v-on:click="seeNote">[[ indexLv5.text ]]</a>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </li>
