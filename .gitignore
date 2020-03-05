@@ -7,11 +7,5 @@
 .jekyll-metadata
 Gemfile.lock
 
-# Compiled scripts
-bundle.js
-bundle.css
-
 # Distribution / packaging
 _site/
-node_modules/
-
