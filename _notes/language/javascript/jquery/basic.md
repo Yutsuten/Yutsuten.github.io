@@ -1,7 +1,9 @@
 ---
+doc: https://api.jquery.com/
 ---
 
-#### index.js
+A low level javascript library.
+
 ```javascript
 // Get the number of selected items by the selector
 $('.selector').length;
@@ -36,19 +38,4 @@ $('select').append($('<option>', {
     value: '',
     text: 'Select an option'
 }));
-
-// Ajax
-$.get(url, function(response) {
-    console.log(response);
-});
-var data = {field1: 'hello'}
-$.post(url, data, function(response) {
-    console.log(response);
-});
-
-var response = $.ajax({
-    async: false,  // Async defaults to true
-    method: 'GET',
-    url: url
-});
 ```
