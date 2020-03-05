@@ -161,13 +161,11 @@
     margin-bottom: 4px;
   }
 
-  > .onlinedoc > a.external::after {
-    content: '⇗';
+  > .onlinedoc > .external > .fa-external-link-alt {
+    font-size: 0.7rem;
     position: relative;
-    display: inline-block;
-    bottom: 3px;
-    left: 1px;
-    font-size: 0.9rem;
+    bottom: 2px;
+    left: 3px;
   }
 }
 
