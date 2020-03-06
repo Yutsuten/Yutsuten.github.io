@@ -17,3 +17,15 @@ for key, value in my_dict.items():
 del my_dict['key']
 my_dict.pop('key', None)  # Does not raise exception
 ```
+
+## Copy
+
+```python
+# Shallow
+dict(my_dict)
+my_dict.copy()
+
+# Deep
+import copy
+copy.deepcopy(my_dict)
+```
