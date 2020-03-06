@@ -1,17 +1,20 @@
 ---
+doc: https://rclone.org/
 ---
 
-[Site](https://rclone.org/)
+## Install rclone
 
-### Install rclone
-[Guide](https://rclone.org/downloads/)
-```bash
+```shell
+sudo pacman -S rclone
+
+# https://rclone.org/downloads/
 curl https://rclone.org/install.sh | sudo bash
 ```
 
-### Sync with dropbox
-[Guide](https://rclone.org/dropbox/)
-```bash
+## Configure dropbox
+
+```shell
+# https://rclone.org/dropbox/
 rclone config
 n) New remote
 d) Delete remote
@@ -28,10 +31,11 @@ Remote config
 # Skip advanced configuration and let it configure oauth
 ```
 
-### Sync
+## Sync
+
 ```shell
-rclone sync dropbox:/ ~/Dropbox/  # From dropbox to local
-rclone sync ~/Dropbox/ dropbox:/  # From local to dropbox
+rclone sync -v dropbox:/ ~/Dropbox/  # From dropbox to local
+rclone sync -v ~/Dropbox/ dropbox:/  # From local to dropbox
 
 --dry-run  # For checking what changes would be made
 ```
