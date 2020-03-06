@@ -13,4 +13,7 @@ for key in my_dict:
 
 for key, value in my_dict.items():
     print(key, value)
+
+del my_dict['key']
+my_dict.pop('key', None)  # Does not raise exception
 ```
