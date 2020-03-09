@@ -18,7 +18,7 @@ for (let key in obj) {}
 
 ```javascript
 Object.prototype.hasOwnProperty.call(obj, key)
-Object.assign(obj1, obj2)  // merge
+Object.assign(target, source)  // merge target <- source
 Object.keys(obj)
 Object.values(obj)
 ```
