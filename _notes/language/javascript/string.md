@@ -25,6 +25,7 @@ str.replace(pattern, newPattern)  // first occurence
 str.charAt(index)
 str.toUpperCase()
 str.toLowerCase()
+str.endsWith(pattern)
 
 // Find index
 str.indexOf(text)

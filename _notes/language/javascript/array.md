@@ -18,7 +18,7 @@ arr.splice(startIndex, deleteCount)
 arr.indexOf(element)
 arr.join(',')
 arr.includes(element)
-arr1.concat(arr2)
+arr1.concat(arr2)  // does not modify arr1 and arr2
 
 arr.map(n => n * 2)
 arr.reduce((accumulator, current) => accumulator + current, initialValue)
