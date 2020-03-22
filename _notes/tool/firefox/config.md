@@ -13,3 +13,4 @@ Configuration is on `about:config`.
 | browser.urlbar.doubleClickSelectsAll | False | True |
 | browser.cache.disk.smart_size.enabled | True | False |
 | browser.cache.disk.capacity | X (KiB) | 1048576 |
+| browser.startup.page | 0 | 1 |
