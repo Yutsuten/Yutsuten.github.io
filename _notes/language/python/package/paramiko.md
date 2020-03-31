@@ -28,3 +28,23 @@ except socket.error:
 
 client.close()
 ```
+
+## Load RSA key
+
+```python
+# http://docs.paramiko.org/en/stable/api/keys.html
+from io import StringIO
+import paramiko
+
+pkey = 'Content of the key file'
+try:
+    pkey = paramiko.RSAKey.from_private_key(StringIO(pkey))
+except IOError:
+    return False, 'Error reading the key file'
+except paramiko.ssh_exception.PasswordRequiredException:
+    return False, 'Key file is encrypted and requires a password'
+except paramiko.ssh_exception.SSHException:
+    return False, 'Invalid key file'
+
+# client.connect(..., pkey=pkey)
+```
