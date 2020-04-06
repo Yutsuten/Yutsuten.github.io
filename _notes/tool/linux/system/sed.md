@@ -9,9 +9,10 @@
 
 ### Edit
 ```shell
-sed -ie 's/some_pattern/hello/g' my_text_file  # Replace
-sed -ie '/pattern/a some text here' my_text_file  # Add after
-sed -ie '/pattern/i some text here' my_text_file  # Add before
+sed -ie 's/pattern/result/g' myfile     # Replace
+sed -ie '/pattern/a new text' myfile    # Add after
+sed -ie '/pattern/i new text' myfile    # Add before
+sed -ie '0,/pattern/s//result/' myfile  # Replace first occurrence only
 ```
 
 ### Find
