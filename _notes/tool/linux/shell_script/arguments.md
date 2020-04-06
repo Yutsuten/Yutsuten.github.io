@@ -9,6 +9,7 @@ if [[ "$#" -ne 2 ]]; then
   exit 1
 fi
 
+echo $@  # All arguments
 echo $1  # Argument 1
 echo $2  # Argument 2
 exit 0
