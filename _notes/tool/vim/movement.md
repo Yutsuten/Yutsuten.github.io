@@ -1,7 +1,8 @@
 ---
 ---
 
-#### Simple movements
+## Simple movements
+
 ```
 h   # move one character left
 j   # move one row down
@@ -9,7 +10,8 @@ k   # move one row up
 l   # move one character right
 ```
 
-#### Word movements
+## Word movements
+
 ```
 w   # move to beginning of next word
 b   # move to previous beginning of word
@@ -19,7 +21,8 @@ B   # move to beginning of previous WORD
 E   # move to end of next WORD
 ```
 
-#### Inline movements
+## Inline movements
+
 ```
 fX  # to next 'X' after cursor, in the same line (X is any character)
 FX  # to previous 'X' before cursor (f and F put the cursor on X)
@@ -35,7 +38,8 @@ _   # move to first non-blank character of the line
 g_  # move to last non-blank character of the line
 ```
 
-#### File movements
+## File movements
+
 ```
 H   # move to top of screen
 M   # move to middle of screen
@@ -64,7 +68,8 @@ Ctrl-B  # page up
 Ctrl-F  # page down
 ```
 
-#### Set scroll relatively to cursor position
+## Set scroll relatively to cursor position
+
 ```
 zz  # center
 zt  # top

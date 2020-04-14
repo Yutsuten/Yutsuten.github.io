@@ -1,7 +1,8 @@
 ---
 ---
 
-### Autocomplete trigger
+## Autocomplete trigger
+
 ```vim
 "omnifunc
 c-x c-o

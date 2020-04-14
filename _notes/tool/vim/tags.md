@@ -1,7 +1,8 @@
 ---
 ---
 
-### Jumping to function definition
+## Jumping to function definition
+
 ```bash
 # Install ctags
 sudo apt install ctags

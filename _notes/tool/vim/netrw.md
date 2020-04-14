@@ -1,20 +1,22 @@
 ---
+doc: https://gist.github.com/t-mart/610795fcf7998559ea80
 ---
 
-[Quick reference](https://gist.github.com/t-mart/610795fcf7998559ea80)
+## Open in a new split
 
-### Open in a new split
 ```
 o   # Open file in horizontal split
 v   # Open file in vertical split
 ```
 
-### Change current directory
+## Change current directory
+
 ```shell
 c     # May be needed to mark target (see bellow)
 ```
 
-### File manipulation
+## File manipulation
+
 ```shell
 :Ex
 mf    # Mark file

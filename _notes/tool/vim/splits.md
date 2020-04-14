@@ -1,7 +1,8 @@
 ---
 ---
 
-### Splitting
+## Splitting
+
 ```
 <c-w>s  # Split horizontally
 :sp
@@ -15,17 +16,14 @@ set wfh  # WinFixHeight
 set wfw  # WinFixWidth
 ```
 
-### Rotating
+## Rotating
+
 ```shell
 <c-w><c-r>  # Rotate (invert) windows
 ```
 
-### Move split into new tab
-```
-<c-w>T
-```
+## Split size
 
-### Split size
 ```
 # Change size horizontally
 <c-w> +

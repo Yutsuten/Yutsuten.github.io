@@ -1,12 +1,14 @@
 ---
 ---
 
-#### Opening files in different tabs
+## Opening files in different tabs
+
 ```bash
 vim -p first.txt second.txt
 ```
 
-#### Dealing with tabs inside vim
+## Dealing with tabs inside vim
+
 ```
 t  # Using netrw, opens the file in a new tab
 

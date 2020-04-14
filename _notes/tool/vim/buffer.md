@@ -1,14 +1,14 @@
 ---
 ---
 
-### Buffer list
+## Buffer list
 
 ```vim
 :buffers
 :ls
 ```
 
-### Change buffer
+## Change buffer
 
 When typing the name of a buffer, `<Tab>` can be used for auto-completion.
 
@@ -17,7 +17,7 @@ When typing the name of a buffer, `<Tab>` can be used for auto-completion.
 :b <name>
 ```
 
-### Delete buffer
+## Delete buffer
 
 When typing the name of a buffer, `Ctrl-A` can be used to target multiple buffers.
 

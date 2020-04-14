@@ -1,13 +1,15 @@
 ---
 ---
 
-#### Start interactive shell
+## Start interactive shell
+
 ```
 :shell
 :sh
 ```
 
-#### Bang!
+## Bang!
+
 ```
 :!git status
 ```

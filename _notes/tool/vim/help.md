@@ -1,7 +1,8 @@
 ---
 ---
 
-### Update help tags
+## Update help tags
+
 ```vim
 :helptags ALL
 ```

@@ -1,7 +1,8 @@
 ---
 ---
 
-### Normal mode
+## Normal mode
+
 ```
 # :redir command redirects the output of a command to a register (@+).
 # The register @+ refers to the clipboard.

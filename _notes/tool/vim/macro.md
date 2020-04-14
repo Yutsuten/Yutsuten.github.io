@@ -1,7 +1,8 @@
 ---
 ---
 
-### Recording and running a new macro
+## Recording and running a new macro
+
 ```
 # Start storing macro into register a
 qa
