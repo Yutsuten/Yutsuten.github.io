@@ -11,9 +11,6 @@
 # Repeat last command
 .
 
-# Change syntax coloring
-:set syntax=html
-
 # Replace
 :%s/before/after/g      # All file
 :'<,'>s/before/after/g  # Only selection
@@ -42,4 +39,5 @@ ma  # Second letter can be in [a-z] for same file, [A-Z] for global
 
 # Syntax highlighting
 :set syntax=markdown
+:set filetype=markdown
 ```
