@@ -1,11 +1,17 @@
 ---
 ---
 
-### Start a bash interactive session
-```bash
-docker run -it <image:tag> bash
-docker run --rm -it <image:tag> bash  # Remove the container as you exit it
+## Usage
 
-# Multiple commands
-docker run image_name /bin/bash -c "command1 && command2"
+```shell
+docker run OPTIONS image COMMAND
+# OPTIONS
+-d                  # detach
+-p HOST:CONT        # port forward
+-w DIR              # working directory
+-v HOSTDIR:CONTDIR  # bind mount
+-it                 # interactive TTY
+--name NAME         # container name
+--mount type=bind,source=HOSTDIR,target=CONTDIR
+--rm                # remove container on exit
 ```
