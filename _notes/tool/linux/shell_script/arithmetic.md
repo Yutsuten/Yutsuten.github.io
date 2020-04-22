@@ -1,7 +1,8 @@
 ---
 ---
 
-### Integer calculations
+## Integer calculations
+
 ```shell
 echo $(( 5+2 ))  # 7
 echo $(( 5-2 ))  # 3
@@ -13,7 +14,8 @@ echo $(( 5%2 ))  # 1
 echo $(( 5**2 )) # 25
 ```
 
-### Decimal calculations
+## Decimal calculations
+
 ```shell
 sudo apt install bc  # Required package
 
@@ -28,7 +30,8 @@ echo '10.5^2.5' | bc -l    # 110.25
 echo 'sqrt(10.5)' | bc -l  # 110.25
 ```
 
-#### Relational expressions
+### Relational expressions
+
 ```shell
 echo '8.5<7' | bc -l   # 0
 echo '8.5<=7' | bc -l  # 0
@@ -38,7 +41,8 @@ echo '8.5==7' | bc -l  # 0
 echo '8.5!=7' | bc -l  # 1
 ```
 
-#### Boolean expressions
+### Boolean expressions
+
 ```shell
 echo '!(8.5>7)' | bc -l  # 0
 echo '(8.5>7) && (8.5>9)' | bc -l  # 0
