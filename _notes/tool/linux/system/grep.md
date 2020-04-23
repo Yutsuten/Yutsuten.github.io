@@ -3,13 +3,17 @@
 
 ## Syntax
 
-```
-grep [OPTION] PATTERN [FILE]
+```shell
+grep OPTIONS PATTERN FILE
+-r         # Recursive (when FILE is a FOLDER)
+-v         # Invert the sense of matching, to select non-matching lines.
+-E         # Extended regex
+--exclude  # Exclude FILEs
 ```
 
-## Recursive
+## Examples
 
 ```shell
-grep -r 'search_value' .
 grep -r --exclude="*.swp" 'search_value' .
+grep -E -v 'boo|foo' file
 ```
