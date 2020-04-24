@@ -13,8 +13,8 @@ text.startswith('abc')
 len(text)
 
 # Replace
-text.replace('Hello', '')  # Replace all
-text.replace('Hello', '', 1)  # Number of ocurrences to replace
+# (For regex, use its package)
+text.replace('pattern', repl, count=0)
 
 # Split
 text.split()  # Default is ' '
