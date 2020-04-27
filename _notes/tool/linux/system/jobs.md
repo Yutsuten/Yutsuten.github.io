@@ -1,10 +1,13 @@
 ---
 ---
 
-#### Pause a job
-Type `Ctrl + Z`.
+## Job management
 
-#### Resumo a job
-```bash
-fg
+Type `Ctrl + Z` to stop the job.
+
+```shell
+fg     # Resume the job
+fg num
+
+jobs   # List jobs
 ```
