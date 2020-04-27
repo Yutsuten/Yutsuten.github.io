@@ -1,13 +1,21 @@
 ---
 ---
 
-### Personalization
+## Change default user
+
+```shell
+debian config --default-user root  # Replace debian with OS if necessary
+```
+
+## Personalization
+
 - [Make Bash on Ubuntu on Windows 10 Look Like the Ubuntu Terminal](https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2)
 - [Solarized colors for vim in bash on windows works!](https://www.reddit.com/r/bashonubuntuonwindows/comments/60da1u/solarized_colors_for_vim_in_bash_on_windows_works/)
 - [Solarized Cheat Sheet](http://www.zovirl.com/2011/07/22/solarized_cheat_sheet/)
 - [Powerline fonts](https://medium.com/@slmeng/how-to-install-powerline-fonts-in-windows-b2eedecace58)
 
-#### Workarounds
+### Workarounds
+
 - [Can't set different font for the terminal](https://github.com/Microsoft/WSL/issues/757)
 
 ```
@@ -16,17 +24,20 @@ HKEY_CURRENT_USER\Console\%SystemRoot%_system32_bash.exe
 add/modify item CodePage->(DWORD)FDE9(65001)
 ```
 
-#### Hide scroll bar
+### Hide scroll bar
+
 - [Reference](https://github.com/Microsoft/WSL/issues/407#issuecomment-295761589)
 
 Make the default settings for the initial window's Screen Buffer Size and Window Size to be the same value.
 
-#### Fullscreen mode
+### Fullscreen mode
+
 ```
 Alt+Shift+Enter
 ```
 
-### Solarized theme
+## Solarized theme
+
 ```
 SLOT SOLARIZED  HEX      RGB             HSB            L*A*B          16/8   TERMCOL   XTERM/HEX
 0    base02     #073642  7    54   66    192  90   26   20  -12  -12   0/4    black     235  #262626
