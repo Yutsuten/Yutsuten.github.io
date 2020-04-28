@@ -18,9 +18,12 @@ text.replace('pattern', repl, count=0)
 
 # Split
 text.split()  # Default is ' '
+text.splitlines()
 
 # Strip
 text.strip()  # Default is ' '
+text.rstrip()
+text.lstrip()
 
 # String addtion
 text_sum = 'Hello ' + 'world!'

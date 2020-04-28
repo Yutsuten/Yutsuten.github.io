@@ -9,6 +9,7 @@ with open('sound.mp3', 'wb') as audio_file:
 
 with open(os.path.join('path', 'to', 'file.txt'), 'r') as f:
     all_text = f.read()
+    lines_list = f.readlines()  # Keeps \n at the end
     each_line_as_element_in_list = f.readlines()
 
 with open('existing_file.txt', 'a') as f:
