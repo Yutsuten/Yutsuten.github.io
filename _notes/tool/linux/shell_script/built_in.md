@@ -14,3 +14,10 @@ set -o xtrace
 ```shell
 echo $(( RANDOM % 10 ))
 ```
+
+## Print
+
+```shell
+printf %s "${MYVAR}"     # Without new line
+printf %s\\n "${MYVAR}"  # With new line
+```
