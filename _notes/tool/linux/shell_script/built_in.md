@@ -20,6 +20,10 @@ echo $(( RANDOM % 10 ))
 ## Print
 
 ```shell
+# Variable
 printf %s "${MYVAR}"     # Without new line
 printf %s\\n "${MYVAR}"  # With new line
+
+# Format text
+printf "Hello %s\n" "${MYVAR}"
 ```

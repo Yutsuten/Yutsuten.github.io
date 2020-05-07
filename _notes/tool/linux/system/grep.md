@@ -15,5 +15,5 @@ grep OPTIONS PATTERN FILE
 
 ```shell
 grep -r --exclude="*.swp" 'search_value' .
-grep -E -v 'boo|foo' file
+grep -Ev 'boo|foo' file
 ```

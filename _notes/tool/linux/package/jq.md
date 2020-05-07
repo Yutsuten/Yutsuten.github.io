@@ -1,7 +1,11 @@
 ---
 ---
 
-### Nice printing a JSON
+## Usage
+
+By default this tool pretty prints the json data.
+
 ```shell
-echo '[ {"a":1, "id":1},  {"a":2, "id":2}, {"a":2, "id":3}, {"a":1, "id":4} ]' | jq .
+jq . < file.json
+jq .version < file.json
 ```

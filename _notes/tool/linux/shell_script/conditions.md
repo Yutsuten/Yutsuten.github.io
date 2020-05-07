@@ -31,7 +31,12 @@ echo $?
 ## String comparison
 
 ```shell
+[[ "04:00" == "12:00" ]]; echo $?
+[[ "04:00" != "12:00" ]]; echo $?
 [[ "04:00" < "12:00" ]]; echo $?
+[[ "04:00" > "12:00" ]]; echo $?
+[[ -z "${MYVAR}" ]]; echo $?  # Length is zero
+[[ -n "${MYVAR}" ]]; echo $?  # Length is non-zero
 ```
 
 ## File checks
