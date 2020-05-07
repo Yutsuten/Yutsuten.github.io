@@ -1,10 +1,10 @@
 ---
 ---
 
-```bash
-ssh myhost
-ssh myhost 'command to run on myhost'
-ssh -t myhost 'command that needs tty'
+```shell
+ssh OPTIONS host COMMAND
+-t  # Force opening a tty
+-i KEY_FILE
 
 # Port forwarding
 ssh -L localaddress:1234:targetaddress:1234 myhost
@@ -50,7 +50,7 @@ Host destination-server
 If you are going to open GUI applications remotely,
 you may need to install some packages on the remote machine.
 
-```bash
+```shell
 sudo yum install xorg-x11-xauth
 sudo apt-get install xauth
 ```
