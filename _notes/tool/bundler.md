@@ -1,12 +1,16 @@
 ---
 ---
 
-### Install
+## Install
+
 ```shell
 gem install bundler
 ```
 
-### Managing dependencies
+## Managing dependencies
+
+Gems are installed on `BUNDLE_PATH`.
+
 ```shell
 bundle install
 bundle update
