@@ -12,6 +12,7 @@ docker run OPTIONS image COMMAND
 -v HOSTDIR:CONTDIR  # bind mount
 -it                 # interactive TTY
 --name NAME         # container name
+--mount source=VOLNAME,target=CONTDIR
 --mount type=bind,source=HOSTDIR,target=CONTDIR
 --rm                # remove container on exit
 ```
