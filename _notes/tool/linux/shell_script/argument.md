@@ -12,7 +12,6 @@ fi
 echo $@  # All arguments
 echo $1  # Argument 1
 echo $2  # Argument 2
-exit 0
 ```
 
 ## Getopts
@@ -25,7 +24,7 @@ Nice tutorial [here](https://wiki.bash-hackers.org/howto/getopts_tutorial).
 while getopts ":a:" opt; do
   case ${opt} in
     a)
-      echo "-a was triggered, Parameter: ${OPTARG}" >&2
+      echo "-a was triggered, Parameter: ${OPTARG}"
       ;;
     \?)
       echo "Invalid option: -${OPTARG}" >&2

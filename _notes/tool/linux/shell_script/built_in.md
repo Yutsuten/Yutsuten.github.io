@@ -1,14 +1,6 @@
 ---
 ---
 
-## Variables
-
-```shell
-name='Taro'
-name+='San'
-score=7
-```
-
 ## Set
 
 ```shell
