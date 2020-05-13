@@ -1,6 +1,11 @@
 ---
 ---
 
+## Usage
+
 ```shell
-tail -10 log/file  # Last 10 lines of a file
+tail OPTIONS FILE
+-f       # Output appended data as the file grows
+-n NUM   # Output the last NUM lines
+-n +NUM  # Output start with line NUM
 ```
