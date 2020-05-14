@@ -8,8 +8,8 @@ Ref: [Link](https://help.github.com/articles/generating-a-new-ssh-key-and-adding
 ```bash
 # Add key
 ssh-keygen -t rsa -b 4096 -C "email@example.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa  # -K parameter required on mac
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
 
 # Public key
 cat ~/.ssh/id_rsa.pub | xclip -sel clip
