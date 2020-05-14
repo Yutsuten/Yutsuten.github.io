@@ -1,7 +1,7 @@
 ---
 ---
 
-## Stdout
+## Write output to file
 
 ```shell
 # Any command is valid, not only echo
@@ -16,11 +16,5 @@ grep -qF -- "${CONTENT}" "${FILE}" || echo "${CONTENT}" >> "${FILE}"
 ## Redirect stderr to stdout
 
 ```shell
-command > new_file 2>&1  # 2 (stderr) to 1 (stdout)
-```
-
-## Write to both to terminal and file
-
-```shell
-command | tee new_file
+command > new_file 2>&1
 ```
