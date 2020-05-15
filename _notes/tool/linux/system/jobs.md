@@ -6,8 +6,11 @@
 Type `Ctrl + Z` to stop the job.
 
 ```shell
-fg     # Resume the job
-fg num
-
 jobs   # List jobs
+
+fg     # Resume the job
+fg NUM
+
+bg     # Resume the job in the background
+bg NUM
 ```
