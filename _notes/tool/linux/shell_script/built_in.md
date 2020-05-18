@@ -27,3 +27,11 @@ printf %s\\n "${MYVAR}"  # With new line
 # Format text
 printf "Hello %s\n" "${MYVAR}"
 ```
+
+## Process
+
+```shell
+command &
+pid=$!
+wait   # Wait until all processes finish
+```
