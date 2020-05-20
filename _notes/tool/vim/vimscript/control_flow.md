@@ -1,13 +1,14 @@
 ---
 ---
 
-### If statement
+## If-elseif
+
 ```vim
-if &somevar == 1
-  " Do something
-elseif &somevar == 0
-  " Do something
+if condition
+  "Do something
+elseif condition
+  "Do something
 else
-  " Do something else
+  "Do something else
 endif
 ```
