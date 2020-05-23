@@ -120,7 +120,7 @@
   h3 {font-size: 1.1rem;}
   h4 {font-size: 1.0rem;}
   h5 {font-size: 0.9rem;}
-  p {margin-bottom: 0;}
+  p {margin-bottom: 12px;}
 
   a {
     color: #268BD2;
@@ -139,6 +139,8 @@
     h3 {font-size: 1.5rem;}
     h4 {font-size: 1.3rem;}
     h5 {font-size: 1.15rem;}
+
+    h1,h2,h3,h4,h5 {margin-bottom: 12px}
   }
 
   table {
@@ -154,7 +156,8 @@
 
   pre.highlight {
     overflow: hidden;
-    margin: 5px 3px;
+    margin-bottom: 12px;
+    padding: 8px 12px 11px 12px;
   }
 }
 
