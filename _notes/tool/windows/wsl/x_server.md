@@ -22,11 +22,8 @@ Install X server's dbus (`dbus-x11` for ubuntu) and add this to your rc file.
 export DISPLAY=127.0.0.1:0
 ```
 
-Maybe needed:
+Install some nice packages for better support.
 
 ```shell
-sudo apt install keyboard-configuration console-setup
-sudo dpkg-reconfigure keyboard-configuration
-sudo service keyboard-setup restart
-sudo udevadm trigger --subsystem-match=input --action=change
+sudo apt install fonts-emojione
 ```
