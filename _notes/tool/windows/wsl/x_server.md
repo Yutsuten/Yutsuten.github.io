@@ -25,5 +25,6 @@ export DISPLAY=127.0.0.1:0
 Install some nice packages for better support.
 
 ```shell
-sudo apt install fonts-emojione
+sudo apt install fonts-emojione fonts-noto
+sudo update-locale LANG=ja_JP.UTF-8
 ```
