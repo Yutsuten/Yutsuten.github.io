@@ -4,7 +4,12 @@
 ## Command parameters
 
 ```bash
-mysql -e "SELECT ..."  # Run SQL inline
+mysql OPTIONS DBNAME
+-h host          # --host
+-u user          # --user
+-P               # --port
+-p               # --password
+-e "SELECT..."   # Run SQL inline
 ```
 
 ### Basic commands
