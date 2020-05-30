@@ -26,3 +26,13 @@ fg       # Resume in the foreground
 bg       # Resume in the background
 disown   # Detach job from terminal
 ```
+
+## Nohup
+
+Avoid sending `SIGHUP` to a process on logout.
+
+```shell
+nohup command
+nohup command &
+nohup command > output 2>&1 &
+```
