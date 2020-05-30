@@ -1,13 +1,16 @@
 ---
+doc: https://docs.python.org/3/library/pdb.html
 ---
 
-### Debug script in loop
+## Debug mode
+
+This will run the script in loop.
 
 ```shell
 python -m pdb -c continue path/to/script.py
 ```
 
-### Adding breakpoints
+## Add breakpoints
 
 ```python
 # ...
@@ -16,7 +19,24 @@ import pdb; pdb.set_trace()
 # ...
 ```
 
-### Enter post-mortem debugging
+### Basic usage
+
+| Command | Meaning | Explanation |
+| --- | --- | --- |
+| `h` | help | Print the list of available commands |
+| `w` | where | Print a stack trace |
+| `s` | step | Execute the current line, stop at the first possible occasion |
+| `n` | next | Continue execution until the next line in the current function is reached or it returns |
+| `unt N` | until | Continue execution until a line with a number greater or equal to N (default next) is reached |
+| `r` | return | Continue execution until the current function returns |
+| `c` | continue | Continue execution, only stop when a breakpoint is encountered |
+| `l` | list | List 11 lines around the current line |
+| `p EXP` | print | Print the value of EXPression |
+| `pp EXP` | pretty-print | Pretty-print the value of EXPression |
+| `whatis EXP` | whatis | Print the type of the EXPression |
+| `q` | quit | Quit from the debugger. The program being executed is aborted |
+
+## Enter post-mortem debugging
 
 ```python
 import pdb; pdb.pm()
