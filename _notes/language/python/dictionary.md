@@ -5,8 +5,9 @@
 my_dict = {'name': 'John', 'age': 28}
 my_dict['hobby'] = 'games'
 
-my_dict.keys()  # List of keys
+my_dict.keys()    # List of keys
 my_dict.values()  # List of values
+my_dict.update(another_dict)  # Merge dicts
 
 for key in my_dict:
     print(key, my_dict[key])
