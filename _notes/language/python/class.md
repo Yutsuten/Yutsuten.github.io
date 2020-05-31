@@ -25,6 +25,12 @@ class MyClass(object):
 
 
 class InheritanceExample(MyClass):
+  parameter2 = None
+
+  def __init__(self, parameter1, parameter2)
+    MyClass.__init__(self, parameter1)  # super().__init__(parameter1)
+    self.parameter2 = parameter2
+
   # Python 2
   def custom_method(self, parameter):
     self(InheritanceExample, self).custom_method(parameter)
