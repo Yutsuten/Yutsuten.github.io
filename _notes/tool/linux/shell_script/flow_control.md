@@ -33,6 +33,11 @@ done
 for MYVAR in val1 val2 val3; do
   echo $MYVAR
 done
+
+for path in folder/*/; do
+  echo ${path}
+  echo ${path%?}  # Remove last character
+done
 ```
 
 ## While
