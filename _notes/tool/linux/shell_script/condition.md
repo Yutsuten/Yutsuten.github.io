@@ -60,5 +60,7 @@ Package `bc` is required.
 ## File checks
 
 ```shell
-[[ -f dir/filename ]]; echo $?  # True if exists and is a file
+[[ -d dir/ ]]          # True if exists and is a directory
+[[ -f dir/filename ]]  # True if exists and is a file
+[[ -e dir/filename ]]  # True if path exists
 ```
