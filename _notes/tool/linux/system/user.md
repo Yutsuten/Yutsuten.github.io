@@ -1,19 +1,46 @@
 ---
 ---
 
-### Managing users
-```shell
-sudo adduser test
-sudo userdel -r test
+Most of these commands require root privileges.
 
-sudo passwd test
-```
-### Add sudo permissions to user
+## Managing users
+
+To list existing users in the system, run `cat /etc/passwd`.
+
+### Create user
+
 ```shell
-sudo usermod -aG sudo test
+useradd OPTIONS USERNAME
+-m        # Create home folder
+-p        # Set password
+-G g1,g2  # Add user to groups
+
+chfn USERNAME    # Change finger information
+passwd USERNAME  # Update password
 ```
 
-### Allow access to x-server
+### Groups
+
+To list existing groups in the system, run `getent group`.
+
 ```shell
-xhost +SI:localuser:test
+groups USERNAME                 # List groups of a user (defaults to current user)
+gpasswd OPTIONS USERNAME GROUP  # Manage groups
+-a  # Add to group
+-d  # Remove from group
+```
+
+### Delete user
+
+```shell
+userdel -r USERNAME
+```
+
+### Giving admin privileges
+
+```shell
+visudo
+
+username ALL=(ALL) ALL  # Only for user
+%wheel ALL=(ALL) ALL    # For all users in wheel group
 ```
