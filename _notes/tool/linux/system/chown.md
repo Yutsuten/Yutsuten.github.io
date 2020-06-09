@@ -6,5 +6,5 @@
 chown root:root filename
 
 # Change files owner recursively
-chown root:root . -R
+chown -R root:root .
 ```
