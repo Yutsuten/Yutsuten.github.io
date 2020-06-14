@@ -3,16 +3,30 @@
 
 [Documentation](https://docs.python.org/3/library/unittest.html)
 
-### Skip
+## Usage
+
 ```python
 import unittest
 
-@unittest.skip('Skip me')
-def test_nothing(self):
-    pass
+class TestHello(unittest.TestCase):
+    def test_hello(self):
+        self.assertIsNotNone('Hello!')
+
+    @unittest.skip('Skip me')
+    def test_nothing(self):
+        pass
 ```
 
-### Asserts
+Run:
+
+```shell
+python -m unittest
+python -m unittest discover -s tests
+python -m unittest tests.test_module.TestClass.test_method
+```
+
+## Asserts
+
 ```python
 # All the assert methods accept a msg argument
 assertEqual(a, b)
