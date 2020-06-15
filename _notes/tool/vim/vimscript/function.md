@@ -6,4 +6,6 @@
 function! MyMethod(myarg)
   "DoSomething
 endfunction
+
+call MyMethod(1)
 ```
