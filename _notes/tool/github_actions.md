@@ -17,10 +17,15 @@ on: push
 jobs:
   unit-test:
     name: Unit Tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v2
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache
+          key: cache
       - name: Run command
         run: ls -al
 ```
@@ -32,3 +37,9 @@ jobs:
 `jobs.<id>.name` is the name of the job.
 `jobs.<id>.runs-on` is the OS of the machine.
 `jobs.<id>.steps` each step to complete the job.
+
+### Actions
+
+- [Checkout](https://github.com/actions/checkout): Action for checking out a repo.
+- [Cache](https://github.com/actions/cache): Cache dependencies and build outputs.
+- [Pyenv](https://github.com/gabrielfalcao/pyenv-action): Enables pyenv within your workflow.
