@@ -20,3 +20,9 @@ Use `%` for the current file.
 :so %
 :so $MYVIMRC
 ```
+
+## Printf
+
+```vim
+printf(' %s ', myvar)
+```

@@ -12,3 +12,11 @@ else
   "Do something else
 endif
 ```
+
+## For-endfor
+
+```vim
+for value in list
+  "Do something
+endfor
+```

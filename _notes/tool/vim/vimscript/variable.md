@@ -15,3 +15,9 @@ l:myarg       "Local to function"
 g:myarg       "Global"
 &shiftwidth   "Global setting"
 ```
+
+## Set / change variable value
+
+```vim
+let myvar = 'Hello'
+```
