@@ -28,11 +28,6 @@ git reset HEAD .
 git reset HEAD directory/
 git reset HEAD path/to/file
 
-# Undo changes in a file
-git checkout -- .
-git checkout -- directory/
-git checkout -- path/to/file
-
 # Commit changes
 git commit               # Open the editor to type the message
 git commit -m "Message"  # Create a message inline
