@@ -42,4 +42,28 @@ jobs:
 
 - [Checkout](https://github.com/actions/checkout): Action for checking out a repo.
 - [Cache](https://github.com/actions/cache): Cache dependencies and build outputs.
+- [Setup Python](https://github.com/actions/setup-python): Set up your workflow with a specific version of python.
 - [Pyenv](https://github.com/gabrielfalcao/pyenv-action): Enables pyenv within your workflow.
+
+### Coveralls
+
+For python, the official GitHub Action does not work.
+As a workaround, install the coveralls package with pip,
+then manually call it on the script.
+
+```shell
+- name: Run tests
+  env:
+    COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+  run: |
+    python -m pip install coveralls PyYAML
+    coverage run ...
+    coveralls
+```
+
+Configuration on `coveralls.yml` is needed.
+
+```yaml
+service_name: travis-ci
+parallel: false
+```
