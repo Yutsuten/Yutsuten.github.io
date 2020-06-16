@@ -13,7 +13,7 @@ Example of basic .yml file:
 
 ```yml
 name: Continuous Testing
-on: push
+on: [push, pull_request]
 jobs:
   unit-test:
     name: Unit Tests
