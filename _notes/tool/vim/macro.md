@@ -1,18 +1,17 @@
 ---
 ---
 
-## Recording and running a new macro
+## Usage
 
-```
-# Start storing macro into register a
-qa
+Press `q` followed by a key that will represent the register it will be stored.
+It will record all key presses until you quit with `q`.
 
-# Type some commands
-10j
+To run the macro, press `@` + the register of the macro.
 
-# Finish recording the macro
-q
+## Example
 
-# Run the macro
-@a
-```
+Create:
+`qa` → `10j` → `q`
+
+Run:
+`@a`

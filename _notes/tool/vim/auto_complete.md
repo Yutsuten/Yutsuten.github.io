@@ -1,16 +1,9 @@
 ---
 ---
 
-## Autocomplete trigger
+Press `:pc` to close the preview window.
 
-```vim
-"omnifunc
-c-x c-o
-
-"close preview window
-:pc[lose]
-
-"simple autocomplete
-c-n
-c-p
-```
+| Shortcut | Description |
+| --- | --- |
+| `Ctrl+x` `Ctrl+o` | Omnifunc |
+| `Ctrl+n` or `Ctrl+p` | Word autocompletion |

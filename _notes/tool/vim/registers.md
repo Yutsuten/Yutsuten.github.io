@@ -1,8 +1,8 @@
 ---
 ---
 
-```
-+  Clipboard
-*  Primary
-%  Current file path (Read only)
-```
+| Key | Description |
+| --- | --- |
+| `+` | Clipboard |
+| `*` | Primary |
+| `%` | Current file path (Read only) |
