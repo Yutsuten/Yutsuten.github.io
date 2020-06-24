@@ -2,6 +2,8 @@
 doc: https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
 ---
 
+{% raw %}
+
 ## Setup a basic workflow
 
 ```shell
@@ -28,6 +30,9 @@ jobs:
           key: cache
       - name: Run command
         run: ls -al
+      - name: Run even on fail
+        if: ${{ success() || failure() }}
+        run: pwd
 ```
 
 `name` is the name of the workflow.
@@ -67,3 +72,5 @@ Configuration on `coveralls.yml` is needed.
 service_name: travis-ci
 parallel: false
 ```
+
+{% endraw %}
