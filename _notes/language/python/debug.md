@@ -31,6 +31,9 @@ import pdb; pdb.set_trace()
 | `r` | return | Continue execution until the current function returns |
 | `c` | continue | Continue execution, only stop when a breakpoint is encountered |
 | `l` | list | List 11 lines around the current line |
+| `ll` | longlist | List all source code for the current function or frame |
+| `u` | up | Move the current frame count (default one) levels up in the stack trace |
+| `d` | down | Move the current frame count (default one) levels down in the stack trace |
 | `p EXP` | print | Print the value of EXPression |
 | `pp EXP` | pretty-print | Pretty-print the value of EXPression |
 | `whatis EXP` | whatis | Print the type of the EXPression |
