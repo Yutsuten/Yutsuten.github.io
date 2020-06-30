@@ -1,9 +1,11 @@
 ---
+doc: https://docs.python.org/3/library/unittest.mock.html
 ---
 
-[Ref](https://semaphoreci.com/community/tutorials/getting-started-with-mocking-in-python)
+## Usage
 
-#### calc.py
+`calc.py`
+
 ```python
 import time
 
@@ -13,7 +15,8 @@ class Calculator:
         return a + b
 ```
 
-#### tests.py
+`tests.py`
+
 ```python
 from unittest import TestCase, mock
 from calc import Calculator
@@ -55,4 +58,13 @@ class TestCalc(TestCase):
         sum.assert_any_call(2)     # Asserts any call's parameters
 
         assert sum.call_count == 3
+```
+
+## Mock module
+
+```python
+import sys
+import mock
+
+sys.modules['some_module'] = mock.MagicMock()
 ```
