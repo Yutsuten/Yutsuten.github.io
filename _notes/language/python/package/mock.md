@@ -4,67 +4,57 @@ doc: https://docs.python.org/3/library/unittest.mock.html
 
 ## Usage
 
-`calc.py`
+Import from `unittest.mock`,
+or from `mock` if installed separately.
+
+### Set value
 
 ```python
-import time
-
-class Calculator:
-    def sum(self, a, b):
-        time.sleep(10)
-        return a + b
+@mock.patch('calc.Calculator.sum')
+def test_sum_return_value(self, sum):
+    sum.return_value = 9
 ```
 
-`tests.py`
+### Side effect
 
 ```python
-from unittest import TestCase, mock
-from calc import Calculator
+def sum(a, b):
+    if a > b:
+        return 5
+    return 10
 
-def mock_sum(a, b):
-      return a + b
+@mock.patch('mymodule.sum')
+def test_sum_side_effect(self, mock_sum):
+    mock_sum.side_effect = sum
 
-class TestCalc(TestCase):
-    def setUp(self):
-        self.calc = Calculator
-
-    @mock.patch('calc.requests')
-    @mock.patch('calc.Calculator.sum')
-    def test_sum_return_value(self, sum, mock_requests):
-        sum.return_value = 9
-
-        mock_requests.get.return_value.content = 'Content of the request'
-        # Mocks requests.get().content
-
-        answer = self.calc.sum(2, 4)
-        self.assertEqual(answer, 9)
-
-    @mock.patch('calc.Calculator.sum')
-    def test_sum_side_effect(self, sum):
-        sum.side_effect = mock_sum
-
-        answer = self.calc.sum(2, 4)
-        self.assertEqual(answer, 6)
-
-    @mock.patch('calc.Calculator.sum', side_effect=Exception('Test'))
-    def test_sum_side_effect(self, sum):
-        answer = self.calc.sum(2, 4)  # raises exception
-        self.assertEqual(answer, 6)
-
-    @mock.patch('calc.Calculator.sum')
-    def test_call_count(self, sum):
-        sum.assert_called_with(1)  # Asserts the last call's parameters
-        sum.assert_any_call(1)     # Asserts any call's parameters
-        sum.assert_any_call(2)     # Asserts any call's parameters
-
-        assert sum.call_count == 3
+@mock.patch('mymodule.sum', side_effect=Exception())
+def test_sum_side_effect(self, mock_sum):
+    mymodule.sum()  # Will raise Exception()
 ```
 
-## Mock module
+### Assert call
+
+```python
+@mock.patch('calc.Calculator.sum')
+def test_call_count(self, sum):
+    sum.assert_called_with(1)  # Asserts the last call's parameters
+    sum.assert_any_call(1)     # Asserts any call's parameters
+    sum.assert_any_call(2)     # Asserts any call's parameters
+    assert sum.call_count == 3
+```
+
+### Mock file
+
+```python
+@mock.patch('builtins.open', mock.mock_open(read_data='file_content'))
+def test_open_file(self):
+    with open('/some/path', 'r') as text_file:
+        text_file.read()  # Returns 'file_content'
+```
+
+### Mock module
 
 ```python
 import sys
-import mock
-
 sys.modules['some_module'] = mock.MagicMock()
 ```
