@@ -10,8 +10,14 @@ The file name and function name must begin with `test`.
 import pytest
 
 class TestHello:
+  def setup_method(self):
+    pass
+
   def test_hello(self):
     assert 'Hello' != 'World'
+
+  def teardown_method(self):
+    pass
 ```
 
 ## Configuration file
