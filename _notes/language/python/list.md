@@ -7,6 +7,7 @@
 my_list = ['a', 'b', 'c', 'd', 'e', 'g', 'f']
 my_list[2]
 my_list.append('z')
+my_list.insert(0, 'first')
 my_list.index('d')
 my_list.remove('z')
 my_list.pop(0)
