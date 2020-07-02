@@ -46,10 +46,13 @@ def test_call_count(self, sum):
 ### Mock file
 
 ```python
-@mock.patch('builtins.open', mock.mock_open(read_data='file_content'))
 def test_open_file(self):
-    with open('/some/path', 'r') as text_file:
-        text_file.read()  # Returns 'file_content'
+    mock_open = mock.mock_open(read_data='file_content')
+    with mock.patch('builtins.open', mock_open):
+        with open('/some/path', 'r') as text_file:
+            text_file.read()  # Returns 'file_content'
+    mock_open.assert_any_call('/some/path', 'r')
+    mock_open().write.call_args.args
 ```
 
 ### Mock module
