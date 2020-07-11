@@ -8,6 +8,7 @@ text.upper()
 text.isalpha()  # Returns True if it only has letters
 text.isdigit()  # Returns True if it only has numbers
 text.isalnum()  # Returns True if it has letters or numbers
+text.startswith('abc')
 
 len(text)
 
