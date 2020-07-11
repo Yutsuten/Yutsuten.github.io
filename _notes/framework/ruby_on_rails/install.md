@@ -18,5 +18,5 @@ sudo apt install libsqlite3-dev
 
 ### Debian extra requirements
 ```bash
-sudo apt install ruby-dev zlib1g-dev
+sudo apt install ruby-dev zlib1g-dev libsqlite3-dev
 ```
