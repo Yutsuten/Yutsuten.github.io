@@ -82,7 +82,7 @@ else
 
 ### While loop
 ```python
-while var1 < var2
+while var1 < var2:
     pass
 else
     # Only if while condition became false

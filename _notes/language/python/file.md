@@ -4,6 +4,10 @@
 ```python
 import os
 
+os.path.exists('sound.mp3')
+os.path.isfile('sound.mp3')
+os.path.isdir('somefolder')
+
 with open('sound.mp3', 'wb') as audio_file:
     audio_file.write(data)
 
