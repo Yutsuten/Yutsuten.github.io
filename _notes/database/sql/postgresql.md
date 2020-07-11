@@ -10,3 +10,9 @@ $ psql    # Start postgresql bash
 > \c mydb # change database
 > \q      # quit
 ```
+
+### Generate / restore dump
+```bash
+pg_dump dbname > outfile.sql
+psql dbname < infile.sql
+```
