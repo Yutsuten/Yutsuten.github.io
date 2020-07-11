@@ -18,6 +18,8 @@
 :'<,'>s/before/after/g  # Only selection
 :%s/\v(\w+)/ \1 /g      # \v "very magic" mode, full regex. Captured group \1
 :%s/\(\w\+)/ \1 /g      # Without "very magic" mode, escape ( and )
+\r  # New line
+\n  # Null character
 
 # Copy file path to clipboard
 :let @+ = @%
