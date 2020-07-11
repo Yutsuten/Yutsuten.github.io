@@ -7,3 +7,9 @@ DROP DATABASE cool_game;
 USE cool_game;
 SHOW DATABASES;
 ```
+
+### Database privileges
+```sql
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'host' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
