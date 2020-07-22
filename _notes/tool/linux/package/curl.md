@@ -8,6 +8,7 @@ curl OPTIONS URL
 -s       # Silent (Does not show progress bar)
 -o FILE  # Write data into file
 -L       # Follow redirect
+-k       # Skip SSL certificate check
 ```
 
 ## Download file from remote

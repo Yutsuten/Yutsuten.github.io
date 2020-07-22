@@ -1,7 +1,9 @@
 ---
 ---
 
+## Usage
+
 ```shell
-pwd
-pwd -P  # Physical directory (ignore symbolic links)
+pwd OPTIONS
+-P  # Physical directory (ignore symbolic links)
 ```
