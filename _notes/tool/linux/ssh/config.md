@@ -1,8 +1,6 @@
 ---
 ---
 
-File location: `~/.ssh/config`
-
 ## Simple usage
 
 ```config
@@ -17,6 +15,12 @@ Host myhost
 Host *
     ServerAliveInterval 120
     AddKeysToAgent yes
+```
+
+The config file must have `600` permissions or it will not work.
+
+```shell
+chmod 600 ~/.ssh/config
 ```
 
 ## Step server
@@ -34,6 +38,22 @@ Host destination-server
     IdentityFile key.pem
     ProxyCommand ssh -X step-server -W %h:%p
 ```
+
+## Git with ssh
+
+Using a key other than the default when using git with ssh.
+
+```
+# ~/.ssh/config
+
+Host work.github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_work
+```
+
+Then on the SSH clone URL,
+edit `github.com` to `work.github.com` and git should use the correct key.
 
 ## Proxy
 
