@@ -1,6 +1,30 @@
 ---
 ---
 
+## Shortcuts
+
+| Action | Shortcut |
+| ------ | -------- |
+| Add | `Ctrl+D` |
+| Organize | `Ctrl+Shift+O` |
+| Sidebar | `Ctrl+B` |
+
+## Run javascript on bookmark
+
+Add a bookmark with the following content on the URL:
+
+```javascript
+javascript:var main = function(){ doSomething(); }()
+```
+
+### Example
+
+Pretty-print a page with JSON content.
+
+```javascript
+javascript:var main = function(){ document.getElementsByTagName('pre')[0].textContent = JSON.stringify(JSON.parse(document.getElementsByTagName('pre')[0].textContent), null, 2); }()
+```
+
 ## Show bookmarks bar only on new tab
 
 - [Creating userChrome.css](https://www.userchrome.org/how-create-userchrome-css.html)
@@ -22,20 +46,4 @@
 #main-window[title^="Firefox"] #PersonalToolbar {
   visibility: visible !important;
 }
-```
-
-## Run javascript on bookmark
-
-Add a bookmark with the following content on the URL:
-
-```javascript
-javascript:var main = function(){ doSomething(); }()
-```
-
-### Example
-
-Pretty-print a page with JSON content.
-
-```javascript
-javascript:var main = function(){ document.getElementsByTagName('pre')[0].textContent = JSON.stringify(JSON.parse(document.getElementsByTagName('pre')[0].textContent), null, 2); }()
 ```
