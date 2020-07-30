@@ -1,11 +1,11 @@
 ---
 ---
 
-### Show bookmarks bar only on new tab
+## Show bookmarks bar only on new tab
+
 - [Creating userChrome.css](https://www.userchrome.org/how-create-userchrome-css.html)
 - [File contents](https://www.reddit.com/r/FirefoxCSS/comments/7evwow/show_bookmarks_toolbar_only_on_new_tab/)
 
-#### Steps
 1. Type `about:support` in the address bar
 2. Find the Profile Folder row and click `Open Folder`
 3. Create a new folder named `chrome`
@@ -22,4 +22,20 @@
 #main-window[title^="Firefox"] #PersonalToolbar {
   visibility: visible !important;
 }
+```
+
+## Run javascript on bookmark
+
+Add a bookmark with the following content on the URL:
+
+```javascript
+javascript:var main = function(){ doSomething(); }()
+```
+
+### Example
+
+Pretty-print a page with JSON content.
+
+```javascript
+javascript:var main = function(){ document.getElementsByTagName('pre')[0].textContent = JSON.stringify(JSON.parse(document.getElementsByTagName('pre')[0].textContent), null, 2); }()
 ```
