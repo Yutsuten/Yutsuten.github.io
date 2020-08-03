@@ -18,10 +18,12 @@ SELECT LENGTH(nick) FROM users;
 
 ```sql
 SELECT ISNULL(title), title FROM posts;
+SELECT SUBSTRING(nick,1,10) FROM users;
 ```
 
 ## PostgreSQL only
 
 ```sql
 SELECT COALESCE(title, 'NULL') AS title FROM posts;
+SELECT LEFT(nick,10) FROM users;
 ```
