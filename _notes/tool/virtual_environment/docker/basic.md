@@ -23,5 +23,5 @@ docker image ls
 
 ### Cleanup
 ```shell
-docker system prune -a
+docker system prune -a --volumes
 ```

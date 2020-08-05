@@ -12,6 +12,7 @@ Get size of files and directories of a directory.
 
 ```shell
 du -sh <dir>
+du -hd 1  # depth
 du -h <dir> | grep '^[0-9\.]\+G'
 du -h | sort -hr | head
 ```
