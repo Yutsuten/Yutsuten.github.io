@@ -1,10 +1,11 @@
 ---
 ---
 
-### Options
-```bash
-## Hyphen is optional on tar commands
+## Options
 
+Hyphen is optional.
+
+```bash
 # Compress
 -c  # create
 
@@ -18,13 +19,15 @@
 -v  # verbosely list files processed
 ```
 
-### Group files without compress
+### Compress
+
 ```shell
-# Create Verbose File
-tar -cvf grouped.tar myfolder
+tar -cf grouped.tar myfolder      # Create File
+tar -czf grouped.tar.gz myfolder  # Create Gzipped File
 ```
 
 ### Extract from .tgz or .gz
+
 ```shell
 tar -xzf file.tgz -C ~/existing/directory/
 ```
