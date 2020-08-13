@@ -1,11 +1,29 @@
 ---
+doc: https://toroid.org/sudoers-syntax
 ---
 
-```shell
-# Single command as super user
-sudo command
+## Usage
 
-# Change to root user
+Run a single command as root.
+
+```shell
+sudo command
+```
+
+Change to root user.
+
+```shell
 sudo su -
 sudo -Es
 ```
+
+## Sudoers configuration
+
+Start editing the sudoers file with `visudo`.
+
+The last user specification match is applied to the sudo command.
+
+| Syntax | Explanation |
+| --- |
+| `%wheel ALL=(ALL) ALL` | Allow wheel members to run any command as any user |
+| `%wheel ALL=(root) NOPASSWD: /bin/program` | Allow wheel members to run program as root without password |
