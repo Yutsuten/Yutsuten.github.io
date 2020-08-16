@@ -20,7 +20,11 @@ show collections # Show collections (tables)
 db.getCollection('groups').find({})
 
 # Insert (automatically creates the collection groups)
-db.groups.insert({'_id': 'f43nm39f', 'name': 'party1', 'type': 'party'})
+db.groups.insertOne({'name': 'party1', 'type': 'party'})
+db.groups.insertMany([
+  {'name': 'party1', 'type': 'party'},
+  {'name': 'party2', 'type': 'party'}
+])
 
 # Query
 db.groups.find({}) # All
