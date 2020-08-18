@@ -1,15 +1,6 @@
 ---
+doc: https://www.postgresql.org/docs/current/app-psql.html
 ---
-
-## Generic queries
-
-```sql
-\l       -- List databases
-\dt      -- Show tables
-\d tbl   -- Describe table
-\c mydb  -- Change database
-\q       -- Quit
-```
 
 ## Create user
 
@@ -31,7 +22,7 @@ REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM myuser;
 REVOKE ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public FROM myuser;
 ```
 
-### Generate / restore dump
+### Dump
 
 ```
 pg_dump dbname > outfile.sql

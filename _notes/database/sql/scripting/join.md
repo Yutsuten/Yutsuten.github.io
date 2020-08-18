@@ -1,7 +1,13 @@
 ---
 ---
 
+## Usage
+
+Use `JOIN` to merge the data that exists on both tables.
+
+Use `LEFT JOIN` to merge the data between tables, but set `NULL` if there is no matching value.
+
 ```sql
-SELECT * FROM users JOIN inventory ON users.id = inventory.id; -- Show all items from users that have items.
-SELECT * FROM users LEFT JOIN inventory ON users.id = inventory.id; -- Show all items from all users (NULL for who don't have).
+SELECT * FROM users JOIN inventory ON users.id = inventory.id;
+SELECT * FROM users LEFT JOIN inventory ON users.id = inventory.id;
 ```

@@ -1,7 +1,8 @@
 ---
 ---
 
-### Basic
+## Basic
+
 ```sql
 SELECT * FROM users;
 SELECT * FROM users WHERE achievements > 5;
