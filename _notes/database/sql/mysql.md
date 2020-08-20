@@ -5,11 +5,15 @@
 
 ```bash
 mysql OPTIONS DBNAME
--h host          # --host
--u user          # --user
--P               # --port
--p               # --password
+-h host  # --host
+-u user  # --user
+-P       # --port
+-p       # --password
+
 -e "SELECT..."   # Run SQL inline
+-t       # Output in table format
+-N       # Don't write column names in results
+-s       # Output in tab separated format (silent)
 ```
 
 ### Database privileges
