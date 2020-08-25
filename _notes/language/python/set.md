@@ -8,7 +8,7 @@ and to perform common math operations like union and intersection.
 
 ```python
 myset = {1, 2, 3}
-myset = set([1, 2, 3])
+myset = set([1, 2, 3])  # set() for empty set
 myset.add(4)
 myset.remove(1)
 myset.pop()
