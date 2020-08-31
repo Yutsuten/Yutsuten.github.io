@@ -24,7 +24,9 @@
 ```vim
 :buffers    :ls         "List current opened buffers"
 :args                   "List arguments"
-:b <num>    :b <name>   "<Tab> for autocompletion is available"
+:b NUM      :b NAME     "<Tab> for autocompletion is available"
+:sb NUM     :sb NAME    "Same as above but in a new split"
+:vertical sb ARG        "Same as above but in a new vertical split"
 :bn         :bp         "Next or previous buffer"
 :n          :N          "Next or previous argument"
 ```
@@ -32,6 +34,6 @@
 ## Removing buffers
 
 ```vim
-:bd <num>   :bd <name>  "Ctrl-A can be used to target multiple buffers"
+:bd <num>   :bd NAME    "Ctrl-A can be used to target multiple buffers"
 :%bd | e#               "Close all buffers but current"
 ```
