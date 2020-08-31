@@ -1,19 +1,12 @@
 ---
 ---
 
-### Commands
+## Usage
+
 ```shell
-docker run -p 4000:80 friendlyhello  # Run "friendlyname" mapping port 4000 to 80
-docker run -d -p 4000:80 friendlyhello         # Same thing, but in detached mode
-docker container ls                                # List all running containers
-docker container ls -a             # List all containers, even those not running
-docker container stop <hash>           # Gracefully stop the specified container
-docker container kill <hash>         # Force shutdown of the specified container
-docker container rm <hash>        # Remove specified container from this machine
-docker container rm $(docker container ls -a -q)         # Remove all containers
-docker login             # Log in this CLI session using your Docker credentials
-docker tag <image> username/repository:tag  # Tag <image> for upload to registry
-docker push username/repository:tag            # Upload tagged image to registry
-docker run username/repository:tag                   # Run image from a registry
-docker exec -it container_name bash  # Terminal
+docker container COMMAND
+ls            # List containers
+stop CONT     # Gracefully stop the specified container
+kill CONT     # Force shutdown of the specified container
+rm CONT       # Remove specified container
 ```

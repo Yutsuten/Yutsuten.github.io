@@ -1,9 +1,10 @@
 ---
+doc: https://docs.docker.com/network/proxy/
 ---
 
-- [Reference](https://docs.docker.com/network/proxy/)
+## Configuration
 
-#### ~/.docker/config.json
+`~/.docker/config.json`
 
 ```json
 {
@@ -19,7 +20,7 @@
 }
 ```
 
-#### /etc/systemd/system/docker.service.d/http-proxy.conf
+`/etc/systemd/system/docker.service.d/http-proxy.conf`
 
 ```conf
 [Service]

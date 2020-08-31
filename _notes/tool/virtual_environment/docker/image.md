@@ -1,17 +1,20 @@
 ---
 ---
 
-### Basic Commands
-```bash
-# Build from Dockerfile
-docker build -t image_name .
+## Usage
 
-docker image ls -a
-docker image rm image_name
+```bash
+docker image COMMAND
+ls      # List images
+rm      # Remove one or more images
+prune   # Remove unused images
+load    # Load an image from a tar archive or STDIN
+save    # Save one or more images to a tar archive (streamed to STDOUT by default)
 ```
 
-### Load/save images
+## Load and save usage
+
 ```bash
-docker save custom_image > custom_image.tar
-docker load --input custom_image.tar
+docker save IMG -o img.tar
+docker load -i img.tar
 ```
