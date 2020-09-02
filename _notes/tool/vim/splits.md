@@ -1,45 +1,27 @@
 ---
 ---
 
-## Splitting
+## Create split
 
-```
-<c-w>s  # Split horizontally
-:sp
-<c-w>v  # Split vertically
-:vs
+Before `:sp`, use `:top` or `:bot` for full width splits.
 
-resize N           # resize a horizontal split
-vertical resize N  # resize a vertical split
+| Shortcut | Command | Description |
+| --- | --- | --- |
+| `Ctrl-W_s` | `:sp` | Split horizontally |
+| `Ctrl-W_v` | `:vs` | Split vertically |
 
-set wfh  # WinFixHeight
-set wfw  # WinFixWidth
-```
+## Manage splits
 
-## Rotating
-
-```shell
-<c-w><c-r>  # Rotate (invert) windows
-```
-
-## Split size
-
-```
-# Change size horizontally
-<c-w> +
-<c-w> -
-<c-w> 10 +
-<c-w> 10 -
-
-# Change size vertically
-<c-w> >
-<c-w> <
-<c-w> 10 >
-<c-w> 10 <
-
-# Equal dimensions
-<c-w> =
-
-<c-w> |  # Window size to widest possible
-<c-w> _  # Window size to highest possible
-```
+| Shortcut | Command | Description |
+| --- | --- | --- |
+| `Ctrl-W_r` \| `Ctrl+R` | | Rotate windows downwards/rightwards |
+| `Ctrl-W_R` | | Rotate windows upwards/leftwards |
+| `Ctrl-W_x` \| `Ctrl-W_X` | | Exchange current window |
+| `Ctrl-W_K` \| `Ctrl-W_J` \| `Ctrl-W_H` \| `Ctrl-W_L` | | Move current window |
+| `Ctrl-W_+` \| `Ctrl-W_-` | `:res +N` \| `:res -N` | Resize horizontal split by `N` |
+| `Ctrl-W_<` \| `Ctrl-W_>` | `:vert res +N` \| `:vert res -N` | Resize vertical split by `N` |
+| `Ctrl-W_=` | | Same size for all windows |
+|  `Ctrl-W_Ctrl-_` \| `Ctrl-W__` | `:res N` | Set current window height to `N` (default: highest possible) |
+| `Ctrl-W_|` | `:vert res N` | Set current window width to `N` (default: widest possible) |
+| | `:set wfh` | Fixed split height |
+| | `:set wfw` | Fixed split width |
