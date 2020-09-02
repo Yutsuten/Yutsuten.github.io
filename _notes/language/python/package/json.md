@@ -1,16 +1,10 @@
 ---
 ---
 
-## Encode a dictionary into JSON
+## Usage
+
 ```python
 import json
-
-json_string = json.dumps({'foo': 'boo'})
-```
-
-## Load a JSON into a object
-```python
-import json
-
-decodedInfo = json.loads(json_string)
+mystr = json.dumps({'foo': 'boo'})     # Python -> JSON
+mydict = json.loads('{"foo": "boo"}')  # JSON -> Python
 ```
