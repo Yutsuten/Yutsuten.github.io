@@ -1,24 +1,21 @@
 ---
 ---
 
-## Opening files in different tabs
+## Create tab
 
-```bash
-vim -p first.txt second.txt
-```
+On netrw, use `t` to open the highlighted file into a new tab.
 
-## Dealing with tabs inside vim
+| Shortcut | Command | Description |
+| --- | --- | --- |
+| | `:tabe file` | Open file in new tab |
+| | `:tabc` | Close current tab |
 
-```
-t  # Using netrw, opens the file in a new tab
+## Manage tabs
 
-:tabedit file
-:tabn 1  # go to tab 1
-:tabclose
-<C-w> T   # Move current panel to new tab
-
-gt   # go to previous tab
-gT   # go to next tab
-
-1gt  # go to tab 1
-```
+| Shortcut | Command | Description |
+| --- | --- | --- |
+| `Ngt` | `:tabn N` | Go to tab `N` |
+| `gt` | `:tabn` | Go to next tab |
+| `gT` | `:tabp` \| `:tabN` | Go to previous tab |
+| | `:tabm N` | Move current tab to after tab `N` |
+| | `:tabm +N` \| `:tabm -N` \| `:+Ntabm` \| `:-Ntabm` | Move current tab `N` places to right/left |
