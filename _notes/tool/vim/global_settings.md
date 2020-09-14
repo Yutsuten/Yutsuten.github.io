@@ -1,13 +1,6 @@
 ---
 ---
 
-## File encoding
-
-```vim
-set fenc=utf8
-set ff=unix
-```
-
 ## Syntax highlighting
 
 ```vim
