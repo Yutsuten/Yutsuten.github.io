@@ -9,9 +9,9 @@ the operator,
 and what are the permissions you with to give (`rwx`).
 
 ```shell
-chown u=rwx file
-chown g+w file
-chown o-x file
+chmod u=rwx file
+chmod g+w file
+chmod o-x file
 ```
 
 | Repr | Target | Operator | Description |
@@ -24,7 +24,7 @@ chown o-x file
 ## Absolute (numeric) mode
 
 ```bash
-sudo chmod 755 some/path
+chmod 755 some/path
 ```
 
 | Number | Permission Type | Symbol |
