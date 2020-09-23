@@ -165,7 +165,9 @@
 
 .note-content {
   > .onlinedoc {
-    margin-bottom: 4px;
+    padding-left: 8px;
+    border-left: 2px solid #268BD2;
+    font-weight: 500;
   }
 
   > .onlinedoc > .external > .fa-external-link-alt {
