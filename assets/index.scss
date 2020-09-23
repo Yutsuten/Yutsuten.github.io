@@ -157,9 +157,16 @@
   pre.highlight {
     overflow: hidden;
     margin-bottom: 12px;
-    padding: 8px 12px 11px 12px;
+    padding: 10px 14px 13px 14px;
     white-space: pre-wrap;
     word-wrap: break-word;
+  }
+
+  code.language-plaintext {
+    background-color: #002B36;
+    color: #B58900;
+    padding: 0 4px 1px 5px;
+    border-radius: 6px;
   }
 }
 
