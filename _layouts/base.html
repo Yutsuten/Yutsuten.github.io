@@ -41,7 +41,7 @@
     {%- endfor -%}
 
     {%- comment -%} Make notes an array and sort it. {%- endcomment -%}
-    {%- assign notes = notes | remove: '_notes/' | remove: '.md' | slice: 1, notes.size -%}
+    {%- assign notes = notes | remove: '_notes/' | remove: '.md' | replace: '_', ' ' | slice: 1, notes.size -%}
     {%- assign notes = notes | split: ';' | sort -%}
 
     {%- comment -%} Remove the exclamation mark and generate the JSON. {%- endcomment -%}

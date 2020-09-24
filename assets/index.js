@@ -77,7 +77,7 @@ new Vue({
     updateIndexTree: function () {
       let filteredIndexList
       if (this.search) {
-        let filter = new RegExp(`.*${this.search.split('*').join('.*')}.*`)
+        let filter = new RegExp(`.*${this.search.split('*').join('.*')}.*`, 'i')
         filteredIndexList = this.notesIndexList.filter(index => filter.test(index))
       } else {
         filteredIndexList = this.notesIndexList
