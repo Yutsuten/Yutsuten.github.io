@@ -16,14 +16,15 @@
   margin-right: 0;
 
   > .input {
-    background-color: #002b36;
-    border-color: #586e75;
-    color: #93a1a1;
+    background-color: #002B36;
+    border-color: #6C71C4;
+    color: #93A1A1;
     padding: 1px 5px;
   }
 
   > .input:focus {
-    outline-color: #839496;
+    outline: none;
+    box-shadow: 0 0 3px 1px #6C71C4;
   }
 
   > .menutoggler {
@@ -37,7 +38,7 @@
 }
 
 .menu-area {
-  border-right: 2px #002b36 solid;
+  border-right: 2px #002B36 solid;
 
   @media only screen and (min-width: 768px) {
     height: 100vh;

@@ -15,7 +15,7 @@ class IndexTree {
         childNode = currentNode.children.find(node => node.text === text)
       }
       if (!childNode) {
-        href = isLeaf ? `#${path.replace(/\//g, '-')}` : null
+        href = isLeaf ? `#${path.replace(/\//g, '-').replace(/ /g, '_')}` : null
         childNode = {text: text, href: href, children: []}
         currentNode.children.push(childNode)
       }
