@@ -118,6 +118,12 @@
   }
 
   h2 {font-size: 1.2rem;}
+  h2:before {
+    content: '› ';
+    position: relative;
+    bottom: 2px;
+  }
+
   h3 {font-size: 1.1rem;}
   h4 {font-size: 1.0rem;}
   h5 {font-size: 0.9rem;}
@@ -136,7 +142,7 @@
       padding-bottom: .3em;
     }
 
-    h2 {font-size: 1.7rem;}
+    h2 {font-size: 1.8rem;}
     h3 {font-size: 1.5rem;}
     h4 {font-size: 1.3rem;}
     h5 {font-size: 1.15rem;}

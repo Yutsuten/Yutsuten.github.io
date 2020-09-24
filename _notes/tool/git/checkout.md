@@ -1,7 +1,7 @@
 ---
 ---
 
-## Undo chenges in file
+## Undo changes in file
 
 ```shell
 git checkout -- .
