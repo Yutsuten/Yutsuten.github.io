@@ -5,7 +5,7 @@
   min-height: 100vh;
   position: relative;
   background-color: #073642;
-  color: #EEE8D5;
+  color: #93A1A1;
 }
 
 .search-bar {
@@ -17,14 +17,14 @@
 
   > .input {
     background-color: #002B36;
-    border-color: #6C71C4;
+    border-color: #839496;
     color: #93A1A1;
     padding: 1px 5px;
   }
 
   > .input:focus {
     outline: none;
-    box-shadow: 0 0 3px 1px #6C71C4;
+    box-shadow: 0 0 3px 0px #EEE8D5;
   }
 
   > .menutoggler {
@@ -48,6 +48,9 @@
 }
 
 .index-area {
+
+  color: #EEE8D5;
+
   @media only screen and (min-width: 768px) {
     flex-grow: 1;
     overflow-y: auto;
@@ -111,6 +114,10 @@
     overflow-y: auto;
   }
 
+  h1, h2, h3, h4, h5 {
+    color: #EEE8D5;
+  }
+
   h1 {
     font-size: 1.5rem;
     border-bottom: 1px solid #586E75;
@@ -151,14 +158,34 @@
   }
 
   table {
-    border: 1px solid #EEE8D5;
     margin: 15px 0;
+    cursor: default;
+    border: 3px solid #586E75;
+    border-radius: 5px;
   }
 
-  table th,
+  table thead {
+    border: 2px solid #586E75;
+  }
+
+  table tbody {
+  }
+
+  table tbody tr:hover {
+    background-color: #002B36;
+  }
+
+  table th {
+    background-color: #002B36;
+    padding: 6px 10px;
+    color: #93A1A1;
+    font-weight: 800;
+  }
+
   table td {
-    border: 1px solid #EEE8D5;
-    padding: 5px 8px;
+    padding: 6px 10px;
+    border-top: 1px dotted #586E75;
+    color: #93A1A1;
   }
 
   pre.highlight {
@@ -173,6 +200,7 @@
     background-color: #002B36;
     color: #B58900;
     padding: 0 4px 1px 5px;
+    margin: 0 2px;
     border-radius: 6px;
   }
 }
