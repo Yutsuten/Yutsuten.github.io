@@ -15,7 +15,7 @@ class IndexTree {
         childNode = currentNode.children.find(node => node.text === text)
       }
       if (!childNode) {
-        href = isLeaf ? `#${path.replace(/\//g, '-').replace(/ /g, '_')}` : null
+        href = isLeaf ? `#${path.replace(/\//g, '-')}` : null
         childNode = {text: text, href: href, children: []}
         currentNode.children.push(childNode)
       }
@@ -54,16 +54,18 @@ new Vue({
       let ctrl = e.ctrlKey
       let backspace = e.keyCode === 8
       let slash = e.keyCode === 191
+      let space = e.keyCode === 32
       let letter = e.keyCode >= 65 && e.keyCode <= 90
-      if (!ctrl && (backspace || slash || letter)) {
+      if (!ctrl && (backspace || slash || space || letter)) {
         document.getElementById('search').focus()
       }
     },
     searchUpdated: function () {
       // Update URL with the new search text
       let url = new URL(window.location.href)
-      if (this.search) {
-        url.searchParams.set('search', this.search)
+      let search = this.search.trim().replace(/\s+/g, ' ')
+      if (search) {
+        url.searchParams.set('search', search)
       } else {
         url.searchParams.delete('search')
       }
@@ -76,9 +78,12 @@ new Vue({
     },
     updateIndexTree: function () {
       let filteredIndexList
+      let search = this.search.trim().replace(/\s+/g, ' ')
       if (this.search) {
-        let filter = new RegExp(`.*${this.search.split('*').join('.*')}.*`, 'i')
-        filteredIndexList = this.notesIndexList.filter(index => filter.test(index))
+        let keywords = search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').split(' ')
+        let filter = keywords.map(keyword => `(?=.*${keyword})`).join('')
+        let filterRegex = new RegExp(`^${filter}.*$`, 'i')
+        filteredIndexList = this.notesIndexList.filter(index => filterRegex.test(index))
       } else {
         filteredIndexList = this.notesIndexList
       }
