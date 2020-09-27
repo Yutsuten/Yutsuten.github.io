@@ -136,9 +136,9 @@
   h5 {font-size: 0.9rem;}
   p {margin-bottom: 12px;}
 
-  a {
-    color: #268BD2;
-  }
+  a {color: #268BD2;}
+
+  ol > li {margin-bottom: 5px;}
 
   @media only screen and (min-width: 768px) {
     font-size: 1rem;
