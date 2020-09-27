@@ -20,23 +20,44 @@ ffmpeg GLOBAL_OPTIONS INPUT_OPTIONS -i input_url OUTPUT_OPTIONS output_url
 | `-codec` | Encoder to be used (add `:<stream>` to specify a stream). Use `copy` do not re-encode. |
 | `-vcodec` | Video encoder (alias for `-codec:v`). Use `libx265` for the newer MP4 encoder ([H.265](https://trac.ffmpeg.org/wiki/Encode/H.265)). |
 | `-acodec` | Audio encoder (alias for `-codec:a`). |
+| `-an` | Disables all audio streams. |
+| `-f` | Force input/output format. Usually needed only on two-pass encoding, with value `mp4`. |
+| `-b` | Bitrate, in a format like `2000k`. |
 | `-r` | Frame rate (FPS). Usually 30 or 60. |
 | `-crf` | (MP4 Option) Constant Rate Factor. The range is 0–51 (default 28), where 0 is lossless and 51 is worst quality possible. |
-| `-preset` | (MP4 Option) Determines compression efficiency (default is `medium`). Options: `ultrafast`, `superfast`, `veryfast`, `faster`, `fast`, `medium`, `slow`, `slower`, `veryslow` and `placebo`. |
+| `-preset` | (MP4 Option) Determines compression efficiency. Slower presets = higher quality. Options: `ultrafast`, `superfast`, `veryfast`, `faster`, `fast`, `medium`, `slow`, `slower`, `veryslow` and `placebo`. |
 | `-ss` | Start time. Format is `hh:mm:ss`. |
 | `-to` | End time. Format is `hh:mm:ss`. |
 | `-t` | Duration. Format is `hh:mm:ss`. |
+| `-y` | Overwrite output files without asking. |
 
 ## Example
+
+### Constant Rate Factor (CRF)
+
+Choose the desired CRF and preset.
 
 ```shell
 ffmpeg -ss 00:00:10 -i input.mp4 -vcodec libx265 -acodec copy -r 60 -crf 20 -preset slow output.mp4
 ```
 
-## Statistics
+### Two-Pass Encoding
 
-Not sure if it is measurable,
-but with the tests it was noticed that **slower presets results in higher quality**.
+Decide the desired `file_size` in kBit (1 MiB = 8192 kBit) and get the video `duration` in seconds.
+Get the bitrate with the formula `bitrate = file_size / duration`.
+Pass the result to `-b` for both passes.
+
+And as for CRF, choose the desired preset.
+
+1. On the first pass, set `-y`, `-an`, `-x265-params pass=1`, `-f mp4` and output to `/dev/null`.
+2. On the second pass, set `-x265-params pass=2`.
+
+```shell
+ffmpeg -y -i input.mp4 -vcodec libx265 -an -r 60 -b:v 720k -preset slow -x265-params pass=1 -f mp4 /dev/null && \
+ffmpeg -i input.mp4 -vcodec libx265 -acodec copy -r 60 -b:v 720k -preset slow -x265-params pass=2 output.mp4
+```
+
+## Statistics
 
 ### libx265 (H.265)
 
@@ -44,8 +65,8 @@ Comparison when changing only the preset.
 Tested inputs:
 
 1. Size: 638.0 MiB - Length: 3:50 - CRF 20
-2. Size: 580.8 Mib - Length: 2:37 - CRF 10
-3. Size: 580.8 Mib - Length: 2:37 - CRF 16
+2. Size: 580.8 MiB - Length: 2:37 - CRF 10
+3. Size: 580.8 MiB - Length: 2:37 - CRF 16
 
 #### File size
 
@@ -74,17 +95,3 @@ Tested inputs:
 | veryfast | 7:39 | 7:02 | 5:55 |
 | superfast | 6:09 | 5:23 | 4:33 |
 | ultrafast | 4:21 | 3:36 | 3:07 |
-
-#### Bitrate
-
-| Input | 1 | 2 | 3 |
-| --- | --- | --- | --- |
-| veryslow | 2578 kb/s | 9105 kb/s | 4176 kb/s |
-| slower | 2588 kb/s | 9111 kb/s | 4179 kb/s |
-| slow | 2669 kb/s | 9117 kb/s | 4249 kb/s |
-| medium | 2584 kb/s | 8476 kb/s | 4045 kb/s |
-| fast | 2625 kb/s | 8255 kb/s | 4065 kb/s |
-| faster | 2608 kb/s | 8205 kb/s | 4024 kb/s |
-| veryfast | 2615 kb/s | 8235 kb/s | 4039 kb/s |
-| superfast | 2536 kb/s | 7342 kb/s | 3760 kb/s |
-| ultrafast | 2550 kb/s | 7390 kb/s | 3824 kb/s |
