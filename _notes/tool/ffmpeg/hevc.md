@@ -1,39 +1,24 @@
 ---
-doc: https://ffmpeg.org/ffmpeg.html
+doc: https://trac.ffmpeg.org/wiki/Encode/H.265
 ---
 
-Video and audio converter.
-
-To get information of a file,
-use `ffprobe input.mp4`.
+High Efficiency Video Coding (H.265).
 
 ## Usage
 
-```shell
-ffmpeg GLOBAL_OPTIONS INPUT_OPTIONS -i input_url OUTPUT_OPTIONS output_url
-```
+### libx265
+
+For a full list of options, run `ffmpeg -h encoder=libx265`.
+
+Default H.265 codec, uses your CPU for processing.
 
 | Option | Description |
 | --- | --- |
-| `-loglevel` | (Global Option) Default is `info`. Options: `quiet`, `fatal`, `error`, `warning`, `info`, `verbose`, `debug`, `trace`. |
-| `-nostdin` | (Global Option) Disable interaction on standard input. Useful for running in the background. |
-| `-codec` | Encoder to be used (add `:<stream>` to specify a stream). Use `copy` do not re-encode. |
-| `-vcodec` | Video encoder (alias for `-codec:v`). Use `libx265` for the newer MP4 encoder ([H.265](https://trac.ffmpeg.org/wiki/Encode/H.265)). |
-| `-acodec` | Audio encoder (alias for `-codec:a`). |
-| `-an` | Disables all audio streams. |
-| `-f` | Force input/output format. Usually needed only on two-pass encoding, with value `mp4`. |
-| `-b` | Bitrate, in a format like `2000k`. |
-| `-r` | Frame rate (FPS). Usually 30 or 60. |
-| `-crf` | (MP4 Option) Constant Rate Factor. The range is 0–51 (default 28), where 0 is lossless and 51 is worst quality possible. |
-| `-preset` | (MP4 Option) Determines compression efficiency. Slower presets = higher quality. Options: `ultrafast`, `superfast`, `veryfast`, `faster`, `fast`, `medium`, `slow`, `slower`, `veryslow` and `placebo`. |
-| `-ss` | Start time. Format is `hh:mm:ss`. |
-| `-to` | End time. Format is `hh:mm:ss`. |
-| `-t` | Duration. Format is `hh:mm:ss`. |
-| `-y` | Overwrite output files without asking. |
+| `-vcodec` | Set to `libx265`. |
+| `-crf` | Constant Rate Factor. The range is 0–51 (default 28), where 0 is lossless and 51 is worst quality possible. |
+| `-preset` | Determines compression efficiency. Slower presets = higher quality. Options: `ultrafast`, `superfast`, `veryfast`, `faster`, `fast`, `medium`, `slow`, `slower`, `veryslow` and `placebo`. |
 
-## Example
-
-### Constant Rate Factor (CRF)
+#### Constant Rate Factor (CRF)
 
 Choose the desired CRF and preset.
 
@@ -41,7 +26,7 @@ Choose the desired CRF and preset.
 ffmpeg -ss 00:00:10 -i input.mp4 -vcodec libx265 -acodec copy -r 60 -crf 20 -preset slow output.mp4
 ```
 
-### Two-Pass Encoding
+#### Two-Pass Encoding
 
 Decide the desired `file_size` in kBit (1 MiB = 8192 kBit) and get the video `duration` in seconds.
 Get the bitrate with the formula `bitrate = file_size / duration`.
@@ -57,9 +42,7 @@ ffmpeg -y -i input.mp4 -vcodec libx265 -an -r 60 -b:v 720k -preset slow -x265-pa
 ffmpeg -i input.mp4 -vcodec libx265 -acodec copy -r 60 -b:v 720k -preset slow -x265-params pass=2 output.mp4
 ```
 
-## Statistics
-
-### libx265 (H.265)
+#### Statistics
 
 Comparison when changing only the preset.
 Tested inputs:
@@ -68,7 +51,7 @@ Tested inputs:
 2. Size: 580.8 MiB - Length: 2:37 - CRF 10
 3. Size: 580.8 MiB - Length: 2:37 - CRF 16
 
-#### File size
+File size:
 
 | Input | 1 | 2 | 3 |
 | --- | --- | --- | --- |
@@ -82,7 +65,7 @@ Tested inputs:
 | superfast | 73.7 MiB | 138.3 MiB | 72.2 MiB |
 | ultrafast | 74.1 MiB | 139.2 MiB | 73.3 MiB |
 
-#### Encoding time
+Encoding time:
 
 | Input | 1 | 2 | 3 |
 | --- | --- | --- | --- |
@@ -95,3 +78,13 @@ Tested inputs:
 | veryfast | 7:39 | 7:02 | 5:55 |
 | superfast | 6:09 | 5:23 | 4:33 |
 | ultrafast | 4:21 | 3:36 | 3:07 |
+
+### hevc_nvenc
+
+For a full list of options, run `ffmpeg -h encoder=hevc_nvenc`.
+
+| Option | Description |
+| --- | --- |
+| `-vcodec` | Set to `hevc_nvenc`. |
+| `-cq` | Target quality level. The range is 0-51. Similar to CRF? |
+| `-preset` | Determines compression efficiency. Options: `losslesshp`, `lossless`, `llhp`, `llhq`, `ll`, `bd`, `hq`, `hp`, `fast`, `medium` and `slow`. |
