@@ -1,7 +1,7 @@
 ---
 ---
 
-## Command parameters
+## Usage
 
 ```bash
 mysql OPTIONS DBNAME
@@ -10,20 +10,20 @@ mysql OPTIONS DBNAME
 -P       # --port
 -p       # --password
 
--e "SELECT..."   # Run SQL inline
+-e sql   # Run SQL query and exit
 -t       # Output in table format
 -N       # Don't write column names in results
 -s       # Output in tab separated format (silent)
 ```
 
-### Database privileges
+### Permissions
 
 ```sql
 GRANT ALL PRIVILEGES ON *.* TO 'user'@'host' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 
-## Dump
+## Backup
 
 ```bash
 mysqldump -u user -p mydb > ~/dump.sql
