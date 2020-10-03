@@ -1,7 +1,9 @@
 ---
+doc: http://paperjs.org/tutorials/interaction/creating-mouse-tools/#click-drag-release
 ---
 
-#### canvas-draw.js [ref](http://paperjs.org/tutorials/interaction/creating-mouse-tools/#click-drag-release) [ref2](http://paperjs.org/reference/path/#onmouseenter)
+#### canvas-draw.js
+
 ```javascript
 var myPath;
 
@@ -31,4 +33,3 @@ function onMouseUp(event) {
     }
 }
 ```
-

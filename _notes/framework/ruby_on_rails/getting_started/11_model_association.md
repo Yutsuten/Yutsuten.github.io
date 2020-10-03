@@ -9,7 +9,8 @@ rails db:migrate
 rails generate controller Comments
 ```
 
-### Tell rails that articles has many comments
+## Tell rails that articles has many comments
+
 ```ruby
 # app/models/article.rb
 class Article < ApplicationRecord
@@ -23,7 +24,8 @@ resources :articles do
 end
 ```
 
-### Adding and viewing comments
+## Adding and viewing comments
+
 ```ruby
 # app/controllers/comments_controller.rb
 class CommentsController < ApplicationController

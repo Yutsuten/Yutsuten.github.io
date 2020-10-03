@@ -1,7 +1,8 @@
 ---
 ---
 
-### Empty application
+## Empty application
+
 ```bash
 # Generate basic files for the Ruby on Rails app
 rails new appname
@@ -13,7 +14,8 @@ bundle install
 rails server
 ```
 
-### Hello World
+## Hello World
+
 Create a controller called "Welcome" with an action called "index".
 
 ```bash

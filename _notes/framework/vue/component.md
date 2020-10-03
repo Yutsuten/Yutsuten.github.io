@@ -1,7 +1,8 @@
 ---
 ---
 
-### Basic
+## Basic
+
 ```html
 <ol>
   <todo-item></todo-item>
@@ -14,7 +15,8 @@ Vue.component('todo-item', {
 })
 ```
 
-### Bind data to it
+## Bind data to it
+
 ```html
 <div id="app">
   <ol>

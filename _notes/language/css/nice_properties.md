@@ -1,7 +1,6 @@
 ---
 ---
 
-#### index.css
 ```css
 /* Background with gradient */
 .my-element {

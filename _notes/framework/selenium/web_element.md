@@ -1,7 +1,8 @@
 ---
 ---
 
-### Locating UI elements
+## Locating UI elements
+
 ```python
 # find_element and find_elements are available
 element = browser.find_element_by_id('foo')
@@ -20,7 +21,8 @@ element.find_element_by_id('boo')
 parent = child.find_element_by_xpath('..')
 ```
 
-### Interact with elements
+## Interact with elements
+
 ```python
 element.text
 element.get_attribute('innerText')  # May work better than element.text

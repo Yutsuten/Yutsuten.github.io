@@ -1,11 +1,8 @@
 ---
 ---
 
-```bash
-sudo apt install php
-```
+## Create the PHP file
 
-#### Create the PHP file
 ```php
 <!DOCTYPE html>
 <html>
@@ -20,7 +17,8 @@ sudo apt install php
 </html>
 ```
 
-#### Move to apache folder
+## Move to apache folder
+
 ```bash
 mv hello.py /var/www/html/
 firefox localhost/hello.php

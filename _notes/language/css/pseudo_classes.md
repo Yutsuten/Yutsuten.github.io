@@ -1,7 +1,8 @@
 ---
 ---
 
-### Selectors
+## Selectors
+
 ```css
 /* Selects the nth child. if the element specified doesn't match the
 child element (ie: div), it won't select anything. */
@@ -24,7 +25,8 @@ pseudo class, every first of type will be selected (ie: h1, div) */
 ::selection
 ```
 
-### Examples
+## Examples
+
 ```css
 /* If the second child isn't a div, it won't select anything */
 .parent > div:nth-child(2) {
@@ -52,4 +54,3 @@ h1::after {
     content: ':';
 }
 ```
-

@@ -2,7 +2,6 @@
 doc: https://developer.mozilla.org/docs/Web/JavaScript/Reference
 ---
 
-#### index.js
 ```javascript
 // Instantiate
 let now = new Date();

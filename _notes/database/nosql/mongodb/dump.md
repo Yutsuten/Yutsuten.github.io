@@ -1,19 +1,37 @@
 ---
+doc: https://docs.mongodb.com/manual/tutorial/backup-and-restore-tools/
 ---
 
-Reference: [link](https://docs.mongodb.com/manual/tutorial/backup-and-restore-tools/)
+## Dump
 
 ```shell
-# Simple way, all defaults
-mongodump
-mongodump --port {port} -d {database} -c {collection} --out {out}
-mongodump --host localhost --port 27017 --db db_name --username usr1 --authenticationDatabase table_name
-
-# Restore - Looks for a folder called 'dump', and inside it the name of the databases to be restored
-mongorestore
-mongorestore --port {port} -d {database} -c {collection} --dir {(dir|bson)}
-
-# Export
-mongoexport -d {database} -c {collection} --out collection.json
+mongodump OPTIONS
+--port 27017
+--host localhost
+--username user
+--authenticationDatabase db_name
+--db db_name
+-c collection_name
+--out dump_name
 ```
 
+## Restore
+
+Looks for a folder called 'dump', and inside it the name of the databases to be restored.
+
+```shell
+mongorestore OPTIONS
+--port 27017
+--db db_name
+-c collection_name
+--dir dump_path  # bson
+```
+
+## Export
+
+```shell
+mongoexport
+--db db_name
+-c collection_name
+--out collection.json
+```

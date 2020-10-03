@@ -1,9 +1,9 @@
 ---
+doc: https://selenium-python.readthedocs.io/waits.html
 ---
 
-[Documentation](https://selenium-python.readthedocs.io/waits.html)
+## Wait until element is available
 
-### Wait until element is available
 ```python
 # Implicit
 browser.implicitly_wait(10)  # seconds

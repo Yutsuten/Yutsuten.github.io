@@ -1,22 +1,26 @@
 ---
+doc: http://django-static-precompiler.readthedocs.io/en/stable/
 ---
 
 {% raw %}
 
-[Django Static Precompiler](http://django-static-precompiler.readthedocs.io/en/stable/)
+## Install packages
 
-### Install packages
 ```shell
 yarn add babel-cli babel-preset-env --dev
 pip install django-static-precompiler
 ```
 
-#### .babelrc
+## Configuration
+
+Create a `.babelrc` file.
+
 ```json
 { "presets": ["env"] }
 ```
 
-#### settings.py
+Edit `settings.py`.
+
 ```python
 INSTALLED_APPS = [
     # ...
@@ -41,34 +45,40 @@ STATIC_PRECOMPILER_COMPILERS = (
 STATIC_PRECOMPILER_ROOT = os.path.join(BASE_DIR, 'static_root')
 ```
 
-### Migration
+Run the migration.
+
 ```shell
 python manage.py migrate static_precompiler
 ```
 
-### Usage
+## Usage
+
 ```html
 {% load compile_static %}
 
 <script type="text/javascript" src="{% static 'js/script.es6' | compile %}"></script>
 ```
 
-### Deploy compiled scripts
-#### settings.py
+To deploy compiled scripts,
+edit `settings.py`:
+
 ```python
 STATIC_PRECOMPILER_DISABLE_AUTO_COMPILE = True
 ```
 
-#### Terminal
+Then run:
+
 ```shell
-python manage.py compilestatic --settings myapp.deploy_settings.dev --delete-stale-files --ignore-dependencies &&
-cp -rf static_root/COMPILED/ myapp/static/COMPILED &&
-python manage.py collectstatic --settings myapp.deploy_settings.dev --noinput -v 3 || true &&
+python manage.py compilestatic --settings myapp.deploy_settings.dev --delete-stale-files --ignore-dependencies
+cp -rf static_root/COMPILED/ myapp/static/COMPILED
+python manage.py collectstatic --settings myapp.deploy_settings.dev --noinput -v 3 || true
 rm -rf myapp/static/COMPILED
 ```
 
-### Gitlab CI
-#### .gitlab-ci.yml
+## Gitlab CI
+
+Sample `.gitlab-ci.yml`.
+
 ```yml
 dev:
   stage: deploy

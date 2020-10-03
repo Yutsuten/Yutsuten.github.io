@@ -1,19 +1,20 @@
 ---
 ---
 
-### Generate model and migration
+## Generate model and migration
 
 ```bash
 rails generate model Article title:string text:text
 ```
 
-### Perform the migration
+To apply the migration:
 
 ```bash
 rails db:migrate
 ```
 
-### Save the data in the controller
+## Save the data in the controller
+
 ```ruby
 # app/controllers/articles_controller.rb
 class ArticlesController < ApplicationController
@@ -38,7 +39,8 @@ class ArticlesController < ApplicationController
 end
 ```
 
-### View template
+## View template
+
 ```html
 <!-- app/views/articles/show.html.erb -->
 <p>

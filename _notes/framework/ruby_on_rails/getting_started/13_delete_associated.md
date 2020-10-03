@@ -1,7 +1,8 @@
 ---
 ---
 
-### Allow deleting comments
+## Allow deleting comments
+
 ```html
 <!-- app/views/comments/_comment.html.erb -->
 <p>
@@ -27,7 +28,8 @@ class CommentsController < ApplicationController
 end
 ```
 
-### Cascade delete
+## Cascade delete
+
 ```ruby
 # app/models/article.rb
 class Article < ApplicationRecord

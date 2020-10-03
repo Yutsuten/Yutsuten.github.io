@@ -1,9 +1,9 @@
 ---
+doc: http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page
 ---
 
-Reference: [Link](http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page)
-
 ## HTML
+
 ```html
 <div class="wrapper">
    <div class="header"></div>
@@ -13,6 +13,7 @@ Reference: [Link](http://matthewjamestaylor.com/blog/keeping-footers-at-the-bott
 ```
 
 ## CSS
+
 ```css
 html,
 body {
@@ -35,4 +36,3 @@ body {
    height: 60px;
 }
 ```
-

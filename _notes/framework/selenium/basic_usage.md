@@ -1,9 +1,9 @@
 ---
+doc: https://www.seleniumhq.org/docs/03_webdriver.jsp
 ---
 
-[Selenium Documentation](https://www.seleniumhq.org/docs/03_webdriver.jsp)
+## Setup
 
-### Setup
 ```shell
 sudo apt install chromium-browser
 
@@ -16,7 +16,8 @@ mv chromedriver ~/bin/chromedriver
 pip install selenium
 ```
 
-### Basic script
+## Basic script
+
 ```python
 # main.py
 from selenium import webdriver
@@ -37,7 +38,8 @@ options.add_argument('--window-size=1280,920')
 browser = webdriver.Chrome(options=options)
 ```
 
-### Run
+## Run
+
 ```shell
 python main.py
 ```

@@ -2,19 +2,18 @@
 ---
 
 ## Open mongo
-```shell
-mongo
 
-# With database name
-mongo my_database
+```shell
+mongo DB_NAME
 ```
 
 ### Mongo shell
+
 ```shell
-db # Show current database
-show dbs # Show available databases
-use my_database # Switch/create database
-show collections # Show collections (tables)
+db                  # Show current database
+show dbs            # Show available databases
+use my_database     # Switch/create database
+show collections    # Show collections (tables)
 
 # Alternative way to access a collection
 db.getCollection('groups').find({})
@@ -57,7 +56,7 @@ db.groups.update({'name': 'wat'}, {$unset: {'member_count': ''}}, {multi: true})
 db.groups.remove({_id: 'f43nm39f'})
 
 # Drop
-db.groups.drop() # Drop collection
+db.groups.drop()  # Drop collection
 db.dropDatabase() # Drop current database
 
 # Rename collection
@@ -72,4 +71,3 @@ db.getCollection('my_collection').find({}).forEach(function(obj) {
     db.getCollection('my_collection').save(obj);
 })
 ```
-

@@ -1,7 +1,8 @@
 ---
 ---
 
-### Change delimiters
+## Change delimiters
+
 ```javascript
 # Vue < 2.0
 Vue.options.delimiters = ['[[', ']]'];

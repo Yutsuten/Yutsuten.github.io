@@ -1,7 +1,10 @@
 ---
 ---
 
-#### index.html
+## Sample
+
+### HTML
+
 ```html
 <div class="drag-and-drop-box">
     <form action="upload/csvfile" class="dropzone" id="uploadcsv">
@@ -14,7 +17,8 @@
 </div>
 ```
 
-#### index.js
+### Javascript
+
 ```javascript
 Dropzone.options.uploadcsv = {
     paramName: "csvfile", // The name that will be used to transfer the file
@@ -36,8 +40,10 @@ Dropzone.options.uploadcsv = {
 };
 ```
 
-#### index.css
+### CSS
+
 Optional
+
 ```css
 .drag-and-drop-box form {
     display: flex;
@@ -71,4 +77,3 @@ Optional
     display: none;
 }
 ```
-

@@ -1,20 +1,24 @@
 ---
 ---
 
-## Enabling Authentication
+## Enable Authentication
 
-### Create User Administrator
-Certify that mongod is running without access control
+For authentication, we need an admin account.
+
+Certify that mongod is running without access control.
+
 ```shell
 mongod
 ```
 
-### Connect to mongo shell
+Connect to mongo shell.
+
 ```shell
 mongo
 ```
 
-### Create Admin
+Then create an admin account with the following command.
+
 ```shell
 use admin
 db.createUser(
@@ -27,32 +31,42 @@ db.createUser(
 exit
 ```
 
-### Enable access control
-Start mongod with access control
+Now we can start mongod with access control.
+
 ```shell
 mongod --auth
 ```
-OR change configuration
-```shell
-linux: $ sudo vi /etc/mongod.conf
-osx with brew version: $ sudo vi /usr/local/etc/mongod.conf
 
-# Add these lines to the end of the file
+To apply it permanently,
+change the mongod configuration.
+
+For Linux it is on `/etc/mongod.conf`,
+for OSX it is on `/usr/local/etc/mongod.conf`.
+Add the following lines to the end of the file.
+
+```
 security:
  authorization: enabled
-
-# Restart mongod
-linux: $ sudo service mongod restart
-osx with brew version: $ brew services restart mongodb
 ```
 
-### Connect as Admin
+To apply those changes, restart mongod.
+
+```shell
+sudo service mongod restart    # Linux
+brew services restart mongodb  # OSX
+```
+
+### Usage
+
+Connect to mongo with the admin account.
+
 ```shell
 mongo -u "admin" -p --authenticationDatabase "admin"
 use admin
 ```
 
-### Create users
+Create some users.
+
 ```shell
 use my_db
 db.createUser(
@@ -65,13 +79,15 @@ db.createUser(
 exit
 ```
 
-### Login as user
+Login as user.
+
 ```shell
 mongo -u "my_user" -p --authenticationDatabase "my_db"
 use my_db
 ```
 
-## Update user
+Update user permissions.
+
 ```shell
 mongo -u "admin" -p --authenticationDatabase "admin"
 use my_db
@@ -83,24 +99,28 @@ db.updateUser(
 )
 ```
 
-
 ## Roles
-**Reference:** [Link](https://docs.mongodb.com/manual/reference/built-in-roles/)
 
-#### User
+[Built in roles](https://docs.mongodb.com/manual/reference/built-in-roles/)
+
+### User
+
 - read
 - readWrite
 
-#### Admin
+### Admin
+
 - userAdmin
 - dbAdmin
 - dbOwner
 
-#### Users in admin database
+### Users in admin database
+
 - readAnyDatabase
 - readWriteAnyDatabase
 - userAdminAnyDatabase
 - dbAdminAnyDatabase
 
-#### Superuser
+### Superuser
+
 - root

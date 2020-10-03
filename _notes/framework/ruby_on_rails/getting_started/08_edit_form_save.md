@@ -1,7 +1,8 @@
 ---
 ---
 
-### Save the data in the controller
+## Save the data to the controller
+
 ```ruby
 # app/controllers/articles_controller.rb
 class ArticlesController < ApplicationController
@@ -21,7 +22,8 @@ class ArticlesController < ApplicationController
 end
 ```
 
-### Add link to the edit page
+## Add link to the edit page
+
 ```html
 <!-- app/views/articles/index.html.erb -->
 <%= link_to 'New article', new_article_path %>

@@ -3,7 +3,7 @@
 
 {% raw %}
 
-### Hide element while Vue is loading
+## Hide element while Vue is loading
 
 v-cloak will remain on the element until the associated Vue instance finishes compilation.
 

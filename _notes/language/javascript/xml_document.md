@@ -2,7 +2,8 @@
 doc: https://developer.mozilla.org/docs/Web/JavaScript/Reference
 ---
 
-### Generating a XMLDocument
+## Generating a XMLDocument
+
 ```javascript
 // A XML
 let doc = document.implementation.createDocument(null, 'root', null)

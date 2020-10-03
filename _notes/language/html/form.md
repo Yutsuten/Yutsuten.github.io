@@ -17,7 +17,8 @@
 </form>
 ```
 
-### Validation
+## Validation
+
 ```html
 <form method="post" action="/some/url">
     <input type="number" name="myNumber" value="100" min="1" required

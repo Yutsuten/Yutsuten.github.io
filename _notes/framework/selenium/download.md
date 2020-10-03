@@ -1,7 +1,8 @@
 ---
 ---
 
-### Download folder
+## Download folder
+
 ```python
 # Normal testing (opening browser)
 options.add_experimental_option('prefs', {

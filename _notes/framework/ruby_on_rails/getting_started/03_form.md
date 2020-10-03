@@ -1,7 +1,7 @@
 ---
 ---
 
-### Creates a form and receives its data
+## Creates a form and receives its data
 
 ```ruby
 # blog/config/routes.rb

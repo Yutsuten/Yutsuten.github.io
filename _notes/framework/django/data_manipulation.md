@@ -1,7 +1,8 @@
 ---
 ---
 
-### Creating user
+## Creating user
+
 [Reference](https://docs.djangoproject.com/en/2.0/ref/contrib/auth/)
 
 ```python
@@ -11,8 +12,10 @@ user = User.objects.create_superuser('myusername', password='password')
 user.save()
 ```
 
-### Create, update, delete
+## Create, update, delete
+
 [Reference](https://docs.djangoproject.com/en/2.1/ref/models/querysets/)
+
 ```python
 # Creating data
 from polls.models import Question
@@ -27,7 +30,8 @@ Question.objects.get(id=1).update(question='Whats up?')
 Question.objects.get(id=1).delete()
 ```
 
-### Convenience methods
+## Convenience methods
+
 ```python
 obj, created = Person.objects.get_or_create(
     first_name='John', last_name='Lennon',
@@ -40,7 +44,8 @@ obj, created = Person.objects.update_or_create(
 )
 ```
 
-### Try except
+## Try except
+
 ```python
 try:
     Question.objects.get(question('Whats up?'))
@@ -48,7 +53,8 @@ except Question.DoesNotExist:
     Question.objects.create(question='Whats new?')
 ```
 
-### Queryset
+## Queryset
+
 ```python
 Question.objects.all()
 Question.objects.get(id=1)
@@ -69,7 +75,8 @@ Question.objects.filter(difficulty=1).exclude(id__in=[1, 2, 3])
 Question.objects.filter(text__startswith='How ')
 ```
 
-### Data set
+## Data set
+
 ```python
 # A Question may have multiple Choices
 Question.objects.get(id=2).choice_set.all()

@@ -1,9 +1,11 @@
 ---
+doc: https://github.com/nathancahill/Split.js
 ---
 
-Download: [Split.js](https://github.com/nathancahill/Split.js)
+## Sample
 
-#### index.html
+### HTML
+
 ```html
 <div class="wrapper">
     <div id="one">#one</div>
@@ -11,7 +13,8 @@ Download: [Split.js](https://github.com/nathancahill/Split.js)
 </div>
 ```
 
-#### index.css
+### CSS
+
 ```css
 .wrapper {
     background-color: gray;
@@ -31,10 +34,10 @@ Download: [Split.js](https://github.com/nathancahill/Split.js)
 }
 ```
 
-#### index.js
+### Javascript
+
 ```javascript
 Split(['#one', '#two'], {
     direction: 'vertical'
 });
 ```
-

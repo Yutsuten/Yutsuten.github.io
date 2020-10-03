@@ -2,9 +2,10 @@
 ---
 
 ## Simple with no dependencies
-### Functions
+
+This will not work on complex queries.
+
 ```javascript
-/* Will not work on complex queries */
 var searchQuery = {
     toObject: function(search) {
         var params = {};
@@ -32,6 +33,7 @@ var searchQuery = {
 ```
 
 ### Usage
+
 ```javascript
 var query = searchQuery.toObject(location.search);
 query.hello = 'world';
@@ -39,15 +41,17 @@ location.search = searchQuery.toString(query);
 ```
 
 ## Complete
+
 ### Dependency: query-string module
+
 [GitHub](https://github.com/sindresorhus/query-string)
 
-### Console
 ```
 yarn add query-string
 ```
 
-## Usage
+### Usage
+
 ```javascript
 const queryString = require('query-string');
 
@@ -55,4 +59,3 @@ var query = queryString.parse(location.search);
 query.rows = 10;
 location.search = queryString.stringify(query);
 ```
-

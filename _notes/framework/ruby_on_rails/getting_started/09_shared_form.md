@@ -1,7 +1,8 @@
 ---
 ---
 
-### Using partials
+## Using partials
+
 Use the same code for displaying the form for new and edit.
 
 ```html
@@ -39,7 +40,7 @@ Use the same code for displaying the form for new and edit.
 <% end %>
 ```
 
-#### Update new and edit views
+### Update new and edit views
 
 ```html
 <!-- app/views/articles/new.html.erb -->

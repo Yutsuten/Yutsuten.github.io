@@ -1,8 +1,8 @@
 ---
 ---
 
-### Manually interact with mongod
-#### Linux
+## Start / stop
+
 ```shell
 # Linux
 sudo service mongod start
@@ -13,8 +13,8 @@ brew services start mongodb
 brew services stop mongodb
 ```
 
-### Start automatically on boot
-#### Linux
+## Start on boot
+
 ```shell
 # Linux
 systemctl enable mongod.service
@@ -22,4 +22,3 @@ systemctl enable mongod.service
 # Mac
 ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
 ```
-

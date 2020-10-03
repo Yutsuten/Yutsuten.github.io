@@ -1,7 +1,6 @@
 ---
 ---
 
-#### index.css
 ```css
 /* Setting variables globally */
 :root {

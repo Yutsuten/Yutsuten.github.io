@@ -1,7 +1,8 @@
 ---
 ---
 
-### Array operations
+## Array operations
+
 ```php
 $myAssocArray = array(
     'year' => 2012,
@@ -9,7 +10,8 @@ $myAssocArray = array(
     'doors' => 5);
 ```
 
-### Built-in functions
+## Built-in functions
+
 ```php
 echo "Message";
 print "Message";
@@ -30,7 +32,8 @@ strtolower($string);
 substr($string, index, size);
 ```
 
-### For loop
+## For loop
+
 ```php
 foreach($asscArray as $value) {
     // Some code
@@ -41,7 +44,8 @@ foreach($array as $key=>$value) {
 }
 ```
 
-### Function
+## Function
+
 ```php
 function($parameter) {
     return 10;

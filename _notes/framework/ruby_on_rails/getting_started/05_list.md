@@ -33,7 +33,8 @@ end
 </table>
 ```
 
-### Add links
+## Add links
+
 ```html
 <!-- app/views/welcome/index.html.erb -->
 <h1>Hello, Rails!</h1>
