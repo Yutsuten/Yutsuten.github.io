@@ -37,8 +37,10 @@ ffmpeg -f x11grab -framerate 30 -video_size 1366x768 -i :0.0 out.mp4
 `libx264rgb` seems to be the best encoder in terms of speed.
 H.265 is slower and not suited for screen recording.
 
-The command to record both audio and screen smoothly and lossless quality should look like this:
+You may want to add `-thread_queue_size` and `-probesize` to the command to avoid some warnings.
+
+The command to record both audio and screen smoothly with lossless quality should look like this:
 
 ```shell
-ffmpeg -f pulse -i alsa_output.pci-0000_00_1b.0.analog-stereo.monitor -f x11grab -framerate 30 -video_size 1366x768 -i :0.0 -vcodec libx264rgb -crf 0 -preset ultrafast out.mp4
+ffmpeg -f pulse -thread_queue_size 512 -i alsa_output.pci-0000_00_1b.0.analog-stereo.monitor -f x11grab -framerate 60 -probesize 16M -thread_queue_size 512 -video_size 1366x768 -i :0.0 -vcodec libx264rgb -crf 0 -preset ultrafast records/out4.mp4
 ```
