@@ -1,15 +1,15 @@
 ---
+doc: http://docs.python-requests.org/en/master/
 ---
 
 ## Module
-- [Reference](http://docs.python-requests.org/en/master/)
 
 ```
 pip install requests
 ```
 
 ## Usage
-#### script.py
+
 ```python
 import requests
 
@@ -34,9 +34,8 @@ print(response.json())
 
 ## Sending big file (stream upload)
 
-- [Reference](https://github.com/requests/requests/issues/1784)
+[Reference](https://github.com/requests/requests/issues/1784)
 
-#### script.py
 ```python
 import requests
 

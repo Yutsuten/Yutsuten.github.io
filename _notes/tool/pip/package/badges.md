@@ -9,9 +9,10 @@ pip install coverage-badge
 coverage-badge -o coverage.svg
 ```
 
-### Script for django project
-#### coverage-run.sh
+## Script for django project
+
 ```shell
+# coverage-run.sh
 if coverage run manage.py test ; then
     coverage report
     coverage html

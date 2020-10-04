@@ -1,20 +1,22 @@
 ---
+doc: https://webpack.js.org/guides/installation/
 ---
 
-### Install
-[Guide](https://webpack.js.org/guides/installation/)
+## Install
 
 ```shell
 yarn add webpack webpack-cli --dev
 ```
 
-### Setup for Vue with bootstrap and js + css bundle
+## Setup for Vue with bootstrap and js + css bundle
+
 ```shell
 yarn add css-loader extract-loader file-loader mini-css-extract-plugin style-loader --dev
 yarn add babel-polyfill bootstrap-vue vue
 ```
 
-#### webpack.config.js
+Edit `webpack.config.js`:
+
 ```javascript
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -59,7 +61,8 @@ module.exports = {
 }
 ```
 
-#### index.js
+### Javascript
+
 ```javascript
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
@@ -71,12 +74,14 @@ import './assets/js'
 Vue.use(BootstrapVue)
 ```
 
-#### index.css
+### CSS
+
 ```css
 @import url('./assets/css/index.css');
 ```
 
-#### package.json
+### package.json
+
 ```json
 {
   "scripts": {
@@ -86,6 +91,7 @@ Vue.use(BootstrapVue)
 ```
 
 ### Build / watch
+
 ```shell
 yarn run build
 npx webpack --watch

@@ -1,28 +1,26 @@
 ---
 ---
 
-## Install bundler
-#### Console
+## Install
+
 ```
 gem install bundler
 ```
 
-## Edit/add Gemfile
+## Usage
+
+Edit `Gemfile`:
+
 ```
 source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 ```
 
-## Install gems
-#### Console
-```
-bundle install
-```
+Install gems and run:
 
-## Build or run
-#### Console
-```
+```shell
+bundle install
+
 bundle exec jekyll build --watch
 bundle exec jekyll serve
 ```
-

@@ -1,7 +1,7 @@
 ---
 ---
 
-### How to measure a command takes to run
+## Measure run time
 
 ```bash
 time command

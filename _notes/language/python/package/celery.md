@@ -1,17 +1,18 @@
 ---
+doc: http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html
 ---
 
-[First steps](http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html)
+## Install
 
-### Install
 ```shell
 sudo apt install rabbitmq-server
 pip install celery
 ```
 
-### Create the task method
-#### tasks.py
+## Create the task method
+
 ```python
+# tasks.py
 from celery import Celery
 
 app = Celery('tasks', broker='pyamqp://guest@localhost//')
@@ -21,19 +22,20 @@ def add(x, y):
     return x + y
 ```
 
-### Run Celery worker server
+## Run Celery worker server
+
 ```shell
 celery -A tasks worker --loglevel=info
 ```
 
-### Calling the task
+## Calling the task
+
 ```python
 >>> from tasks import add
 >>> add.delay(2, 3)  # Returns AsyncResult
 ```
 
-### Task status
-- [Documentation](http://docs.celeryproject.org/en/latest/reference/celery.result.html)
+## Task status
 
 ```python
 from celery.result import AsyncResult
@@ -41,13 +43,14 @@ task = AsyncResult("task-id")
 task.ready()  # True or False
 ```
 
-### Raise SoftTimeLimitExceeded exception on the task
+## Raise SoftTimeLimitExceeded exception on the task
+
 ```python
 task.revoke(terminate=True, signal='SIGUSR1')
 ```
 
-### Abortable task
-[Reference](http://docs.celeryproject.org/en/latest/reference/celery.contrib.abortable.html)
+## Abortable task
+
 ```python
 from celery.contrib.abortable import AbortableTask, AbortableAsyncResult
 

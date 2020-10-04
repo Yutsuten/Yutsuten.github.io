@@ -1,27 +1,27 @@
 ---
+doc: https://github.com/htmlhint/HTMLHint/wiki/Usage
 ---
 
-### Install
+## Install
 
 ```bash
 yarn global add htmlhint
 ```
 
-### Configuration file
+## Usage
 
-[Documentation](https://github.com/htmlhint/HTMLHint/wiki/Usage)
-
-#### Naming / path
+### Naming / path
 
 | Home | Parent |
 | ---- | ------ |
 | - | `.htmlhintrc` |
 
-#### Command
+### Command
 
 There is not command to generate a configuration file.
 
-#### Sample
+### Sample
+
 ```json
 {
   "tagname-lowercase": true,

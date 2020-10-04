@@ -1,7 +1,8 @@
 ---
 ---
 
-#### Show clock
+## Show clock
+
 ```
 Prefix + t
 q

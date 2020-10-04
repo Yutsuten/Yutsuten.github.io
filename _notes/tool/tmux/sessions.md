@@ -1,18 +1,21 @@
 ---
 ---
 
-#### Switching sessions
+## Switching sessions
+
 ```
 Prefix + (
 Prefix + )
 ```
 
-#### Interactive session list
+## Interactive session list
+
 ```
 Prefix + s
 ```
 
-#### Detach from session
+## Detach from session
+
 ```
 Prefix + d
 ```

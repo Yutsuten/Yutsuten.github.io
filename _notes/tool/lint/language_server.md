@@ -1,7 +1,6 @@
 ---
+doc: https://langserver.org/
 ---
-
-[Reference](https://langserver.org/)
 
 To make it work, we need a client (installed in the editor, e.g. ALE for vim)
 and a server.

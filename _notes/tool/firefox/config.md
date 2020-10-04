@@ -1,7 +1,7 @@
 ---
 ---
 
-### Improving defaults
+## Improving defaults
 
 Configuration is on `about:config`.
 

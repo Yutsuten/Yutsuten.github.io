@@ -1,4 +1,5 @@
 ---
+doc: https://docs.python.org/3.4/library/string.html
 ---
 
 ```python
@@ -37,9 +38,7 @@ import unicodedata
 mystring = unicodedata.normalize('NFC', u'こんにちは')
 ```
 
-### Format (new style)
-- [Documentation](https://docs.python.org/3.4/library/string.html#format-string-syntax)
-- [Examples](https://pyformat.info/)
+## Format (new style)
 
 ```python
 # Basic usage

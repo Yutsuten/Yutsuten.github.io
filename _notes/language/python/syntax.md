@@ -1,7 +1,8 @@
 ---
 ---
 
-### Comment
+## Comment
+
 ```python
 # Single line comment
 
@@ -11,7 +12,8 @@ comment
 '''
 ```
 
-### Variables
+## Variables
+
 ```python
 my_int = 7
 my_float = 1.234
@@ -21,7 +23,8 @@ my_array = [1, 2, 3, 4]
 my_dict = {'name': 'John', 'age': 28}
 ```
 
-### Simple operations
+## Simple operations
+
 ```python
 addition = 72 + 23
 subtraction = 108 - 204
@@ -31,14 +34,16 @@ exponentiation = 10 ** 2
 modulo = 10 % 2
 ```
 
-### Bool evaluations
+## Bool evaluations
+
 ```python
 100 == (2 * 50) and 19 <= 19
 -22 >= -18 or 99 != (98 + 1)
 not False
 ```
 
-### Built-in functions
+## Built-in functions
+
 ```python
 # Math
 max(3, 4, 5)
@@ -70,7 +75,8 @@ print('%.2f' % my_float)
 print('Title', variable) # Title <variable>
 ```
 
-### Condition
+## Condition
+
 ```python
 if 3 < 4:
     pass
@@ -80,7 +86,8 @@ else
     pass
 ```
 
-### While loop
+## While loop
+
 ```python
 while var1 < var2:
     pass
@@ -90,7 +97,8 @@ else
 # Result of break
 ```
 
-### Function
+## Function
+
 ```python
 def spam():
     eggs = 12
@@ -99,7 +107,8 @@ def spam():
 lambda (parameters): (return expression)
 ```
 
-### Raise exception
+## Raise exception
+
 ```python
 if some_condition:
     raise Exception('Message')

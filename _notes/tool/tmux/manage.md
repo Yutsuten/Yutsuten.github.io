@@ -1,7 +1,8 @@
 ---
 ---
 
-### Commands to manage sessions
+## Commands to manage sessions
+
 ```shell
 # These commands can be run inside tmux in command mode without 'tmux'
 tmux new
@@ -21,12 +22,14 @@ tmux split-window -h
 tmux send-keys 'bash_command' Enter
 ```
 
-### Detaching
+## Detaching
+
 ```shell
 Prefix + d
 ```
 
-### Fixing issues
+## Fixing issues
+
 ```shell
 tmux -2  # Force tmux to assume the terminal supports 256 colours
 tmux -u  # Fix issues with unicode

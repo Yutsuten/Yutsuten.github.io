@@ -1,8 +1,8 @@
 ---
 ---
 
-### Browserify + browserify-css + watchify + gulp setup
-#### Terminal
+## Browserify + browserify-css + watchify + gulp setup
+
 ```shell
 yarn add browserify --dev
 yarn add browserify-css --dev
@@ -12,7 +12,8 @@ yarn add vinyl-source-stream --dev
 yarn add watchify --dev
 ```
 
-#### package.json
+Edit `package.json`:
+
 ```json
 "browserify": {
   "transform": [
@@ -26,7 +27,8 @@ yarn add watchify --dev
 },
 ```
 
-#### gulpfile.js
+Edit `gulpfile.js`:
+
 ```javascript
 var gulp = require('gulp');
 var source = require('vinyl-source-stream');

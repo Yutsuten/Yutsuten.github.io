@@ -1,7 +1,8 @@
 ---
+doc: https://github.com/google/yapf/
 ---
 
-### Install
+## Install
 
 ```shell
 pacman -S yapf

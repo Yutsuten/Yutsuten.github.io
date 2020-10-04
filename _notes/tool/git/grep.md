@@ -1,14 +1,16 @@
 ---
 ---
 
-### Recommended configuration
+## Recommended configuration
+
 Do not break lines on long lines matches (minified scripts!).
 
 ```shell
 git config --global core.pager 'less -XFS'
 ```
 
-### Usage
+## Usage
+
 ```shell
 git grep some_text
 git grep 'some text'

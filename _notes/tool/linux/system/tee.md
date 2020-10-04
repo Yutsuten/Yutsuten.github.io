@@ -8,7 +8,7 @@ tee OPTIONS FILE
 -a  # Append
 ```
 
-### Example
+## Example
 
 ```shell
 command | tee new_file

@@ -1,28 +1,33 @@
 ---
 ---
 
-#### Split vertically or horizontally
+## Split vertically or horizontally
+
 ```
 Prefix + %
 Prefix + "
 ```
 
-#### Navigating
+## Navigating
+
 ```
 Prefix + <arrow key>
 ```
 
-#### Zooming
+## Zooming
+
 ```
 Prefix + z
 ```
 
-#### Rotating
+## Rotating
+
 ```
 Prefix + C-o
 ```
 
-#### Closing
+## Closing
+
 ```
 C-d
 Prefix + x  # Kill

@@ -1,9 +1,9 @@
 ---
+doc: https://github.com/koalaman/shellcheck
 ---
 
-[Github](https://github.com/koalaman/shellcheck)
+## Install
 
-### Install
 ```shell
 sudo pacman -S shellcheck
 ```

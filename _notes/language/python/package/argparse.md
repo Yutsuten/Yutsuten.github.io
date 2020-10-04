@@ -1,11 +1,11 @@
 ---
+doc: https://docs.python.org/3/library/argparse.html
 ---
-
-[Documentation](https://docs.python.org/3/library/argparse.html)
 
 Easily parse command line arguments to a python application.
 
-### Usage
+## Usage
+
 ```python
 import argparse
 

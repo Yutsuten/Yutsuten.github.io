@@ -1,7 +1,8 @@
 ---
+doc: http://flake8.pycqa.org/en/latest/user/configuration.html#project-configuration
 ---
 
-### Install
+## Install
 
 Flake8 changes its behaviour depending on the python used to install it.
 
@@ -10,21 +11,19 @@ pacman -S flake8
 python -m pip install flake8
 ```
 
-### Configuration file
+## Usage
 
-[Documentation](http://flake8.pycqa.org/en/latest/user/configuration.html#project-configuration)
-
-#### Naming / path
+### Naming / path
 
 | Home | Parent |
 | ---- | ------ |
 | `~/.config/flake8` | `setup.cfg`, `tox.ini`, `.flake8` |
 
-#### Command
+### Command
 
 There is not command to generate a configuration file.
 
-#### Sample
+### Sample
 
 ```
 [flake8]

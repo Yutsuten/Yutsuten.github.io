@@ -1,14 +1,16 @@
 ---
 ---
 
-### Connect to postgres DB using python
+## Connect to postgres DB using python
 
-#### Install
+### Install
+
 ```shell
 pip install psycopg2-binary
 ```
 
-#### Connect to DB
+### Connect to DB
+
 ```python
 import psycopg2
 
@@ -16,7 +18,8 @@ conn = psycopg2.connect(user='postgres', host="localhost", database="mydb")
 conn.close()  # After using the DB it is good practice to close the connection
 ```
 
-#### Select
+### Select
+
 ```python
 cur = conn.cursor()
 sql = 'SELECT id, column_name FROM my_table;'
@@ -26,7 +29,8 @@ result_list = cur.fetchall()
 cur.close()
 ```
 
-#### Insert
+### Insert
+
 ```python
 cur = conn.cursor()
 sql = 'INSERT INTO my_table(column_name) VALUES(%s) RETURNING id;'
@@ -36,7 +40,8 @@ conn.commit()
 cur.close()
 ```
 
-#### Delete
+### Delete
+
 ```python
 cur = conn.cursor()
 sql = 'DELETE FROM table_1 WHERE id = %s;'

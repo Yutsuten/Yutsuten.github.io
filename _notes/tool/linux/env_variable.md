@@ -6,7 +6,8 @@
 export MY_ENV_VAR=true
 ```
 
-#### Timezone
+## Timezone
+
 ```shell
 export TZ="/usr/share/zoneinfo/Japan"
 ```

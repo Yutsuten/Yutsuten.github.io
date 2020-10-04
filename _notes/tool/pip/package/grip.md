@@ -1,11 +1,11 @@
 ---
+doc: https://github.com/joeyespo/grip
 ---
 
 Render local readme files before sending off to GitHub.
 
-[GitHub](https://github.com/joeyespo/grip)
+## Install
 
-### Install
 ```shell
 # PIP
 pip install grip
@@ -14,7 +14,8 @@ pip install grip
 brew install grip
 ```
 
-### Usage
+## Usage
+
 ```shell
 cd myrepo
 python -m grip

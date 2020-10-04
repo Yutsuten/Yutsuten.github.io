@@ -1,9 +1,10 @@
 ---
 ---
 
-### Translation into multiple languages
-#### i18n.py
+## Translation into multiple languages
+
 ```python
+# i18n.py
 import gettext
 import os
 
@@ -20,7 +21,8 @@ ja.install()
 print(ja.gettext('Some string'))
 ```
 
-#### Terminal
+Generate .pot files:
+
 ```shell
 pybabel extract --input-dirs='proj' --output-file='proj/locale/mydomain.pot'
 ```
@@ -28,7 +30,6 @@ pybabel extract --input-dirs='proj' --output-file='proj/locale/mydomain.pot'
 - Create domain.po on `locale/en/LC_MESSAGES/` and `locale/ja/LC_MESSAGES/` using .pot as base.
 - Write the translations
 
-#### Terminal
 ```shell
 pybabel compile --directory='proj/locale' --domain='mydomain'
 ```

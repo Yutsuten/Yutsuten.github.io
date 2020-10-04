@@ -1,7 +1,8 @@
 ---
 ---
 
-### Run script at startup
+## Run script at startup
+
 ```bash
 crontab -e
 ```
@@ -12,6 +13,7 @@ Add:
 ```
 
 To check if it is running:
+
 ```bash
 ps -ef | grep test
 ```

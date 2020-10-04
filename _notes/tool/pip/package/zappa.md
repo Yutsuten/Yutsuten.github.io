@@ -1,15 +1,17 @@
 ---
+doc: https://edgarroman.github.io/zappa-django-guide/walk_database/
 ---
 
 ## Settings for big projects (>50MB)
+
 ### Flask project
 
-#### console
 ```shell
 pip install packaging setuptools
 ```
 
-#### zappa_settings.json
+Edit `zappa_settings.json`:
+
 ```json
 {
   "dev": {
@@ -37,14 +39,15 @@ pip install packaging setuptools
 ```
 
 ## Serve static files on S3
+
 ### Django project
 
-#### console
 ```shell
 pip install django-storages boto
 ```
 
-#### settings.py
+Edit `settings.py`:
+
 ```python
 INSTALLED_APPS = [
   # ...
@@ -57,9 +60,7 @@ STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 ```
 
-#### zappa-update.sh
-
-Reference: [link](https://edgarroman.github.io/zappa-django-guide/walk_database/)
+Then update changes:
 
 ```shell
 python manage.py collectstatic --noinput &&
@@ -67,13 +68,8 @@ zappa update dev &&
 zappa manage dev migrate
 ```
 
-#### console
-```shell
-./zappa-update.sh
-```
-
 ### Django create super user
+
 ```shell
 zappa invoke --raw dev "from django.contrib.auth.models import User; User.objects.create_superuser('admin', '', 'admin')"
 ```
-

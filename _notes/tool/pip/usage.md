@@ -1,7 +1,8 @@
 ---
 ---
 
-### Terminal
+## Usage
+
 ```shell
 # Install
 pip install <package>

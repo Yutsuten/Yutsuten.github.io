@@ -1,9 +1,9 @@
 ---
+doc: http://effbot.org/zone/element-index.htm
 ---
 
 Generate and manipulate XML.
 
-### views.py
 ```python
 import xml.etree.ElementTree as ET
 
@@ -17,6 +17,3 @@ body.text = "Hello, World!"
 
 result = ET.tostring(root).decode('utf-8')
 ```
-
-[Reference](http://effbot.org/zone/element-index.htm)
-

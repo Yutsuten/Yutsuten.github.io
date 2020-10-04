@@ -23,7 +23,8 @@ git branch -d another-feature
 git push origin -d another-feature
 ```
 
-### Moving recent commits to new branch
+## Moving recent commits to new branch
+
 ```shell
 git branch newbranch      # Create a new branch, saving the desired commits
 git stash

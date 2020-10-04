@@ -1,7 +1,8 @@
 ---
 ---
 
-### Reverting a merge
+## Reverting a merge
+
 ```shell
 # It is necessary to check both parents, and choose the parent you want to revert to.
 # By experience, sometimes you'll need 1 and others 2, so there is no easy rule to remember.

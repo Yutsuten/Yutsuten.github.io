@@ -1,7 +1,8 @@
 ---
 ---
 
-### Hide/show modified files
+## Hide/show modified files
+
 ```shell
 git update-index --skip-worktree <files>
 git update-index --no-skip-worktree <files>

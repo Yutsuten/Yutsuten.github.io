@@ -1,7 +1,6 @@
 ---
+doc: https://github.com/seebi/dircolors-solarized
 ---
-
-- [Github](https://github.com/seebi/dircolors-solarized)
 
 ```shell
 git clone https://github.com/seebi/dircolors-solarized.git

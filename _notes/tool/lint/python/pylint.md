@@ -1,30 +1,29 @@
 ---
+doc: https://docs.pylint.org/en/1.6.0/run.html
 ---
 
-### Install
+## Install
 
 ```shell
 pacman -S python-pylint
 python -m pip install pylint
 ```
 
-### Configuration file
+## Usage
 
-[Documentation](https://docs.pylint.org/en/1.6.0/run.html)
-
-#### Naming / path
+### Naming / path
 
 | Home | Parent |
 | ---- | ------ |
 | `~/.pylintrc`, `.config/pylintrc` | `pylintrc` |
 
-#### Command
+### Command
 
 ```bash
 pylint --generate-rcfile
 ```
 
-#### Sample
+### Sample
 
 Usage with `pylint-django`, for django projects:
 

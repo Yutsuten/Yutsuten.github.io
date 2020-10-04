@@ -1,7 +1,8 @@
 ---
 ---
 
-### Startup script
+## Startup script
+
 ```bash
 #!/bin/bash
 tmux new-session -d -c /path/to/project vim

@@ -1,28 +1,28 @@
 ---
+doc: https://eslint.org/docs/user-guide/configuring
 ---
 
-### Install
+## Install
+
 ```bash
 sudo pacman -S eslint
 ```
 
-### Configuration file
+## Usage
 
-[Documentation](https://eslint.org/docs/user-guide/configuring)
-
-#### Naming / path
+### Naming / path
 
 | Home | Parent |
 | ---- | ------ |
 | `~/.eslintrc.json` | `.eslintrc.json` |
 
-#### Command
+### Command
 
 ```bash
 eslint --init
 ```
 
-#### Sample
+### Sample
 
 ```json
 {

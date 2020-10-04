@@ -1,7 +1,6 @@
 ---
+doc: https://regexr.com/
 ---
-
-Test Regex Expression: [link](https://regexr.com/)
 
 ```python
 # Character patterns

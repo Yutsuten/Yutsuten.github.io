@@ -1,16 +1,15 @@
 ---
+doc: https://github.com/kayak/pypika
 ---
 
-[Documentation](https://github.com/kayak/pypika)
+## Install
 
-### Install
 ```bash
 pip install wheel
 pip install pypika
 ```
 
-### Usage
-[Full documentation](https://github.com/kayak/pypika)
+## Usage
 
 ```python
 from pypika import Query

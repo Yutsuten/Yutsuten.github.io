@@ -1,7 +1,6 @@
 ---
+doc: http://pygal.org/en/stable/
 ---
-
-[Official website](http://pygal.org/en/stable/)
 
 ## Install
 ```
@@ -9,7 +8,9 @@ pip install pygal
 ```
 
 ## Usage
+
 ### Python script
+
 ```python
 import pygal, flask
 
@@ -23,9 +24,9 @@ return flask.send_file('tmp/result.svg', mimetype='image/svg+xml')
 ```
 
 ### HTML
+
 ```html
 <figure id="fishdatagraph">
     <embed src="tmp/result.svg" type="image/svg+xml" />
 </figure>
 ```
-

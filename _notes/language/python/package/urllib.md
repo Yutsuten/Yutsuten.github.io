@@ -1,7 +1,7 @@
 ---
 ---
 
-### Parsing and unparsing URL
+## Parsing and unparsing URL
 
 ```python
 import urllib.parse

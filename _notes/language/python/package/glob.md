@@ -1,7 +1,8 @@
 ---
 ---
 
-### Find files using wildcards
+## Find files using wildcards
+
 ```python
 import glob
 

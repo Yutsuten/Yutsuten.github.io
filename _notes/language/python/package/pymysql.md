@@ -1,14 +1,16 @@
 ---
 ---
 
-### Connect to MySQL DB using python
+## Connect to MySQL DB using python
 
-#### Install
+### Install
+
 ```bash
 pip install pymysql
 ```
 
-#### Connect to DB
+### Connect to DB
+
 ```python
 connection = pymysql.connect(host='localhost', user='myuser', password='mypass', database='mydb')
 connection.close()

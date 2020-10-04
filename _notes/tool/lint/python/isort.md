@@ -1,7 +1,7 @@
 ---
 ---
 
-### Install
+## Install
 
 ```shell
 pacman -S python-isort

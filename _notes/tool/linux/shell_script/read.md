@@ -1,7 +1,8 @@
 ---
 ---
 
-### Read user input
+## Read user input
+
 ```shell
 read text  # input will be available at variable text
 read -t 3 text  # Timeout in seconds

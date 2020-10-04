@@ -1,12 +1,14 @@
 ---
 ---
 
-#### New window
+## New window
+
 ```
 Prefix + c
 ```
 
-#### Switching windows
+## Switching windows
+
 ```
 Prefix + n
 Prefix + p

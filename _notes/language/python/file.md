@@ -1,7 +1,7 @@
 ---
 ---
 
-### Read and write files
+## Read and write files
 
 ```python
 with open('sound.mp3', 'wb') as audio_file:

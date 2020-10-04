@@ -1,7 +1,8 @@
 ---
 ---
 
-#### Variables
+## Variables
+
 ```ruby
 $global_variable
 @instance_variable

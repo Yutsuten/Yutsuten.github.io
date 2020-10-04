@@ -1,7 +1,6 @@
 ---
+doc: https://docs.python.org/3/library/unittest.html
 ---
-
-[Documentation](https://docs.python.org/3/library/unittest.html)
 
 ## Usage
 

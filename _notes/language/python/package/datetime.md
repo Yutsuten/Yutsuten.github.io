@@ -1,12 +1,14 @@
 ---
 ---
 
-### Helper modules
+## Helper modules
+
 ```shell
 pip install python-dateutil
 ```
 
-### Usage
+## Usage
+
 ```python
 from django.utils import timezone
 import datetime

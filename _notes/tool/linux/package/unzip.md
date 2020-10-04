@@ -1,6 +1,0 @@
----
----
-
-```shell
-unzip file.zip
-```

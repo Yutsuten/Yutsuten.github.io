@@ -1,27 +1,26 @@
 ---
+doc: https://jshint.com/docs/options/
 ---
 
-### Install
+## Install
 
 ```bash
 yarn global add jshint
 ```
 
-### Configuration file
+## Usage
 
-[Documentation](https://jshint.com/docs/options/)
-
-#### Naming / path
+### Naming / path
 
 | Home | Parent |
 | ---- | ------ |
 | - | `.jshintrc` |
 
-#### Command
+### Command
 
 There is not command to generate a configuration file.
 
-#### Sample
+### Sample
 
 ```json
 {
