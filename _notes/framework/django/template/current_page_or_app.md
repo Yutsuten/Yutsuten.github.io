@@ -1,11 +1,8 @@
 ---
+doc: https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#django.urls.ResolverMatch
 ---
 
 {% raw %}
-
-Ref: [request.resolver_match](https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#django.urls.ResolverMatch)
-
-#### index.html
 
 ```html
 <li class="nav-item {% if request.resolver_match.app_name == 'projects' %}active{% endif %}">

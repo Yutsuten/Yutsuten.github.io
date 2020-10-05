@@ -5,9 +5,9 @@ Press `:pc` to close the preview window.
 
 | Shortcut | Description |
 | --- | --- |
-| `Ctrl+x` `Ctrl+o` | Omnifunc |
-| `Ctrl+x` `Ctrl+f` | File completion |
-| `Ctrl+x` `Ctrl+l` | Line completion |
-| `Ctrl+n` or `Ctrl+p` | Word autocompletion |
-| `Ctrl+y` | Select highlighted menu item |
-| `Ctrl+e` | Cancel completion |
+| `Ctrl-X_Ctrl-O` | Omnifunc |
+| `Ctrl-X_Ctrl-F` | File completion |
+| `Ctrl-X_Ctrl-L` | Line completion |
+| `Ctrl-N` `Ctrl-P` | Word autocompletion |
+| `Ctrl-Y` | Select highlighted menu item |
+| `Ctrl-E` | Cancel completion |

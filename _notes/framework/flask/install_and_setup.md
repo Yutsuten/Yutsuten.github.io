@@ -2,14 +2,15 @@
 ---
 
 ## Install
-### Terminal
-```
+
+```shell
 pip install Flask
 ```
 
 ## Simple site setup
-### views.py
+
 ```python
+# views.py
 from flask import Flask
 app = Flask(__name__)
 
@@ -18,14 +19,8 @@ def hello_world():
     return 'Hello, World!'
 ```
 
-### Console
-```
+```shell
 export FLASK_APP=views.py
 export FLASK_DEBUG=1
-```
-
-## Run server
-```
 flask run
 ```
-

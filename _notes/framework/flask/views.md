@@ -1,8 +1,8 @@
 ---
 ---
 
-### views.py
 ```python
+# views.py
 from flask import Flask
 from flask import request
 
@@ -22,4 +22,3 @@ def answer_call():
     if request.method == 'DELETE':
         return 'Delete'
 ```
-

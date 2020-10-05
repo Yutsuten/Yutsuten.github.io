@@ -3,7 +3,6 @@
 
 {% raw %}
 
-#### login.html
 ```python
 <form action="{% url 'auth' %}" method="post">{% csrf_token %}
     <input type="text" name="username" placeholder="Username" />
@@ -12,8 +11,8 @@
 </form>
 ```
 
-#### views.py
 ```python
+# views.py
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
@@ -37,16 +36,17 @@ def signout(request):
 ```
 
 ## Limiting access to logged-in users
-#### views.py
+
 ```python
+# views.py
 from django.contrib.auth.mixins import LoginRequiredMixin
 class MyView(LoginRequiredMixin, View):
     # View contents
 ```
 
 ### Redirecting
-#### settings.py
 ```python
+# settings.py
 LOGIN_URL = 'login' #Redirect URL
 ```
 

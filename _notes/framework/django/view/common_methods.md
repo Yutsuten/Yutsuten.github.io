@@ -1,8 +1,8 @@
 ---
 ---
 
-#### appname/views.py
 ```python
+# appname/views.py
 from django.views import generic
 
 class AppnameIndexView(generic.TemplateView):
@@ -24,4 +24,3 @@ class AppnameIndexView(generic.TemplateView):
 
         return context
 ```
-

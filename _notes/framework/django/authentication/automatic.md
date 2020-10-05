@@ -3,17 +3,17 @@
 
 {% raw %}
 
-### Setting up
+## Setting up
 
-#### settings.py
 ```python
+# settings.py
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'projects:index'
 LOGOUT_REDIRECT_URL = 'login'
 ```
 
-#### urls.py
 ```python
+# urls.py
 from django.contrib.auth import views as auth_views
 from . import forms
 
@@ -23,8 +23,8 @@ urlpatterns = [
 ]
 ```
 
-#### forms.py
 ```python
+# forms.py
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -33,7 +33,8 @@ class CustomAuthenticationForm(AuthenticationForm):
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'}))
 ```
 
-#### registration/login.html
+Then on `registration/login.html`:
+
 ```html
 {% if form.errors %}
 <div class="row">

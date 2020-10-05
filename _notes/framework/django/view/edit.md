@@ -3,8 +3,8 @@
 
 ## From model
 
-#### appname/views.py
 ```python
+# appname/views.py
 from django.views import generic
 from . import models
 
@@ -24,8 +24,8 @@ class AppnameEditView(generic.edit.UpdateView):
 
 ## Model + Form
 
-#### appname/views.py
 ```python
+# appname/views.py
 from django.views import generic
 from . import models, forms
 
@@ -34,4 +34,3 @@ class AppnameEditView(generic.edit.UpdateView):
     form_class = forms.ModelNameForm
     template_name = 'appname/form.html'
 ```
-

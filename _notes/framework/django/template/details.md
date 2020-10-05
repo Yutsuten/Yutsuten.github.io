@@ -3,7 +3,6 @@
 
 {% raw %}
 
-#### details.html
 ```html
 <h2>{{ project.name }}</h2>
 <p>{{ project.description }}</p>

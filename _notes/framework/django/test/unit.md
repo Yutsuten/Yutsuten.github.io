@@ -1,8 +1,6 @@
 ---
+doc: https://docs.python.org/3/library/unittest.html#assert-methods
 ---
-
-#### tests.py
-Assert methods: [link](https://docs.python.org/3/library/unittest.html#assert-methods)
 
 ```python
 import json

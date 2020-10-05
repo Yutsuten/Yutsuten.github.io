@@ -3,7 +3,6 @@
 
 {% raw %}
 
-#### index.html
 ```html
 {% if modelname_list %}
 <ul>

@@ -3,7 +3,6 @@
 
 {% raw %}
 
-#### form.html
 ```html
 <form action="" method="post">{% csrf_token %}
     {% for field in form %}

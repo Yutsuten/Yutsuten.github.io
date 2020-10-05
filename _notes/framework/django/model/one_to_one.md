@@ -1,8 +1,9 @@
 ---
+doc: https://docs.djangoproject.com/en/2.1/topics/db/examples/one_to_one/
 ---
 
-[Reference](https://docs.djangoproject.com/en/2.1/topics/db/examples/one_to_one/)
-### Models
+## Models
+
 ```python
 class Place(models.Model):
     name = models.CharField(max_length=50)
@@ -17,7 +18,8 @@ class Restaurant(models.Model):
     serves_pizza = models.BooleanField(default=False)
 ```
 
-### Accessing the associated model
+## Accessing the associated model
+
 ```python
 place = Place(name='Demon Dogs', address='944 W. Fullerton')
 restaurant = Restaurant(place=place, serves_hot_dogs=True, serves_pizza=False)

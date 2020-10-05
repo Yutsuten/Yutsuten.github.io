@@ -1,7 +1,8 @@
 ---
 ---
 
-### Shortcuts
+## Shortcuts
+
 ```bash
 Windows Key + Tab  # Task View
 Windows Key + Ctrl + D  # New desktop

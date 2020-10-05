@@ -1,8 +1,8 @@
 ---
 ---
 
-#### views.py
 ```python
+# views.py
 from django.http import JsonResponse
 
 def myView(request):

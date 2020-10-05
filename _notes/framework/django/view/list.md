@@ -1,8 +1,8 @@
 ---
 ---
 
-#### appname/views.py
 ```python
+# appname/views.py
 from django.views import generic
 from . import models
 
@@ -13,4 +13,3 @@ class AppnameIndexView(generic.ListView):
 
     paginate_by = 5 # Optional: To paginate
 ```
-

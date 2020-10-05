@@ -2,8 +2,9 @@
 ---
 
 ## Respond with custom headers
-### views.py
+
 ```python
+# views.py
 from flask import Response
 
 @app.route('/', methods=['GET'])
@@ -14,8 +15,9 @@ def index():
 ```
 
 ## Respond with file
-### views.py
+
 ```python
+# views.py
 from flask import send_from_directory
 
 @app.route('/', methods=['GET'])
@@ -24,6 +26,7 @@ def index():
 ```
 
 ## Get named parameters
+
 ```python
 import flask
 
@@ -34,6 +37,7 @@ def user(user_id):
 ```
 
 ## Get search parameters from URL
+
 ```python
 import flask
 
@@ -44,6 +48,7 @@ def search():
 ```
 
 ## Get POST parameters
+
 ```python
 import flask
 
@@ -53,4 +58,3 @@ def post_data():
     print(flask.request.form.get('field1'))
     return flask.jsonify({'success': True})
 ```
-

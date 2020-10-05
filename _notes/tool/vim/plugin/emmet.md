@@ -1,8 +1,9 @@
 ---
+doc: https://github.com/mattn/emmet-vim
 ---
 
-[Site](https://github.com/mattn/emmet-vim)
-### Extending abbreviations
+## Extending abbreviations
+
 ```
 <c-y>,
 

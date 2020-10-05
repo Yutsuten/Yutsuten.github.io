@@ -1,8 +1,8 @@
 ---
 ---
 
-#### appname/urls.py
 ```python
+# appname/urls.py
 from . import views
 
 app_name = 'myapp'
@@ -14,4 +14,3 @@ urlpatterns = [
     path('delete/<int:pk>', views.DeleteView.as_view(), name='delete'),
 ]
 ```
-

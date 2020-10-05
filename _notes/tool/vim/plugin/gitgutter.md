@@ -1,13 +1,15 @@
 ---
 ---
 
-#### Jump between hunks
+## Jump between hunks
+
 ```
 ]c   # Next hunk (change)
 [c   # Previous hunk (change)
 ```
 
-#### Staging hunks
+## Staging hunks
+
 ```
 <Leader>hs   # Stage the hunk
 <Leader>hu   # Undo changes in the hunk

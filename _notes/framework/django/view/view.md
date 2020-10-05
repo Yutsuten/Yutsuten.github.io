@@ -1,8 +1,8 @@
 ---
 ---
 
-#### views.py
 ```python
+# views.py
 from django.views import View
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
@@ -17,4 +17,3 @@ class CustomView(View):
         print(post_data.get('field1'))
         return HttpResponseRedirect(reverse_lazy('appname:viewname'))
 ```
-

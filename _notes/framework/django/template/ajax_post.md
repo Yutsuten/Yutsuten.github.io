@@ -1,10 +1,12 @@
 ---
 ---
 
+## Usage
+
 Adding the CSRF to the post so django accepts the request.
 
 ### With js-cookie dependency
-#### script.js
+
 ```javascript
 var Cookies = require('js-cookie');
 
@@ -18,7 +20,7 @@ $.post(url, data, response => {
 ```
 
 ### No dependencies
-#### script.js
+
 ```javascript
 function getCookie(name) {
     var cookieValue = null;
@@ -43,4 +45,3 @@ $.post(url, data, response => {
     console.log(response);
 });
 ```
-

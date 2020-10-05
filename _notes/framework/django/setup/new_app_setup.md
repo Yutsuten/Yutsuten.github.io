@@ -1,13 +1,12 @@
 ---
 ---
 
-#### Terminal
-```
+```shell
 python manage.py startapp appname
 ```
 
-#### projectname/settings.py
 ```python
+# projectname/settings.py
 INSTALLED_APPS = [
     'appname.apps.AppnameConfig',
     'django.contrib.admin',
@@ -19,15 +18,15 @@ INSTALLED_APPS = [
 ]
 ```
 
-#### urls.py
 ```python
+# urls.py
 from django.conf.urls import include
 
 path('appname/', include('appname.urls')),
 ```
 
-#### appname/urls.py
 ```python
+# appname/urls.py
 from django.urls import path
 
 from . import views
@@ -37,4 +36,3 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
 ]
 ```
-

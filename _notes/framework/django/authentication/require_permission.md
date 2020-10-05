@@ -1,10 +1,9 @@
 ---
+doc: https://docs.djangoproject.com/en/1.11/topics/auth/default/#default-permissions
 ---
 
-Reference: [link](https://docs.djangoproject.com/en/1.11/topics/auth/default/#default-permissions)
-
-#### views.py
 ```python
+# views.py
 from django.views import generic
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from . import models
@@ -18,7 +17,6 @@ class CreateView(PermissionRequiredMixin, generic.edit.CreateView):
 ```
 
 ### Default permissions:
-- appname.add_modelname
-- appname.change_modelname
-- appname.delete_modelname
-
+- `appname.add_modelname`
+- `appname.change_modelname`
+- `appname.delete_modelname`

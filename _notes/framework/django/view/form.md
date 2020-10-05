@@ -1,10 +1,9 @@
 ---
+doc: https://docs.djangoproject.com/en/2.0/ref/class-based-views/mixins-editing/
 ---
 
-Ref: [https://docs.djangoproject.com/en/2.0/ref/class-based-views/mixins-editing/](https://docs.djangoproject.com/en/2.0/ref/class-based-views/mixins-editing/)
-
-#### appname/views.py
 ```python
+# appname/views.py
 from django.views import generic
 from . import forms
 
@@ -23,4 +22,3 @@ class SimpleFormView(generic.edit.FormView):
         print(form.cleaned_data)
         return super().form_valid(form)
 ```
-

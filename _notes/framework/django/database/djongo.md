@@ -1,17 +1,17 @@
 ---
+doc: https://nesdis.github.io/djongo/get-started/
 ---
 
-Documentation: [link](https://nesdis.github.io/djongo/get-started/)
+## Install
 
-### Install
 ```shell
 pip install djongo
 ```
 
-### Configuration
-#### settings.py
-```python
+## Configuration
 
+```python
+# settings.py
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
@@ -28,8 +28,9 @@ DATABASES = {
 ```
 
 ### Embedded Model
-#### models.py
+
 ```python
+# models.py
 from djongo import models
 from django.forms.models import model_to_dict
 from django.utils import timezone
@@ -58,8 +59,8 @@ class Project(models.Model):
         super().save(*args, **kwargs)
 ```
 
-#### views.py
 ```python
+# views.py
 from django.views import generic
 from . import models, forms
 from django.utils import timezone
@@ -84,8 +85,9 @@ class ProjectView(generic.edit.CreateView):
 ```
 
 ### Embedded Model as Array
-#### models.py
+
 ```python
+# models.py
 from djongo import models
 from django.forms.models import model_to_dict
 
@@ -108,8 +110,8 @@ class Company(models.Model):
         super().save(*args, **kwargs)
 ```
 
-#### views.py
 ```python
+# views.py
 from django.views import generic
 from . import models, forms
 from django.utils import timezone
@@ -137,6 +139,7 @@ class CompanyView(generic.edit.CreateView):
 ```
 
 ### JSON encoding
+
 ```python
 from djongo.models import Model
 from django.forms.models import model_to_dict
@@ -163,8 +166,8 @@ JsonResponse(context, encoder=JSONEncoder)
 ```
 
 
-### Push changes to database (when there are new tables)
+### Run migration
+
 ```
 python manage.py migrate
 ```
-

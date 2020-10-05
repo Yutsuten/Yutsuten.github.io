@@ -1,7 +1,6 @@
 ---
+doc: https://github.com/tpope/vim-surround
 ---
-
-[GitHub](https://github.com/tpope/vim-surround)
 
 ```
 # Add surround

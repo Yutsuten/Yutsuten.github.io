@@ -3,7 +3,6 @@
 
 {% raw %}
 
-### index.html
 ```html
 <nav aria-label="...">
     <ul class="pagination justify-content-end">

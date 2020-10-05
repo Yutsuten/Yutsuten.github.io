@@ -1,8 +1,8 @@
 ---
 ---
 
-#### settings.py
 ```python
+# settings.py
 TEMPLATES = [
     {
         # ...
@@ -11,4 +11,3 @@ TEMPLATES = [
     },
 ]
 ```
-

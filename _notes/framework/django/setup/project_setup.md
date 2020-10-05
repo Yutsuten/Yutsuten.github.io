@@ -2,14 +2,14 @@
 ---
 
 ## Install Django
-#### Terminal
+
 ```
-sudo pip3 install Django
+pip3 install Django
 ```
 
 ## Project setup
-#### Terminal
-```
+
+```shell
 django-admin startproject projectname
 cd projectname/
 python3 -m venv venv
@@ -19,8 +19,8 @@ sudo apt-get install python-dev default-libmysqlclient-dev
 pip install mysqlclient
 ```
 
-#### projectname/settings.py
 ```python
+# projectname/settings.py
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -49,8 +49,6 @@ TEMPLATES = [
 TIME_ZONE = 'Asia/Tokyo'
 ```
 
-#### Terminal
-```
+```shell
 python manage.py migrate
 ```
-

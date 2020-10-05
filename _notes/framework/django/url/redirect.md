@@ -1,8 +1,8 @@
 ---
 ---
 
-#### urls.py
 ```python
+# urls.py
 from django.views.generic import RedirectView
 from django.urls import reverse_lazy
 from . import views
@@ -12,4 +12,3 @@ urlpatterns = [
     path('login', views.LoginView.as_view(), name='login'),
 ]
 ```
-

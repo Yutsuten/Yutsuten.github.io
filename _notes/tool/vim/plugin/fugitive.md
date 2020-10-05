@@ -1,9 +1,8 @@
 ---
+doc: https://github.com/tpope/vim-fugitive
 ---
 
-[Github](https://github.com/tpope/vim-fugitive)
-
-### Git status
+## Git status
 
 ```shell
 :G
@@ -18,7 +17,7 @@ dp  # put (while patching)
 do  # obtain (while patching)
 ```
 
-### Add patch
+## Add patch
 
 With the cursor on the file with changes.
 
@@ -29,7 +28,8 @@ With the cursor on the file with changes.
 :Git add %   # add current file to staged
 ```
 
-### Grep
+## Grep
+
 ```shell
 :Ggrep keyword  # It uses something similar to :vimgrep
 :cn  # [c]ount next
