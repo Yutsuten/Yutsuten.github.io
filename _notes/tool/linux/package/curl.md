@@ -5,11 +5,17 @@
 
 ```shell
 curl OPTIONS URL
--s       # Silent (Does not show progress bar)
--o FILE  # Write data into file
--L       # Follow redirect
--k       # Skip SSL certificate check
 ```
+
+| Option | Description |
+| --- | --- |
+| `-K` `--request` | Specifies a custom request method (GET, HEAD, POST, PUT). |
+| `-H` `--header` | Extra header to include in the request when sending HTTP to a server. |
+| `-d` `--data` | Sends the specified data to the HTTP server. |
+| `-s` `--silent` | Silent (Does not show progress bar). |
+| `-o` `--output` | Write response into file. |
+| `-L` `--location` | Follow redirect. |
+| `-k` `--insecure` | Skip SSL certificate check. |
 
 ## Download file from remote
 
