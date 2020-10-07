@@ -1,13 +1,19 @@
 ---
 ---
 
+## Usage
+
+Setting variables globally.
+
 ```css
-/* Setting variables globally */
 :root {
     --my-var: url('example.com/image.png');
 }
+```
 
-/* Using it */
+Using it.
+
+```css
 .selector {
     background-image: var(--my-var);
 }
