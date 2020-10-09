@@ -1,4 +1,5 @@
 ---
+doc: https://wiki.archlinux.org/index.php/Localization/Japanese
 ---
 
 ## Fonts
@@ -11,12 +12,30 @@ sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts
 
 ### Ibus Anthy
 
+[IBus documentation](https://wiki.archlinux.org/index.php/IBus)
+
 ```shell
 sudo pacman -S ibus-anthy
 ```
 
-Reboot the system.
-Not sure if the next command is necessary...
+Add the following at the end of `~/.xprofile`.
+
+```shell
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+ibus-daemon -drx --panel /usr/lib/ibus/ibus-ui-gtk3
+```
+
+On KDE, use the following to integrate Kimpanel with IBus.
+
+```shell
+ibus-daemon -drx --panel=/usr/lib/kimpanel-ibus-panel
+```
+
+Then you have to add the widget `Input methods panel`.
+
+Reboot the system, and setup Ibus with the following:
 
 ```shell
 ibus-setup
