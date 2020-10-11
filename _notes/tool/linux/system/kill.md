@@ -1,13 +1,25 @@
 ---
 ---
 
-## Usage
+## Kill
+
+Kill processes by process ID.
 
 ```shell
 kill PID  # Defaults to SIGTERM
 kill -9 PID
 kill -9 %JOBID
 ```
+
+## Pkill
+
+Kill processes by process name.
+
+```shell
+pkill PNAME
+```
+
+## Signals
 
 Obs: `Ctrl+C` sends the signal `SIGINT`.
 

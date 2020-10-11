@@ -22,3 +22,9 @@ Use `nmtui` to manage your connections interactively on terminal.
 | `nmcli connection down <SSID>` | Disconnect from a wifi network. |
 | `nmcli connection delete <SSID>` | Delete configuration of wifi network. |
 | `nmcli --show-secrets connection show <SSID>` | Check configuration of wifi network. |
+
+## GUI
+
+```shell
+sudo pacman -S nm-connection-editor network-manager-applet
+```
