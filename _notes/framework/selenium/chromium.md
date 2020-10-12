@@ -1,8 +1,7 @@
 ---
-doc: https://www.seleniumhq.org/docs/03_webdriver.jsp
 ---
 
-## Setup
+## Install
 
 ```shell
 sudo apt install chromium-browser
@@ -12,34 +11,40 @@ sudo apt install chromium-browser
 curl https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip > chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 mv chromedriver ~/bin/chromedriver
-
-pip install selenium
 ```
 
-## Basic script
+## Options
 
 ```python
-# main.py
 from selenium import webdriver
 
-# No options
-browser = webdriver.Chrome()
-browser.get('http://seleniumhq.org/')
-browser.refresh()
-browser.quit()
-
-# With options
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')  # Hidden browser
 options.add_argument('--disable-infobars')
 options.add_argument('--disable-extensions')
 options.add_argument('--window-position=0,0')
 options.add_argument('--window-size=1280,920')
+
 browser = webdriver.Chrome(options=options)
 ```
 
-## Run
+## Download file
 
-```shell
-python main.py
+When opening browser normally:
+
+```python
+options.add_experimental_option('prefs', {
+    'download.default_directory': download_dir
+})
+```
+
+When using the `--headless` argument:
+
+```python
+browser.command_executor._commands['send_command'] = (
+    'POST', '/session/$sessionId/chromium/send_command')
+browser.execute('send_command', {
+    'cmd': 'Page.setDownloadBehavior',
+    'params': {'behavior': 'allow', 'downloadPath': download_dir}
+})
 ```
