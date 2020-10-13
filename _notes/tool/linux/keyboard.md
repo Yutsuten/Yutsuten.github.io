@@ -8,7 +8,7 @@ doc: https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Setting_ke
 localectl --no-convert set-x11-keymap jp,br '' '' grp:win_space_toggle
 ```
 
-File `/etc/X11/xorg.conf.d/00-keyboard.conf` shoulb become something like this.
+The resulting `/etc/X11/xorg.conf.d/00-keyboard.conf` should be like this:
 
 ```
 Section "InputClass"
