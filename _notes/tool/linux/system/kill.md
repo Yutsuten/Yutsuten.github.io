@@ -13,10 +13,19 @@ kill -9 %JOBID
 
 ## Pkill
 
-Kill processes by process name.
+Kill processes by process name (pattern).
+Use `pgrep` for a preview of what processes will be killed.
 
 ```shell
 pkill PNAME
+```
+
+## Killall
+
+Kill processes by process name (exact).
+
+```shell
+killall PNAME
 ```
 
 ## Signals

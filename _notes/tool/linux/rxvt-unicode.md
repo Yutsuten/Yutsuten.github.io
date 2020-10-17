@@ -8,6 +8,10 @@ doc: https://wiki.archlinux.org/index.php/Rxvt-unicode
 urxvt OPTIONS
 ```
 
+Use `Ctrl+Alt+C` to copy to clipboard,
+`Ctrl+Alt+V` to paste from clipboard.
+While selecting, right click can be used to extend selection.
+
 ## Configuration
 
 Update its configuration by running `xrdb ~/.Xresources`.
@@ -24,8 +28,8 @@ URxvt.scrollTtyKeypress: true
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
 
-URxvt.font: xft:Noto Sans Mono:pixelsize=12
-URxvt.boldFont: xft:Noto Sans Mono:bold:pixelsize=12
+URxvt.font: xft:Noto Sans Mono:size=9
+URxvt.boldFont: xft:Noto Sans Mono:bold:size=9
 URxvt.letterSpace: -1
 
 URxvt.background: [90]#000000
