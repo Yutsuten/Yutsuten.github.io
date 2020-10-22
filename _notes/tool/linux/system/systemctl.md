@@ -15,3 +15,9 @@ systemctl COMMAND
 | `suspend` | Also known as sleep, saves the current state to RAM and suspends the system. |
 | `hibernate` | Saves the current state to disk and shuts down the system. |
 | `hybrid-sleep` | Saves the current state to both RAM and disk, then suspends the system. |
+
+### Restarting X
+
+```shell
+sudo systemctl restart display-manager
+```
