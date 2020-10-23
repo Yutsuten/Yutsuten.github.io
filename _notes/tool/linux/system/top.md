@@ -11,5 +11,8 @@ top
 
 | Key | Description |
 | --- | --- |
+| `?` | Help |
 | `M` | Sort by memory usage |
-| `E` | Cycle through different size units |
+| `m` | Cycle memory info display mode (text, bar) |
+| `E` | Cycle through memory scale for summary |
+| `e` | Cycle through memory scale for tasks |
