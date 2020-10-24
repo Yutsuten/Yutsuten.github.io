@@ -4,8 +4,8 @@
 .container-fluid {
   min-height: 100vh;
   position: relative;
-  background-color: #073642;
-  color: #93A1A1;
+  background-color: var(--sbase02);
+  color: var(--sbase0);
 }
 
 .search-bar {
@@ -16,15 +16,15 @@
   margin-right: 0;
 
   > .input {
-    background-color: #002B36;
-    border-color: #839496;
-    color: #93A1A1;
+    background-color: var(--sbase03);
+    border-color: var(--sbase1);
+    color: var(--sbase1);
     padding: 1px 5px;
   }
 
   > .input:focus {
     outline: none;
-    box-shadow: 0 0 3px 0px #EEE8D5;
+    box-shadow: 0 0 3px 0px var(--sbase2);
   }
 
   > .menutoggler {
@@ -38,7 +38,7 @@
 }
 
 .menu-area {
-  border-right: 2px #002B36 solid;
+  border-right: 2px var(--sbase03) solid;
 
   @media only screen and (min-width: 768px) {
     height: 100vh;
@@ -48,8 +48,6 @@
 }
 
 .index-area {
-
-  color: #EEE8D5;
 
   @media only screen and (min-width: 768px) {
     flex-grow: 1;
@@ -66,11 +64,21 @@
     font-weight: 500;
   }
 
+  > .list.-root > .index > .text {
+    font-weight: 600;
+    color: var(--title);
+  }
+
+  > .list.-root > .index .text {
+    font-weight: bold;
+    color: var(--title);
+  }
+
   .list {
     margin-left: 0;
     margin-bottom: 0;
-    padding-left: 18px;
-    list-style-type: disclosure-closed;
+    padding-left: 15px;
+    list-style-type: square;
   }
 
   .index {
@@ -85,11 +93,11 @@
 
   .index > .text:hover,
   .index > .link:hover {
-    background-color: #002B36;
+    background-color: var(--sbase03);
   }
 
   .index > .link {
-    color: #268BD2;
+    color: var(--sblue);
   }
 
   .index > .link:hover {
@@ -97,7 +105,7 @@
   }
 
   .index > .link:focus {
-    color: #6C71C4;
+    color: var(--sviolet);
   }
 
   .index > .text {
@@ -114,14 +122,16 @@
     overflow-y: auto;
   }
 
-  h1, h2, h3, h4, h5 {
-    color: #EEE8D5;
+  h2, h3, h4, h5 {
+    color: var(--sbase1);
   }
 
   h1 {
     font-size: 1.5rem;
-    border-bottom: 1px solid #586E75;
+    font-weight: 700;
+    border-bottom: 1px solid var(--sbase01);
     padding-bottom: .3em;
+    color: var(--title);
   }
 
   h2 {font-size: 1.2rem;}
@@ -136,19 +146,14 @@
   h5 {font-size: 0.9rem;}
   p {margin-bottom: 12px;}
 
-  a {color: #268BD2;}
+  a {color: var(--sblue);}
 
   ol > li {margin-bottom: 5px;}
 
   @media only screen and (min-width: 768px) {
     font-size: 1rem;
 
-    h1 {
-      font-size: 2.3rem;
-      border-bottom: 1px solid #586E75;
-      padding-bottom: .3em;
-    }
-
+    h1 {font-size: 2.3rem;}
     h2 {font-size: 1.8rem;}
     h3 {font-size: 1.5rem;}
     h4 {font-size: 1.3rem;}
@@ -160,29 +165,29 @@
   table {
     margin: 15px 0;
     cursor: default;
-    border: 3px solid #586E75;
+    border: 3px solid var(--sbase01);
     border-radius: 5px;
   }
 
   table thead {
-    border: 2px solid #586E75;
+    border: 2px solid var(--sbase01);
   }
 
   table tbody tr:hover {
-    background-color: #002B36;
+    background-color: var(--sbase03);
   }
 
   table th {
-    background-color: #002B36;
+    background-color: var(--sbase03);
     padding: 6px 10px;
-    color: #93A1A1;
+    color: var(--sbase1);
     font-weight: 800;
   }
 
   table td {
     padding: 6px 10px;
-    border-top: 1px dotted #586E75;
-    color: #93A1A1;
+    border-top: 1px dotted var(--sbase01);
+    color: var(--sbase0);
   }
 
   pre.highlight {
@@ -194,8 +199,8 @@
   }
 
   code.language-plaintext {
-    background-color: #002B36;
-    color: #B58900;
+    background-color: var(--sbase03);
+    color: var(--syellow);
     padding: 0 4px 1px 5px;
     margin: 0 2px;
     border-radius: 6px;
@@ -205,7 +210,7 @@
 .note-content {
   > .onlinedoc {
     padding-left: 8px;
-    border-left: 2px solid #268BD2;
+    border-left: 2px solid var(--sblue);
     font-weight: 500;
   }
 
@@ -219,4 +224,24 @@
 
 [v-cloak] {
   display: none;
+}
+
+:root {
+  --title: #a8b3b5;
+  --sbase03: #002b36;
+  --sbase02: #073642;
+  --sbase01: #586e75;
+  --sbase00: #657b83;
+  --sbase0: #839496;
+  --sbase1: #93a1a1;
+  --sbase2: #eee8d5;
+  --sbase3: #fdf6e3;
+  --syellow: #b58900;
+  --sorange: #cb4b16;
+  --sred: #dc322f;
+  --smagenta: #d33682;
+  --sviolet: #6c71c4;
+  --sblue: #268bd2;
+  --scyan: #2aa198;
+  --sgreen: #859900;
 }
