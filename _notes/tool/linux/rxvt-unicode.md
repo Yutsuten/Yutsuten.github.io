@@ -30,6 +30,12 @@ URxvt.boldFont: xft:Noto Sans Mono:bold:size=9
 URxvt.letterSpace: -1
 ```
 
+Trying to fix special characters and emoji:
+
+- [rxvt-unicode-wcwidthcallback](https://aur.archlinux.org/packages/rxvt-unicode-wcwidthcallback/)
+- [nerd-fonts URxvt Known Issues](https://github.com/ryanoasis/nerd-fonts/wiki/Terminal-Emulators#urxvt)
+- [wcwidth-icons](https://github.com/powerman/wcwidth-icons)
+
 ### Simple tabs
 
 Enable the `tabbed` extension.
