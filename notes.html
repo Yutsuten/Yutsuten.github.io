@@ -1,0 +1,68 @@
+---
+layout: base
+title: Programming Notes
+---
+
+<div class="row">
+  <div class="col-12 col-md-4 col-lg-3 menu-area" visible id="menu">
+    <div class="row search-bar">
+      <input type="text" class="input col-10 col-md-12" id="search" v-model="search" v-on:input="searchUpdated" v-on:focus="showMenu" placeholder="Type to search" autofocus />
+      <b-button class="col-2 menutoggler d-md-none" v-b-toggle.index><i class="fas fa-search"></i></b-button>
+    </div>
+
+    <b-collapse class="index-area" visible id="index">
+      <ul v-cloak class="list -root">
+        <li class="index" v-for="indexLv1 in indexTree">
+          <a class="text">[[ indexLv1.text ]]</a>
+          <ul class="list" v-if="indexLv1.children.length > 0">
+            <li class="index" v-for="indexLv2 in indexLv1.children">
+              <a v-if="!indexLv2.href" class="text">[[ indexLv2.text ]]</a>
+              <a v-else class="link" v-bind:href="indexLv2.href" v-on:click="seeNote">[[ indexLv2.text ]]</a>
+              <ul class="list" v-if="indexLv2.children.length > 0">
+                <li class="index" v-for="indexLv3 in indexLv2.children">
+                  <a v-if="!indexLv3.href" class="text">[[ indexLv3.text ]]</a>
+                  <a v-else class="link" v-bind:href="indexLv3.href" v-on:click="seeNote">[[ indexLv3.text ]]</a>
+                  <ul class="list" v-if="indexLv3.children.length > 0">
+                    <li class="index" v-for="indexLv4 in indexLv3.children">
+                      <a v-if="!indexLv4.href" class="text">[[ indexLv4.text ]]</a>
+                      <a v-else class="link" v-bind:href="indexLv4.href" v-on:click="seeNote">[[ indexLv4.text ]]</a>
+                      <ul class="list" v-if="indexLv4.children.length > 0">
+                        <li class="index" v-for="indexLv5 in indexLv4.children">
+                          <a v-if="!indexLv5.href" class="text">[[ indexLv5.text ]]</a>
+                          <a v-else class="link" v-bind:href="indexLv5.href" v-on:click="seeNote">[[ indexLv5.text ]]</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </b-collapse>
+  </div>
+
+  <div class="col-12 col-md-8 col-lg-9 content-area" id="content">
+    <div v-if="typeof activeNote !== 'string'" class="note-content" id="home">
+      <h1>Home</h1>
+      Welcome to my programming notes!
+    </div>
+    {%- for note in site.notes -%}
+      {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
+      {%- assign title = note_path | replace: '/', ' » ' | replace: '_', ' ' | capitalize -%}
+      {%- assign note_id = note_path | replace: '/', '-' -%}
+      <div v-cloak v-if="activeNote === '{{ note_id }}'" class="note-content">
+        <h1>{{ title }}</h1>
+        {%- if note.doc -%}
+          <p class="onlinedoc">
+            <a class="external" rel="nofollow" href="{{ note.doc }}">
+                External documentation<i class="fas fa-external-link-alt"></i>
+            </a>
+          </p>
+        {%- endif -%}
+        {{ note.content }}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
