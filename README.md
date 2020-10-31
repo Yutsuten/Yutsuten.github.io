@@ -1,29 +1,27 @@
-# Yutsuten.github.io
+# yutsuten.github.io
 
-## Running locally
+## Run manually
 
-- [Linux](#linux)
-- [Docker](#docker)
-
-### Linux
+Install jekyll and its dependencies:
 
 ```shell
-# Install jekyll and its dependencies
 ruby --version  # Must be >2.1.0
 gem install bundler
 bundle install
+```
 
-# Build and run server
+Then build and run server:
+
+```shell
 bundle exec jekyll serve
 ```
 
-### Docker
+## Run with docker
+
+Run `make` to start the server,
+and `docker stop yutsuten` to stop it.
 
 ```shell
-# Serve
 make
-make serve
-
-# Stop / remove
-docker stop notes
+docker stop yutsuten
 ```
