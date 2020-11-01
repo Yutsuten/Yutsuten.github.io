@@ -21,35 +21,9 @@
     <!-- Load fontawesome -->
     <script src="https://kit.fontawesome.com/8e31a988f2.js"></script>
 
-    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/syntax_highlight.css %}" media="screen">
-    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/index.scss %}" media="screen">
-
-    <title>{{ page.title }} - Mateus Etto Website</title>
+    <title>{{ page.title }} | Yutsuten</title>
   </head>
   <body>
-    <div class="container-fluid" id="app">
-      {{ content }}
-    </div>
-    <script type="application/json" id="raw-index-data">
-    {%- comment -%} Add an exclamation mark before each note name for sorting. {%- endcomment -%}
-    {%- assign notes = '' -%}
-    {%- for note in site.notes -%}
-      {%- assign note_path_arr = note.relative_path | split: '/' -%}
-      {%- assign new_filename = '!' | append: note_path_arr.last -%}
-      {%- assign note_path = note.relative_path | replace: note_path_arr.last, new_filename -%}
-      {%- capture notes -%}{{ notes }};{{ note_path }}{%- endcapture -%}
-    {%- endfor -%}
-
-    {%- comment -%} Make notes an array and sort it. {%- endcomment -%}
-    {%- assign notes = notes | remove: '_notes/' | remove: '.md' | slice: 1, notes.size -%}
-    {%- assign notes = notes | split: ';' | sort -%}
-
-    {%- comment -%} Remove the exclamation mark and generate the JSON. {%- endcomment -%}
-    {%- for note in notes -%}
-      {%- capture index_json -%}{{ index_json }},"{{ note | replace: '!', '' }}"{%- endcapture -%}
-    {%- endfor -%}
-    [{{ index_json | slice: 1, index_json.size }}]
-    </script>
-    <script src="{{ site.baseurl }}{% link assets/index.js %}"></script>
+    {{ content }}
   </body>
 </html>
