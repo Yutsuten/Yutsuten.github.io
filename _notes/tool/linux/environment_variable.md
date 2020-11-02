@@ -3,23 +3,32 @@
 
 ## System-wide
 
-Those are variables that affects all users of the system.
-
-Set those to `/etc/environment` file.
+Variables that affects all users of the system,
+set on `/etc/environment`.
 
 ## Session-wide
 
-Those are variables that affects just a particular user.
+Variables that affects just a particular user,
+set on `~/.pam_environment`.
 
-Set those to `~/.pam_environment` file.
+Check the syntax [here](https://linux.die.net/man/5/pam_env.conf).
 
-## X11
+## Resources file
 
-Startup script for X is on `~/.xprofile`.
+For Xorg the file is `~/.xprofile`.
+
+For bash the file is `~/.bash_profile`.
+
+For zsh the file is `~/.zshenv` (environment variables),
+or `~/.zprofile`.
 
 ## Shell
 
-Examples are `~/.bashrc` and `~/.zshrc`. Use the `export` keyword.
+Initialization of interactive shells.
+
+For bash the file is `~/.bashrc`.
+
+For zsh the file is `~/.zshrc`.
 
 ```shell
 export MY_ENV_VAR=true
