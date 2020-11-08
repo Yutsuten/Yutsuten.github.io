@@ -108,6 +108,11 @@
     color: var(--sviolet);
   }
 
+  .index > .link.active {
+    font-weight: bold;
+    color: var(--sviolet);
+  }
+
   .index > .text {
     cursor: default;
   }
