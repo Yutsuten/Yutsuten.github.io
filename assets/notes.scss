@@ -64,13 +64,13 @@
     font-weight: 500;
   }
 
-  > .list.-root > .index > .text {
-    font-weight: 600;
-    color: var(--title);
-  }
-
   > .list.-root > .index .text {
     font-weight: bold;
+    color: var(--subtitle);
+  }
+
+  > .list.-root > .index > .text {
+    font-weight: 600;
     color: var(--title);
   }
 
@@ -123,7 +123,7 @@
   }
 
   h2, h3, h4, h5 {
-    color: var(--sbase1);
+    color: var(--subtitle);
   }
 
   h1 {
@@ -227,7 +227,8 @@
 }
 
 :root {
-  --title: #a8b3b5;
+  --title: #ccd9db;
+  --subtitle: #a8b3b5;
   --sbase03: #002b36;
   --sbase02: #073642;
   --sbase01: #586e75;
