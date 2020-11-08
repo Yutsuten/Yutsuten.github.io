@@ -26,7 +26,7 @@ class IndexTree {
 
 
 new Vue({
-  el: '#app',
+  el: '#notes',
   delimiters: ['[[', ']]'],
   data: {
     search: '',

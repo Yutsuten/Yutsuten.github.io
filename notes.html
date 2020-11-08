@@ -50,7 +50,12 @@ title: Notes
     </div>
     {%- for note in site.notes -%}
       {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
-      {%- assign title = note_path | replace: '/', ' » ' | replace: '_', ' ' | capitalize -%}
+      {%- assign note_path_arr = note_path | replace: '_', ' ' | split: '/' -%}
+      {%- assign title = '' -%}
+      {%- for note_path_element in note_path_arr -%}
+        {%- capture title -%}{{ title }} » {{ note_path_element | capitalize }}{%- endcapture -%}
+      {%- endfor -%}
+      {%- assign title = title | remove_first: ' » ' -%}
       {%- assign note_id = note_path | replace: '/', '-' -%}
       <div v-cloak v-if="activeNote === '{{ note_id }}'" class="note-content">
         <h1>{{ title }}</h1>

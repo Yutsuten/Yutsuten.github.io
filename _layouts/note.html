@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/notes.scss %}" media="screen">
   </head>
   <body>
-    <div class="container-fluid" id="app">
+    <div class="container-fluid" id="notes">
       {{ content }}
     </div>
 
@@ -14,7 +14,7 @@
     {%- assign notes = '' -%}
     {%- for note in site.notes -%}
       {%- assign note_path_arr = note.relative_path | split: '/' -%}
-      {%- assign new_filename = '!' | append: note_path_arr.last -%}
+      {%- assign new_filename = note_path_arr.last | prepend: '!' -%}
       {%- assign note_path = note.relative_path | replace: note_path_arr.last, new_filename -%}
       {%- capture notes -%}{{ notes }};{{ note_path }}{%- endcapture -%}
     {%- endfor -%}
@@ -25,7 +25,7 @@
 
     {%- comment -%} Remove the exclamation mark and generate the JSON. {%- endcomment -%}
     {%- for note in notes -%}
-      {%- capture index_json -%}{{ index_json }},"{{ note | replace: '!', '' }}"{%- endcapture -%}
+      {%- capture index_json -%}{{ index_json }},"{{ note | remove: '!' }}"{%- endcapture -%}
     {%- endfor -%}
     [{{ index_json | slice: 1, index_json.size }}]
     </script>
