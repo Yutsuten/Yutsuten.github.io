@@ -9,6 +9,7 @@ or to match some special characters.
 | Pattern | Description |
 | --- | --- |
 | `\v` | Enable full regex (very magic). |
+| `\V` | Disable regex mode (very nomagic). |
 | `\c` | Force the search to be case insensitive. |
 | `\C` | Force the search to be case sensitive. |
 | `\n` | Matches the new line character. |
