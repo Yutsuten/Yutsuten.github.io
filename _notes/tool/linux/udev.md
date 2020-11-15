@@ -1,4 +1,5 @@
 ---
+doc: http://www.reactivated.net/writing_udev_rules.html
 ---
 
 ## Automount media device
@@ -7,6 +8,7 @@ Add the file `/etc/udev/rules.d/90-media-automount.rules` with the following con
 
 ```
 ACTION=="add", SUBSYSTEMS=="usb", SUBSYSTEM=="block", ENV{ID_FS_USAGE}=="filesystem", RUN{program}+="/usr/bin/systemd-mount --no-block --automount=yes --collect --owner=mateus $devnode"
+ACTION=="add", SUBSYSTEMS=="usb", SUBSYSTEM=="block", ENV{ID_FS_USAGE}=="filesystem", RUN{program}+="/usr/bin/systemd-mount --no-block --automount=yes --collect $devnode"
 ```
 
 To unmount the device, use:
