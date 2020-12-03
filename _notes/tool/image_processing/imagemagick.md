@@ -33,6 +33,7 @@ convert INPUT_OPTIONS INPUT_FILE OUTPUT_OPTIONS OUTPUT_FILE
 | `-resize` | Resize to WxH. Ratio is kept unless `!` is appended. |
 | `-quality` | Valid only for JPEG or MPEG. 100 is lossless, 1 is worst quality. |
 | `-interlace` | Type of image interlacing scheme. `none`, `line`, `plane`, `JPEG`, `GIF`, `PNG`. |
+| `-rotate` | Rotates the image by X degrees. |
 | `-gaussian-blur` | Reduce image noise and reduce detail levels. Ex: `0.05` |
 | `-sampling-factor` | Used by the JPEG encoder for chroma downsampling. |
 
