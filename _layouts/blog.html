@@ -2,14 +2,17 @@
 <html>
   <head>
     {% include head_common.html %}
-    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/blog.scss %}" media="screen">
+    {% include head_blog.html %}
   </head>
   <body>
-    <div class="container-fluid">
-      <h1 class="blog-header">Yutsuten's blog</h1>
-    </div>
+    {% include blog_top.html %}
     <div class="container">
-      {{ content }}
+      <div class="section location-bar">
+        <a><i class="fas fa-home"></i> Home</a>
+      </div>
+      <div class="section">
+        {{ content }}
+      </div>
     </div>
   </body>
 </html>

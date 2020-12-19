@@ -2,16 +2,19 @@
 <html>
   <head>
     {% include head_common.html %}
-    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/blog.scss %}" media="screen">
+    {% include head_blog.html %}
   </head>
   <body>
-    <div class="container-fluid">
-      <h1 class="blog-header">Yutsuten's blog</h1>
-    </div>
+    {% include blog_top.html %}
     <div class="container">
-      <h1>{{ page.title }}</h1>
-      <span>Posted on {{ page.date | date: "%Y/%m/%d" }}.</span>
-      <div>{{ content }}</div>
+      <div class="section location-bar">
+        <a href="{% link blog.html %}"><i class="fas fa-home"></i> Home</a>
+        <a class="node">[{{ page.date | date: "%Y/%m/%d" }}] {{ page.title }}</a>
+      </div>
+      <div class="section">
+        <h1>{{ page.title }}</h1>
+        <div>{{ content }}</div>
+      </div>
     </div>
   </body>
 </html>
