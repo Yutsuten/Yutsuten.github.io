@@ -48,6 +48,13 @@ white-space: pre-wrap;
 word-wrap: break-word;
 ```
 
+### Text formatting
+
+```css
+text-align: justify;
+text-indent: 1.5rem;
+```
+
 ### Special
 
 ```css
