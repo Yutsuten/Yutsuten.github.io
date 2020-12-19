@@ -10,6 +10,35 @@ a:hover {
   text-decoration: none;
 }
 
+.section h1 {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+h2, h3, h4, h5 {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+h2::before {
+  content: '› ';
+}
+
+hr {
+  border-top: 1px solid #ccc;
+}
+
+p {
+  margin-bottom: 0.3rem;
+  text-indent: 1.5rem;
+  text-align: justify;
+}
+
+ul {
+  margin-bottom: 0.5rem;
+}
+
 .blog-header {
   font-size: 3.0rem;
 }

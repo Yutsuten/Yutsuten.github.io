@@ -53,6 +53,7 @@ word-wrap: break-word;
 ```css
 cursor: default;
 list-style-type: disclosure-closed;
+user-select: none;
 ```
 
 ## Page layout example

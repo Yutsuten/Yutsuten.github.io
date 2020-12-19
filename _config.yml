@@ -4,7 +4,7 @@ description: >-
   Personal website.
 baseurl: ""
 url: ""
-permalink: /blog/:categories/:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title
 github_username: Yutsuten
 collections:
   - notes
