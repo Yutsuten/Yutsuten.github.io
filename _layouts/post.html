@@ -8,7 +8,8 @@
     {% include blog_top.html %}
     <div class="container">
       <div class="section location-bar">
-        <a href="{% link blog.html %}"><i class="fas fa-home"></i> Home</a>
+        <a class="node" href="{% link blog.html %}"><i class="fas fa-home"></i> Home</a>
+        <span> » </span>
         <a class="node">[{{ page.date | date: "%Y/%m/%d" }}] {{ page.title }}</a>
       </div>
       <div class="section">
