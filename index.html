@@ -1,5 +1,34 @@
+---
+title: Welcome
+---
+
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting to notes</title>
-<meta http-equiv="refresh" content="0; URL=./notes">
-<link rel="canonical" href="./notes">
+<html>
+  <head>
+    {% include head_common.html %}
+    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/index.scss %}" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-1"></div>
+        <div class="col-md-8 col-sm-10 col-12 landingpage-block">
+          <div class="section">
+            <a class="big-button" href="{% link notes.html %}">
+              <div class="title">Notes</div>
+              <div class="description">A personal knowledge base.</div>
+            </a>
+            <a class="big-button" href="{% link blog.html %}">
+              <div class="title">Blog</div>
+              <div class="description">Stuff I want to share with people!</div>
+            </a>
+            <a class="big-button" href="/AppEducacional-Parasitologia/">
+              <div class="title">Game</div>
+              <div class="description">Educational game about parasitology. (Portuguese)</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
