@@ -28,6 +28,14 @@ Kill processes by process name (exact).
 killall PNAME
 ```
 
+## Xkill
+
+Kill process by clicking its window.
+
+```shell
+xkill
+```
+
 ## Signals
 
 Obs: `Ctrl+C` sends the signal `SIGINT`.
