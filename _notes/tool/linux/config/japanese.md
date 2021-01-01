@@ -5,7 +5,7 @@ doc: https://wiki.archlinux.org/index.php/Localization/Japanese
 ## Fonts
 
 ```shell
-sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts
+pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts
 ```
 
 ## Input
@@ -15,7 +15,7 @@ sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts
 [IBus documentation](https://wiki.archlinux.org/index.php/IBus)
 
 ```shell
-sudo pacman -S ibus-anthy
+pacman -S ibus-anthy
 ```
 
 Add the following at the end of `~/.xprofile`.
@@ -47,7 +47,7 @@ ibus-setup
 [Mozc documentation](https://wiki.archlinux.org/index.php/Mozc)
 
 ```shell
-sudo pacman -S fcitx-mozc fcitx-im fcitx-configtool
+pacman -S fcitx-mozc fcitx-im fcitx-configtool
 ```
 
 Update `~/.pam_environment`.
@@ -83,3 +83,23 @@ fcitx-remote OPTION
 ```
 
 Another available modes are `dictionary_tool`, `word_register_dialog`, `hand_writing`, `character_palette`.
+
+### Uim
+
+[Uim documentation](https://wiki.archlinux.org/index.php/Uim)
+
+```shell
+pacman -S uim
+```
+
+Update `~/.xprofile`.
+
+```
+export GTK_IM_MODULE=uim
+export QT_IM_MODULE=uim
+export XMODIFIERS=@im=uim
+```
+
+Start it by running `uim-xim` (it may be on `.xprofile`).
+
+For preferences, run `uim-pref-*`.
