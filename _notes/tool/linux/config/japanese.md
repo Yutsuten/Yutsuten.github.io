@@ -53,9 +53,9 @@ pacman -S fcitx-mozc fcitx-im fcitx-configtool
 Update `~/.pam_environment`.
 
 ```
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
+GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE  DEFAULT=fcitx
+XMODIFIERS    DEFAULT=\@im=fcitx
 ```
 
 Reboot the system.
