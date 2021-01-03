@@ -1,11 +1,31 @@
 ---
-doc: https://www.gnupg.org/documentation/manuals/gnupg/
+doc: https://wiki.archlinux.org/index.php/GnuPG
 ---
 
-## Start GPG agent
+## Configuration
+
+On your shell's `rc` file,
+export the following environment variable:
 
 ```shell
 export GPG_TTY=$(tty)
+```
+
+### Dialog
+
+Optionally set the dialog for inputting your password.
+Add to `~/.gnupg/gpg-agent.conf`:
+
+```
+pinentry-program /usr/bin/pinentry-qt
+```
+
+Another GUI option is `pinentry-gnome3`.
+
+After changing the configuration, reload the agent:
+
+```
+gpg-connect-agent reloadagent /bye
 ```
 
 ## Usage
