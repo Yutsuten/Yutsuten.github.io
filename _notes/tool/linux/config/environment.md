@@ -13,6 +13,12 @@ set on `~/.pam_environment`.
 
 Check the syntax [here](https://linux.die.net/man/5/pam_env.conf).
 
+```
+GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE  DEFAULT=fcitx
+XMODIFIERS    DEFAULT=\@im=fcitx
+```
+
 ## Resources file
 
 For Xorg the file is `~/.xprofile`.
