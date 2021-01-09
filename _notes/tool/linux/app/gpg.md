@@ -33,7 +33,7 @@ gpg-connect-agent reloadagent /bye
 ```shell
 gpg OPTIONS
 --homedir DIR                   # Default is ~/.gnupg (GNUPGHOME)
---keyid-format long             # Display key IDs with 16 characters
+--keyid-format long             # Display key IDs with 16 characters (used on git and pass)
 -k                              # List public keys
 -K                              # List secret keys
 
