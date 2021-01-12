@@ -4,12 +4,11 @@ doc: https://gist.github.com/ctaggart/68ead4d0d942b240061086f4ba587f5f
 
 ## X server choices
 
-Choose one of the bellow:
+Choose one of the bellow.
+Personal recommendation is VcXsrv.
 
 - VcXsrv
 - Xming
-
-Personal recommendation is VcXsrv.
 
 ## Setup (Windows)
 
@@ -27,16 +26,21 @@ Here are some parameters that may be interesting to use:
 
 ## Setup (Linux)
 
-Install X server's dbus (`dbus-x11` for ubuntu) and add this to the resource file.
+Install dbus, terminal and some other basic tools:
+
+```shell
+sudo apt install dbus-x11 make git xfce4-terminal fonts-emojione fonts-noto i3 zsh neovim nnn unzip
+```
+
+Then set these environment variables:
 
 ```shell
 export DISPLAY=127.0.0.1:0
 export LIBGL_ALWAYS_INDIRECT=1
 ```
 
-Install some nice packages for better support.
+Optionally set the locale.
 
 ```shell
-sudo apt install fonts-emojione fonts-noto
 sudo update-locale LANG=ja_JP.UTF-8
 ```

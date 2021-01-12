@@ -28,5 +28,4 @@ Add-AppxPackage .\app_name.appx
 ```
 
 The linux icon will appear on the menu.
-
 It may be necessary to restart your computer for WSL to work properly.
