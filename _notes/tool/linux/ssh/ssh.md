@@ -10,8 +10,10 @@ ssh OPTIONS host COMMAND
 -Y  # X11 forwarding
 ```
 
-To make X11 forwarding work properly,
-it is necessary to install some packages on each server until the destination server.
+~~To make X11 forwarding work properly,
+it is necessary to install some packages on every server until the destination server.~~
+
+Maybe only the servers you stop need these packages.
 
 | Distro | Package |
 | --- | --- |

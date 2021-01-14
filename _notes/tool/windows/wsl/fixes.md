@@ -18,5 +18,5 @@ bar {
 Convert `.pam_environment` to `.bash_profile` with this script.
 
 ```shell
-sed -Ee 's|\s+DEFAULT\=(.+)|="\1"|g' -e 's|\\||g' ~/.pam_environment > ~/.bash_profile
+sed -Ee 's|([^ ]+)\s+DEFAULT\=(.+)|export \1="\2"|g' -e 's|\\||g' ~/.pam_environment > ~/.bash_profile
 ```
