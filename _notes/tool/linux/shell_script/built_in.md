@@ -26,6 +26,9 @@ printf %s\\n "${MYVAR}"  # With new line
 
 # Format text
 printf "Hello %s\n" "${MYVAR}"
+
+# Prompt expansion (ZSH)
+print -P "%F{1}Red"
 ```
 
 ## Process
