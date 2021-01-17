@@ -30,7 +30,7 @@ convert INPUT_OPTIONS INPUT_FILE OUTPUT_OPTIONS OUTPUT_FILE
 | `-trim` | Trim image edges. |
 | `-crop WxH+X+Y` | Crop the image to size WxH, starting from (X;Y). |
 | `+repage` | Reset virtual canvas. |
-| `-resize` | Resize to WxH. Ratio is kept unless `!` is appended. |
+| `-resize` | Resize to WxH. By default it keeps the aspect ratio. For all options, see [here](http://www.imagemagick.org/script/command-line-processing.php#geometry). |
 | `-quality` | Valid only for JPEG or MPEG. 100 is lossless, 1 is worst quality. |
 | `-interlace` | Type of image interlacing scheme. `none`, `line`, `plane`, `JPEG`, `GIF`, `PNG`. |
 | `-rotate` | Rotates the image by X degrees. |
