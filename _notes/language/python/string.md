@@ -1,5 +1,5 @@
 ---
-doc: https://docs.python.org/3.4/library/string.html
+doc: https://docs.python.org/3/library/string.html
 ---
 
 ```python
@@ -38,16 +38,36 @@ import unicodedata
 mystring = unicodedata.normalize('NFC', u'こんにちは')
 ```
 
-## Format (new style)
+## Format
+
+Array-like usage:
 
 ```python
-# Basic usage
-'Hello {}, there is a {:#x} error!'.format('Bob', 50159747054)
-'Hello {name}, there is a {errno:#x} error!'.format(name='Bob', errno=50159747054)
+'{}{}{}'.format(a, b, c)
+'{0}{1}{2}'.format(a, b, c)
+```
 
-# Add 0 to left of a number
-'{:03d}'.format(8)  # 008
+Dictionary-like usage:
 
-# Decimal number with fixed decimal places
-'{:.4f}'.format(3.141592653589793)  # 3.1416
+```python
+'{name}'.format(name='John')
+```
+
+Numbers formatting:
+
+```python
+'{:03d}'.format(8)  # '008'
+'{:+.4f}'.format(3.141592653589793)  # '+3.1416'
+'{:-.4f}'.format(3.141592653589793)  # '3.1416'
+'{: .4f}'.format(3.141592653589793)  # ' 3.1416'
+'{:.2%}'.format(0.2548)  # '25.48%'
+```
+
+Content alignment:
+
+```python
+'{:<10}'.format('left')    # 'left      '
+'{:^10}'.format('center')  # '  center  '
+'{:>10}'.format('right')   # '     right'
+'{:_^10}'.format('fill')   # '___fill___'
 ```
