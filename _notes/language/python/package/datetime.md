@@ -1,14 +1,16 @@
 ---
-doc: https://docs.python.org/3.3/library/datetime.html
+doc: https://docs.python.org/3/library/datetime.html
 ---
 
 ## Usage
 
+```python
+from datetime import datetime, timedelta, timezone
+```
+
 ### Generation
 
 ```python
-from datetime import datetime
-
 now = datetime.now()  # May specify TZ, defaults to None
 nowutc = datetime.utcnow()
 
@@ -34,8 +36,14 @@ fulldate = mydate.strftime('%Y-%m-%d_%H-%M-%S')
 Get a date with the next month.
 
 ```python
-from datetime import timedelta
 future_date = mydate.replace(day=1) + timedelta(days=32)
+```
+
+Difference between dates.
+
+```python
+difference = datetime.now() - datetime(2020, 1, 1)  # timedelta object
+seconds = difference.total_seconds()
 ```
 
 ### Timezone
@@ -43,8 +51,6 @@ future_date = mydate.replace(day=1) + timedelta(days=32)
 Replace timezone (does not change the time itself):
 
 ```python
-from datetime import timezone, timedelta
-
 UTC = timezone.utc
 JST = timezone(timedelta(hours=9))
 
