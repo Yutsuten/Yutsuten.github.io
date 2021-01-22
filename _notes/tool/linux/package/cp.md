@@ -11,5 +11,5 @@ cp OPTIONS SOURCE DEST
 | --- | --- |
 | `-R` `-r` | Copy directories recursively. |
 | `-p` | Preserve most metadata. |
-| `-a` | Archive (copy recursively and keep all metadata). |
-| `-u` | Update (copy only when SOURCE is newer or file is missing on DEST). |
+| `-a` | Archive mode (keep metadata, recursive). |
+| `-u` | Update mode (skip files that are newer on the receiver). |

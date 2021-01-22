@@ -4,10 +4,9 @@ doc: https://rclone.org/
 
 ## Install rclone
 
-```shell
-sudo pacman -S rclone
+Access [this link](https://rclone.org/downloads/) or run:
 
-# https://rclone.org/downloads/
+```shell
 curl https://rclone.org/install.sh | sudo bash
 ```
 
