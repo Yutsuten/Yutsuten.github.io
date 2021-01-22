@@ -33,7 +33,8 @@ fulldate = mydate.strftime('%Y-%m-%d_%H-%M-%S')
 
 ### Manipulation
 
-Get a date with the next month.
+Get a date with the next month
+(See also `dateutil.relativedelta`).
 
 ```python
 future_date = mydate.replace(day=1) + timedelta(days=32)
