@@ -153,6 +153,15 @@
   p {margin-bottom: 12px;}
 
   a {color: var(--sblue);}
+  a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.8rem;
+    font-weight: 900;
+    display: inline-block;
+    padding-left: 3px;
+    vertical-align: middle;
+    content: '\f35d';
+  }
 
   ol > li {margin-bottom: 5px;}
 
@@ -212,13 +221,6 @@
     padding-left: 8px;
     border-left: 2px solid var(--sblue);
     font-weight: 500;
-  }
-
-  > .onlinedoc > .external > .fa-external-link-alt {
-    font-size: 0.7rem;
-    position: relative;
-    bottom: 2px;
-    left: 3px;
   }
 
   > .last-updated {

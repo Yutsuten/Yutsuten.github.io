@@ -1,4 +1,5 @@
 ---
+update: 2021-01-23
 ---
 
 ## Selectors
@@ -94,7 +95,13 @@ Pseudo-elements content.
 h1::before {
     content: '- ';
 }
-h1::after {
-    content: ':';
+a::after {  /* Using Font Awesome icon */
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.8rem;
+    font-weight: 900;
+    display: inline-block;
+    padding-left: 3px;
+    vertical-align: middle;
+    content: '\f35d';
 }
 ```
