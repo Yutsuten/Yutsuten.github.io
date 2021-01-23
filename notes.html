@@ -50,7 +50,9 @@ title: Notes
   <div class="col-12 col-md-8 col-lg-9 content-area" id="content">
     <div v-if="typeof activeNote !== 'string'" class="note-content" id="home">
       <h1>Home</h1>
-      Welcome to my programming notes!
+      <p>Welcome to my programming notes!</p>
+      <p>There are currently {{ site.notes.size }} notes.
+      The last update was at {{ 'today' | date: '%Y/%m/%d' }}.</p>
     </div>
     {%- for note in site.notes -%}
       {%- assign note_path = note.relative_path | remove_first: '_notes/' | remove: '.md' -%}
@@ -63,13 +65,20 @@ title: Notes
       {%- assign note_id = note_path | replace: '/', '-' -%}
       <div v-cloak v-if="activeNote === '{{ note_id }}'" class="note-content">
         <h1>{{ title }}</h1>
-        {%- if note.doc -%}
-          <p class="onlinedoc">
-            <a class="external" rel="nofollow" href="{{ note.doc }}">
-                External documentation<i class="fas fa-external-link-alt"></i>
-            </a>
-          </p>
-        {%- endif -%}
+        <div class="note-metadata">
+          {%- if note.doc -%}
+            <p class="onlinedoc">
+              <a class="external" rel="nofollow" href="{{ note.doc }}">
+                  External documentation<i class="fas fa-external-link-alt"></i>
+              </a>
+            </p>
+          {%- endif -%}
+          {%- if note.update -%}
+            <p class="last-updated">
+              <b>Last updated:</b> {{ note.update | date: '%Y/%m/%d' }}
+            </p>
+          {%- endif -%}
+        </div>
         {{ note.content }}
       </div>
     {%- endfor -%}

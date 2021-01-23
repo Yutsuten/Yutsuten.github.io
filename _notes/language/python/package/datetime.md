@@ -1,5 +1,6 @@
 ---
 doc: https://docs.python.org/3/library/datetime.html
+update: 2020-01-22
 ---
 
 ## Usage

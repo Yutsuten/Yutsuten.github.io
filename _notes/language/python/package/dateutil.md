@@ -1,4 +1,5 @@
 ---
+update: 2020-01-22
 ---
 
 The dateutil module provides powerful extensions to the standard datetime module.

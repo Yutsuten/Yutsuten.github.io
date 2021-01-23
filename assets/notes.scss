@@ -205,7 +205,9 @@
   }
 }
 
-.note-content {
+.note-content > .note-metadata {
+  margin-bottom: 15px;
+
   > .onlinedoc {
     padding-left: 8px;
     border-left: 2px solid var(--sblue);
@@ -217,6 +219,16 @@
     position: relative;
     bottom: 2px;
     left: 3px;
+  }
+
+  > .last-updated {
+    color: var(--scyan);
+    padding-left: 8px;
+    border-left: 2px solid var(--scyan);
+  }
+
+  > .last-updated > b {
+    font-weight: 500;
   }
 }
 
