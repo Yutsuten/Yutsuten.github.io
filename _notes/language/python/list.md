@@ -1,4 +1,5 @@
 ---
+update: 2021-01-25
 ---
 
 ## Basic
@@ -38,10 +39,15 @@ range(1, 6, 3) # => [1, 4]
 
 ## Sorting
 
+[External documentation](https://docs.python.org/3/library/operator.html)
+
 ```python
-from operator import itemgetter
+from operator import itemgetter, attrgetter
+```
+
+```python
 list_of_dicts.sort(key=itemgetter('date'))
-my_list = sorted(list_of_dicts, key=itemgetter('date'), reverse=True)
+my_list = sorted(list_of_instances, key=attrgetter('type'))
 ```
 
 ## Looping
@@ -54,10 +60,6 @@ for index, value in enumerate(my_list):
     print(index, value)
 
 for _ in range(10):  # If iterator is unnecessary
-    pass
-
-import itertools  # This is faster than the above
-for _ in itertools.repeat(None, 10):
     pass
 
 for elem1, elem2 in zip(my_list1, my_list2):
