@@ -1,5 +1,6 @@
 ---
 doc: https://docs.python.org/3/library/string.html
+update: 2021-01-27
 ---
 
 ```python
@@ -58,9 +59,15 @@ Numbers formatting:
 ```python
 '{:03d}'.format(8)  # '008'
 '{:+.4f}'.format(3.141592653589793)  # '+3.1416'
-'{:-.4f}'.format(3.141592653589793)  # '3.1416'
+'{:-.4f}'.format(3.141592653589793)  # '3.1416' (default)
 '{: .4f}'.format(3.141592653589793)  # ' 3.1416'
 '{:.2%}'.format(0.2548)  # '25.48%'
+```
+
+Date formatting:
+
+```python
+'{:%Y/%m/%d %H:%M:%S}'.format(datetime.now())
 ```
 
 Content alignment:
