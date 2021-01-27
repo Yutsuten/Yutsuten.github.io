@@ -62,3 +62,18 @@ def test_open_file(self):
 import sys
 sys.modules['some_module'] = mock.MagicMock()
 ```
+
+## Tips
+
+Mocking can sometimes be tricky.
+There are situations where it *should* work, but doesn't.
+
+For example, mocking your own import instead the original module may help.
+Let's say your module is at `a.b` and it imports `x.y.z`.
+You want to mock `z`.
+The result of mocking may be like this:
+
+```python
+@mock.patch('x.y.z')  # Does not work...
+@mock.patch('a.b.z')  # Works!
+```
