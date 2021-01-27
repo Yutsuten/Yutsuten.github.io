@@ -75,6 +75,7 @@ map(lambda x: x*x, my_list)
 ```
 
 ## List comprehension
+
 ```python
 # Three parts
 [(expression_in_list) (for value in range) (if condition)]
