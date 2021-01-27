@@ -1,4 +1,5 @@
 ---
+update: 2021-01-27
 ---
 
 ## Create split
@@ -18,7 +19,7 @@
 | `Ctrl-W_R` | | Rotate windows upwards/leftwards |
 | `Ctrl-W_x` `Ctrl-W_X` | | Exchange current window |
 | `Ctrl-W_K` `Ctrl-W_J` `Ctrl-W_H` `Ctrl-W_L` | | Move current window to indicated direction |
-| `Ctrl-W_t` | | Move current window to new tab |
+| `Ctrl-W_T` | | Move current window to new tab |
 | `Ctrl-W_+` `Ctrl-W_-` | `:res +N` `:res -N` | Resize horizontal split by `N` |
 | `Ctrl-W_<` `Ctrl-W_>` | `:vert res +N` `:vert res -N` | Resize vertical split by `N` |
 | `Ctrl-W_=` | | Same size for all windows |
