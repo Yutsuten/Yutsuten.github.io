@@ -1,5 +1,6 @@
 ---
 doc: https://docs.pytest.org/en/latest/contents.html
+update: 2021-01-27
 ---
 
 ## Test file
@@ -15,6 +16,10 @@ class TestHello:
 
   def test_hello(self):
     assert 'Hello' != 'World'
+
+  @pytest.mark.skip(reason='Not implemented')
+  def test_incomplete(self):
+    pass
 
   def teardown_method(self):
     pass
