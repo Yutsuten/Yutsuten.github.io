@@ -23,6 +23,7 @@ Here are some parameters that may be interesting to use:
 | --- | --- |
 | `-xkblayout jp` | Set japanese keyboard layout. |
 | `-keyhook` | Grab special keypresses like Alt-Tab or the Menu key. |
+| `-ac` | Disable access control restrictions. A must have for WSL2. |
 
 ## Setup (Linux)
 
@@ -35,7 +36,8 @@ sudo apt install dbus-x11 make git xfce4-terminal fonts-emojione fonts-noto i3 z
 Then set these environment variables:
 
 ```shell
-export DISPLAY=127.0.0.1:0
+export DISPLAY=127.0.0.1:0  # WSL1
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0  # WSL2
 export LIBGL_ALWAYS_INDIRECT=1
 ```
 
