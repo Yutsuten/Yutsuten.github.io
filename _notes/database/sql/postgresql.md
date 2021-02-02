@@ -1,18 +1,27 @@
 ---
 doc: https://www.postgresql.org/docs/current/app-psql.html
+update: 2021-02-02
 ---
 
 ## Usage
 
 ```shell
 psql OPTIONS DBNAME
--h host  # --host
--p port  # --port
--U user  # --username
--w       # --no-password
--W       # --password
+```
 
--c sql   # --command - Run SQL query and exit
+| Option | Description |
+| --- | --- |
+| `-h HOST` | Database server host. |
+| `-p PORT` | Database server port. |
+| `-U USER` | Database user name. |
+| `-w` | Never prompt for password. |
+| `-W` | Force password prompt. |
+| `-c` | Run SQL query and exit. |
+
+You may provide the password by prepending `PGPASSWORD` to the command.
+
+```shell
+env PGPASSWORD=password psql dbname
 ```
 
 ### Create user
@@ -37,7 +46,13 @@ REVOKE ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public FROM myuser;
 
 ## Backup
 
-```
+```shell
 pg_dump dbname > outfile.sql
 psql dbname < infile.sql
+```
+
+Using pipe:
+
+```shell
+zcat backup.sql.gz | env PGPASSWORD=password psql dbname
 ```
