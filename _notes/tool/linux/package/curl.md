@@ -9,6 +9,7 @@ curl OPTIONS URL
 
 | Option | Description |
 | --- | --- |
+| `-v` `--verbose` | Makes curl verbose during the operation. |
 | `-K` `--request` | Specifies a custom request method (GET, HEAD, POST, PUT). |
 | `-H` `--header` | Extra header to include in the request when sending HTTP to a server. |
 | `-d` `--data` | Sends the specified data to the HTTP server. |
@@ -16,6 +17,7 @@ curl OPTIONS URL
 | `-o` `--output` | Write response into file. |
 | `-L` `--location` | Follow redirect. |
 | `-k` `--insecure` | Skip SSL certificate check. |
+| `--noproxy` | Comma-separated list of hosts which do not use a proxy, if one is specified. |
 
 ## Download file from remote
 

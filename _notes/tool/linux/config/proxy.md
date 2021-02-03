@@ -16,12 +16,13 @@ Acquire::https::proxy "http://user:pass@proxyhost:port/";
 ## Environment Variables
 
 ```shell
-export ftp_proxy="http://user:pass@proxyhost:port/"
 export http_proxy="http://user:pass@proxyhost:port/"
-export https_proxy="http://user:pass@proxyhost:port/"
+export https_proxy=${http_proxy}
+export ftp_proxy=${http_proxy}
 export no_proxy="localhost,127.0.0.1,192.168.1.1,::1,*.local"
-export FTP_PROXY="http://user:pass@proxyhost:port/"
-export HTTP_PROXY="http://user:pass@proxyhost:port/"
-export HTTPS_PROXY="http://user:pass@proxyhost:port/"
-export NO_PROXY="localhost,127.0.0.1,192.168.1.1,::1,*.local"
+
+export HTTP_PROXY=${http_proxy}
+export HTTPS_PROXY=${http_proxy}
+export FTP_PROXY=${http_proxy}
+export NO_PROXY=${no_proxy}
 ```
