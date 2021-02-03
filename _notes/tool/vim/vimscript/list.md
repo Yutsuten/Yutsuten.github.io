@@ -1,4 +1,5 @@
 ---
+update: 2021-02-03
 ---
 
 For more details, check the help for `list`.
@@ -6,7 +7,8 @@ For more details, check the help for `list`.
 ## Basic usage
 
 ```vim
-let mylist = [1, two, 3, 'four']
+let mylist = [1, 'two', 3, 'four']
+let numbers = range(5)  " => [0, 1, 2, 3, 4]"
 mylist[1]
 ```
 

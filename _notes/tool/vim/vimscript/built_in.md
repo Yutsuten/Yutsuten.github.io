@@ -1,5 +1,14 @@
 ---
+update: 2021-02-03
 ---
+
+## Echo
+
+Good for debugging.
+
+```vim
+echo range(5)
+```
 
 ## Exists
 
@@ -17,8 +26,8 @@ exists('varname')
 Use `%` for the current file.
 
 ```vim
-:so %
-:so $MYVIMRC
+so %
+so $MYVIMRC
 ```
 
 ## Printf
