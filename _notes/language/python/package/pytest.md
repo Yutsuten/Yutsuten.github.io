@@ -1,16 +1,32 @@
 ---
 doc: https://docs.pytest.org/en/latest/contents.html
-update: 2021-01-27
+update: 2021-02-04
 ---
 
-## Test file
+## Usage
+
+```shell
+pytest OPTIONS FILE_OR_DIR
+```
+
+| Option | Description |
+| --- | --- |
+| `-v` | Increate verbosity. |
+
+Usage example:
+
+```shell
+pytest -vvv tests/unit_test.py::TestApp::test_hello
+```
+
+## Test creation
 
 The file name and function name must begin with `test`.
 
 ```python
 import pytest
 
-class TestHello:
+class TestApp:
   def setup_method(self):
     pass
 
@@ -25,7 +41,7 @@ class TestHello:
     pass
 ```
 
-## Configuration file
+### Configuration
 
 Create a file named `pytest.ini` with the following contents:
 
