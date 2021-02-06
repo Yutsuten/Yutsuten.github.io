@@ -1,8 +1,9 @@
 ---
-update: 2021-02-03
+doc: https://learnvimscriptthehardway.stevelosh.com/chapters/35.html
+update: 2021-02-06
 ---
 
-For more details, check the help for `list`.
+For more details, check the help for `List`.
 
 ## Basic usage
 
@@ -12,17 +13,41 @@ let numbers = range(5)  " => [0, 1, 2, 3, 4]"
 mylist[1]
 ```
 
-## List operations
+## Operations
 
 ```vim
-let mylist = [1, 2] + [3, 4]  " => [1, 2, 3, 4]"
+let mylist = ['a', 'b'] + ['c', 'd']  " => ['a', 'b', 'c', 'd']"
+
+let val = get(mylist, 1, 'default')
+let ind = index(mylist, 'value')  "Index of value or -1"
+
+call add(mylist, 'e')         "Append 'e' value"
+call insert(mylist, 'foo')    "Prepend 'foo' value"
+call insert(mylist, 'z', 3)   "Insert at index 3"
+
+call remove(mylist, 3)        "Remove index 3"
+unlet mylist[3]               "Idem"
+let val = remove(mylist, 3)   "Idem"
+
+call reverse(mylist)          "Reverses the list in place"
+
+let text = join(mylist)       "Space by default"
+let text = join(mylist, ',')
 ```
 
-## List functions
+### Slicing
 
 ```vim
-empty(list)
-len(list)
-max(list)
-min(list)
+echo numbers[1:3]  " => [1, 2, 3]"
+echo numbers[:3]  " => [0, 1, 2, 3]"
+echo numbers[1:]  " => [1, 2, 3, 4]"
+```
+
+## Functions
+
+```vim
+echo empty(list)
+echo len(list)
+echo max(list)
+echo min(list)
 ```

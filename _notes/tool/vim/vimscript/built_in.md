@@ -1,24 +1,25 @@
 ---
-update: 2021-02-03
+update: 2021-02-06
 ---
 
-## Echo
-
-Good for debugging.
+## Ask for input
 
 ```vim
-echo range(5)
+let default_value = 'default'
+call inputsave()
+let opts = {
+      \ 'prompt': 'Choose a name: ',
+      \ 'default': default_value,
+      \ 'cancelreturn': default_value,
+      \ }
+let name = input(opts)
+call inputrestore()
 ```
 
-## Exists
-
-Checks if the variable / function is defined.
-Check the help for `exists` for more details.
+## Printf
 
 ```vim
-exists('&setting')
-exists('*function')
-exists('varname')
+echo printf(' %s ', myvar)
 ```
 
 ## Load vim file
@@ -28,10 +29,4 @@ Use `%` for the current file.
 ```vim
 so %
 so $MYVIMRC
-```
-
-## Printf
-
-```vim
-printf(' %s ', myvar)
 ```
