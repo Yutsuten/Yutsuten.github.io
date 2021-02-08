@@ -1,6 +1,6 @@
 ---
 doc: https://learnvimscriptthehardway.stevelosh.com/chapters/35.html
-update: 2021-02-06
+update: 2021-02-08
 ---
 
 For more details, check the help for `List`.
@@ -11,6 +11,12 @@ For more details, check the help for `List`.
 let mylist = [1, 'two', 3, 'four']
 let numbers = range(5)  " => [0, 1, 2, 3, 4]"
 mylist[1]
+```
+
+To generate a list filled with values:
+
+```vim
+let names = repeat([''], 5)  " => ['', '', '', '', '']"
 ```
 
 ## Operations

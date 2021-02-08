@@ -1,4 +1,5 @@
 ---
+update: 2021-02-08
 ---
 
 ## Normal mode
@@ -16,9 +17,4 @@
 <visual mode> U
 gu<movement>
 gU<movement>
-
-# Mark a line (not visible)
-ma  # Second letter can be in [a-z] for same file, [A-Z] for global
-'a  # Jump to the line the mark is
-`a  # Jump to the position the mark is
 ```
