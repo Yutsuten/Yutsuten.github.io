@@ -1,5 +1,5 @@
 ---
-update: 2021-01-25
+update: 2021-02-08
 ---
 
 ## Basic
@@ -38,12 +38,6 @@ range(1, 6, 3) # => [1, 4]
 ```
 
 ## Sorting
-
-[External documentation](https://docs.python.org/3/library/operator.html)
-
-```python
-from operator import itemgetter, attrgetter
-```
 
 ```python
 list_of_dicts.sort(key=itemgetter('date'))
