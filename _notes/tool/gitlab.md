@@ -1,7 +1,26 @@
 ---
+update: 2021-02-10
 ---
 
-#### .gitlab-ci.yml
+## Markdown
+
+Create a collapsible:
+
+```html
+<p>
+<details>
+<summary>Title</summary>
+
+Hidden text.
+
+</details>
+</p>
+```
+
+## Continuous Integration
+
+Example of `.gitlab-ci.yml`:
+
 ```yaml
 # Node + eslint
 lint-js:
