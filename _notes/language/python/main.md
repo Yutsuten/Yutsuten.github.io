@@ -1,7 +1,13 @@
 ---
+update: 2021-02-22
 ---
 
+## Basic
+
+You may run it as a standalone script.
+
 ```python
+#!/usr/bin/env python
 import sys
 
 def main(argv=None):
