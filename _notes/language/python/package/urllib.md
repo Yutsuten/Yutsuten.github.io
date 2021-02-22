@@ -1,18 +1,41 @@
 ---
+doc: https://docs.python.org/3/library/urllib.parse.html#module-urllib.parse
+update: 2021-02-22
 ---
 
-## Parsing and unparsing URL
+## Parse
 
 ```python
-import urllib.parse
-
-url = urllib.parse.urlparse(my_url)
-url_query = urllib.parse.parse_qs(url.query)
-
-new_path = 'my/new/path'
-del url_query['some_qparam']
-new_qs = urllib.parse.urlencode(url_query, doseq=True)
-
-new_url = urllib.parse.ParseResult(url.scheme, url.netloc, new_path, url.params, new_qs, url.fragment)
-new_my_url = urllib.parse.urlunparse(new_url)
+from urllib.parse import urlparse, parse_qs, urlencode, urlunparse, ParseResult
 ```
+
+Parsing URL and query string:
+
+```python
+parsed_url = urlparse('https://example.com?greet=true')  # ParseResult
+parsed_qs = parse_qs(parsed_url.query)                   # Dictionary
+```
+
+Creating new ParseResult instance:
+
+```python
+parsed_url = ParseResult(
+    'https',        # Scheme
+    'example.com',  # Netloc
+    'some/path',    # Path
+    '',             # Params (semi-colon separated, usually not used)
+    'greet=true',   # Query
+    'fragment',     # Fragment
+)
+# 'https://example.com/some/path?greet=true#fragment'
+```
+
+Unparsing URL and query string:
+
+```python
+query = urlencode({'greet': 'true'})  # String
+url = urlunparse(parsed_url)          # String
+```
+
+*Tip: If using the requests package,
+you may use the query string as a dictionary.*
