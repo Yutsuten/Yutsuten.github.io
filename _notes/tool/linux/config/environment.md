@@ -1,4 +1,6 @@
 ---
+doc: https://wiki.archlinux.org/index.php/environment_variables
+update: 2021-02-23
 ---
 
 ## System-wide
