@@ -1,6 +1,6 @@
 ---
 doc: http://docs.python-requests.org/en/master/
-update: 2021-02-22
+update: 2021-02-27
 ---
 
 ## Usage
@@ -36,6 +36,27 @@ Check the response content:
 ```python
 response.status_code
 response.json()
+```
+
+## Retry
+
+[Stackoverflow](https://stackoverflow.com/a/35504626)
+
+Create a requests session instance,
+then mount it with a HTTP adapter using the desired retry configuration.
+
+By creating a session,
+the underlying TCP connection is reused ([reference](https://requests.readthedocs.io/en/master/user/advanced/#session-objects)),
+therefore the retries have better performance.
+
+```python
+from urllib3.util.retry import Retry
+
+with requests.Session() as session:
+    session.mount('https://', requests.adapters.HTTPAdapter(
+        max_retries=Retry(total=5, backoff_factor=2)
+    ))
+    response = session.get('https://example.com/')
 ```
 
 ## Dealing with huge files
