@@ -42,6 +42,13 @@ modulo = 10 % 2
 not False
 ```
 
+Unlike other programming languages,
+comparison operations can be chained.
+
+```python
+1 < 2 < 3
+```
+
 ## Built-in functions
 
 ```python
