@@ -1,4 +1,5 @@
 ---
+update: 2021-02-28
 ---
 
 ## Simple usage
@@ -10,12 +11,16 @@ Host myhost
     IdentityFile ~/.ssh/ec2-server.pem
 
     # Port forwarding
-    LocalForward localaddress:1234 targetaddress:1234
+    LocalForward localhost:1234 targetaddress:1234
+    RemoteForward localhost:1234 targetaddress:1234
+    DynamicForward 1080
 
 Host *
     ServerAliveInterval 120
     AddKeysToAgent yes
 ```
+
+When port forwarding, `localhost` is the default.
 
 The config file must have `600` permissions or it will not work.
 

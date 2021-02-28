@@ -1,5 +1,6 @@
 ---
 doc: https://unix.stackexchange.com/questions/115897/whats-ssh-port-forwarding-and-whats-the-difference-between-ssh-local-and-remot
+update: 2021-02-28
 ---
 
 When forwarding ports,
@@ -24,4 +25,13 @@ Forward requests from `B:456` to `local:123`.
 
 ```shell
 ssh -R 456:localhost:123 B
+```
+
+## Dynamic forwarding
+
+Creates a SOCKS server that will forward connections through it.
+Use as a proxy server.
+
+```shell
+ssh -D 1080 A
 ```
