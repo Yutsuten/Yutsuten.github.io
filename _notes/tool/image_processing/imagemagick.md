@@ -1,5 +1,6 @@
 ---
 doc: https://imagemagick.org/script/convert.php#options
+update: 2021-03-02
 ---
 
 ## Identify
