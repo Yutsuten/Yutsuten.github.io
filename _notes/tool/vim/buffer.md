@@ -29,6 +29,7 @@
 :vertical sb ARG        "Same as above but in a new vertical split"
 :bn         :bp         "Next or previous buffer"
 :n          :N          "Next or previous argument"
+:argu NUM               "Jump to argument NUM, defaults to current"
 ```
 
 ## Removing buffers
