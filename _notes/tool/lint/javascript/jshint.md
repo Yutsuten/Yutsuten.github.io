@@ -1,5 +1,6 @@
 ---
 doc: https://jshint.com/docs/options/
+update: 2021-03-24
 ---
 
 ## Install
@@ -18,7 +19,7 @@ yarn global add jshint
 
 ### Command
 
-There is not command to generate a configuration file.
+There is no command to generate a configuration file.
 
 ### Sample
 
