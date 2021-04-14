@@ -1,4 +1,5 @@
 ---
+update: 2021-04-14
 ---
 
 ## Usage
@@ -11,6 +12,7 @@ git diff OPTIONS COMMIT -- PATH
 | --- | --- |
 | `--cached` `--staged` | Show changes in the staging area. |
 | `--word-diff` | Change to show word diff mode. |
+| `--stat` | Generate a diffstat. |
 | `COMM1 COMM2` | Difference between two arbitrary commits. |
 | `HEAD~N` | Difference between the previous commit and the working tree. |
 | `HEAD~N..` `HEAD~N..HEAD` | Difference between a recent commit and the latest commit. |
