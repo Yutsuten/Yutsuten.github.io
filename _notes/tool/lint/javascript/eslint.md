@@ -1,5 +1,6 @@
 ---
-doc: https://eslint.org/docs/user-guide/configuring
+doc: https://eslint.org/docs/rules/
+update: 2021-03-26
 ---
 
 ## Install
