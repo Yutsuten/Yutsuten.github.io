@@ -1,12 +1,14 @@
 ---
 doc: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+update: 2021-04-19
 ---
 
 ## Basic
 
 ```javascript
-let arr = [2, 3, 5]
-arr.length
+let arr = [2, 3, 5];
+arr.length;
+arr = Array(size).fill(value);
 ```
 
 ## Methods

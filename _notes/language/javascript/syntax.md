@@ -1,6 +1,6 @@
 ---
 doc: https://developer.mozilla.org/docs/Web/JavaScript/Reference
-update: 2021-04-16
+update: 2021-04-19
 ---
 
 ## Basic
@@ -17,6 +17,7 @@ isNaN(myVar);
 ```javascript
 const num = parseInt('10');
 const dec = parseFloat('3.1416');
+const bool = Boolean(0);  // !!0 - true for empty lists and objects!
 ```
 
 #### Timers
