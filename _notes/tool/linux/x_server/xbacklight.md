@@ -1,5 +1,6 @@
 ---
 doc: https://wiki.archlinux.org/index.php/backlight
+update: 2021-04-24
 ---
 
 ## Setup
