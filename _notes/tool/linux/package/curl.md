@@ -1,5 +1,5 @@
 ---
-update: 2021-02-03
+update: 2021-05-06
 ---
 
 ## Usage
@@ -11,7 +11,7 @@ curl OPTIONS URL
 | Option | Description |
 | --- | --- |
 | `-v` `--verbose` | Makes curl verbose during the operation. |
-| `-K` `--request` | Specifies a custom request method (GET, HEAD, POST, PUT). |
+| `-X` `--request` | Specifies a custom request method (GET, HEAD, POST, PUT). |
 | `-H` `--header` | Extra header to include in the request when sending HTTP to a server. |
 | `-d` `--data` | Sends the specified data to the HTTP server. |
 | `-s` `--silent` | Silent (Does not show progress bar). |
