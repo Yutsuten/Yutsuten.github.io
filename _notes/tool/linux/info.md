@@ -6,6 +6,7 @@ update: 2021-02-28
 
 ```shell
 hostnamectl
+cat /etc/os-release
 ```
 
 ## Network details
