@@ -1,25 +1,34 @@
 ---
+update: 2021-06-01
 ---
 
 Most of these commands require root privileges.
 
-## Managing users
+## User management
 
-To list existing users in the system, run `cat /etc/passwd`.
-
-### Create user
+Commands to manage users.
 
 ```shell
 useradd OPTIONS USERNAME
 -m        # Create home folder
 -p        # Set password
 -G g1,g2  # Add user to groups
+userdel -r USERNAME
 
-chfn USERNAME    # Change finger information
-passwd USERNAME  # Update password
+chfn USERNAME        # Change finger information
+passwd USERNAME      # Update password
+usermod -u 1001 USERNAME  # Update UID
+```
+
+To list existing users in the system:
+
+```shell
+cat /etc/passwd
 ```
 
 ### Groups
+
+Commands to manage user groups.
 
 To list existing groups in the system, run `getent group`.
 
@@ -28,19 +37,15 @@ groups USERNAME                 # List groups of a user (defaults to current use
 gpasswd OPTIONS USERNAME GROUP  # Manage groups
 -a  # Add to group
 -d  # Remove from group
-```
 
-### Delete user
-
-```shell
-userdel -r USERNAME
+groupmod -g 1001 USERNAME  # Update GID
 ```
 
 ### Giving admin privileges
 
-```shell
-visudo
+Run `visudo` and edit the desired privileges:
 
+```shell
 username ALL=(ALL) ALL  # Only for user
 %wheel ALL=(ALL) ALL    # For all users in wheel group
 ```
