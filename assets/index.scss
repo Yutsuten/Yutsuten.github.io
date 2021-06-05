@@ -1,16 +1,64 @@
 ---
 ---
 
+/* Colors */
 body {
-  color: #ccc;
-  background-color: #111;
+  color: var(--text);
+  background-color: var(--base01);
+}
+
+a {
+  color: var(--link);
 }
 
 a:hover {
-  text-decoration: none;
+  color: var(--link-hover);
 }
 
-.section h1 {
+.background {
+  background-color: var(--base01);
+}
+
+.content-area {
+  background-color: var(--base0);
+}
+
+.button {
+  background-color: var(--button);
+  color: var(--text);
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+  color: var(--text);
+}
+
+.slick-button {
+  color: var(--text);
+}
+
+.slick-button:hover {
+  color: var(--text);
+  background-color: var(--base00);
+}
+
+/* Spacing */
+
+.box {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 20px;
+
+  &.-small {
+    padding: 12px 20px;
+  }
+
+  &.-spaced {
+    padding: 40px;
+  }
+}
+
+.markdown h1 {
   margin-bottom: 15px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
@@ -44,32 +92,18 @@ ul {
 }
 
 .top-section {
-  background-color: #222;
   margin-bottom: 10px;
-  padding: 30px 15px;
+  padding: 30px 40px;
   user-select: none;
 }
 
-.section {
-  background-color: #222;
-  margin-bottom: 10px;
-  padding: 20px 15px 15px;
-  border-radius: 8px;
-}
-
-.section.location-bar {
-  padding: 12px 15px;
+.location-bar {
   user-select: none;
 }
 
 .location-bar > .node {
   padding: 3px 8px;
   border-radius: 3px;
-  color: #ccc;
-}
-
-.location-bar > .node:hover {
-  background-color: #333;
 }
 
 /* Landing page stuff */
@@ -82,16 +116,25 @@ ul {
   margin: 15px 12px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #1d2a48;
-  color: #ccc;
   text-align: center;
-}
-
-.big-button:hover {
-  background-color: #162037;
-  color: #ccc;
 }
 
 .big-button > .title {
   font-size: 2.3rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+:root {
+  --base01: #383c4a;
+  --base00: #404552;
+  --base0: #4b5162;
+  --base1: #7c818c;
+  --text: #cdd1dc;
+  --link: #5294e2;
+  --link-hover: #3274c2;
+  --button: #1f3d60;
+  --button-hover: #0f2d50;
 }
