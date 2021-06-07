@@ -13,27 +13,27 @@ title: Notes
     <b-collapse class="index-area" visible id="index">
       <ul v-cloak class="list -root">
         <li class="index" v-for="indexLv1 in indexTree">
-          <a class="text">[[ indexLv1.text ]]</a>
+          <a class="text hoveranimation">[[ indexLv1.text ]]</a>
           <ul class="list" v-if="indexLv1.children.length > 0">
             <li class="index" v-for="indexLv2 in indexLv1.children">
-              <a v-if="!indexLv2.href" class="text">[[ indexLv2.text ]]</a>
-              <a v-else-if="indexLv2.href.substring(1) !== activeNote" class="link" v-bind:href="indexLv2.href" v-on:click="seeNote">[[ indexLv2.text ]]</a>
-              <a v-else class="link active" v-bind:href="indexLv2.href" v-on:click="seeNote">[[ indexLv2.text ]]</a>
+              <a v-if="!indexLv2.href" class="text hoveranimation">[[ indexLv2.text ]]</a>
+              <a v-else-if="indexLv2.href.substring(1) !== activeNote" class="link hoveranimation" v-bind:href="indexLv2.href" v-on:click="seeNote">[[ indexLv2.text ]]</a>
+              <a v-else class="link hoveranimation active" v-bind:href="indexLv2.href" v-on:click="seeNote">[[ indexLv2.text ]]</a>
               <ul class="list" v-if="indexLv2.children.length > 0">
                 <li class="index" v-for="indexLv3 in indexLv2.children">
-                  <a v-if="!indexLv3.href" class="text">[[ indexLv3.text ]]</a>
-                  <a v-else-if="indexLv3.href.substring(1) !== activeNote" class="link" v-bind:href="indexLv3.href" v-on:click="seeNote">[[ indexLv3.text ]]</a>
-                  <a v-else class="link active" v-bind:href="indexLv3.href" v-on:click="seeNote">[[ indexLv3.text ]]</a>
+                  <a v-if="!indexLv3.href" class="text hoveranimation">[[ indexLv3.text ]]</a>
+                  <a v-else-if="indexLv3.href.substring(1) !== activeNote" class="link hoveranimation" v-bind:href="indexLv3.href" v-on:click="seeNote">[[ indexLv3.text ]]</a>
+                  <a v-else class="link hoveranimation active" v-bind:href="indexLv3.href" v-on:click="seeNote">[[ indexLv3.text ]]</a>
                   <ul class="list" v-if="indexLv3.children.length > 0">
                     <li class="index" v-for="indexLv4 in indexLv3.children">
-                      <a v-if="!indexLv4.href" class="text">[[ indexLv4.text ]]</a>
-                      <a v-else-if="indexLv4.href.substring(1) !== activeNote" class="link" v-bind:href="indexLv4.href" v-on:click="seeNote">[[ indexLv4.text ]]</a>
-                      <a v-else class="link active" v-bind:href="indexLv4.href" v-on:click="seeNote">[[ indexLv4.text ]]</a>
+                      <a v-if="!indexLv4.href" class="text hoveranimation">[[ indexLv4.text ]]</a>
+                      <a v-else-if="indexLv4.href.substring(1) !== activeNote" class="link hoveranimation" v-bind:href="indexLv4.href" v-on:click="seeNote">[[ indexLv4.text ]]</a>
+                      <a v-else class="link hoveranimation active" v-bind:href="indexLv4.href" v-on:click="seeNote">[[ indexLv4.text ]]</a>
                       <ul class="list" v-if="indexLv4.children.length > 0">
                         <li class="index" v-for="indexLv5 in indexLv4.children">
-                          <a v-if="!indexLv5.href" class="text">[[ indexLv5.text ]]</a>
-                          <a v-else-if="indexLv5.href.substring(1) !== activeNote" class="link" v-bind:href="indexLv5.href" v-on:click="seeNote">[[ indexLv5.text ]]</a>
-                          <a v-else class="link active" v-bind:href="indexLv5.href" v-on:click="seeNote">[[ indexLv5.text ]]</a>
+                          <a v-if="!indexLv5.href" class="text hoveranimation">[[ indexLv5.text ]]</a>
+                          <a v-else-if="indexLv5.href.substring(1) !== activeNote" class="link hoveranimation" v-bind:href="indexLv5.href" v-on:click="seeNote">[[ indexLv5.text ]]</a>
+                          <a v-else class="link hoveranimation active" v-bind:href="indexLv5.href" v-on:click="seeNote">[[ indexLv5.text ]]</a>
                         </li>
                       </ul>
                     </li>
@@ -67,14 +67,14 @@ title: Notes
         <h1>{{ title }}</h1>
         <div class="note-metadata">
           {%- if note.doc -%}
-            <p class="onlinedoc">
+            <div class="onlinedoc">
               <a rel="nofollow" href="{{ note.doc }}">External documentation</a>
-            </p>
+            </div>
           {%- endif -%}
           {%- if note.update -%}
-            <p class="last-updated">
+            <div class="last-updated">
               <b>Last updated:</b> {{ note.update | date: '%Y/%m/%d' }}
-            </p>
+            </div>
           {%- endif -%}
         </div>
         {{ note.content }}

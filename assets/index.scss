@@ -15,11 +15,15 @@ a:hover {
   color: var(--link-hover);
 }
 
+input {
+  background-color: var(--base0);
+}
+
 .background {
   background-color: var(--base01);
 }
 
-.content-area {
+.foreground {
   background-color: var(--base0);
 }
 
@@ -39,6 +43,9 @@ a:hover {
 
 .slick-button:hover {
   color: var(--text);
+}
+
+.hoveranimation:hover {
   background-color: var(--base00);
 }
 
@@ -123,6 +130,10 @@ ul {
   font-size: 2.3rem;
 }
 
+a {
+  text-indent: 0;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -132,9 +143,14 @@ a:hover {
   --base00: #404552;
   --base0: #4b5162;
   --base1: #7c818c;
+  --title: #cdd1dc;
   --text: #cdd1dc;
+  --subtext: #adb1bc;
   --link: #5294e2;
   --link-hover: #3274c2;
+  --link-active: #2264b2;
   --button: #1f3d60;
   --button-hover: #0f2d50;
+  --green: #1eb77e;
+  --yellow: #bfad1c;
 }
