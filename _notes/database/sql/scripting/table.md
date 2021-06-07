@@ -1,4 +1,5 @@
 ---
+update: 2021-06-07
 ---
 
 ## MySQL
@@ -14,10 +15,10 @@ SHOW TABLES;
 
 ## PostgreSQL
 
-```sql
-\dt      -- Describe (list) tables
-\d tbl   -- Describe
-```
+| Command | Description |
+| --- | --- |
+| `\dt` | Describe (list) tables. |
+| `\d TABLE` | Describe table. |
 
 ## SQLite
 

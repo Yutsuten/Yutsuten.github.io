@@ -1,4 +1,5 @@
 ---
+update: 2021-06-07
 ---
 
 ## MySQL
@@ -16,10 +17,13 @@ SHOW DATABASES LIKE '%name%';
 ```sql
 CREATE DATABASE dbname;
 DROP DATABASE dbname;
-\c mydb   -- \connect to database
-\l        -- \list databases
-\q        -- \quit
 ```
+
+| Command | Description |
+| --- | --- |
+| `\c DBNAME` `\connect DBNAME` | Connect to database. |
+| `\l` `\list` | List databases. |
+| `\q` `\quit` | Quit. |
 
 ## SQLite
 
