@@ -1,9 +1,10 @@
 ---
+update: 2021-06-11
 ---
 
 ## Allow deleting comments
 
-```html
+```erb
 <!-- app/views/comments/_comment.html.erb -->
 <p>
   <%= link_to 'Destroy Comment', [comment.article, comment],

@@ -1,4 +1,5 @@
 ---
+update: 2021-06-11
 ---
 
 ## Save the data to the controller
@@ -24,7 +25,7 @@ end
 
 ## Add link to the edit page
 
-```html
+```erb
 <!-- app/views/articles/index.html.erb -->
 <%= link_to 'New article', new_article_path %>
 <table>
@@ -45,7 +46,7 @@ end
 </table>
 ```
 
-```html
+```erb
 <!-- app/views/articles/show.html.erb -->
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>

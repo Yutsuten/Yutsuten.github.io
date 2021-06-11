@@ -1,11 +1,12 @@
 ---
+update: 2021-06-11
 ---
 
 ## Using partials
 
 Use the same code for displaying the form for new and edit.
 
-```html
+```erb
 <!-- app/views/articles/_form.html.erb -->
 <%= form_with model: @article, local: true do |form| %>
 
@@ -42,7 +43,7 @@ Use the same code for displaying the form for new and edit.
 
 ### Update new and edit views
 
-```html
+```erb
 <!-- app/views/articles/new.html.erb -->
 <h1>New article</h1>
 
@@ -51,7 +52,7 @@ Use the same code for displaying the form for new and edit.
 <%= link_to 'Back', articles_path %>
 ```
 
-```html
+```erb
 <!-- app/views/articles/edit.html.erb -->
 <h1>Edit article</h1>
 

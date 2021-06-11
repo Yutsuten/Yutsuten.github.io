@@ -1,4 +1,5 @@
 ---
+update: 2021-06-11
 ---
 
 ```ruby
@@ -12,7 +13,7 @@ class ArticlesController < ApplicationController
 end
 ```
 
-```html
+```erb
 <!-- app/views/articles/index.html.erb -->
 <h1>Listing articles</h1>
 
@@ -35,7 +36,7 @@ end
 
 ## Add links
 
-```html
+```erb
 <!-- app/views/welcome/index.html.erb -->
 <h1>Hello, Rails!</h1>
 <%= link_to 'My Blog', controller: 'articles' %>

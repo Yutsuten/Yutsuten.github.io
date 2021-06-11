@@ -1,4 +1,5 @@
 ---
+update: 2021-06-11
 ---
 
 ```ruby
@@ -9,7 +10,7 @@ def edit
 end
 ```
 
-```html
+```erb
 <!-- /home/mateus/Projects/blog/app/views/articles/edit.html.erb -->
 <h1>Edit article</h1>
 

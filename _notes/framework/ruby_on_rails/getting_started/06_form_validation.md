@@ -1,4 +1,5 @@
 ---
+update: 2021-06-11
 ---
 
 ```ruby
@@ -29,7 +30,7 @@ class ArticlesController < ApplicationController
 end
 ```
 
-```html
+```erb
 <!-- app/views/articles/new.html.erb -->
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>
 

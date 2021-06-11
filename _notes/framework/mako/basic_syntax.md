@@ -1,15 +1,23 @@
 ---
+update: 2021-06-11
 ---
 
-```python
-# Module level
-<%! from babel import Locale %>
+On module level:
 
-# Template level
+```
+<%! from babel import Locale %>
+```
+
+On template level:
+
+```
 <% locale = Locale('en', 'US') %>
 ${locale.territories['US']}
+```
 
-# Control structures
+Using control structures:
+
+```
 % if x == 5:
   some output
 % endif

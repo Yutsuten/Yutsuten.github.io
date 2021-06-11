@@ -1,4 +1,5 @@
 ---
+update: 2021-06-11
 ---
 
 ## Creates a form and receives its data
@@ -38,8 +39,9 @@ class ArticlesController < ApplicationController
 end
 ```
 
-```html
-<!-- app/views/articles/new.html.erb -->
+At `app/views/articles/new.html.erb`:
+
+```erb
 <h1>New Article</h1>
 
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>

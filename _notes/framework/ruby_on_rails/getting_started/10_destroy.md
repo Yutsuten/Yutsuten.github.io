@@ -1,4 +1,5 @@
 ---
+update: 2021-06-11
 ---
 
 ```ruby
@@ -11,7 +12,7 @@ def destroy
 end
 ```
 
-```html
+```erb
 <!-- app/views/articles/index.html.erb -->
 <h1>Listing Articles</h1>
 <%= link_to 'New article', new_article_path %>

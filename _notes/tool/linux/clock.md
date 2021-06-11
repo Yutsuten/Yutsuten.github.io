@@ -1,18 +1,25 @@
 ---
-update: 2021-05-26
+update: 2021-06-11
 ---
+
+## Check
+
+Check the current timedate configuration with:
+
+```shell
+timedatectl
+```
 
 ## Adjust
 
-### Automatic
+Automatically synchronize the clock using NTP.
 
 ```shell
-sudo timedateclt set-ntp yes
+sudo timedatectl set-ntp yes
 ```
 
-### Manual
-
-You may set only the date or the time.
+Or set it manually using the command bellow
+(you may give only the date or the time).
 
 ```shell
 sudo date -s 'YYYY-MM-DD HH:MM:SS'

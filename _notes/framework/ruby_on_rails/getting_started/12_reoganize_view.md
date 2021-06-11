@@ -1,9 +1,10 @@
 ---
+update: 2021-06-11
 ---
 
 Move the show comments and comments form into its own view.
 
-```html
+```erb
 <!-- app/views/comments/_comment.html.erb -->
 <p>
   <strong>Commenter:</strong>

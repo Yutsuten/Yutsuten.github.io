@@ -1,9 +1,10 @@
 ---
+update: 2021-06-11
 ---
 
 Creating `comments` for `articles`.
 
-```bash
+```shell
 rails generate model Comment commenter:string body:text article:references
 rails db:migrate
 rails generate controller Comments
@@ -42,7 +43,7 @@ class CommentsController < ApplicationController
 end
 ```
 
-```html
+```erb
 <!-- app/views/articles/show.html.erb -->
 <p>
   <strong>Title:</strong>

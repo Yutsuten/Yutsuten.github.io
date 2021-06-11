@@ -1,4 +1,5 @@
 ---
+update: 2021-06-11
 ---
 
 ## Generate model and migration
@@ -41,8 +42,9 @@ end
 
 ## View template
 
-```html
-<!-- app/views/articles/show.html.erb -->
+At `app/views/articles/show.html.erb`:
+
+```erb
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
