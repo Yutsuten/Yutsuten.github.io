@@ -1,4 +1,5 @@
 ---
+update: 2021-06-11
 ---
 
 ## Search
@@ -29,9 +30,18 @@ N   "previous matching search pattern"
 
 ### Highlight
 
+Configure search highlight:
+
 ```vim
-:noh
-:nohlsearch
+set hlsearch
+set nohlsearch
+```
+
+Stop the highlight for the last search:
+
+```vim
+noh
+nohlsearch
 ```
 
 ## Find & Replace
