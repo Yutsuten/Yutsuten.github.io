@@ -1,4 +1,5 @@
 ---
+update: 2021-06-11
 ---
 
 ## Browserify + browserify-css + watchify + gulp setup
@@ -15,16 +16,18 @@ yarn add watchify --dev
 Edit `package.json`:
 
 ```json
-"browserify": {
-  "transform": [
-    "browserify-css"
-  ]
-},
-"browserify-css": {
-  "autoInject": false,
-  "minify": true,
-  "output": "bundle.css"
-},
+{
+  "browserify": {
+    "transform": [
+      "browserify-css"
+    ]
+  },
+  "browserify-css": {
+    "autoInject": false,
+    "minify": true,
+    "output": "bundle.css"
+  }
+}
 ```
 
 Edit `gulpfile.js`:
