@@ -42,7 +42,7 @@ Sometimes used on some production servers.
 {
   "log-driver": "syslog",
   "log-opts": {
-    "tag": "app_service",
+    "tag": "app_service"
   }
 }
 ```
