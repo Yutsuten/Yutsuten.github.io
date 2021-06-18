@@ -6,9 +6,9 @@ update: 2021-06-03
 ```yml
 version: "3"
 services:
-  <service_name>:
+  app:
     build: .
-    image: <image>
+    image: imagename
     ports:
       - "4050:4000"  # HOST:CONTAINER
     volumes:
