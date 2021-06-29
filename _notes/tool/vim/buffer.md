@@ -1,5 +1,5 @@
 ---
-update: 2021-03-02
+update: 2021-06-28
 ---
 
 ## Opening file(s) into buffers
@@ -12,6 +12,8 @@ update: 2021-03-02
 ```vim
 :new                    "New file"
 :e path/file.txt        "Open existing file in new buffer"
+:e +100 path/file.txt
+:e +/search path/file.txt
 :find path/**/file.txt  "Open existing file in new buffer"
 :n path/**/file.txt     "Opens all matched files"
 
