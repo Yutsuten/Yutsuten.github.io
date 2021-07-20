@@ -30,3 +30,9 @@ Find and delete empty directories:
 find . -type d -empty -print
 find . -type d -empty -delete
 ```
+
+Rename multiple files (does not work if the path has spaces):
+
+```shell
+find . -type f -name 'Screenshot_*_*.png' | sed -E 'p;s/Screenshot_([0-9]{4})([0-9]{2})([0-9]{2})_([0-9]{2})([0-9]{2})([0-9]{2})([0-9]+)\.png/Screenshot_\1-\2-\3T\4:\5:\6.\7.png/g' | xargs -n 2 mv
+```
